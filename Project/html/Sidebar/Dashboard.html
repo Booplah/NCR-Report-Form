@@ -3,90 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
   <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../css/Main-Page.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
 </head>
 
-<body class="bg-gray-50 text-gray-800 flex min-h-screen">
-
-  <!-- Sidebar -->
-  <aside class="flex w-64 flex-col justify-between border-e border-gray-100 bg-white">
-    <div class="px-4 py-2">
-      <span class="flex justify-center">
+<body class="page-container">
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="sidebar-content">
+      <div class="sidebar-logo">
         <a href="../Home.html">
-          <img src="../../Images/Logo.png" class="h20 w-20 shadow-md" alt="Logo">
+          <img src="../../Images/Logo.png" class="logo-image" alt="CrossFire NCR System Logo">
         </a>
-      </span>
+      </div>
 
-      <ul class="space-y-1 mt-4 border-t border-gray">
-        <li><a href="../../html/Home.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-700 text-gray-500 hover:bg-gray-100 hover:text-gray-700">Home</a></li>
-        <li><a href="../../html/Sidebar/Dashboard.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 text-gray-500 hover:bg-gray-100 hover:text-gray-700 bg-gray-100">Dashboard</a>
+      <hr>
+      <div class=siderbar-items>
+        <li class="siderbar-item">
+          <a href="../../html/Home.html" class="menu-link">Home</a>
         </li>
-        <li><a href="../../html/Sidebar/CreateNCR.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 text-gray-500 hover:bg-gray-100 hover:text-gray-700">Create NCR</a></li>
-        <li><a href="../../html/Sidebar/Admin.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 text-gray-500 hover:bg-gray-100 hover:text-gray-700">Admin Page</a></li>
-        <li><a href="../../html/Sidebar/help-about.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 text-gray-500 hover:bg-gray-100 hover:text-gray-700">Help & About</a>
-          <details class="group [&_summary::-webkit-details-marker]:hidden">
-            <summary
-              class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-              <span class="text-sm font-medium"> Account </span>
-              <span class="shrink-0 transition duration-300 group-open:-rotate-180">
-                <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd" />
-                </svg>
+        <li class="siderbar-item">
+          <a href="../../html/Sidebar/Dashboard.html" class="menu-link active">Dashboard</a>
+        </li>
+        <li class="siderbar-item">
+          <a href="../../html/Sidebar/CreateNCR.html" class="menu-link">Create NCR</a>
+        </li>
+        <li class="siderbar-item">
+          <a href="../../html/Sidebar/Admin.html" class="menu-link">Admin Page</a>
+        </li>
+        <li class="siderbar-item">
+          <a href="../../html/Sidebar/help-about.html" class="menu-link">Help & About</a>
+        </li>
+        <li class="siderbar-item">
+          <details class="dropdown-menu">
+            <summary class="dropdown-toggle">
+              <span class="dropdown-label">Account</span>
+              <span class="dropdown-arrow">
               </span>
             </summary>
-
-            <ul class="mt-2 space-y-1 px-4">
+            <ul class="dropdown-items">
               <li>
-                <a href="#"
-                  class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                  Admin
-                </a>
+                <a href="#" class="dropdown-link">Admin</a>
               </li>
               <li>
-                <a href="#"
-                  class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                  Test
-                </a>
+                <a href="#" class="dropdown-link">Test</a>
               </li>
-
-
             </ul>
           </details>
-      </ul>
+        </li>
+      </div>
     </div>
 
-    <div class="border-t border-gray-100 flex justify-center">
-      <a href="" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Help</a>
+    <div class="sidebar-footer">
+      <a href="#" class="help-link">Help</a>
     </div>
-
   </aside>
 
-  <!-- Header > Main page -->
-<div class="flex-1 flex flex-col">
-  <header class="bg-white shadow-md">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="">
-        <h1 class="text-2xl font-bold text-purple-700">Dashboard</h1>
-      </a>
-      <nav>
-        <ul class="flex gap-6 text-sm font-medium">
-          <div>
-            <p class="text-xs"><strong class="block font-medium">Account</strong></p>
-          </div>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <!-- Main Content -->
+  <div class="page-content">
+    <!-- Page Header -->
+    <header class="main-header">
+      <div class="header-content">
+        <a href="#" class="header-title">
+          <h1 class="page-title">Dashboard</h1>
+        </a>
+        <nav class="header-navigation">
+          <ul class="header-links">
+            <div class="account-info">
+              <p class="account-name"><strong class="account-label">Account</strong></p>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <!-- Main -->
+    <!-- Main Content -->
     <main class="flex-1 p-10">
 
       <div class="mb-8">
@@ -113,8 +110,9 @@
           </div>
         </div>
       </div>
-      
+
     </main>
+
   </div>
 
   <script src="../Scripts/app.js"></script>

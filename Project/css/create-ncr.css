@@ -1,0 +1,215 @@
+/* Create NCR — Theme-only styles (scoped) */
+/* -------------------------------------------------- */
+/* Paleta y tokens */
+:root {
+    --cf-bg: #f8fafc;           /* slate-50 */
+    --cf-card: #ffffff;
+    --cf-border: #e5e7eb;       /* gray-200 */
+    --cf-ink: #0f172a;          /* slate-900 */
+    --cf-muted: #64748b;        /* slate-500 */
+    --cf-accent: #6d28d9;       /* purple-700 */
+    --cf-accent-600: #7c3aed;   /* purple-600 */
+    --cf-accent-500: #8b5cf6;   /* purple-500 */
+    --cf-danger: #dc2626;       /* red-600 */
+    --cf-success: #16a34a;      /* green-600 */
+    --cf-focus: 0 0 0 3px rgba(124, 58, 237, .35);
+    --radius: 14px;
+    --radius-sm: 10px;
+    --shadow-card: 0 10px 25px -10px rgba(2,6,23,.2), 0 2px 6px rgba(2,6,23,.06);
+  }
+  
+  /* Limitar el alcance a esta vista */
+  #view-create {
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--cf-ink);
+  }
+  
+  /* Encabezados con la segunda fuente */
+  #view-create h2 {
+    font-family: "Alan Sans", "Inter", ui-sans-serif, system-ui;
+    color: var(--cf-accent);
+    font-weight: 700;
+    letter-spacing: .2px;
+  }
+  
+  /* Tarjeta contenedora */
+  #view-create .card {
+    background: var(--cf-card);
+    border: 1px solid var(--cf-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+  }
+  
+  #view-create .pad { padding: 18px 18px; }
+  @media (min-width: 768px) { #view-create .pad { padding: 22px; } }
+  
+  /* Grid del formulario */
+  #view-create .formGrid {
+    gap: 14px;
+  }
+  #view-create .two-col {
+    display: grid;
+    gap: 12px;
+  }
+  @media (min-width: 640px) {
+    #view-create .two-col {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Labels y ayudas */
+  #view-create label {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  #view-create .muted {
+    color: var(--cf-muted);
+  }
+  #view-create .required {
+    color: var(--cf-danger);
+    margin-left: 2px;
+    font-weight: 700;
+  }
+  #view-create .opt {
+    color: var(--cf-muted);
+    font-weight: 500;
+    font-size: .85em;
+  }
+  
+  /* Inputs unificados */
+  #view-create .input,
+  #view-create input[type="text"],
+  #view-create input[type="date"],
+  #view-create input[type="number"],
+  #view-create select,
+  #view-create textarea {
+    width: 100%;
+    appearance: none;
+    background: #fff;
+    border: 1px solid var(--cf-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    line-height: 1.4;
+    transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease;
+  }
+  
+  #view-create textarea.input { min-height: 96px; resize: vertical; }
+  
+  /* Estado hover y focus */
+  #view-create .input:hover,
+  #view-create select:hover,
+  #view-create textarea:hover {
+    border-color: #d1d5db; /* gray-300 */
+  }
+  #view-create .input:focus,
+  #view-create select:focus,
+  #view-create textarea:focus {
+    outline: none;
+    border-color: var(--cf-accent-600);
+    box-shadow: var(--cf-focus);
+  }
+  
+  /* Estado inválido (el JS agrega aria-invalid="true") */
+  #view-create [aria-invalid="true"] {
+    border-color: var(--cf-danger) !important;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, .15) !important;
+    background-color: #fff7f7;
+  }
+  
+  /* Errores accesibles */
+  #view-create .error {
+    min-height: 1.15rem;
+    font-size: .78rem;
+    color: var(--cf-danger);
+    margin-top: 6px;
+  }
+  
+  /* Fieldset radio */
+  #view-create fieldset {
+    border: 1px solid var(--cf-border);
+    border-radius: var(--radius);
+    background: #fff;
+  }
+  #view-create fieldset legend {
+    padding: 0 6px;
+  }
+  
+  /* Botones */
+  #view-create .btn {
+    --btn-bg: #ffffff;
+    --btn-ink: var(--cf-ink);
+    --btn-border: var(--cf-border);
+    --btn-shadow: 0 2px 6px rgba(2,6,23,.06);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--btn-border);
+    background: var(--btn-bg);
+    color: var(--btn-ink);
+    font-weight: 600;
+    box-shadow: var(--btn-shadow);
+    transition: transform .06s ease, box-shadow .15s ease, border-color .15s ease;
+    cursor: pointer;
+  }
+  #view-create .btn:hover {
+    border-color: #d1d5db;
+    box-shadow: 0 6px 16px -6px rgba(2,6,23,.15), 0 2px 6px rgba(2,6,23,.06);
+  }
+  #view-create .btn:active { transform: translateY(1px); }
+  
+  #view-create .btn.primary {
+    --btn-bg: linear-gradient(180deg, var(--cf-accent-500), var(--cf-accent-600));
+    --btn-ink: #fff;
+    --btn-border: transparent;
+    color: #fff;
+    border: none;
+  }
+  #view-create .btn.primary:hover {
+    box-shadow: 0 10px 22px -10px rgba(124,58,237,.55), 0 3px 10px rgba(124,58,237,.25);
+  }
+  #view-create .btn.sm {
+    padding: 8px 12px;
+    font-size: .92rem;
+    border-radius: 10px;
+  }
+  
+  /* Grupo de acciones */
+  #view-create .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  
+  /* Placeholders */
+  #view-create ::placeholder { color: #9aa3af; }
+  
+  /* Numbers — ocultar spinners en WebKit (opcional estético) */
+  #view-create input[type=number]::-webkit-outer-spin-button,
+  #view-create input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none; margin: 0;
+  }
+  #view-create input[type=number] { -moz-appearance: textfield; }
+  
+  /* Micro animación de aparición de la tarjeta */
+  @media (prefers-reduced-motion: no-preference) {
+    #view-create .card {
+      animation: cf-fade-in .18s ease-out both;
+    }
+    @keyframes cf-fade-in {
+      from { opacity: 0; transform: translateY(4px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  }
+  
+  /* Estado de éxito / info (por si los usas en textos) */
+  #view-create .text-success { color: var(--cf-success); }
+  #view-create .text-info { color: var(--cf-accent-600); }
+  
+  /* Compatibilidad con atributo hidden (por si el navegador no lo aplica) */
+  #view-create[hidden] { display: none !important; }
+  

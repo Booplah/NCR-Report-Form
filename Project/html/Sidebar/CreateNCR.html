@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Create NCR</title>
+
+  <link rel="stylesheet" href="../../css/create-ncr.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
 <body class="bg-gray-50 text-gray-800 flex min-h-screen">
@@ -13,179 +20,171 @@
   <aside class="sticky top-0 h-screen flex flex-col justify-between border-e border-gray-100 bg-white">
     <div class="px-4 py-6">
       <span class="flex justify-center">
-        <img src="../../Images/Logo.png" class="h-12 w-12 object-cover rounded-lg shadow-sm" alt="Logo">
+        <img src="../../Images/Logo.png" class="h-12 w-12 object-cover rounded-lg shadow-sm" alt="Logo" />
       </span>
 
-      <ul class="space-y-1 mt-4">
-        <li><a href="../../html/Home.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-700">Home</a></li>
-        <li><a href="../../html/Sidebar/Dashboard.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Dashboard</a></li>
-        <li><a href="../../html/Sidebar/CreateNCR.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 bg-gray-100">Create
-            NCR</a></li>
-        <li><a href="../../html/Sidebar/Admin.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Admin Page</a></li>
-        <li><a href="../../html/Sidebar/help-about.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Help & About</a>
-      </ul>
+      <nav aria-label="Sidebar" class="mt-4">
+        <ul class="space-y-1">
+          <li>
+            <a href="../../html/Home.html" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-700">Home</a>
+          </li>
+          <li>
+            <a href="../../html/Sidebar/Dashboard.html" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Dashboard</a>
+          </li>
+          <li>
+            <a href="../../html/Sidebar/CreateNCR.html" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 bg-gray-100">Create NCR</a>
+          </li>
+          <li>
+            <a href="../../html/Sidebar/Admin.html" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Admin Page</a>
+          </li>
+          <li>
+            <a href="../../html/Sidebar/help-about.html" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Help &amp; About</a>
+          </li>
+        </ul>
+      </nav>
     </div>
 
     <div class="border-t border-gray-100 flex justify-center">
-      <a href="" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Help</a>
+      <a href="../../html/Sidebar/help-about.html#help" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Help</a>
     </div>
   </aside>
 
-  <!-- Main -->
+  
+
+    <!-- Main -->
   <div class="flex-1 flex flex-col">
     <header class="bg-white shadow-md">
       <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold text-purple-700">Create NCR</h1>
 
-        <nav>
+        <nav aria-label="Account">
           <div class="border-t border-gray-100">
             <div>
-              <p class="text-xs"><strong class="block font-medium">Account</strong></p>
+              <p class="text-xs">
+                <strong class="block font-medium">Account</strong>
+              </p>
             </div>
           </div>
         </nav>
-
       </div>
     </header>
 
     <main class="flex-1 p-6">
-
       <div class="max-w-4xl mx-auto">
-        <!-- Form -->
-        <form class="bg-white rounded-lg shadow-lg p-6">
-          <h2>Non-Compliance Report</h2>
-
-          <fieldset> <br>
-            <legend>Basic Information</legend>
-
-            <div>
-              <label>NCR Number</label>
-              <input type="text" name="NCRID" value="436346" readonly>
+        <!-- CREATE -->
+        <section id="view-create">
+          <div class="card pad">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <h2>Quality Rep</h2>
+              <button id="btnGenerate" class="btn sm" type="button">Generate NCR #</button>
             </div>
 
-            <div>
-              <label>Quality Department</label>
-              <select name="QualityDep">
-                <option value="">Select Department</option>
-                <option value="manufacturing">Manufacturing</option>
-                <option value="assembly">Assembly</option>
-                <option value="shipping">Shipping</option>
-                <option value="receiving">Receiving</option>
-              </select>
-            </div>
-          </fieldset>
+            <form id="ncrForm" style="margin-top:12px" novalidate>
+              <div style="display:grid;grid-template-columns:1fr;gap:12px" class="formGrid">
+                <div>
+                  <label for="ncrNumber">NCR No. <span class="required" aria-hidden="true">*</span></label>
+                  <input id="ncrNumber" name="ncrNumber" class="input" type="text" placeholder="ex: NCR-2025-003" aria-describedby="err-ncrNumber" />
+                  <div id="err-ncrNumber" class="error" role="alert" aria-live="polite"></div>
+                </div>
 
-          <fieldset> <br>
-            <legend>Supplier Information</legend>
+                <div>
+                  <label for="dateReported">Date <span class="required" aria-hidden="true">*</span></label>
+                  <input id="dateReported" name="dateReported" class="input" type="date" aria-describedby="err-dateReported" />
+                  <div id="err-dateReported" class="error" role="alert" aria-live="polite"></div>
+                </div>
 
-            <div>
-              <label>Supplier Name</label>
-              <input type="text" name="SupplierName">
-            </div>
+                <div>
+                  <label for="processApplicable">Identify Process Applicable <span class="required" aria-hidden="true">*</span></label>
+                  <select id="processApplicable" name="processApplicable" class="input" aria-describedby="err-processApplicable">
+                    <option value="">Select…</option>
+                    
+                    <option value="Supplier or Rec-Insp">Supplier or Rec-Insp</option>
+                    <option value="WIP (Production Order)">WIP (Production Order)</option>
+                  </select>
+                  <div id="err-processApplicable" class="error" role="alert" aria-live="polite"></div>
+                </div>
 
-            <div>
-              <label>Supplier or Receiving Inspection</label>
-              <select name="SupplierOrReclnsp">
-                <option value="">Select Type</option>
-                <option value="supplier">Supplier Inspection</option>
-                <option value="receiving">Receiving Inspection</option>
-              </select>
-            </div>
+                <div>
+                  <label for="supplierName">Supplier Name <span class="opt">(required if Supplier/Rec-Insp)</span></label>
+                  <input id="supplierName" name="supplierName" class="input" type="text" placeholder="ex: MetroFab Inc." aria-describedby="err-supplierName" />
+                  <div id="err-supplierName" class="error" role="alert" aria-live="polite"></div>
+                </div>
 
-            <div>
-              <label>
-                <input type="checkbox" name="WIP">
-                Work in Progress (WIP)
-              </label>
-            </div>
-          </fieldset>
+                <div>
+                  <label for="poOrProdNo">PO or Prod. No. <span class="opt">(one of these or Sales Order)</span></label>
+                  <input id="poOrProdNo" name="poOrProdNo" class="input" type="text" placeholder="ex: PO-45127 or PRD-20491" aria-describedby="err-poOrProdNo" />
+                  <div id="err-poOrProdNo" class="error" role="alert" aria-live="polite"></div>
+                </div>
 
-          <fieldset> <br>
-            <legend>Product Information</legend>
+                <div>
+                  <label for="salesOrderNo">Sales Order No. <span class="opt">(one of these or PO/Prod)</span></label>
+                  <input id="salesOrderNo" name="salesOrderNo" class="input" type="text" placeholder="ex: SO-77419" aria-describedby="err-salesOrderNo" />
+                  <div id="err-salesOrderNo" class="error" role="alert" aria-live="polite"></div>
+                </div>
 
-            <div>
-              <label>PO or Product Number</label>
-              <input type="text" name="POOrProd">
-            </div>
+                <div>
+                  <label for="itemDescriptionSAP">Description of Item (including SAP No.) <span class="required" aria-hidden="true">*</span></label>
+                  <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input" type="text" placeholder="ex: CF-AX12 – Clamp Bracket (SAP 110045)" aria-describedby="err-itemDescriptionSAP" />
+                  <div id="err-itemDescriptionSAP" class="error" role="alert" aria-live="polite"></div>
+                </div>
 
-            <div>
-              <label>Sales Order</label>
-              <input type="text" name="SalesOrder">
-            </div>
+                <div class="two-col">
+                  <div>
+                    <label for="qtyReceived">Quantity Received <span class="required" aria-hidden="true">*</span></label>
+                    <input id="qtyReceived" name="qtyReceived" class="input" type="number" inputmode="numeric" min="1" step="1" placeholder="ex: 120" aria-describedby="err-qtyReceived" />
+                    <div id="err-qtyReceived" class="error" role="alert" aria-live="polite"></div>
+                  </div>
+                  <div>
+                    <label for="qtyDefective">Quantity Defective <span class="required" aria-hidden="true">*</span></label>
+                    <input id="qtyDefective" name="qtyDefective" class="input" type="number" inputmode="numeric" min="0" step="1" placeholder="ex: 7" aria-describedby="err-qtyDefective" />
+                    <div id="err-qtyDefective" class="error" role="alert" aria-live="polite"></div>
+                  </div>
+                </div>
 
-            <div>
-              <label>Quantity Received</label>
-              <input type="number" name="QuantityRec" min="0">
-            </div>
+                <div>
+                  <label for="defectDescription">Description of Defect <span class="required" aria-hidden="true">*</span></label>
+                  <textarea id="defectDescription" name="defectDescription" class="input" rows="3" placeholder="Detail defect, spec delta, location, lot/PO, etc." aria-describedby="err-defectDescription"></textarea>
+                  <div id="err-defectDescription" class="error" role="alert" aria-live="polite"></div>
+                </div>
 
-            <div>
-              <label>Quantity Defective</label>
-              <input type="number" name="QuantityDef" min="0">
-            </div>
-          </fieldset>
+                <fieldset class="card pad" style="border-color:var(--border)">
+                  <legend id="legend-itemMarked" style="font-weight:600">Item marked Nonconforming <span class="required" aria-hidden="true">*</span></legend>
+                  <div id="itemMarkedNonconformingGroup" role="radiogroup" aria-labelledby="legend-itemMarked" style="display:flex;gap:16px;margin-top:6px">
+                    <label for="mark-yes"><input id="mark-yes" type="radio" name="itemMarkedNonconforming" value="Yes" /> Yes</label>
+                    <label for="mark-no"><input id="mark-no" type="radio" name="itemMarkedNonconforming" value="No" /> No</label>
+                  </div>
+                  <div id="err-itemMarkedNonconforming" class="error" role="alert" aria-live="polite"></div>
+                  <p class="muted" style="font-size:12px;margin-top:6px">Uploads (images/videos)</p>
+                </fieldset>
 
-          <fieldset> <br>
-            <legend>Defect Details</legend>
+                <div class="two-col">
+                  <div>
+                    <label for="reportedBy">Quality Representative's Name <span class="required" aria-hidden="true">*</span></label>
+                    <input id="reportedBy" name="reportedBy" class="input" type="text" placeholder="ex: Dave kendell" aria-describedby="err-reportedBy" />
+                    <div id="err-reportedBy" class="error" role="alert" aria-live="polite"></div>
+                  </div>
+                  <div>
+                    <label for="status">Status <span class="required" aria-hidden="true">*</span></label>
+                    <select id="status" name="status" class="input" aria-describedby="err-status">
+                      <option>Open</option>
+                      <option>Closed</option>
+                    </select>
+                    <div id="err-status" class="error" role="alert" aria-live="polite"></div>
+                  </div>
+                </div>
 
-            <div>
-              <label>Item Description</label>
-              <textarea name="ItemDesc" rows="3"></textarea>
-            </div>
-
-            <div>
-              <label>Defect Description</label>
-              <textarea name="DefectDesc" rows="3"></textarea>
-            </div>
-
-            <div>
-              <label>Non-conformed Item</label>
-              <input type="text" name="Nonconformedltem">
-            </div>
-
-            <div>
-              <label>Disposition Required</label>
-              <select name="ToDispos">
-                <option value="">Select Disposition</option>
-                <option value="return">Return to Supplier</option>
-                <option value="scrap">Scrap Item</option>
-                <option value="rework">Rework Required</option>
-                <option value="use-as-is">Use As-Is</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-          </fieldset>
-
-          <fieldset> <br>
-            <legend>Quality Representative</legend>
-
-            <div>
-              <label>Quality Rep Name</label>
-              <input type="text" name="QRName" value="Eric Frusciante">
-            </div>
-
-            <div>
-              <label>Date</label>
-              <input type="date" name="Date">
-            </div>
-          </fieldset>
-
-          <div>
-            <button type="button">Cancel</button>
-            <button type="submit">Create NCR</button>
+                <div class="actions">
+                  <button type="button" class="btn" id="btnValidate">Validate Input</button>
+                  <button type="submit" class="btn primary">Save NCR</button>
+                </div>
+              </div>
+            </form>
           </div>
-        </form>
-
-
+        </section>
       </div>
-
     </main>
-
-    <script src="../Scripts/app.js"></script>
+    <!-- Nota: si mueves el archivo JS, ajusta esta ruta -->
+    <script defer src="../../Scripts/app.js"></script>
+  </div>
 </body>
-
 </html>

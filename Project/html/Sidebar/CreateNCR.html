@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,29 @@
 
 <body class="bg-gray-50 text-gray-800 flex min-h-screen">
   <!-- Sidebar -->
-  <aside class="flex h-screen flex-col justify-between border-e border-gray-100 bg-white">
+  <aside class="sticky top-0 h-screen flex flex-col justify-between border-e border-gray-100 bg-white">
     <div class="px-4 py-6">
       <span class="flex justify-center">
         <img src="../../Images/Logo.png" class="h-12 w-12 object-cover rounded-lg shadow-sm" alt="Logo">
       </span>
 
       <ul class="space-y-1 mt-4">
-        <li><a href="../../html/Home.html"class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-700">Home</a></li>
-        <li><a href="../../html/Sidebar/Dashboard.html"class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Dashboard</a></li>
-        <li><a href="../../html/Sidebar/CreateNCR.html"class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 bg-gray-100">Create NCR</a></li>
-        <li><a href="../../html/Sidebar/Admin.html" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Admin Page</a></li>
-        <li><a href="../../html/Sidebar/help-about.html"class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Help & About</a>
+        <li><a href="../../html/Home.html"
+            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-700">Home</a></li>
+        <li><a href="../../html/Sidebar/Dashboard.html"
+            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Dashboard</a></li>
+        <li><a href="../../html/Sidebar/CreateNCR.html"
+            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 bg-gray-100">Create
+            NCR</a></li>
+        <li><a href="../../html/Sidebar/Admin.html"
+            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Admin Page</a></li>
+        <li><a href="../../html/Sidebar/help-about.html"
+            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Help & About</a>
       </ul>
     </div>
 
-    <div class="border-t border-gray-100">
-      <a href="#" class="flex items-center gap-2 p-4 hover:bg-gray-50">
-        <img src="" class="size-10 rounded-full object-cover" alt="Profile">
-        <div><p class="text-xs"><strong class="block font-medium">Account</strong></p></div>
-      </a>
+    <div class="border-t border-gray-100 flex justify-center">
+      <a href="" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Help</a>
     </div>
   </aside>
 
@@ -37,15 +41,151 @@
     <header class="bg-white shadow-md">
       <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold text-purple-700">Create NCR</h1>
-        <nav>
 
+        <nav>
+          <div class="border-t border-gray-100">
+            <div>
+              <p class="text-xs"><strong class="block font-medium">Account</strong></p>
+            </div>
+          </div>
         </nav>
+
       </div>
     </header>
 
-    <main class="flex-1 p-6"></main>
-  </div>
+    <main class="flex-1 p-6">
 
-  <script src="../Scripts/app.js"></script>
+      <div class="max-w-4xl mx-auto">
+        <!-- Form -->
+        <form class="bg-white rounded-lg shadow-lg p-6">
+          <h2>Non-Compliance Report</h2>
+
+          <fieldset> <br>
+            <legend>Basic Information</legend>
+
+            <div>
+              <label>NCR Number</label>
+              <input type="text" name="NCRID" value="436346" readonly>
+            </div>
+
+            <div>
+              <label>Quality Department</label>
+              <select name="QualityDep">
+                <option value="">Select Department</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="assembly">Assembly</option>
+                <option value="shipping">Shipping</option>
+                <option value="receiving">Receiving</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset> <br>
+            <legend>Supplier Information</legend>
+
+            <div>
+              <label>Supplier Name</label>
+              <input type="text" name="SupplierName">
+            </div>
+
+            <div>
+              <label>Supplier or Receiving Inspection</label>
+              <select name="SupplierOrReclnsp">
+                <option value="">Select Type</option>
+                <option value="supplier">Supplier Inspection</option>
+                <option value="receiving">Receiving Inspection</option>
+              </select>
+            </div>
+
+            <div>
+              <label>
+                <input type="checkbox" name="WIP">
+                Work in Progress (WIP)
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset> <br>
+            <legend>Product Information</legend>
+
+            <div>
+              <label>PO or Product Number</label>
+              <input type="text" name="POOrProd">
+            </div>
+
+            <div>
+              <label>Sales Order</label>
+              <input type="text" name="SalesOrder">
+            </div>
+
+            <div>
+              <label>Quantity Received</label>
+              <input type="number" name="QuantityRec" min="0">
+            </div>
+
+            <div>
+              <label>Quantity Defective</label>
+              <input type="number" name="QuantityDef" min="0">
+            </div>
+          </fieldset>
+
+          <fieldset> <br>
+            <legend>Defect Details</legend>
+
+            <div>
+              <label>Item Description</label>
+              <textarea name="ItemDesc" rows="3"></textarea>
+            </div>
+
+            <div>
+              <label>Defect Description</label>
+              <textarea name="DefectDesc" rows="3"></textarea>
+            </div>
+
+            <div>
+              <label>Non-conformed Item</label>
+              <input type="text" name="Nonconformedltem">
+            </div>
+
+            <div>
+              <label>Disposition Required</label>
+              <select name="ToDispos">
+                <option value="">Select Disposition</option>
+                <option value="return">Return to Supplier</option>
+                <option value="scrap">Scrap Item</option>
+                <option value="rework">Rework Required</option>
+                <option value="use-as-is">Use As-Is</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset> <br>
+            <legend>Quality Representative</legend>
+
+            <div>
+              <label>Quality Rep Name</label>
+              <input type="text" name="QRName" value="Eric Frusciante">
+            </div>
+
+            <div>
+              <label>Date</label>
+              <input type="date" name="Date">
+            </div>
+          </fieldset>
+
+          <div>
+            <button type="button">Cancel</button>
+            <button type="submit">Create NCR</button>
+          </div>
+        </form>
+
+
+      </div>
+
+    </main>
+
+    <script src="../Scripts/app.js"></script>
 </body>
+
 </html>

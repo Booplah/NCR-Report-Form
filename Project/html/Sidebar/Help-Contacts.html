@@ -1,11 +1,12 @@
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../../css/Main-Page.css">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Support</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css/Main-Page.css">
+    <link rel="stylesheet" href="../../css/help-about.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -29,10 +30,10 @@
           <a href="../../html/Home.html" class="menu-link">Home</a>
         </li>
         <li class="siderbar-item">
-          <a href="../../html/Sidebar/Dashboard.html" class="menu-link active">Dashboard</a>
+          <a href="../../html/Sidebar/Dashboard.html" class="menu-link">Dashboard</a>
         </li>
         <li class="siderbar-item">
-          <a href="../../html/Sidebar/CreateNCR.html" class="menu-link">Create NCR</a>
+          <a href="../../html/Sidebar/CreateNCR.html" class="menu-link active">Create NCR</a>
         </li>
         <li class="siderbar-item">
           <a href="../../html/Sidebar/Admin.html" class="menu-link">Admin Page</a>
@@ -46,13 +47,13 @@
             </summary>
             <ul class="dropdown-items">
               <li>
-                <a href="../Sidebar/Help-About.html" class="dropdown-link-active">About This Project</a>
+                <a href="../Sidebar/Help-About.html" class="dropdown-link">About This Project</a>
               </li>
               <li>
                 <a href="../Sidebar/Help-Usage.html" class="dropdown-link">How To Use</a>
               </li>
               <li>
-                <a href="../Sidebar/Help-Contacts.html" class="dropdown-link">Need Help?</a>
+                <a href="../Sidebar/Help-Contacts.html" class="dropdown-link">Contact & Support</a>
               </li>
             </ul>
           </details>
@@ -65,13 +66,12 @@
     </div>
   </aside>
 
-  <!-- Main Content -->
   <div class="page-content">
-    <!-- Page Header -->
+    <!-- Header -->
     <header class="main-header">
       <div class="header-content">
         <a href="#" class="header-title">
-          <h1 class="page-title">Dashboard</h1>
+          <h1 class="page-title">Contact & Support</h1>
         </a>
         <nav class="header-navigation">
           <ul class="header-links">
@@ -83,39 +83,29 @@
       </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-1 p-10">
+    <main class="flex-1 p-6">
+    <div class="content-wrap">
+        <article class="content-card">
+          <div class="meta">Help / About → Need Help?</div>
+          <h2>Support</h2>
+          <p>If you run into trouble, try these first:</p>
+          <ul>
+            <li>- Refresh the page and re-enter any missing required fields.</li>
+            <li>- Check file paths for images/attachments.</li>
+            <li>- Use the role tabs to confirm you are in the correct view.</li>
+          </ul>
 
-      <div class="mb-8">
-        <h3 class="text-lg font-semibold text-gray-800 mb-4">Quick Actions</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <a href="../../html/Sidebar/CreateNCR.html"
-            class="bg-purple-600 text-white py-3 rounded-md text-center font-medium hover:bg-purple-700 transition-colors">
-            New NCR </a>
-          <a href="../../html/Sidebar/ViewNCRs.html"
-            class="bg-white border border-gray-300 text-gray-700 py-3 rounded-md text-center font-medium hover:bg-gray-100 transition-colors">View
-            NCRs</a>
-        </div>
-      </div>
+          <h2 class="mt-6">Contact</h2>
+          <p>Email: <a class="Email" href="mailto:vtruong1@ncstudents.niagaracollege.ca">trava@gmail.com</a></p>
 
-      <div class="grid grid-cols-1 gap-2 lg:grid-cols-4 lg:gap-6">
-        <div class="bg-white rounded-lg shadow p-6 border-l-4 border-red-500">
-          <div class="flex items-center">
-            <div class="flex-shrink-0">
-            </div>
-            <div class="ml-4">
-              <p class="">Current...</p>
-              <p class="">3</p>
-            </div>
+          <div class="mt-6">
+            <a href="./help-about.html" class="inline-flex items-center rounded-lg border px-3 py-2 text-sm hover:bg-gray-50">Back</a>
           </div>
-        </div>
+        </article>
       </div>
-
     </main>
-
+    <!-- Footer -->
+  <footer>&copy; 2025 Crossfire NCR Project | TRAVA Tech</footer>
   </div>
-
-  <script src="../Scripts/app.js"></script>
 </body>
-
 </html>

@@ -7,12 +7,12 @@
     --cf-border: #e5e7eb;       /* gray-200 */
     --cf-ink: #0f172a;          /* slate-900 */
     --cf-muted: #64748b;        /* slate-500 */
-    --cf-accent: #6d28d9;       /* purple-700 */
-    --cf-accent-600: #7c3aed;   /* purple-600 */
-    --cf-accent-500: #8b5cf6;   /* purple-500 */
+    --cf-accent: #3285C9;       /* purple-700 */
+    --cf-accent-600: #3285C9;   /* purple-600 */
+    --cf-accent-500: #5897c9;   /* purple-500 */
     --cf-danger: #dc2626;       /* red-600 */
     --cf-success: #16a34a;      /* green-600 */
-    --cf-focus: 0 0 0 3px rgba(124, 58, 237, .35);
+    --cf-focus: 0 0 0 3px rgba(58, 121, 237, 0.35);
     --radius: 14px;
     --radius-sm: 10px;
     --shadow-card: 0 10px 25px -10px rgba(2,6,23,.2), 0 2px 6px rgba(2,6,23,.06);

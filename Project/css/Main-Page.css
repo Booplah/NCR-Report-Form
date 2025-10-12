@@ -1,7 +1,7 @@
 .page-container {
   display: flex;
   min-height: 100vh;
-  background-color: #f8f9fb;
+  background-color: #f8f9fbee;
   color: #1e293b;
   font-family: 'Inter', sans-serif;
 }
@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: space-between;
   background: #ffffff;
-  border-right: 1px solid #e4e7ec;
+  border-right: 1px solid #e4e7ecfb;
   width: 16rem;
   position: fixed;
   height: 100vh;
@@ -38,8 +38,10 @@
 /* ... (all your other CSS rules) ... */
 
 .logo-image {
-  width: 4.75rem;
-  height: 4.75rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
 }
 
 .siderbar-items {
@@ -65,7 +67,7 @@
 .menu-link:hover,
 .menu-link.active {
   background: #f3f4f7;
-  color: #2d3640;
+  color: #5897c9;
 }
 
 /* Dropdown */
@@ -174,7 +176,7 @@
 .page-title {
   font-size: 1.45rem;
   font-weight: 700;
-  color: #7a56e0;
+  color: #5897c9;
   margin: 0;
 }
 

@@ -18,8 +18,8 @@
   <aside class="sidebar">
     <div class="sidebar-content">
       <div class="sidebar-logo">
-        <a href="../Home.html">
-          <img src="../../Images/Logo.png" class="logo-image" alt="CrossFire NCR System Logo">
+        <a href="../Home.html" class="logo-image">
+          <img src="../../Images/Crossfire Logo - no bkgd.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
         </a>
       </div>
 
@@ -65,7 +65,6 @@
     </div>
   </aside>
 
-  <!-- Main Content -->
   <div class="page-content">
     <!-- Page Header -->
     <header class="main-header">
@@ -86,29 +85,102 @@
     <!-- Main Content -->
     <main class="flex-1 p-10">
 
-      <div class="mb-8">
-        <h3 class="text-lg font-semibold text-gray-800 mb-4">Quick Actions</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <a href="../../html/Sidebar/CreateNCR.html"
-            class="bg-purple-600 text-white py-3 rounded-md text-center font-medium hover:bg-purple-700 transition-colors">
-            New NCR </a>
-          <a href="../../html/Sidebar/ViewNCRs.html"
-            class="bg-white border border-gray-300 text-gray-700 py-3 rounded-md text-center font-medium hover:bg-gray-100 transition-colors">View
-            NCRs</a>
+      <div class="max-w-6xl mx-auto">
+        
+        <!-- Quick Actions -->
+        <h3 class="text-lg font-semibold text-gray-800 mb-4">Actions</h3>
+        <div class="mb-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a href="../../html/Sidebar/CreateNCR.html" class="bg-[#5897c9] text-white px-4 py-3 rounded-lg hover:bg-[#3285C9] transition duration-200 text-center font-medium">
+              Create New NCR
+            </a>
+            <a href="../../html/Sidebar/ViewNCRs.html" class="bg-white border border-gray-300 text-gray-700 px-4 py-3 rounded-lg hover:bg-gray-50 transition duration-200 text-center font-medium">
+              View All NCRs
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div class="grid grid-cols-1 gap-2 lg:grid-cols-4 lg:gap-6">
-        <div class="bg-white rounded-lg shadow p-6 border-l-4 border-red-500">
-          <div class="flex items-center">
-            <div class="flex-shrink-0">
+        <!-- NCR List -->
+         <h3 class="text-lg font-semibold text-gray-800 mb-4">NCR List</h3>
+        <div class="grid grid-cols-1 ">
+          
+          <!-- Recent NCRs -->
+          <div class="bg-white rounded-lg shadow mb-8">
+            <div class="px-6 py-4 border-b border-gray-200">
+              <h3 class="text-lg font-semibold text-gray-800">Recent NCRs</h3>
             </div>
-            <div class="ml-4">
-              <p class="">Current...</p>
-              <p class="">3</p>
+            <div class="p-6">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg">
+                  <div>
+                    <p class="font-medium text-gray-900">---</p>
+                    <p class="text-sm text-gray-500">---</p>
+                  </div>
+                  <button class="bg-blue-100 text-[#5897c9] text-sm px-2 py-1 rounded-full">View/Edit</button>
+                </div>
+                
+                <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg">
+                  <div>
+                    <p class="font-medium text-gray-900">---</p>
+                    <p class="text-sm text-gray-500">---</p>
+                  </div>
+                  <button class="bg-blue-100 text-[#5897c9] text-sm px-2 py-1 rounded-full">View/Edit</button>
+                </div>
+                
+                <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg">
+                  <div>
+                    <p class="font-medium text-gray-900">---</p>
+                    <p class="text-sm text-gray-500">---</p>
+                  </div>
+                  <button class="bg-blue-100 text-[#5897c9] text-sm px-2 py-1 rounded-full">View/Edit</button>
+                </div>
+              </div>
+              <a href="../../html/Sidebar/ViewNCRs.html" class="block text-center mt-4 text-[#5897c9] hover:text-[#3285C9] font-medium">
+                View All NCRs
+              </a>
             </div>
           </div>
         </div>
+
+        <!-- Statistics Cards -->
+        <h3 class="text-lg font-semibold text-gray-800 mb-4">Status</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <!-- Total NCRs Card -->
+          <div class="bg-white rounded-lg shadow p-8 border border-blue-600 border-l-4">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+              </div>
+              <div class="ml-4">
+                <p class="text-sm font-medium text-gray-600">Total NCRs</p>
+                <p class="text-2xl font-bold text-gray-900">24</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active NCRs Card -->
+          <div class="bg-white rounded-lg shadow p-8 border border-green-600 border-l-4">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+              </div>
+              <div class="ml-4">
+                <p class="text-sm font-medium text-gray-600">Active NCRs</p>
+                <p class="text-2xl font-bold text-gray-900">14</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Closed NCRs Card -->
+          <div class="bg-white rounded-lg shadow p-8 border border-red-600 border-l-4">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+              </div>
+              <div class="ml-4">
+                <p class="text-sm font-medium text-gray-600">Closed NCRs</p>
+                <p class="text-2xl font-bold text-gray-900">10</p>
+              </div>
+            </div>
+          </div>
+
       </div>
 
     </main>

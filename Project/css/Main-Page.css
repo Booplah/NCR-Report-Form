@@ -67,7 +67,7 @@
 .menu-link:hover,
 .menu-link.active {
   background: #f3f4f7;
-  color: #5897c9;
+  color: #215683;
 }
 
 /* Dropdown */
@@ -176,7 +176,7 @@
 .page-title {
   font-size: 1.45rem;
   font-weight: 700;
-  color: #5897c9;
+  color: #215683;
   margin: 0;
 }
 

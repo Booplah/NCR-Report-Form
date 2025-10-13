@@ -33,7 +33,7 @@
           <a href="../../html/Sidebar/Dashboard.html" class="menu-link">Dashboard</a>
         </li>
         <li class="siderbar-item">
-          <a href="../../html/Sidebar/CreateNCR.html" class="menu-link active">Create NCR</a>
+          <a href="../../html/Sidebar/create-ncr.html" class="menu-link active">Create NCR</a>
         </li>
         <li class="siderbar-item">
           <a href="../../html/Sidebar/Admin.html" class="menu-link">Admin Page</a>
@@ -50,7 +50,7 @@
                 <a href="../Sidebar/Help-About.html" class="dropdown-link">About This Project</a>
               </li>
               <li>
-                <a href="../Sidebar/Help-Usage.html" class="dropdown-link">How To Use</a>
+                <a href="../Sidebar/help-Usage.html" class="dropdown-link">How To Use</a>
               </li>
               <li>
                 <a href="../Sidebar/Help-Contacts.html" class="dropdown-link">Need Help?</a>
@@ -90,7 +90,7 @@
         <section id="view-create">
           <div class="card pad">
             <div style="display:flex;justify-content:space-between;align-items:center">
-              <h2>Quality Rep</h2>
+              <h2>Quality Representative</h2>
               <button id="btnGenerate" class="btn sm" type="button">Generate NCR #</button>
             </div>
 
@@ -170,13 +170,21 @@
                   </div>
                 </div>
 
-                <div>
-                  <label for="defectDescription">Description of Defect <span class="required"
+                <div class="two-col">
+                  <div>
+                    <label for="defectDescription">Description of Defect <span class="required"
                       aria-hidden="true">*</span></label>
-                  <textarea id="defectDescription" name="defectDescription" class="input" rows="3"
+                    <textarea id="defectDescription" name="defectDescription" class="input" rows="3"
                     placeholder="Detail defect, spec delta, location, lot/PO, etc."
                     aria-describedby="err-defectDescription"></textarea>
-                  <div id="err-defectDescription" class="error" role="alert" aria-live="polite"></div>
+                    <div id="err-defectDescription" class="error" role="alert" aria-live="polite"></div>
+                  </div>
+                  <div>
+                  <form action="/action_page.php"> 
+                    <label for="fileNCR">You can attach any additional drawing, skecthes, pictures,etc</label>
+                    <input type="file" id="fileNCR" type="file" multiple class="Input">
+                  </form>
+                  </div>
                 </div>
 
                 <fieldset class="card pad" style="border-color:var(--border)">
@@ -190,7 +198,7 @@
                       No</label>
                   </div>
                   <div id="err-itemMarkedNonconforming" class="error" role="alert" aria-live="polite"></div>
-                  <p class="muted" style="font-size:12px;margin-top:6px">Uploads (images/videos)</p>
+                 
                 </fieldset>
 
                 <div class="two-col">

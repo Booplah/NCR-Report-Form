@@ -7,12 +7,12 @@
     --cf-border: #e5e7eb;       /* gray-200 */
     --cf-ink: #0f172a;          /* slate-900 */
     --cf-muted: #64748b;        /* slate-500 */
-    --cf-accent: #3285C9;       /* purple-700 */
-    --cf-accent-600: #3285C9;   /* purple-600 */
-    --cf-accent-500: #5897c9;   /* purple-500 */
+    --cf-accent: #275E8F;       /* purple-700 */
+    --cf-accent-600: #275E8F;   /* purple-600 */
+    --cf-accent-500: #2D6EA7;   /* purple-500 */
     --cf-danger: #dc2626;       /* red-600 */
     --cf-success: #16a34a;      /* green-600 */
-    --cf-focus: 0 0 0 3px rgba(58, 121, 237, 0.35);
+    --cf-focus: 0 0 0 3px rgba(96, 139, 221, 0.35);
     --radius: 14px;
     --radius-sm: 10px;
     --shadow-card: 0 10px 25px -10px rgba(2,6,23,.2), 0 2px 6px rgba(2,6,23,.06);
@@ -24,7 +24,7 @@
     color: var(--cf-ink);
   }
   
-  /* Encabezados con la segunda fuente */
+  /* Headings */
   #view-create h2 {
     font-family: "Alan Sans", "Inter", ui-sans-serif, system-ui;
     color: var(--cf-accent);
@@ -32,7 +32,7 @@
     letter-spacing: .2px;
   }
   
-  /* Tarjeta contenedora */
+  
   #view-create .card {
     background: var(--cf-card);
     border: 1px solid var(--cf-border);
@@ -43,7 +43,7 @@
   #view-create .pad { padding: 18px 18px; }
   @media (min-width: 768px) { #view-create .pad { padding: 22px; } }
   
-  /* Grid del formulario */
+  /*  From Grid*/
   #view-create .formGrid {
     gap: 14px;
   }
@@ -57,7 +57,7 @@
     }
   }
   
-  /* Labels y ayudas */
+  /* Labels and helpers */
   #view-create label {
     display: inline-block;
     margin-bottom: 6px;
@@ -169,8 +169,10 @@
     border: none;
   }
   #view-create .btn.primary:hover {
-    box-shadow: 0 10px 22px -10px rgba(124,58,237,.55), 0 3px 10px rgba(124,58,237,.25);
+    box-shadow: 0 10px 22px -10px  rgba(2,6,23,.15), 0 2px 6px rgba(2,6,23,.06);
+    background: #21527c;
   }
+  
   #view-create .btn.sm {
     padding: 8px 12px;
     font-size: .92rem;

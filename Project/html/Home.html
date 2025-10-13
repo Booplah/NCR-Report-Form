@@ -1,74 +1,85 @@
 <!-- CHANGE MADE BY ALEX'S peer tutor (Dave) -->
-
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CrossFire NCR – Home</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../../Project/css/Main-Page.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossFire NCR – Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="../../Project/css/Main-Page.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+  </head>
 
-</head>
+  <body class="bg-gray-50 text-gray-800 flex min-h-screen">
 
-<body class="bg-gray-50 text-gray-800 flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="flex h-screen flex-col justify-between border-e border-gray-100 bg-white">
+      <div class="px-4 py-6">
+        <span class="flex justify-center">
+          <img src="../Images/Logo.png" class="h-12 w-12 object-cover rounded-lg shadow-sm" alt="Logo">
+        </span>
 
-  <!-- Sidebar -->
-  <aside class="flex h-screen flex-col justify-between border-e border-gray-100 bg-white">
-    <div class="px-4 py-6">
-      <span class="flex justify-center">
-        <img src="../Images/Logo.png" class="h-12 w-12 object-cover rounded-lg shadow-sm" alt="Logo">
-      </span>
-
-      <ul class="space-y-1 mt-4">
-        <li><a href="../html/Home.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-700 bg-gray-100">Home</a>
-        </li>
-        <li><a href="../html/Sidebar/Dashboard.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Dashboard</a></li>
-        <li><a href="../html/Sidebar/CreateNCR.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Create NCR</a></li>
-        <li><a href="" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Admin
-            Page</a></li>
-        <li><a href="../html/Sidebar/help-about.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Help & About</a>
-      </ul>
-    </div>
-
-    <div class="border-t border-gray-100 flex justify-center">
-      <a href="" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Help</a>
-    </div>
-  </aside>
-
-  <!-- Topbar -->
-  <div class="flex-1 flex flex-col">
-    <header class="bg-white shadow-md">
-      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-purple-700">CrossFire NCR</h1>
-        <nav>
-          <ul class="flex gap-6 text-sm font-medium">
-            <div class="border-t border-gray-100">
-              <div>
-                <p class="text-xs"><strong class="block font-medium">Account</strong></p>
-              </div>
-            </div>
-          </ul>
-        </nav>
+        <ul class="space-y-1 mt-4">
+          <li><a href="../html/Home.html"
+              class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-700 bg-gray-100">Home</a>
+          </li>
+          <li><a href="../html/Sidebar/Dashboard.html"
+              class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Dashboard</a></li>
+          <li><a href="../html/Sidebar/CreateNCR.html"
+              class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Create NCR</a></li>
+          <li><a href="" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Admin
+              Page</a></li>
+          <li><a href="../html/Sidebar/help-about.html"
+              class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Help & About</a>
+        </ul>
       </div>
-    </header>
 
-    <!-- Main -->
-    <main class="flex-1 flex flex-col justify-center items-center text-center p-10">
-      <h2 class="text-3xl font-semibold mb-4">Welcome</h2>
-      <p class="text-lg text-gray-600">Use the navigation above to access each NCR section.</p>
-    </main>
-  </div>
+      <div class="border-t border-gray-100 flex justify-center">
+        <a href="" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Contact Admin</a>
+      </div>
+    </aside>
 
-  <script src="../Scripts/app.js"></script>
-</body>
+    <!-- Topbar -->
+    <div class="flex-1 flex flex-col">
+      <header class="bg-white shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+          <h1 class="text-2xl font-bold text-purple-700">CrossFire NCR</h1>
+          <nav>
+            <ul class="flex gap-6 text-sm font-medium">
+              <div class="border-t border-gray-100">
+                <div>
+                  <p class="text-xs"><strong class="block font-medium">Account</strong></p>
+                </div>
+              </div>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
+      <!-- Main -->
+      <main class="flex-1 flex flex-col justify-center items-center text-center p-10">
+        <h2 class="text-3xl font-semibold mb-4">Welcome</h2>
+        <p class="text-lg text-gray-600">Use the navigation above to access each NCR section.</p>
+
+      </main>
+
+      <footer class="bg-white justify-center">
+        <div
+          class="flex flex-col items-center justify-center gap-4 text-center"
+        >
+          <ul class="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
+            <li><a href="#" class="text-gray-500 transition hover:opacity-75"> Terms & Conditions </a></li>
+
+            <li><a href="#" class="text-gray-500 transition hover:opacity-75"> Privacy Policy </a></li>
+          </ul>
+          <h1 class="text-gray-500 transition hover:opacity-75 justify- text-xs"> ©CrossFire NCR. All Rights Reserved. </h1>
+        </div>
+
+      </footer>
+    </div>
+    <script src="../Scripts/app.js"></script>
+  </body>
 </html>

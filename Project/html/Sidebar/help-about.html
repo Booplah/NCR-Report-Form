@@ -1,83 +1,111 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
+  
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & About</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>CrossFire NCR – Help/About</title>
+    <link rel="stylesheet" href="../../css/Main-Page.css">
     <link rel="stylesheet" href="../../css/help-about.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
 </head>
-<body>
-   <body class="bg-gray-50 text-gray-800 flex min-h-screen">
 
-  <!-- Sidebar -->
-  <aside class="flex h-screen flex-col justify-between border-e border-gray-100 bg-white">
-    <div class="px-4 py-6">
-      <span class="flex justify-center">
-        <img src="../../Images/Logo.png" class="h-12 w-12 object-cover rounded-lg shadow-sm" alt="Logo">
-      </span>
+<body class="page-container">
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="sidebar-content">
+      <div class="sidebar-logo">
+        <a href="../Home.html" class="logo-image">
+          <img src="../../Images/Crossfire Logo - no bkgd.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
+        </a>
+      </div>
 
-      <ul class="space-y-1 mt-4">
-        <li><a href="../../html/Home.html"class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-700">Home</a></li>
-        <li><a href="../../html/Sidebar/Dashboard.html"class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Dashboard</a></li>
-        <li><a href="../../html/Sidebar/CreateNCR.html"class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Create NCR</a></li>
-        <li><a href="../../html/Sidebar/Admin.html" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Admin Page</a></li>
-        <li><a href="../../html/Sidebar/help-about.html"class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 bg-gray-100">Help & About</a>
-      </ul>
+      <hr>
+      <div class=siderbar-items>
+        <li class="siderbar-item">
+          <a href="../../html/Home.html" class="menu-link">Home</a>
+        </li>
+        <li class="siderbar-item">
+          <a href="../../html/Sidebar/Dashboard.html" class="menu-link">Dashboard</a>
+        </li>
+        <li class="siderbar-item">
+          <a href="../../html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a>
+        </li>
+        <li class="siderbar-item">
+          <a href="../../html/Sidebar/Admin.html" class="menu-link">Admin Page</a>
+        </li>
+        <li class="siderbar-item">
+          <details class="dropdown-menu">
+            <summary class="dropdown-toggle">
+              <span class="dropdown-label">Help & About</span>
+              <span class="dropdown-arrow">
+              </span>
+            </summary>
+            <ul class="dropdown-items">
+              <li>
+                <a href="../Sidebar/Help-About.html" class="dropdown-link active">About This Project</a>
+              </li>
+              <li>
+                <a href="../Sidebar/Help-Usage.html" class="dropdown-link">How To Use</a>
+              </li>
+              <li>
+                <a href="../Sidebar/Help-Contacts.html" class="dropdown-link">Need Help?</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <a href="../Sidebar/help.html" class="help-link">Support</a>
     </div>
   </aside>
 
-  <!-- Main -->
-  <div class="flex-1 flex flex-col">
-    <header class="bg-white shadow-md">
-      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-purple-700">CrossFire NCR - Help/About</h1>
-        <nav>
-          <ul class="flex gap-6 text-sm font-medium">
-                    <div class="border-t border-gray-100">
-            <div>
-              <p class="text-xs"><strong class="block font-medium">Account</strong></p>
+  <div class="page-content">
+    <!-- Header -->
+    <header class="main-header">
+      <div class="header-content">
+        <a href="#" class="header-title">
+          <h1 class="page-title">CrossFire - About</h1>
+        </a>
+        <nav class="header-navigation">
+          <ul class="header-links">
+            <div class="account-info">
+              <p class="account-name"><strong class="account-label">Account</strong></p>
             </div>
-        </div>
           </ul>
         </nav>
       </div>
     </header>
 
     <main class="flex-1 p-6">
-        <!-- Help/About page content -->
-        
-     <section class="about">
-    
-        <div class="about-fields">
-            <a href="about-project.html">
-            <h2>About This Project</h2>
-            </a>
-        </div>
+    <div class="content-wrap">
+        <article class="content-card">
+          <div class="meta">Help / About → About the Project</div>
+          <h2>About the Project</h2>
+          <p>
+            This web app streamlines CrossFire Niagara’s Non-Conformance Reporting (NCR) process.
+            Instead of manual Excel entries, users can create, view, and collaborate on NCRs with
+            attachments (images, links) and role-based views.
+          </p>
+          <p class="mt-3">
+            Goals: reduce time, improve consistency, and keep the whole team on the same page.
+          </p>
 
-        <div class="about-fields">
-            <a href="how-to-use.html">
-            <h2>How to Use</h2>
-            </a>
+          <div class="mt-6 flex gap-3">
+            <a href="./help-about.html" class="inline-flex items-center rounded-lg border px-3 py-2 text-sm hover:bg-gray-50">← Back to Help</a>
+            <a href="./how-to-use.html" class="inline-flex items-center rounded-lg border px-3 py-2 text-sm hover:bg-gray-50">How to Use →</a>
+          </div>
+        </article>
         </div>
-
-        <div class="about-fields">
-            <a href="help.html">
-            <h2>Need Help?</h2>
-            </a>
-        </div>
-        
-    </section>
   </main>
   <!-- Footer -->
   <footer>&copy; 2025 Crossfire NCR Project | TRAVA Tech</footer>
   </div>
-
-
-     
- <script src="../Scripts/app.js"></script>
 </body>
 </html>

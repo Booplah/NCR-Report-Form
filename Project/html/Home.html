@@ -1,60 +1,81 @@
-<!-- CHANGE MADE BY ALEX'S peer tutor (Dave) -->
-
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CrossFire NCR – Home</title>
+  <title>Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../../Project/css/Main-Page.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-
+  <link rel="stylesheet" href="../css/Main-Page.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
 </head>
 
-<body class="bg-gray-50 text-gray-800 flex min-h-screen">
+<body class="page-container">
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="sidebar-content">
+      <div class="sidebar-logo">
+        <a href="../Home.html" class="logo-image">
+          <img src="../Images/Crossfire Logo - no bkgd.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
+        </a>
+      </div>
 
-  <!-- Sidebar -->
-  <aside class="flex h-screen flex-col justify-between border-e border-gray-100 bg-white">
-    <div class="px-4 py-6">
-      <span class="flex justify-center">
-        <img src="../Images/Logo.png" class="h-12 w-12 object-cover rounded-lg shadow-sm" alt="Logo">
-      </span>
-
-      <ul class="space-y-1 mt-4">
-        <li><a href="../html/Home.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-700 bg-gray-100">Home</a>
+      <hr>
+      <div class=siderbar-items>
+        <li class="siderbar-item">
+          <a href="../html/Home.html" class="menu-link active">Home</a>
         </li>
-        <li><a href="../html/Sidebar/Dashboard.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Dashboard</a></li>
-        <li><a href="../html/Sidebar/CreateNCR.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Create NCR</a></li>
-        <li><a href="" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Admin
-            Page</a></li>
-        <li><a href="../html/Sidebar/help-about.html"
-            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Help & About</a>
-      </ul>
+        <li class="siderbar-item">
+          <a href="../html/Sidebar/Dashboard.html" class="menu-link">Dashboard</a>
+        </li>
+        <li class="siderbar-item">
+          <a href="../html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a>
+        </li>
+        <li class="siderbar-item">
+          <a href="../html/Sidebar/Admin.html" class="menu-link">Admin Page</a>
+        </li>
+        <li class="siderbar-item">
+          <details class="dropdown-menu">
+            <summary class="dropdown-toggle">
+              <span class="dropdown-label">Help & About</span>
+              <span class="dropdown-arrow">
+              </span>
+            </summary>
+            <ul class="dropdown-items">
+              <li>
+                <a href="../html/Sidebar/Help-About.html" class="dropdown-link">About This Project</a>
+              </li>
+              <li>
+                <a href="../html/Sidebar/help-Usage.html" class="dropdown-link">How To Use</a>
+              </li>
+              <li>
+                <a href="../html/Sidebar/Help-Contacts.html" class="dropdown-link">Need Help?</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </div>
     </div>
 
-    <div class="border-t border-gray-100 flex justify-center">
-      <a href="" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Help</a>
+    <div class="sidebar-footer">
+      <a href="../Sidebar/help.html" class="help-link">Support</a>
     </div>
   </aside>
 
-  <!-- Topbar -->
-  <div class="flex-1 flex flex-col">
-    <header class="bg-white shadow-md">
-      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-purple-700">CrossFire NCR</h1>
-        <nav>
-          <ul class="flex gap-6 text-sm font-medium">
-            <div class="border-t border-gray-100">
-              <div>
-                <p class="text-xs"><strong class="block font-medium">Account</strong></p>
-              </div>
+  <div class="page-content">
+    <!-- Page Header -->
+    <header class="main-header">
+      <div class="header-content">
+        <a href="#" class="header-title">
+          <h1 class="page-title">Home</h1>
+        </a>
+        <nav class="header-navigation">
+          <ul class="header-links">
+            <div class="account-info">
+              <p class="account-name"><strong class="account-label">Account</strong></p>
             </div>
           </ul>
         </nav>
@@ -63,8 +84,35 @@
 
     <!-- Main -->
     <main class="flex-1 flex flex-col justify-center items-center text-center p-10">
-      <h2 class="text-3xl font-semibold mb-4">Welcome</h2>
-      <p class="text-lg text-gray-600">Use the navigation above to access each NCR section.</p>
+      <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
+        Welcome to
+
+        <strong style="color: #2d6ea7;"> CrossFire NCR </strong>
+
+      </h1>
+
+      <p class="mt-4 text-base text-pretty text-gray-700 sm:text-lg/relaxed">
+        -- add detailed text here
+      </p>
+
+      <div class="mt-4 flex justify-center gap-4 sm:mt-6">
+        <a
+          class="inline-block rounded border border-gray-200 bg-[#2D6EA7] px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-[#275E8F]"
+          href="#"
+        >
+          Create NCR
+        </a>
+
+        <a
+          class="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900"
+          href="#"
+        >
+          View Dashboard
+        </a>
+      </div>
+    </div>
+
+
     </main>
   </div>
 

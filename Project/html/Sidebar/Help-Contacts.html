@@ -1,11 +1,12 @@
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../../css/Main-Page.css">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Support</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css/Main-Page.css">
+    <link rel="stylesheet" href="../../css/help-about.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -35,7 +36,7 @@
           <a href="../../html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a>
         </li>
         <li class="siderbar-item">
-          <a href="../../html/Sidebar/Admin.html" class="menu-link active">Admin Page</a>
+          <a href="../../html/Sidebar/Admin.html" class="menu-link">Admin Page</a>
         </li>
         <li class="siderbar-item">
           <details class="dropdown-menu">
@@ -49,10 +50,10 @@
                 <a href="../Sidebar/Help-About.html" class="dropdown-link">About This Project</a>
               </li>
               <li>
-                <a href="../Sidebar/Help-Usage.html" class="dropdown-link">How To Use</a>
+                <a href="../Sidebar/help-Usage.html" class="dropdown-link">How To Use</a>
               </li>
               <li>
-                <a href="../Sidebar/Help-Contacts.html" class="dropdown-link">Need Help?</a>
+                <a href="../Sidebar/Help-Contacts.html" class="dropdown-link active">Contact & Support</a>
               </li>
             </ul>
           </details>
@@ -65,13 +66,12 @@
     </div>
   </aside>
 
-  <!-- Main Content -->
   <div class="page-content">
-    <!-- Page Header -->
+    <!-- Header -->
     <header class="main-header">
       <div class="header-content">
         <a href="#" class="header-title">
-          <h1 class="page-title">CrossFire - Admin</h1>
+          <h1 class="page-title">Contact & Support</h1>
         </a>
         <nav class="header-navigation">
           <ul class="header-links">
@@ -83,14 +83,29 @@
       </div>
     </header>
 
-  <!-- Main -->
-    <main class="flex-1 flex flex-col justify-center items-center text-center p-10">
-      <h2><STRONG class="text-[40px]">Admin Dashboard</STRONG></h2>
-      <p>Admininstration will be implemented in prototype 2...</p>
+    <main class="flex-1 p-6">
+    <div class="content-wrap">
+        <article class="content-card">
+          <div class="meta">Help / About → Need Help?</div>
+          <h2>Support</h2>
+          <p>If you run into trouble, try these first:</p>
+          <ul>
+            <li>- Refresh the page and re-enter any missing required fields.</li>
+            <li>- Check file paths for images/attachments.</li>
+            <li>- Use the role tabs to confirm you are in the correct view.</li>
+          </ul>
+
+          <h2 class="mt-6">Contact</h2>
+          <p>Email: <a class="Email" href="mailto:vtruong1@ncstudents.niagaracollege.ca">trava@gmail.com</a></p>
+
+          <div class="mt-6">
+            <a href="./help-about.html" class="inline-flex items-center rounded-lg border px-3 py-2 text-sm hover:bg-gray-50">Back</a>
+          </div>
+        </article>
+      </div>
     </main>
+    <!-- Footer -->
+  <footer>&copy; 2025 Crossfire NCR Project | TRAVA Tech</footer>
   </div>
-
-  <script src="../Scripts/app.js"></script>
 </body>
-
 </html>

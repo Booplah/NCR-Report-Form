@@ -1,0 +1,121 @@
+body {
+        font-family: 'Inter', sans-serif;
+        background-color: #efefef;
+        margin: 0;      
+    }
+
+.view-ncr-field {
+        background: #f9f9f9;
+        max-width: 90%;
+        margin: 10px auto 30px auto;
+        border-radius: 12px;
+        box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.05);
+        padding: 30px 60px;}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 5px;
+    }
+
+.ncr-sum{
+        text-align: center;
+        color: #666;
+        margin-bottom: 25px;
+        font-size: 10px;
+    }
+
+.row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 18px;
+    }
+
+.field-box{
+    flex:1;
+    background: #fff;
+    border: 1px solid #cac2cf;
+    border-radius: 6px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    }
+
+.field-label {
+    font-size: 13px;
+    color: #4e4c50;
+    border-bottom: 1.6px solid #a25dec;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    }
+
+.field-value {
+    font-size: 12px;
+    color: #222;
+    min-height: 20px;
+    }
+.ncr-number{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.inline-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+}
+.inline-field .field-label {
+    border:none;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #7f31d2;
+;
+}
+.inline-field .field-value {
+    color: #222;
+}
+.small-description{
+    font-size: 11px;
+    color: #555;
+    padding: 8px;
+    border: 1px solid #951fef;
+    border-radius: 6px;
+}
+.section-header {
+    background-color: #7f2fd5;
+    color: white;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    }
+
+.btn-container {
+    text-align: right;
+    margin-top: 25px;
+    }
+
+button {
+        background-color: #78c093;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-left: 10px;
+}
+
+button:hover { background-color: #5fa580; }

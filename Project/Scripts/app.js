@@ -44,7 +44,7 @@ function validateForm() {
     const error = document.getElementById('err-' + id);
 
     if (!input.value.trim()) {
-      error.textContent = 'Este campo es obligatorio.';
+      error.textContent = 'This field is required.';
       valid = false;
     } else {
       error.textContent = '';

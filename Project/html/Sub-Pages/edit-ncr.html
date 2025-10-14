@@ -31,14 +31,16 @@
                     <a href="../../html/Home.html" class="menu-link">Home</a>
                 </li>
                 <li class="siderbar-item">
-                    <a href="../../html/Sidebar/dashboard.html" class="menu-link">Dashboard</a>
+                    <a href="../../html/Sidebar/Dashboard.html" class="menu-link">Dashboard</a>
                 </li>
                 <li class="siderbar-item">
                     <a href="../../html/Sidebar/create-ncr.html" class="menu-link active">Create NCR</a>
                 </li>
-                
                 <li class="siderbar-item">
-                    <a href="../../html/Sidebar/admin.html" class="menu-link">Admin Page</a>
+                    <a href="../../html/Sidebar/edit-ncr.html" class="menu-link active">Edit NCR</a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="../../html/Sidebar/Admin.html" class="menu-link">Admin Page</a>
                 </li>
                 <li class="siderbar-item">
                     <details class="dropdown-menu">
@@ -199,20 +201,23 @@
                                     </div>
                                 </div>
 
-                                <div>
-                                    <label id="legend-itemMarked" style="font-weight:600">Item marked Nonconforming
-                                        <span class="required" aria-hidden="true">*</span>
-                                    </label>
+                                <fieldset class="card pad" style="border-color:var(--border)">
+                                    <legend id="legend-itemMarked" style="font-weight:600">Item marked Nonconforming
+                                        <span class="required" aria-hidden="true">*</span></legend>
                                     <div id="itemMarkedNonconformingGroup" role="radiogroup"
-                                        aria-labelledby="legend-itemMarked" class="input">
+                                        aria-labelledby="legend-itemMarked"
+                                        style="display:flex;gap:16px;margin-top:6px">
                                         <label for="mark-yes"><input id="mark-yes" type="radio"
                                                 name="itemMarkedNonconforming" value="Yes" /> Yes</label>
                                         <label for="mark-no"><input id="mark-no" type="radio"
                                                 name="itemMarkedNonconforming" value="No" />
                                             No</label>
                                     </div>
-                                    <div id="err-itemMarkedNonconforming" class="error" role="alert" aria-live="polite"></div>
-                                </div>
+                                    <div id="err-itemMarkedNonconforming" class="error" role="alert" aria-live="polite">
+                                    </div>
+
+                                </fieldset>
+
                                 <div class="two-col">
                                     <div>
                                         <label for="reportedBy">Quality Representative's Name <span class="required"

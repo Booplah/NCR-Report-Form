@@ -100,7 +100,7 @@ document.getElementById('ncrForm').addEventListener('submit', function (event) {
   ncrList.push(newNcr);
   localStorage.setItem('ncrList', JSON.stringify(ncrList));
 
-  alert('NCR guardado correctamente ✅');
+  alert('NCR saved succesfully ✅');
   this.reset();
 
   // Generate a new ncr number

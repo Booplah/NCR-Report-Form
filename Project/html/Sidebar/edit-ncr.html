@@ -95,7 +95,7 @@
                     <div class="card pad">
                         <div style="display:flex;justify-content:space-between;align-items:center">
                             <h2>Quality Representative</h2>
-                            <button id="btnGenerate" class="btn sm" type="button">Generate NCR #</button>
+                           
                         </div>
 
                         <form id="ncrForm" style="margin-top:12px" novalidate>
@@ -130,24 +130,21 @@
                                 </div>
 
                                 <div>
-                                    <label for="supplierName">Supplier Name <span class="opt">(required if
-                                            Supplier/Rec-Insp)</span></label>
+                                    <label for="supplierName">Supplier Name<span class="required">*</span></label>
                                     <input id="supplierName" name="supplierName" class="input" type="text"
                                         placeholder="ex: MetroFab Inc." aria-describedby="err-supplierName" />
                                     <div id="err-supplierName" class="error" role="alert" aria-live="polite"></div>
                                 </div>
 
                                 <div>
-                                    <label for="poOrProdNo">PO or Prod. No. <span class="opt">(one of these or Sales
-                                            Order)</span></label>
+                                    <label for="poOrProdNo">PO or Prod. No. (one of these or
+                                        PO/Prod) <span class="required">*</span></label>
                                     <input id="poOrProdNo" name="poOrProdNo" class="input" type="text"
                                         placeholder="ex: PO-45127 or PRD-20491" aria-describedby="err-poOrProdNo" />
                                     <div id="err-poOrProdNo" class="error" role="alert" aria-live="polite"></div>
                                 </div>
-
                                 <div>
-                                    <label for="salesOrderNo">Sales Order No. <span class="opt">(one of these or
-                                            PO/Prod)</span></label>
+                                    <label for="salesOrderNo">Sales Order No. <span class="required">*</span></label>
                                     <input id="salesOrderNo" name="salesOrderNo" class="input" type="text"
                                         placeholder="ex: SO-77419" aria-describedby="err-salesOrderNo" />
                                     <div id="err-salesOrderNo" class="error" role="alert" aria-live="polite"></div>
@@ -181,17 +178,17 @@
                                         <div id="err-qtyDefective" class="error" role="alert" aria-live="polite"></div>
                                     </div>
                                 </div>
-
-                                <div class="two-col">
-                                    <div>
-                                        <label for="defectDescription">Description of Defect <span class="required"
-                                                aria-hidden="true">*</span></label>
-                                        <textarea id="defectDescription" name="defectDescription" class="input" rows="3"
-                                            placeholder="Detail defect, spec delta, location, lot/PO, etc."
-                                            aria-describedby="err-defectDescription"></textarea>
-                                        <div id="err-defectDescription" class="error" role="alert" aria-live="polite">
-                                        </div>
+                                <div>
+                                    <label for="defectDescription">Description of Defect <span class="required"
+                                            aria-hidden="true">*</span></label>
+                                    <textarea id="defectDescription" name="defectDescription" class="input" rows="3"
+                                        placeholder="Detail defect, spec delta, location, lot/PO, etc."
+                                        aria-describedby="err-defectDescription"></textarea>
+                                    <div id="err-defectDescription" class="error" role="alert" aria-live="polite">
                                     </div>
+                                </div>
+                                <div class="two-col">
+
                                     <div>
                                         <form action="/action_page.php">
                                             <label for="fileNCR">You can attach any additional drawing, skecthes,
@@ -199,22 +196,26 @@
                                             <input type="file" id="fileNCR" type="file" multiple class="Input">
                                         </form>
                                     </div>
+                                    <div >
+                                        <label id="legend-itemMarked" style="font-weight:600">Item marked Nonconforming
+                                            <span class="required" aria-hidden="true">*</span>
+                                        </label>
+                                        <br>
+                                        <br>
+                                        <div id="itemMarkedNonconformingGroup" role="radiogroup"
+                                            aria-labelledby="legend-itemMarked" class="input">
+                                            <label for="mark-yes"><input id="mark-yes" type="radio"
+                                                    name="itemMarkedNonconforming" value="Yes" /> Yes</label>
+                                            <label for="mark-no"><input id="mark-no" type="radio"
+                                                    name="itemMarkedNonconforming" value="No" />
+                                                No</label>
+                                        </div>
+                                        <div id="err-itemMarkedNonconforming" class="error" role="alert"
+                                            aria-live="polite"></div>
+                                    </div>
                                 </div>
 
-                                <div>
-                                    <label id="legend-itemMarked" style="font-weight:600">Item marked Nonconforming
-                                        <span class="required" aria-hidden="true">*</span>
-                                    </label>
-                                    <div id="itemMarkedNonconformingGroup" role="radiogroup"
-                                        aria-labelledby="legend-itemMarked" class="input">
-                                        <label for="mark-yes"><input id="mark-yes" type="radio"
-                                                name="itemMarkedNonconforming" value="Yes" /> Yes</label>
-                                        <label for="mark-no"><input id="mark-no" type="radio"
-                                                name="itemMarkedNonconforming" value="No" />
-                                            No</label>
-                                    </div>
-                                    <div id="err-itemMarkedNonconforming" class="error" role="alert" aria-live="polite"></div>
-                                </div>
+
                                 <div class="two-col">
                                     <div>
                                         <label for="reportedBy">Quality Representative's Name <span class="required"
@@ -235,8 +236,8 @@
                                 </div>
 
                                 <div class="actions">
-                                    <button type="submit" class="btn primary">Save changes</button>
-                                    <button type="button" id="btnCancel" class="btn primary">Cancel</button>
+                                    <button type="submit" class="btn">Cancel</button>
+                                    <button type="button" id="btnCancel" class="btn primary">Save Changes</button>
 
 
                                 </div>

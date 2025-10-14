@@ -1,9 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Home</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../css/Main-Page.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,77 +14,74 @@
 </head>
 
 <body class="page-container">
-  <!-- Sidebar Navigation -->
-  <aside class="sidebar">
-    <div class="sidebar-content">
-      <div class="sidebar-logo">
-        <a href="../home.html" class="logo-image">
-          <img src="../Images/Crossfire Logo - no bkgd.png" alt="CrossFire NCR System Logo"
-            style="width: auto; height: 80%;">
-        </a>
-      </div>
-
-      <hr>
-      <div class=siderbar-items>
-        <li class="siderbar-item">
-          <a href="../html/home.html" class="menu-link active">Home</a>
-        </li>
-        <li class="siderbar-item">
-          <a href="../html/Sidebar/dashboard.html" class="menu-link">Dashboard</a>
-        </li>
-        <li class="siderbar-item">
-          <a href="../html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a>
-        </li>
-        <li class="siderbar-item">
-          <a href="../../html/Sidebar/edit-ncr.html" class="menu-link active">Edit NCR</a>
-        </li>
-        <li class="siderbar-item">
-          <a href="../html/Sidebar/admin.html" class="menu-link">Admin Page</a>
-        </li>
-        <li class="siderbar-item">
-          <details class="dropdown-menu">
-            <summary class="dropdown-toggle">
-              <span class="dropdown-label">Help & About</span>
-              <span class="dropdown-arrow">
-              </span>
-            </summary>
-            <ul class="dropdown-items">
-              <li>
-                <a href="../html/Sidebar/help-about.html" class="dropdown-link">About This Project</a>
-              </li>
-              <li>
-                <a href="../html/Sidebar/help-usage.html" class="dropdown-link">How To Use</a>
-              </li>
-              <li>
-                <a href="../html/Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a>
-              </li>
-            </ul>
-          </details>
-        </li>
-      </div>
+   <!-- Sidebar  -->
+<aside class="sidebar">
+  <div class="sidebar-content">
+    <div class="sidebar-logo">
+      <a href="../home.html" class="logo-image">
+        <img src="../Images/crossfire-logo.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
+      </a>
     </div>
-
-    <div class="sidebar-footer">
-      <a href="./Sidebar/help-contacts.html" class="help-link">Support</a>
-    </div>
-  </aside>
-
-  <div class="page-content">
-    <!-- Page Header -->
-    <header class="main-header">
-      <div class="header-content">
-        <a href="#" class="header-title">
-          <h1 class="page-title">Home</h1>
-        </a>
-        <nav class="header-navigation">
-          <ul class="header-links">
-            <div class="account-info">
-              <p class="account-name"><strong class="account-label">Account</strong></p>
-            </div>
+    <hr>
+    <ul class=siderbar-items>
+      <li class="siderbar-item">
+        <a href="../html/home.html" class="menu-link active">Home</a>
+      </li>
+      <li class="siderbar-item">
+        <a href="../html/Sidebar/dashboard.html" class="menu-link">Dashboard</a>
+      </li>
+      <li class="siderbar-item">
+        <a href="../html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a>
+      </li>
+      <li class="siderbar-item">
+        <a href="../html/Sidebar/edit-ncr.html" class="menu-link">Edit NCR</a>
+      </li>
+      <li class="siderbar-item">
+        <a href="../html/Sidebar/admin.html" class="menu-link">Admin Page</a>
+      </li>
+      <li class="siderbar-item">
+        <details class="dropdown-menu">
+          <summary class="dropdown-toggle">
+            <span class="dropdown-label">Help & About</span>
+            <span class="dropdown-arrow"></span>
+          </summary>
+          <ul class="dropdown-items">
+            <li>
+              <a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a>
+            </li>
+            <li>
+              <a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a>
+            </li>
+            <li>
+              <a href="./Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a>
+            </li>
           </ul>
-        </nav>
-      </div>
-    </header>
+        </details>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sidebar-footer">
+    <a href="./Sidebar/help-contacts.html" class="help-link">Support</a>
+  </div>
+</aside>
+
+<!-- Main Page/Header  -->
+<div class="page-content">
+  <header class="main-header">
+    <div class="header-content">
+      <a href="#" class="header-title">
+        <h1 class="page-title">Dashboard</h1>
+      </a>
+      <nav class="header-navigation">
+        <ul class="header-links">
+          <li class="account-info">
+            <p class="account-name"><strong class="account-label">Account</strong></p>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
     <!-- Main -->
     <main class="flex-1 flex flex-col justify-center items-center text-center p-10">

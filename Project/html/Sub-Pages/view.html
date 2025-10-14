@@ -54,7 +54,7 @@
                                 <a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a>
                             </li>
                             <li>
-                                <a href="../Sidebar/help-contacts.html" class="dropdown-link">Need Help?</a>
+                                <a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a>
                             </li>
                         </ul>
                     </details>
@@ -84,14 +84,16 @@
             </div>
         </header>
 
-        <main class="flex-1 p-6">
+        <!-- Main Content -->
+        <main class="main-content">
             <div class="max-w-4xl mx-auto" style="margin-top: -20px;">
                 <div class="btn-container">
                     <button onclick="window.print()">Download PDF</button>
                     <button onclick="window.location.href='edit.html'">Edit NCR</button>
                     <button onclick="window.location.href='../../../dashboard.html'">Back</button>
                 </div>
-                <!-- Main content -->
+                
+                <!-- NCR Form Content -->
                 <div class="view-ncr-field">
                     <h1>Non-Conformance Report</h1>
                     <div class="ncr-sum">
@@ -136,7 +138,6 @@
                         </div>
                     </div>
 
-
                     <!-- Row 2 -->
                     <div class="row" style="flex: 2;">
                         <div class="field-box" style="flex:5;">
@@ -153,7 +154,7 @@
                         </div>
                     </div>
 
-                    <!-- row 3 -->
+                    <!-- Row 3 -->
                     <div class="row">
                         <div class="field-box" style="flex:1 1 100%; min-height: 160px;">
                             <div class="field-label">Description of Defect <small> (in as much detail as possible, use
@@ -161,7 +162,8 @@
                             <div class="field-value">Mobile phone clip is broken, and USB cable is frayed.</div>
                         </div>
                     </div>
-                    <!-- row 4 -->
+                    
+                    <!-- Row 4 -->
                     <div class="row">
                         <div class="field-box" style="flex:3;">
                             <div class="field-label">Item marked Nonconforming</div>
@@ -172,7 +174,6 @@
                                 <label>
                                     <input type="checkbox" id="chkNo" name="chkNo" disabled> No
                                 </label>
-
                             </div>
                         </div>
 
@@ -180,9 +181,9 @@
                             be forwarded to HBC Engineering and
                             Operations Manager complete with any relevant documents attached
                             (pictures, actual measurements, material certs, etc.)</div>
-
                     </div>
-                    <!-- row 5 -->
+                    
+                    <!-- Row 5 -->
                     <div class="row">
                         <div class="inline-field" style="width: 50%;">
                             <div class="field-label">Quality Representative's Name: </div>
@@ -222,7 +223,7 @@
                                 </label>
                             </div>
                         </div>
-                        <!-- row 1, column 2 of engineering section -->
+                        <!-- Row 1, column 2 of engineering section -->
                         <div class="field-box">
                             <div class="field-label" style="border-color:#58a899;">
                                 Does customer require notification of NCR<br>
@@ -240,7 +241,7 @@
                         </div>
                     </div>
 
-                    <!-- row 2 of engineering section -->
+                    <!-- Row 2 of engineering section -->
                     <div class="row">
                         <div class="field-box" style="min-height: 160px;">
                             <div class="field-label" style="border-color: #58a899;">
@@ -257,7 +258,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- row 3 of engineering section -->
+                    
+                    <!-- Row 3 of engineering section -->
                     <div class="row">
                         <div class="field-box" style="width: 50%;">
                             <div class="field-label" style="border-color: #58a899;">
@@ -340,8 +342,6 @@
                                         <input type="checkbox" id="chk-no" name="chk-no" checked disabled> No
                                     </label>
                                     <br>
-
-
                                 </div>
                             </div>
                             <div class="inline-field">
@@ -357,7 +357,6 @@
                                         <input type="checkbox" id="chk-no" name="chk-no" checked disabled> No
                                     </label>
                                     <br>
-
                                 </div>
                             </div>
                         </div>
@@ -373,11 +372,11 @@
                             <div class="field-value">2025/10/11</div>
                         </div>
                     </div>
-                    <!-- End of Form -->
+                    
+                    <!-- Final Review Section -->
                     <div class="section-header" style="background-color:#292980;">Final Review</div>
 
                     <div class="row">
-
                         <div class="inline-field" style="flex: 1;">
                             <div class="field-label" style="color: #4e4c50;"> Re-Inspected Acceptable?
                                 <br><small style="color: black; font-weight: lighter;">(If "No", please record a new
@@ -391,7 +390,6 @@
                                 <label>
                                     <input type="checkbox" id="chk-no" name="chk-no" disabled> No
                                 </label>
-
                             </div>
                         </div>
                         <div class="inline-field" style="flex: 1;">
@@ -402,8 +400,8 @@
                             <div class="field-label">Date: </div>
                             <div class="field-value">2025/10/15</div>
                         </div>
-
                     </div>
+                    
                     <div class="row">
                         <div class="inline-field" style="flex: 1;">
                             <div class="field-label" style="color: #4e4c50;">NCR Closed:</div>
@@ -424,24 +422,22 @@
                             <div class="field-value">2025/10/16</div>
                         </div>
                     </div>
-
                 </div>
-
-
             </div>
-    </div>
-    </main>
+        </main>
+
         <footer class="left-64 right-0 bg-white border-t border-gray-200 py-3 z-10">
-    <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
-      <ul class="flex flex-wrap justify-center gap-4 text-xs">
-        <li><a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a></li>
-        <li><a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a></li>
-      </ul>
-      <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
+            <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
+                <ul class="flex flex-wrap justify-center gap-4 text-xs">
+                    <li><a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a></li>
+                    <li><a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a></li>
+                </ul>
+                <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
+            </div>
+        </footer>
     </div>
-  </footer>
+
     <script src="../Scripts/app.js"></script>
-    </div>
 </body>
 
 </html>

@@ -2,49 +2,58 @@
     text-align: right;
     margin-top: 25px;
     margin-right: 3em;
-    }
+}
 
-button {
-        background-color: #2D6EA7 ;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        padding: 8px 16px;
-        font-size: 14px;
-        cursor: pointer;
-        margin-left: 10px;}
+.btn-action {
+    background-color: #2D6EA7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
 
-button:hover { background-color: #275E8F; }
+.btn-action:hover {
+    background-color: #275E8F;
+    color: white;
+    text-decoration: none;
+}
+
 .view-ncr-field {
-        background: #fafafa;
-        max-width: 90%;
-        margin: 10px auto 30px auto;
-        border-radius: 12px;
-        box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.05);
-        padding: 30px 60px;}
-
+    background: #fafafa;
+    max-width: 90%;
+    margin: 10px auto 30px auto;
+    border-radius: 12px;
+    box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.05);
+    padding: 30px 60px;
+}
 
 h1 {
     text-align: center;
     color: #333;
     margin-bottom: 5px;
-    }
+}
 
-.ncr-sum{
-        text-align: center;
-        color: #666;
-        margin-bottom: 25px;
-        font-size: 10px;
-    }
+.ncr-sum {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 10px;
+}
 
 .row {
     display: flex;
     gap: 6px;
     margin-bottom: 18px;
-    }
+}
 
-.field-box{
-    flex:1;
+.field-box {
+    flex: 1;
     background: #fff;
     border: 1px solid #cac2cf;
     border-radius: 6px;
@@ -52,7 +61,7 @@ h1 {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    }
+}
 
 .field-label {
     font-size: 13px;
@@ -61,19 +70,21 @@ h1 {
     padding-bottom: 2px;
     margin-bottom: 10px;
     font-weight: bold;
-    }
+}
 
 .field-value {
     font-size: 12px;
     color: #222;
     min-height: 20px;
-    }
-.ncr-number{
-    flex:1;
+}
+
+.ncr-number {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
+
 .inline-field {
     display: flex;
     justify-content: space-between;
@@ -84,24 +95,27 @@ h1 {
     border-radius: 6px;
     background-color: #fff;
 }
+
 .inline-field .field-label {
-    border:none;
+    border: none;
     margin: 0;
     padding: 0;
     font-weight: bold;
     color: #292980;
-;
 }
+
 .inline-field .field-value {
     color: #222;
 }
-.small-description{
+
+.small-description {
     font-size: 11px;
     color: #555;
     padding: 8px;
     border: 1px solid #292980;
     border-radius: 6px;
 }
+
 .section-header {
     background-color: #292980;
     color: white;
@@ -111,5 +125,4 @@ h1 {
     font-weight: bold;
     margin-top: 25px;
     margin-bottom: 10px;
-    }
-
+}

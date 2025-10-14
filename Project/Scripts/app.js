@@ -4,7 +4,7 @@
             // Create NCR //
 // ======== Function to obtain ncr
 /*function getExistingNcrCount() {
-  const existing = JSON.parse(localStorage.getItem('ncrList') || '[]');
+  const existing = JSON.parse(localStorage.getItem('ncrList') || '[]');        //// It's not implemented yet
   return existing.length;
 }*/
 
@@ -36,6 +36,7 @@ function validateForm() {
     'qtyReceived',
     'qtyDefective',
     'poOrProdNo',
+    'salesOrderNo',
     'defectDescription',
     'reportedBy',
     
@@ -53,7 +54,7 @@ function validateForm() {
     }
   });
 
-  // Validar radio buttons (Item marcado como No conforme)
+  // validation for radio buttons
   const radios = document.getElementsByName('itemMarkedNonconforming');
   const errorRadio = document.getElementById('err-itemMarkedNonconforming');
   const checked = Array.from(radios).some(radio => radio.checked);
@@ -68,9 +69,9 @@ function validateForm() {
   return valid;
 }
 
-// ======== Save NCR (when is checked by the validation process)
+// ========  Save NCR when the validation is correct 
 document.getElementById('ncrForm').addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevenir envío por defecto
+  event.preventDefault(); // Prevent the event 
 
   if (!validateForm()) {
     alert('Please complete all the required fields');
@@ -106,7 +107,7 @@ document.getElementById('ncrForm').addEventListener('submit', function (event) {
   document.getElementById('ncrNumber').value = generateNcrNumber();
 });
 
-// ======== Cancel Button: limpia todo y genera nuevo NCR Number
+// ======== Cancel Button: Reset all the from and make a new ncr number
 document.getElementById('btnCancel').addEventListener('click', () => {
   document.getElementById('ncrForm').reset();
   document.getElementById('ncrNumber').value = generateNcrNumber();

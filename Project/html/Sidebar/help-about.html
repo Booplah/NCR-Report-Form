@@ -19,7 +19,7 @@
   <aside class="sidebar">
     <div class="sidebar-content">
       <div class="sidebar-logo">
-        <a href="../Home.html" class="logo-image">
+        <a href="../home.html" class="logo-image">
           <img src="../../Images/Crossfire Logo - no bkgd.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
         </a>
       </div>
@@ -27,16 +27,16 @@
       <hr>
       <div class=siderbar-items>
         <li class="siderbar-item">
-          <a href="../../html/Home.html" class="menu-link">Home</a>
+          <a href="../../html/home.html" class="menu-link">Home</a>
         </li>
         <li class="siderbar-item">
-          <a href="../../html/Sidebar/Dashboard.html" class="menu-link">Dashboard</a>
+          <a href="../../html/Sidebar/dashboard.html" class="menu-link">Dashboard</a>
         </li>
         <li class="siderbar-item">
           <a href="../../html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a>
         </li>
         <li class="siderbar-item">
-          <a href="../../html/Sidebar/Admin.html" class="menu-link">Admin Page</a>
+          <a href="../../html/Sidebar/admin.html" class="menu-link">Admin Page</a>
         </li>
         <li class="siderbar-item">
           <details class="dropdown-menu">
@@ -47,13 +47,13 @@
             </summary>
             <ul class="dropdown-items">
               <li>
-                <a href="../Sidebar/Help-About.html" class="dropdown-link active">About This Project</a>
+                <a href="../Sidebar/help-about.html" class="dropdown-link active">About This Project</a>
               </li>
               <li>
-                <a href="../Sidebar/Help-Usage.html" class="dropdown-link">How To Use</a>
+                <a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a>
               </li>
               <li>
-                <a href="../Sidebar/Help-Contacts.html" class="dropdown-link">Need Help?</a>
+                <a href="../Sidebar/help-contacts.html" class="dropdown-link">Need Help?</a>
               </li>
             </ul>
           </details>
@@ -62,7 +62,7 @@
     </div>
 
     <div class="sidebar-footer">
-      <a href="../Sidebar/help.html" class="help-link">Support</a>
+      <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
     </div>
   </aside>
 
@@ -98,14 +98,21 @@
           </p>
 
           <div class="mt-6 flex gap-3">
-            <a href="./help-about.html" class="inline-flex items-center rounded-lg border px-3 py-2 text-sm hover:bg-gray-50">← Back to Help</a>
-            <a href="./how-to-use.html" class="inline-flex items-center rounded-lg border px-3 py-2 text-sm hover:bg-gray-50">How to Use →</a>
+            <a href="../Sidebar/help-usage.html" class="inline-flex items-center rounded-lg border px-3 py-2 text-sm hover:bg-gray-50">How to Use →</a>
           </div>
         </article>
         </div>
   </main>
   <!-- Footer -->
-  <footer>&copy; 2025 Crossfire NCR Project | TRAVA Tech</footer>
+      <footer class="left-64 right-0 bg-white border-t border-gray-200 py-3 z-10">
+    <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
+      <ul class="flex flex-wrap justify-center gap-4 text-xs">
+        <li><a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a></li>
+        <li><a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a></li>
+      </ul>
+      <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
+    </div>
+  </footer>
   </div>
 </body>
 </html>

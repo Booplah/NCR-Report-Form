@@ -20,7 +20,8 @@
     <div class="sidebar-content">
       <div class="sidebar-logo">
         <a href="../home.html" class="logo-image">
-          <img src="../../Images/Crossfire Logo - no bkgd.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
+          <img src="../../Images/Crossfire Logo - no bkgd.png" alt="CrossFire NCR System Logo"
+            style="width: auto; height: 80%;">
         </a>
       </div>
 
@@ -83,7 +84,7 @@
       </div>
     </header>
 
-      <!-- Main Content -->
+    <!-- Main Content -->
     <main class="flex-1 p-6">
       <div class="max-w-4xl mx-auto">
         <!-- CREATE -->
@@ -124,22 +125,21 @@
                 </div>
 
                 <div>
-                  <label for="supplierName">Supplier Name <span class="opt">(required if
-                      Supplier/Rec-Insp)</span></label>
+                  <label for="supplierName">Supplier Name <span class="required">*</span></label>
                   <input id="supplierName" name="supplierName" class="input" type="text" placeholder="ex: MetroFab Inc."
                     aria-describedby="err-supplierName" />
                   <div id="err-supplierName" class="error" role="alert" aria-live="polite"></div>
                 </div>
 
                 <div>
-                  <label for="poOrProdNo">PO or Prod. No. <span class="opt">(one of these or Sales Order)</span></label>
+                  <label for="poOrProdNo">PO or Prod. No. <span class="required">*</span></label>
                   <input id="poOrProdNo" name="poOrProdNo" class="input" type="text"
                     placeholder="ex: PO-45127 or PRD-20491" aria-describedby="err-poOrProdNo" />
                   <div id="err-poOrProdNo" class="error" role="alert" aria-live="polite"></div>
                 </div>
 
                 <div>
-                  <label for="salesOrderNo">Sales Order No. <span class="opt">(one of these or PO/Prod)</span></label>
+                  <label for="salesOrderNo">Sales Order No. <span class="required">*</span></label>
                   <input id="salesOrderNo" name="salesOrderNo" class="input" type="text" placeholder="ex: SO-77419"
                     aria-describedby="err-salesOrderNo" />
                   <div id="err-salesOrderNo" class="error" role="alert" aria-live="polite"></div>
@@ -169,39 +169,37 @@
                     <div id="err-qtyDefective" class="error" role="alert" aria-live="polite"></div>
                   </div>
                 </div>
-
-                <div class="two-col">
-                  <div>
-                    <label for="defectDescription">Description of Defect <span class="required"
+                
+                <div>
+                  <label for="defectDescription">Description of Defect <span class="required"
                       aria-hidden="true">*</span></label>
-                    <textarea id="defectDescription" name="defectDescription" class="input" rows="3"
+                  <textarea id="defectDescription" name="defectDescription" class="input" rows="3"
                     placeholder="Detail defect, spec delta, location, lot/PO, etc."
                     aria-describedby="err-defectDescription"></textarea>
-                    <div id="err-defectDescription" class="error" role="alert" aria-live="polite"></div>
-                  </div>
-                  <div>
-                  <form action="/action_page.php"> 
+                  <div id="err-defectDescription" class="error" role="alert" aria-live="polite"></div>
+                </div>
+                <div>
+                  <form action="/action_page.php">
                     <label for="fileNCR">You can attach any additional drawing, skecthes, pictures,etc</label>
                     <input type="file" id="fileNCR" type="file" multiple class="Input">
                   </form>
-                  </div>
                 </div>
 
-                <fieldset class="card pad" style="border-color:var(--border)">
-                  <legend id="legend-itemMarked" style="font-weight:600">Item marked Nonconforming <span
-                      class="required" aria-hidden="true">*</span></legend>
-                  <div id="itemMarkedNonconformingGroup" role="radiogroup" aria-labelledby="legend-itemMarked"
-                    style="display:flex;gap:16px;margin-top:6px">
-                    <label for="mark-yes"><input id="mark-yes" type="radio" name="itemMarkedNonconforming"
-                        value="Yes" /> Yes</label>
-                    <label for="mark-no"><input id="mark-no" type="radio" name="itemMarkedNonconforming" value="No" />
-                      No</label>
-                  </div>
-                  <div id="err-itemMarkedNonconforming" class="error" role="alert" aria-live="polite"></div>
-                 
-                </fieldset>
-
+                <br>
                 <div class="two-col">
+                  <div>
+                    <label id="legend-itemMarked" style="font-weight:600">Item marked Nonconforming <span
+                        class="required" aria-hidden="true">*</span></label>
+                    <div id="itemMarkedNonconformingGroup" class="input" role="radiogroup"
+                      aria-labelledby="legend-itemMarked">
+                      <label for="mark-yes"><input id="mark-yes" type="radio" name="itemMarkedNonconforming"
+                          value="Yes" />
+                        Yes</label>
+                      <label for="mark-no"><input id="mark-no" type="radio" name="itemMarkedNonconforming" value="No" />
+                        No</label>
+                    </div>
+                    <div id="err-itemMarkedNonconforming" class="error" role="alert" aria-live="polite"></div>
+                  </div>
                   <div>
                     <label for="reportedBy">Quality Representative's Name <span class="required"
                         aria-hidden="true">*</span></label>
@@ -209,18 +207,10 @@
                       aria-describedby="err-reportedBy" />
                     <div id="err-reportedBy" class="error" role="alert" aria-live="polite"></div>
                   </div>
-                  <div>
-                    <label for="status">Status <span class="required" aria-hidden="true">*</span></label>
-                    <select id="status" name="status" class="input" aria-describedby="err-status">
-                      <option>Open</option>
-                      <option>Closed</option>
-                    </select>
-                    <div id="err-status" class="error" role="alert" aria-live="polite"></div>
-                  </div>
                 </div>
 
                 <div class="actions">
-                  <button type="button" class="btn" id="btnValidate">Validate Input</button>
+                  <button type="button" class="btn" id="btnValidate">Cancel</button>
                   <button type="submit" class="btn primary">Save NCR</button>
                 </div>
               </div>
@@ -229,7 +219,7 @@
         </section>
       </div>
     </main>
-  
+
     <script defer src="../../Scripts/app.js"></script>
   </div>
 </body>

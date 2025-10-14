@@ -32,11 +32,13 @@ function validateForm() {
     'dateReported',
     'processApplicable',
     'itemDescriptionSAP',
+    'supplierName',
     'qtyReceived',
     'qtyDefective',
+    'poOrProdNo',
     'defectDescription',
     'reportedBy',
-    'status'
+    
   ];
 
   requiredFields.forEach((id) => {
@@ -57,7 +59,7 @@ function validateForm() {
   const checked = Array.from(radios).some(radio => radio.checked);
 
   if (!checked) {
-    errorRadio.textContent = 'Debe seleccionar una opción.';
+    errorRadio.textContent = 'You must select a option.';
     valid = false;
   } else {
     errorRadio.textContent = '';
@@ -66,12 +68,12 @@ function validateForm() {
   return valid;
 }
 
-// ======== Guardar NCR (solo si pasa validación)
+// ======== Save NCR (when is checked by the validation process)
 document.getElementById('ncrForm').addEventListener('submit', function (event) {
   event.preventDefault(); // Prevenir envío por defecto
 
   if (!validateForm()) {
-    alert('Por favor, completa los campos obligatorios.');
+    alert('Please complete all the required fields');
     return;
   }
 
@@ -100,11 +102,11 @@ document.getElementById('ncrForm').addEventListener('submit', function (event) {
   alert('NCR guardado correctamente ✅');
   this.reset();
 
-  // Generar un nuevo NCR para siguiente entrada
+  // Generate a new ncr number
   document.getElementById('ncrNumber').value = generateNcrNumber();
 });
 
-// ======== Botón Cancelar: limpia todo y genera nuevo NCR Number
+// ======== Cancel Button: limpia todo y genera nuevo NCR Number
 document.getElementById('btnCancel').addEventListener('click', () => {
   document.getElementById('ncrForm').reset();
   document.getElementById('ncrNumber').value = generateNcrNumber();

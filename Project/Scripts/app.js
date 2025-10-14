@@ -69,7 +69,7 @@ function validateForm() {
   return valid;
 }
 
-// ========  Save NCR when the validation is correct 
+//  Save NCR when the validation is correct 
 document.getElementById('ncrForm').addEventListener('submit', function (event) {
   event.preventDefault(); // Prevent the event 
 
@@ -107,7 +107,7 @@ document.getElementById('ncrForm').addEventListener('submit', function (event) {
   document.getElementById('ncrNumber').value = generateNcrNumber();
 });
 
-// ======== Cancel Button: Reset all the from and make a new ncr number
+// Cancel Button: Reset all the from and make a new ncr number
 document.getElementById('btnCancel').addEventListener('click', () => {
   document.getElementById('ncrForm').reset();
   document.getElementById('ncrNumber').value = generateNcrNumber();

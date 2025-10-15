@@ -112,3 +112,4 @@ document.getElementById('btnCancel').addEventListener('click', () => {
   document.getElementById('ncrForm').reset();
   document.getElementById('ncrNumber').value = generateNcrNumber();
 });
+

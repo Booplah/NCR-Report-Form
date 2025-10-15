@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Edit NCR</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../../css/Main-Page.css">
     <link rel="stylesheet" href="../../css/create-ncr.css">
@@ -15,16 +15,54 @@
 </head>
 
 <body class="page-container">
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-        <div class="sidebar-content">
-            <div class="sidebar-logo">
-                <a href="../Home.html" class="logo-image">
-                    <img src="../../Images/Crossfire Logo - no bkgd.png" alt="CrossFire NCR System Logo"
-                        style="width: auto; height: 80%;">
-                </a>
-            </div>
+   <!-- Sidebar  -->
+<aside class="sidebar">
+  <div class="sidebar-content">
+    <div class="sidebar-logo">
+      <a href="../home.html" class="logo-image">
+        <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
+      </a>
+    </div>
+    <hr>
+    <ul class=siderbar-items>
+      <li class="siderbar-item">
+        <a href="../../html/home.html" class="menu-link">Home</a>
+      </li>
+      <li class="siderbar-item">
+        <a href="../../html/Sidebar/dashboard.html" class="menu-link ">Dashboard</a>
+      </li>
+      <li class="siderbar-item">
+        <a href="../../html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a>
+      </li>
+      <li class="siderbar-item">
+        <a href="../../html/Sidebar/edit-ncr.html" class="menu-link active">Edit NCR</a>
+      </li>
+      <li class="siderbar-item">
+        <a href="../../html/Sidebar/admin.html" class="menu-link">Admin Page</a>
+      </li>
+      <li class="siderbar-item">
+        <details class="dropdown-menu">
+          <summary class="dropdown-toggle">
+            <span class="dropdown-label">Help & About</span>
+            <span class="dropdown-arrow"></span>
+          </summary>
+          <ul class="dropdown-items">
+            <li>
+              <a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a>
+            </li>
+            <li>
+              <a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a>
+            </li>
+            <li>
+              <a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a>
+            </li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
 
+<<<<<<< HEAD
             <hr>
             <div class=siderbar-items>
                 <li class="siderbar-item">
@@ -62,28 +100,29 @@
                 </li>
             </div>
         </div>
+=======
+  <div class="sidebar-footer">
+    <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
+  </div>
+</aside>
+>>>>>>> 720cda0ad541234d474b149a74d0c4138846e6b2
 
-        <div class="sidebar-footer">
-            <a href="../Sidebar/help.html" class="help-link">Support</a>
-        </div>
-    </aside>
-
-    <div class="page-content">
-        <!-- Header -->
-        <header class="main-header">
-            <div class="header-content">
-                <a href="#" class="header-title">
-                    <h1 class="page-title">CrossFire - Edit NCR</h1>
-                </a>
-                <nav class="header-navigation">
-                    <ul class="header-links">
-                        <div class="account-info">
-                            <p class="account-name"><strong class="account-label">Account</strong></p>
-                        </div>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+<!-- Main Page/Header  -->
+<div class="page-content">
+  <header class="main-header">
+    <div class="header-content">
+      <a href="#" class="header-title">
+        <h1 class="page-title">Dashboard</h1>
+      </a>
+      <nav class="header-navigation">
+        <ul class="header-links">
+          <li class="account-info">
+            <p class="account-name"><strong class="account-label">Account</strong></p>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
         <!-- Main Content -->
         <main class="flex-1 p-6">
@@ -93,7 +132,7 @@
                     <div class="card pad">
                         <div style="display:flex;justify-content:space-between;align-items:center">
                             <h2>Quality Representative</h2>
-                            <button id="btnGenerate" class="btn sm" type="button">Generate NCR #</button>
+                           
                         </div>
 
                         <form id="ncrForm" style="margin-top:12px" novalidate>
@@ -128,24 +167,21 @@
                                 </div>
 
                                 <div>
-                                    <label for="supplierName">Supplier Name <span class="opt">(required if
-                                            Supplier/Rec-Insp)</span></label>
+                                    <label for="supplierName">Supplier Name<span class="required">*</span></label>
                                     <input id="supplierName" name="supplierName" class="input" type="text"
                                         placeholder="ex: MetroFab Inc." aria-describedby="err-supplierName" />
                                     <div id="err-supplierName" class="error" role="alert" aria-live="polite"></div>
                                 </div>
 
                                 <div>
-                                    <label for="poOrProdNo">PO or Prod. No. <span class="opt">(one of these or Sales
-                                            Order)</span></label>
+                                    <label for="poOrProdNo">PO or Prod. No. (one of these or
+                                        PO/Prod) <span class="required">*</span></label>
                                     <input id="poOrProdNo" name="poOrProdNo" class="input" type="text"
                                         placeholder="ex: PO-45127 or PRD-20491" aria-describedby="err-poOrProdNo" />
                                     <div id="err-poOrProdNo" class="error" role="alert" aria-live="polite"></div>
                                 </div>
-
                                 <div>
-                                    <label for="salesOrderNo">Sales Order No. <span class="opt">(one of these or
-                                            PO/Prod)</span></label>
+                                    <label for="salesOrderNo">Sales Order No. <span class="required">*</span></label>
                                     <input id="salesOrderNo" name="salesOrderNo" class="input" type="text"
                                         placeholder="ex: SO-77419" aria-describedby="err-salesOrderNo" />
                                     <div id="err-salesOrderNo" class="error" role="alert" aria-live="polite"></div>
@@ -179,23 +215,40 @@
                                         <div id="err-qtyDefective" class="error" role="alert" aria-live="polite"></div>
                                     </div>
                                 </div>
-
-                                <div class="two-col">
-                                    <div>
-                                        <label for="defectDescription">Description of Defect <span class="required"
-                                                aria-hidden="true">*</span></label>
-                                        <textarea id="defectDescription" name="defectDescription" class="input" rows="3"
-                                            placeholder="Detail defect, spec delta, location, lot/PO, etc."
-                                            aria-describedby="err-defectDescription"></textarea>
-                                        <div id="err-defectDescription" class="error" role="alert" aria-live="polite">
-                                        </div>
+                                <div>
+                                    <label for="defectDescription">Description of Defect <span class="required"
+                                            aria-hidden="true">*</span></label>
+                                    <textarea id="defectDescription" name="defectDescription" class="input" rows="3"
+                                        placeholder="Detail defect, spec delta, location, lot/PO, etc."
+                                        aria-describedby="err-defectDescription"></textarea>
+                                    <div id="err-defectDescription" class="error" role="alert" aria-live="polite">
                                     </div>
+                                </div>
+                                <div class="two-col">
+
                                     <div>
                                         <form action="/action_page.php">
                                             <label for="fileNCR">You can attach any additional drawing, skecthes,
                                                 pictures,etc</label>
                                             <input type="file" id="fileNCR" type="file" multiple class="Input">
                                         </form>
+                                    </div>
+                                    <div >
+                                        <label id="legend-itemMarked" style="font-weight:600">Item marked Nonconforming
+                                            <span class="required" aria-hidden="true">*</span>
+                                        </label>
+                                        <br>
+                                        <br>
+                                        <div id="itemMarkedNonconformingGroup" role="radiogroup"
+                                            aria-labelledby="legend-itemMarked" class="input">
+                                            <label for="mark-yes"><input id="mark-yes" type="radio"
+                                                    name="itemMarkedNonconforming" value="Yes" /> Yes</label>
+                                            <label for="mark-no"><input id="mark-no" type="radio"
+                                                    name="itemMarkedNonconforming" value="No" />
+                                                No</label>
+                                        </div>
+                                        <div id="err-itemMarkedNonconforming" class="error" role="alert"
+                                            aria-live="polite"></div>
                                     </div>
                                 </div>
 
@@ -211,7 +264,8 @@
                                                 name="itemMarkedNonconforming" value="No" />
                                             No</label>
                                     </div>
-                                    <div id="err-itemMarkedNonconforming" class="error" role="alert" aria-live="polite"></div>
+                                    <div id="err-itemMarkedNonconforming" class="error" role="alert" aria-live="polite">
+                                    </div>
                                 </div>
                                 <div class="two-col">
                                     <div>
@@ -233,8 +287,8 @@
                                 </div>
 
                                 <div class="actions">
-                                    <button type="submit" class="btn primary">Save changes</button>
-                                    <button type="button" id="btnCancel" class="btn primary">Cancel</button>
+                                    <button type="submit" class="btn">Cancel</button>
+                                    <button type="button" id="btnCancel" class="btn primary">Save Changes</button>
 
 
                                 </div>
@@ -244,7 +298,16 @@
                 </section>
             </div>
         </main>
-
+            <!-- Footer -->
+    <footer class="left-64 right-0 bg-white border-t border-gray-200 py-2.5 z-10">
+      <div class="flex flex-col items-center justify-center gap-3 text-center py-3">
+        <ul class="flex flex-wrap justify-center gap-3 text-xs">
+          <li><a href="#" class="text-gray-500 hover:opacity-75">Terms & Conditions</a></li>
+          <li><a href="#" class="text-gray-500 hover:opacity-75">Privacy Policy</a></li>
+        </ul>
+        <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
+      </div>
+    </footer>
         <script defer src="../../Scripts/app.js"></script>
     </div>
 </body>

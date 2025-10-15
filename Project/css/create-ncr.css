@@ -196,13 +196,14 @@
     --btn-bg: linear-gradient(180deg, var(--cf-accent-500), var(--cf-accent-600));
     --btn-ink: #fff;
     --btn-border: transparent;
+    background-color: #2D6EA7;
     color: #fff;
     border: none;
 }
 
 #view-create .btn.primary:hover {
     box-shadow: 0 10px 22px -10px rgba(2, 6, 23, .15), 0 2px 6px rgba(2, 6, 23, .06);
-    background: #21527c;
+    background: #275E8F;
 }
 
 #view-create .btn.sm {

@@ -97,13 +97,17 @@
             <form id="ncrForm" style="margin-top:12px" novalidate>
               <div style="display:grid;grid-template-columns:1fr;gap:12px" class="formGrid">
                 <div>
+<<<<<<< HEAD
                   <div class="flex items-center justify-between">
                     <label for="ncrNumber" class="font-medium">
                       NCR No. <span class="text-red-500">*</span>
                     </label>
-                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
+                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto" alt="Help icon" />
                   </div>
 
+=======
+                  <label for="ncrNumber">NCR No. <span class="required" aria-hidden="true">*</span></label>
+>>>>>>> parent of ed40ed6 (Merge branch 'main' of https://github.com/Booplah/NCR-Report-Form)
                   <input id="ncrNumber" name="ncrNumber" class="input" type="text" placeholder="ex: NCR-2025-003"
                     aria-describedby="err-ncrNumber" />
                   <div id="err-ncrNumber" class="error" role="alert" aria-live="polite"></div>
@@ -111,18 +115,22 @@
 
                 <div>
                   <label for="dateReported">Date <span class="required" aria-hidden="true">*</span></label>
-
                   <input id="dateReported" name="dateReported" class="input" type="date"
                     aria-describedby="err-dateReported" />
                   <div id="err-dateReported" class="error" role="alert" aria-live="polite"></div>
                 </div>
 
                 <div>
+<<<<<<< HEAD
 
                   <div class="flex items-center justify-between">
                     <label for="processApplicable">Identify Process Applicable <span class="required" aria-hidden="true">*</span></label>
-                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
+                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto" alt="Help icon" />
                   </div>
+=======
+                  <label for="processApplicable">Identify Process Applicable <span class="required"
+                      aria-hidden="true">*</span></label>
+>>>>>>> parent of ed40ed6 (Merge branch 'main' of https://github.com/Booplah/NCR-Report-Form)
                   <select id="processApplicable" name="processApplicable" class="input"
                     aria-describedby="err-processApplicable">
                     <option value="">Select…</option>
@@ -134,38 +142,58 @@
                 </div>
 
                 <div>
+<<<<<<< HEAD
                   <div class="flex items-center justify-between">
                     <label for="supplierName">Supplier Name <span class="required">*</span></label>
-                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
+                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto" alt="Help icon" />
                   </div>
+=======
+                  <label for="supplierName">Supplier Name <span class="required">*</span></label>
+>>>>>>> parent of ed40ed6 (Merge branch 'main' of https://github.com/Booplah/NCR-Report-Form)
                   <input id="supplierName" name="supplierName" class="input" type="text" placeholder="ex: MetroFab Inc."
                     aria-describedby="err-supplierName" />
                   <div id="err-supplierName" class="error" role="alert" aria-live="polite"></div>
                 </div>
 
                 <div>
+<<<<<<< HEAD
                   <div class="flex items-center justify-between">
                     <label for="poOrProdNo">PO or Prod. No. <span class="required">*</span></label>
-                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
+                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto" alt="Help icon" />
                   </div>
+=======
+                  <label for="poOrProdNo">PO or Prod. No. <span class="required">*</span></label>
+>>>>>>> parent of ed40ed6 (Merge branch 'main' of https://github.com/Booplah/NCR-Report-Form)
                   <input id="poOrProdNo" name="poOrProdNo" class="input" type="text"
                     placeholder="ex: PO-45127 or PRD-20491" aria-describedby="err-poOrProdNo" />
                   <div id="err-poOrProdNo" class="error" role="alert" aria-live="polite"></div>
                 </div>
 
                 <div>
+<<<<<<< HEAD
                   <div class="flex items-center justify-between">
                     <label for="salesOrderNo">Sales Order No. <span class="required">*</span></label>
-                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
+                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto" alt="Help icon" />
                   </div>
+=======
+                  <label for="salesOrderNo">Sales Order No. <span class="required">*</span></label>
+>>>>>>> parent of ed40ed6 (Merge branch 'main' of https://github.com/Booplah/NCR-Report-Form)
                   <input id="salesOrderNo" name="salesOrderNo" class="input" type="text" placeholder="ex: SO-77419"
                     aria-describedby="err-salesOrderNo" />
                   <div id="err-salesOrderNo" class="error" role="alert" aria-live="polite"></div>
                 </div>
 
                 <div>
-                  <label for="itemDescriptionSAP">Description of the Item (must include SAP No.) <span class="required" aria-hidden="true">*</span></label>
+<<<<<<< HEAD
 
+                  <div class="flex items-center justify-between">
+                    <label for="itemDescriptionSAP">Description of Item (including SAP No.) <span class="required" aria-hidden="true">*</span></label>
+                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto" alt="Help icon" />
+                  </div>
+=======
+                  <label for="itemDescriptionSAP">Description of Item (including SAP No.) <span class="required"
+                      aria-hidden="true">*</span></label>
+>>>>>>> parent of ed40ed6 (Merge branch 'main' of https://github.com/Booplah/NCR-Report-Form)
                   <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input" type="text"
                     placeholder="ex: CF-AX12 – Clamp Bracket (SAP 110045)" aria-describedby="err-itemDescriptionSAP" />
                   <div id="err-itemDescriptionSAP" class="error" role="alert" aria-live="polite"></div>
@@ -173,19 +201,29 @@
 
                 <div class="two-col">
                   <div>
+<<<<<<< HEAD
                     <div class="flex items-center justify-between">
                       <label for="qtyReceived">Quantity Received <span class="required" aria-hidden="true">*</span></label>
-                      <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
+                      <img src="../../Images/HelpIcon.png" class="w-5 h-auto" alt="Help icon" />
                     </div>
+=======
+                    <label for="qtyReceived">Quantity Received <span class="required"
+                        aria-hidden="true">*</span></label>
+>>>>>>> parent of ed40ed6 (Merge branch 'main' of https://github.com/Booplah/NCR-Report-Form)
                     <input id="qtyReceived" name="qtyReceived" class="input" type="number" inputmode="numeric" min="1"
                       step="1" placeholder="ex: 120" aria-describedby="err-qtyReceived" />
                     <div id="err-qtyReceived" class="error" role="alert" aria-live="polite"></div>
                   </div>
                   <div>
+<<<<<<< HEAD
                     <div class="flex items-center justify-between">
-                      <label for="qtyDefective">Quantity of Defective <span class="required" aria-hidden="true">*</span></label>
-                      <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
+                      <label for="qtyDefective">Quantity Defective <span class="required" aria-hidden="true">*</span></label>
+                      <img src="../../Images/HelpIcon.png" class="w-5 h-auto" alt="Help icon" />
                     </div>
+=======
+                    <label for="qtyDefective">Quantity Defective <span class="required"
+                        aria-hidden="true">*</span></label>
+>>>>>>> parent of ed40ed6 (Merge branch 'main' of https://github.com/Booplah/NCR-Report-Form)
                     <input id="qtyDefective" name="qtyDefective" class="input" type="number" inputmode="numeric" min="0"
                       step="1" placeholder="ex: 7" aria-describedby="err-qtyDefective" />
                     <div id="err-qtyDefective" class="error" role="alert" aria-live="polite"></div>
@@ -193,8 +231,16 @@
                 </div>
 
                 <div>
-                  <label for="defectDescription">Description of the Defect <span class="required" aria-hidden="true">*</span></label>
+<<<<<<< HEAD
 
+                  <div class="flex items-center justify-between">
+                    <label for="defectDescription">Description of Defect <span class="required" aria-hidden="true">*</span></label>
+                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto" alt="Help icon" />
+                  </div>
+=======
+                  <label for="defectDescription">Description of Defect <span class="required"
+                      aria-hidden="true">*</span></label>
+>>>>>>> parent of ed40ed6 (Merge branch 'main' of https://github.com/Booplah/NCR-Report-Form)
                   <textarea id="defectDescription" name="defectDescription" class="input" rows="3"
                     placeholder="Detail defect, spec delta, location, lot/PO, etc."
                     aria-describedby="err-defectDescription"></textarea>
@@ -202,7 +248,7 @@
                 </div>
                 <div>
                   <form action="/action_page.php">
-                    <label for="fileNCR">Please attach any additional drawings, skecthes, pictures, etc.</label>
+                    <label for="fileNCR">You can attach any additional drawing, skecthes, pictures,etc</label>
                     <input type="file" id="fileNCR" type="file" multiple class="Input">
                   </form>
                 </div>
@@ -210,8 +256,16 @@
                 <br>
                 <div class="two-col">
                   <div>
+<<<<<<< HEAD
                     
                     <div id="itemMarkedNonconformingGroup"  role="radiogroup"
+=======
+                    <div class="flex items-center justify-between">
+                      <label id="legend-itemMarked" style="font-weight:600">Item marked Nonconforming <span class="required" aria-hidden="true">*</span></label>
+                      <img src="../../Images/HelpIcon.png" class="w-5 h-auto" alt="Help icon" />
+                    </div>
+                    <div id="itemMarkedNonconformingGroup" class="input" role="radiogroup"
+>>>>>>> parent of f32e2f7 (Modal views added to every icon)
                       aria-labelledby="legend-itemMarked">
                      
                         <label id="legend-itemMarked" style="font-weight:600">Item marked Nonconforming <span
@@ -221,9 +275,19 @@
                     <div id="err-itemMarkedNonconforming" class="error" role="alert" aria-live="polite"></div>
                   </div>
                   <div>
+<<<<<<< HEAD
                     <label id="legend-itemMarked" style="font-weight:600">Engineering Correction <span class="opt"
                         aria-hidden="true"><input id="mark-yes" type="checkbox" name="itemMarkedNonconforming" /></span></label>
                     <div id="err-itemMarkedNonconforming" class="error" role="alert" aria-live="polite"></div>
+=======
+                    <div class="flex items-center justify-between">
+                      <label for="reportedBy">Quality Representative's Name <span class="required" aria-hidden="true">*</span></label>
+                      <img src="../../Images/HelpIcon.png" class="w-5 h-auto" alt="Help icon" />
+                    </div>
+                    <input id="reportedBy" name="reportedBy" class="input" type="text" placeholder="ex: Dave kendell"
+                      aria-describedby="err-reportedBy" />
+                    <div id="err-reportedBy" class="error" role="alert" aria-live="polite"></div>
+>>>>>>> parent of f32e2f7 (Modal views added to every icon)
                   </div>
 
                 </div>
@@ -253,31 +317,7 @@
         <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
       </div>
     </footer>
-
     <script defer src="../../Scripts/app.js"></script>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        let modal = document.getElementById('helperModal');
-
-        window.openHelpModel = function () {
-          modal.classList.remove('hidden');
-          modal.addEventListener('click', handleOutsideClick);
-        }
-
-        window.closeHelpModel = function () {
-          modal.classList.add('hidden');
-          modal.removeEventListener('click', handleOutsideClick);
-        }
-
-        function handleOutsideClick(e) {
-          if (e.target === modal) {
-            closeHelpModel();
-          }
-        }
-      })
-    </script>
-  </div>
   </div>
 </body>
 

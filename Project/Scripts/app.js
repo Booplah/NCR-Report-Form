@@ -97,8 +97,8 @@ document.getElementById('ncrForm').addEventListener('submit', function (event) {
     createdAt: new Date().toISOString()
   };
 
-  ncrList.push(newNcr);
-  localStorage.setItem('ncrList', JSON.stringify(ncrList));
+  //ncrList.push(newNcr);
+  //localStorage.setItem('ncrList', JSON.stringify(ncrList));
 
   alert('NCR saved succesfully ✅');
   this.reset();

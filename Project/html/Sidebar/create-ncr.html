@@ -15,71 +15,70 @@
 </head>
 
 <body class="page-container">
-   <!-- Sidebar  -->
-<aside class="sidebar">
-  <div class="sidebar-content">
-    <div class="sidebar-logo">
-      <a href="../home.html" class="logo-image">
-        <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
-      </a>
+  <!-- Sidebar  -->
+  <aside class="sidebar">
+    <div class="sidebar-content">
+      <div class="sidebar-logo">
+        <a href="../home.html" class="logo-image">
+          <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
+        </a>
+      </div>
+      <hr>
+      <ul class=siderbar-items>
+        <li class="siderbar-item">
+          <a href="../../html/home.html" class="menu-link">Home</a>
+        </li>
+        <li class="siderbar-item">
+          <a href="../../html/Sidebar/dashboard.html" class="menu-link ">Dashboard</a>
+        </li>
+        <li class="siderbar-item">
+          <a href="../../html/Sidebar/create-ncr.html" class="menu-link active">Create NCR</a>
+        </li>
+        <li class="siderbar-item">
+          <a href="../../html/Sidebar/admin.html" class="menu-link">Admin Page</a>
+        </li>
+        <li class="siderbar-item">
+          <details class="dropdown-menu">
+              <span class="dropdown-label">Help & About</span>
+              <span class="dropdown-arrow"></span>
+            </summary>
+            <ul class="dropdown-items">
+              <li>
+                <a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a>
+              </li>
+              <li>
+                <a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a>
+              </li>
+              <li>
+                <a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
     </div>
-    <hr>
-    <ul class=siderbar-items>
-      <li class="siderbar-item">
-        <a href="../../html/home.html" class="menu-link">Home</a>
-      </li>
-      <li class="siderbar-item">
-        <a href="../../html/Sidebar/dashboard.html" class="menu-link ">Dashboard</a>
-      </li>
-      <li class="siderbar-item">
-        <a href="../../html/Sidebar/create-ncr.html" class="menu-link active">Create NCR</a>
-      </li>
-      <li class="siderbar-item">
-        <a href="../../html/Sidebar/admin.html" class="menu-link">Admin Page</a>
-      </li>
-      <li class="siderbar-item">
-        <details class="dropdown-menu">
-          <summary class="dropdown-toggle">
-            <span class="dropdown-label">Help & About</span>
-            <span class="dropdown-arrow"></span>
-          </summary>
-          <ul class="dropdown-items">
-            <li>
-              <a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a>
-            </li>
-            <li>
-              <a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a>
-            </li>
-            <li>
-              <a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a>
+
+    <div class="sidebar-footer">
+      <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
+    </div>
+  </aside>
+
+  <!-- Main Page/Header  -->
+  <div class="page-content">
+    <header class="main-header">
+      <div class="header-content">
+        <a href="#" class="header-title">
+          <h1 class="page-title">Dashboard</h1>
+        </a>
+        <nav class="header-navigation">
+          <ul class="header-links">
+            <li class="account-info">
+              <p class="account-name"><strong class="account-label">Account</strong></p>
             </li>
           </ul>
-        </details>
-      </li>
-    </ul>
-  </div>
-
-  <div class="sidebar-footer">
-    <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
-  </div>
-</aside>
-
-<!-- Main Page/Header  -->
-<div class="page-content">
-  <header class="main-header">
-    <div class="header-content">
-      <a href="#" class="header-title">
-        <h1 class="page-title">Dashboard</h1>
-      </a>
-      <nav class="header-navigation">
-        <ul class="header-links">
-          <li class="account-info">
-            <p class="account-name"><strong class="account-label">Account</strong></p>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        </nav>
+      </div>
+    </header>
 
     <!-- Main Content -->
     <main class="flex-1 p-6">
@@ -87,153 +86,165 @@
         <!-- CREATE -->
         <section id="view-create">
           <div class="card pad">
-            <div style="display:flex;justify-content:space-between;align-items:center">
-              <h2>Quality Representative</h2>
+            <div>
+              <h2 class="section-header">Quality Representative</h2>
             </div>
 
             <form id="ncrForm" style="margin-top:12px" novalidate>
+
               <div style="display:grid;grid-template-columns:1fr;gap:12px" class="formGrid">
-                <div>
-                  <div class="flex items-center justify-between">
-                    <label for="ncrNumber" class="font-medium">
-                      NCR No. <span class="text-red-500">*</span>
-                    </label>
-                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
-                  </div>
-
-                  <input id="ncrNumber" name="ncrNumber" class="input" type="text" placeholder="ex: NCR-2025-003"
-                    aria-describedby="err-ncrNumber" />
-                  <div id="err-ncrNumber" class="error" role="alert" aria-live="polite"></div>
-                </div>    
-
-                <div>
-                  <label for="dateReported">Date <span class="required" aria-hidden="true">*</span></label>
-
-                  <input id="dateReported" name="dateReported" class="input" type="date"
-                    aria-describedby="err-dateReported" />
-                  <div id="err-dateReported" class="error" role="alert" aria-live="polite"></div>
-                </div>
-
-                <div>
-
-                  <div class="flex items-center justify-between">
-                    <label for="processApplicable">Identify Process Applicable <span class="required" aria-hidden="true">*</span></label>
-                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
-                  </div>
-                  <select id="processApplicable" name="processApplicable" class="input"
-                    aria-describedby="err-processApplicable">
-                    <option value="">Select…</option>
-
-                    <option value="Supplier or Rec-Insp">Supplier or Rec-Insp</option>
-                    <option value="WIP (Production Order)">WIP (Production Order)</option>
-                  </select>
-                  <div id="err-processApplicable" class="error" role="alert" aria-live="polite"></div>
-                </div>
-
-                <div>
-                  <div class="flex items-center justify-between">
-                    <label for="supplierName">Supplier Name <span class="required">*</span></label>
-                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
-                  </div>
-                  <input id="supplierName" name="supplierName" class="input" type="text" placeholder="ex: MetroFab Inc."
-                    aria-describedby="err-supplierName" />
-                  <div id="err-supplierName" class="error" role="alert" aria-live="polite"></div>
-                </div>
-
-                <div>
-                  <div class="flex items-center justify-between">
-                    <label for="poOrProdNo">PO or Prod. No. <span class="required">*</span></label>
-                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
-                  </div>
-                  <input id="poOrProdNo" name="poOrProdNo" class="input" type="text"
-                    placeholder="ex: PO-45127 or PRD-20491" aria-describedby="err-poOrProdNo" />
-                  <div id="err-poOrProdNo" class="error" role="alert" aria-live="polite"></div>
-                </div>
-
-                <div>
-                  <div class="flex items-center justify-between">
-                    <label for="salesOrderNo">Sales Order No. <span class="required">*</span></label>
-                    <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
-                  </div>
-                  <input id="salesOrderNo" name="salesOrderNo" class="input" type="text" placeholder="ex: SO-77419"
-                    aria-describedby="err-salesOrderNo" />
-                  <div id="err-salesOrderNo" class="error" role="alert" aria-live="polite"></div>
-                </div>
-
-                <div>
-                  <label for="itemDescriptionSAP">Description of the Item (must include SAP No.) <span class="required" aria-hidden="true">*</span></label>
-
-                  <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input" type="text"
-                    placeholder="ex: CF-AX12 – Clamp Bracket (SAP 110045)" aria-describedby="err-itemDescriptionSAP" />
-                  <div id="err-itemDescriptionSAP" class="error" role="alert" aria-live="polite"></div>
-                </div>
-
                 <div class="two-col">
                   <div>
                     <div class="flex items-center justify-between">
-                      <label for="qtyReceived">Quantity Received <span class="required" aria-hidden="true">*</span></label>
-                      <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
+                      <label for="ncrNumber" class="font-medium">
+                        NCR No. <span class="text-red-500">*</span>
+                      </label>
+                      <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon"
+                        onclick="openHelpModel()" />
                     </div>
-                    <input id="qtyReceived" name="qtyReceived" class="input" type="number" inputmode="numeric" min="1"
-                      step="1" placeholder="ex: 120" aria-describedby="err-qtyReceived" />
-                    <div id="err-qtyReceived" class="error" role="alert" aria-live="polite"></div>
+
+                    <input id="ncrNumber" name="ncrNumber" class="input" type="text" placeholder="ex: NCR-2025-003"
+                      aria-describedby="err-ncrNumber" />
+                    <div id="err-ncrNumber" class="error" role="alert" aria-live="polite"></div>
                   </div>
                   <div>
                     <div class="flex items-center justify-between">
-                      <label for="qtyDefective">Quantity of Defective <span class="required" aria-hidden="true">*</span></label>
-                      <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
+                      <label for="processApplicable">Identify Process Applicable <span class="required"
+                          aria-hidden="true">*</span></label>
+                      <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon"
+                        onclick="openHelpModel()" />
                     </div>
-                    <input id="qtyDefective" name="qtyDefective" class="input" type="number" inputmode="numeric" min="0"
-                      step="1" placeholder="ex: 7" aria-describedby="err-qtyDefective" />
-                    <div id="err-qtyDefective" class="error" role="alert" aria-live="polite"></div>
+                    <select id="processApplicable" name="processApplicable" class="input"
+                      aria-describedby="err-processApplicable">
+                      <option value="">Select…</option>
+
+                      <option value="Supplier or Rec-Insp">Supplier or Rec-Insp</option>
+                      <option value="WIP (Production Order)">WIP (Production Order)</option>
+                    </select>
+                    <div id="err-processApplicable" class="error" role="alert" aria-live="polite"></div>
+                  </div>
+
+                  <div>
+                    <div class="flex items-center justify-between">
+                      <label for="supplierName">Supplier Name <span class="required">*</span></label>
+                      <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon"
+                        onclick="openHelpModel()" />
+                    </div>
+                    <input id="supplierName" name="supplierName" class="input" type="text"
+                      placeholder="ex: MetroFab Inc." aria-describedby="err-supplierName" />
+                    <div id="err-supplierName" class="error" role="alert" aria-live="polite"></div>
+                  </div>
+                  <div class="two-col">
+                    <div>
+                      <div class="flex items-center justify-between">
+                        <label for="poOrProdNo">PO or Prod. No. <span class="required">*</span></label>
+                        <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon"
+                          onclick="openHelpModel()" />
+                      </div>
+                      <input id="poOrProdNo" name="poOrProdNo" class="input" type="text"
+                        placeholder="ex: PO-45127 or PRD-20491" aria-describedby="err-poOrProdNo" />
+                      <div id="err-poOrProdNo" class="error" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div>
+                      <div class="flex items-center justify-between">
+                        <label for="salesOrderNo">Sales Order No. <span class="required">*</span></label>
+                        <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon"
+                          onclick="openHelpModel()" />
+                      </div>
+                      <input id="salesOrderNo" name="salesOrderNo" class="input" type="text" placeholder="ex: SO-77419"
+                        aria-describedby="err-salesOrderNo" />
+                      <div id="err-salesOrderNo" class="error" role="alert" aria-live="polite"></div>
+                    </div>
+                  </div>
+
+                </div>
+                <div>
+                  <div>
+                    <label for="itemDescriptionSAP">Description of the Item (must include SAP No.) <span
+                        class="required" aria-hidden="true">*</span></label>
+
+                    <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input" type="text"
+                      placeholder="ex: CF-AX12 – Clamp Bracket (SAP 110045)"
+                      aria-describedby="err-itemDescriptionSAP" />
+                    <div id="err-itemDescriptionSAP" class="error" role="alert" aria-live="polite"></div>
+                  </div>
+                  <div class="two-col">
+                    <div>
+                      <div class="flex items-center justify-between">
+                        <label for="qtyReceived">Quantity Received <span class="required"
+                            aria-hidden="true">*</span></label>
+                        <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon"
+                          onclick="openHelpModel()" />
+                      </div>
+                      <input id="qtyReceived" name="qtyReceived" class="input" type="number" inputmode="numeric" min="1"
+                        step="1" placeholder="ex: 120" aria-describedby="err-qtyReceived" />
+                      <div id="err-qtyReceived" class="error" role="alert" aria-live="polite"></div>
+                    </div>
+                    <div>
+                      <div class="flex items-center justify-between">
+                        <label for="qtyDefective">Quantity of Defective <span class="required"
+                            aria-hidden="true">*</span></label>
+                        <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon"
+                          onclick="openHelpModel()" />
+                      </div>
+                      <input id="qtyDefective" name="qtyDefective" class="input" type="number" inputmode="numeric"
+                        min="0" step="1" placeholder="ex: 7" aria-describedby="err-qtyDefective" />
+                      <div id="err-qtyDefective" class="error" role="alert" aria-live="polite"></div>
+                    </div>
                   </div>
                 </div>
-                
-                <div>
-                  <label for="defectDescription">Description of the Defect <span class="required" aria-hidden="true">*</span></label>
+                <fieldset>
 
-                  <textarea id="defectDescription" name="defectDescription" class="input" rows="3"
-                    placeholder="Detail defect, spec delta, location, lot/PO, etc."
-                    aria-describedby="err-defectDescription"></textarea>
-                  <div id="err-defectDescription" class="error" role="alert" aria-live="polite"></div>
-                </div>
-                <div>
-                  <form action="/action_page.php">
-                    <label for="fileNCR">Please attach any additional drawings, skecthes, pictures, etc.</label>
-                    <input type="file" id="fileNCR" type="file" multiple class="Input">
-                  </form>
-                </div>
+                  <div>
+                    <label for="defectDescription">Description of the Defect <span class="required"
+                        aria-hidden="true">*</span></label>
 
+                    <textarea id="defectDescription" name="defectDescription" class="input" rows="3"
+                      placeholder="Detail defect, spec delta, location, lot/PO, etc."
+                      aria-describedby="err-defectDescription"></textarea>
+                    <div id="err-defectDescription" class="error" role="alert" aria-live="polite"></div>
+                  </div>
+                  <div class="two-col">
+                    <div>
+                      <form action="/action_page.php">
+                        <label for="fileNCR">Please attach any additional drawings, skecthes, pictures, etc.</label>
+                        <input type="file" id="fileNCR" type="file" multiple class="Input">
+                      </form>
+                    </div>
+                    <div>
+                      <div class="flex items-center justify-between">
+                        <label id="legend-itemMarked" style="font-weight:600">Item marked Nonconforming <span
+                            class="required" aria-hidden="true">*</span></label>
+                        <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon"
+                          onclick="openHelpModel()" />
+                      </div>
+                      <div id="itemMarkedNonconformingGroup" class="input" role="radiogroup"
+                        aria-labelledby="legend-itemMarked">
+                        <label for="mark-yes"><input id="mark-yes" type="radio" name="itemMarkedNonconforming"
+                            value="Yes" />
+                          Yes</label>
+                        <label for="mark-no"><input id="mark-no" type="radio" name="itemMarkedNonconforming"
+                            value="No" />
+                          No</label>
+                      </div>
+                      <div id="err-itemMarkedNonconforming" class="error" role="alert" aria-live="polite"></div>
+                    </div>
+                  </div>
+                </fieldset>
                 <br>
-                <div class="two-col">
+                <div >
                   <div>
                     <div class="flex items-center justify-between">
-                      <label id="legend-itemMarked" style="font-weight:600">Item marked Nonconforming <span class="required" aria-hidden="true">*</span></label>
-                      <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
-                    </div>
-                    <div id="itemMarkedNonconformingGroup" class="input" role="radiogroup"
-                      aria-labelledby="legend-itemMarked">
-                      <label for="mark-yes"><input id="mark-yes" type="radio" name="itemMarkedNonconforming"
-                          value="Yes" />
-                        Yes</label>
-                      <label for="mark-no"><input id="mark-no" type="radio" name="itemMarkedNonconforming" value="No" />
-                        No</label>
-                    </div>
-                    <div id="err-itemMarkedNonconforming" class="error" role="alert" aria-live="polite"></div>
-                  </div>
-                  <div>
-                    <div class="flex items-center justify-between">
-                      <label for="reportedBy">Quality Representative's Name <span class="required" aria-hidden="true">*</span></label>
-                      <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon" onclick="openHelpModel()"/>
+                      <label for="reportedBy">Quality Representative's Name <span class="required"
+                          aria-hidden="true">*</span></label>
+                      <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon"
+                        onclick="openHelpModel()" />
 
-                      <div
-                        id="helperModal"
-                        class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
-                        role="dialog"
-                        aria-modal="true"
-                        aria-labelledby="modalTitle"
-                      >
-                        <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg" onclick="event.stopPropagation()">
+                      <div id="helperModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
+                        role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                        <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
+                          onclick="event.stopPropagation()">
                           <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Info</h2>
 
                           <div class="mt-4">
@@ -244,23 +255,30 @@
                           </div>
                         </div>
                       </div>
-                    <input id="reportedBy" name="reportedBy" class="input" type="text" placeholder="ex: Dave kendell"
-                      aria-describedby="err-reportedBy" />
-                    <div id="err-reportedBy" class="error" role="alert" aria-live="polite"></div>
+                      <input id="reportedBy" name="reportedBy" class="input" type="text" placeholder="ex: Dave kendell"
+                        aria-describedby="err-reportedBy" />
+                      <div id="err-reportedBy" class="error" role="alert" aria-live="polite"></div>
+                      <div>
+                        <label for="dateReported">Date <span class="required" aria-hidden="true">*</span></label>
+
+                        <input id="dateReported" name="dateReported" class="input" type="date"
+                          aria-describedby="err-dateReported" />
+                        <div id="err-dateReported" class="error" role="alert" aria-live="polite"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-
                 <div class="actions">
                   <button type="button" class="btn" id="btnValidate">Reset</button>
                   <button type="submit" class="btn primary">Save NCR</button>
                 </div>
-              </div>
+
             </form>
           </div>
         </section>
       </div>
     </main>
-        <footer class="left-64 right-0 bg-white border-t border-gray-200 py-3 z-10">
+    <footer class="left-64 right-0 bg-white border-t border-gray-200 py-3 z-10">
       <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
         <ul class="flex flex-wrap justify-center gap-4 text-xs">
           <li><a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a></li>

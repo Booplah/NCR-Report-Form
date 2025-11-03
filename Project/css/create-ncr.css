@@ -268,3 +268,14 @@
 #view-create[hidden] {
     display: none !important;
 }
+
+.section-header {
+    background-color: #292980;
+    color: white;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}

@@ -27,7 +27,10 @@
     --shadow-card: 0 10px 25px -10px rgba(2, 6, 23, .2), 0 2px 6px rgba(2, 6, 23, .06);
 }
 
-
+.form-group label {
+  margin-right: 20px;
+  gap: 5px;
+}
 #view-create {
     font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
     color: var(--cf-ink);

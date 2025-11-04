@@ -19,20 +19,20 @@
   <aside class="sidebar">
     <div class="sidebar-content">
       <div class="sidebar-logo">
-        <a href="../home.html" class="logo-image">
+        <a href="../index.html" class="logo-image">
           <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
         </a>
       </div>
       <hr>
-      <ul class=siderbar-items>
+      <ul class="sidebar-items">
         <li class="siderbar-item">
-          <a href="../../html/home.html" class="menu-link">Home</a>
+          <a href="../../Html/index.html" class="menu-link">Home</a>
         </li>
         <li class="siderbar-item">
-          <a href="../../html/Sidebar/dashboard.html" class="menu-link active">Dashboard</a>
+          <a href="../../Html/Sidebar/dashboard.html" class="menu-link active">Dashboard</a>
         </li>
         <li class="siderbar-item">
-          <a href="../../html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a>
+          <a href="../../Html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a>
         </li>
         <li class="siderbar-item">
           <a href="../../html/Sidebar/admin.html" class="menu-link">Admin Page</a>
@@ -43,6 +43,7 @@
               <span class="dropdown-label">Help & About</span>
               <span class="dropdown-arrow"></span>
             </summary>
+
             <ul class="dropdown-items">
               <li>
                 <a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a>
@@ -121,7 +122,7 @@
         <div class="bg-white rounded-md shadow mb-7">
           <div class="px-5 py-3.5 border-b border-gray-200 flex justify-between items-center">
             <h3 class="text-lg font-semibold text-gray-800">Recent NCRs</h3>
-            <a href="../../html/Sidebar/create-ncr.html"
+            <a href="../../Html/Sidebar/create-ncr.html"
               class="bg-[#2D6EA7] text-white px-4 py-2.5 rounded-md hover:bg-[#275E8F] text-center font-medium">Create
               New NCR</a>
           </div>
@@ -227,8 +228,10 @@
                   <td class="px-3 py-2">2025-10-05</td>
                   <td class="px-3 py-2">Incorrect batch labeling detected during inspection.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../../html/Sub-Pages/view.html"
-                      class="bg-blue-100 text-[#215683] px-3 py-1 rounded-full text-xs font-medium">View/Edit</a>
+                    <a href="../../html/Sidebar/edit-ncr.html"
+                      class="bg-green-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
+                    <button id=""
+                      class="bg-red-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">Close</button>
                   </td>
                 </tr>
 
@@ -240,7 +243,9 @@
                   <td class="px-3 py-2">Dimensional deviation found in metal part assembly.</td>
                   <td class="px-3 py-2 text-center">
                     <a href="../NCR-Folder-Samples/NCR-0002.html"
-                      class="bg-blue-100 text-[#215683] px-3 py-1 rounded-full text-xs font-medium">View/Edit</a>
+                      class="bg-green-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
+                    <button id=""
+                      class="bg-red-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">Close</button>
                   </td>
                 </tr>
 
@@ -252,12 +257,13 @@
                   <td class="px-3 py-2">Packaging defect corrected and verified.</td>
                   <td class="px-3 py-2 text-center">
                     <a href="../NCR-Folder-Samples/NCR-0003.html"
-                      class="bg-blue-100 text-[#215683] px-3 py-1 rounded-full text-xs font-medium">View/Edit</a>
+                      class="bg-green-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
+                    <button id=""
+                      class="bg-red-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">Close</button>
                   </td>
                 </tr>
-              </tbody>
 
-              <tbody id="extraNCRs" class="divide-y divide-gray-100 hidden">
+
                 <tr>
                   <td class="px-3 py-2 font-medium text-gray-900">NCR-004</td>
                   <td class="px-3 py-2 text-green-700">Active</td>
@@ -267,9 +273,12 @@
                     non-compliance on final assembly.</td>
                   <td class="px-3 py-2 text-center">
                     <a href="../NCR-Folder-Samples/NCR-0004.html"
-                      class="bg-blue-100 text-[#215683] px-3 py-1 rounded-full text-xs font-medium">View/Edit</a>
+                      class="bg-green-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
+                    <button id=""
+                      class="bg-red-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">Close</button>
                   </td>
                 </tr>
+
 
                 <tr>
                   <td class="px-3 py-2 font-medium text-gray-900">NCR-005</td>
@@ -280,10 +289,14 @@
                     supplier component variance reported.</td>
                   <td class="px-3 py-2 text-center">
                     <a href="../NCR-Folder-Samples/NCR-0005.html"
-                      class="bg-blue-100 text-[#215683] px-3 py-1 rounded-full text-xs font-medium">View/Edit</a>
+                      class="bg-green-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
+                    <button id=""
+                      class="bg-red-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">Close</button>
                   </td>
                 </tr>
+              </tbody>
 
+              <tbody id="extraNCRs" class="divide-y divide-gray-100 hidden">
                 <tr>
                   <td class="px-3 py-2 font-medium text-gray-900">NCR-006</td>
                   <td class="px-3 py-2 text-green-700">Active</td>
@@ -293,7 +306,9 @@
                     Incorrect torque values detected in component assembly.</td>
                   <td class="px-3 py-2 text-center">
                     <a href="../NCR-Folder-Samples/NCR-0006.html"
-                      class="bg-blue-100 text-[#215683] px-3 py-1 rounded-full text-xs font-medium">View/Edit</a>
+                      class="bg-green-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
+                    <button id=""
+                      class="bg-red-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">Close</button>
                   </td>
                 </tr>
 
@@ -306,7 +321,9 @@
                     Incorrect lot traceability information resolved after review.</td>
                   <td class="px-3 py-2 text-center">
                     <a href="../NCR-Folder-Samples/NCR-0007.html"
-                      class="bg-blue-100 text-[#215683] px-3 py-1 rounded-full text-xs font-medium">View/Edit</a>
+                      class="bg-green-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
+                    <button id=""
+                      class="bg-red-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">Close</button>
                   </td>
                 </tr>
 
@@ -319,7 +336,9 @@
                     failure in circuit board batch.</td>
                   <td class="px-3 py-2 text-center">
                     <a href="../NCR-Folder-Samples/NCR-0008.html"
-                      class="bg-blue-100 text-[#215683] px-3 py-1 rounded-full text-xs font-medium">View/Edit</a>
+                      class="bg-green-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
+                    <button id=""
+                      class="bg-red-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">Close</button>
                   </td>
                 </tr>
 
@@ -332,7 +351,9 @@
                     substitution found without authorization.</td>
                   <td class="px-3 py-2 text-center">
                     <a href="../NCR-Folder-Samples/NCR-0009.html"
-                      class="bg-blue-100 text-[#215683] px-3 py-1 rounded-full text-xs font-medium">View/Edit</a>
+                      class="bg-green-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
+                    <button id=""
+                      class="bg-red-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">Close</button>
                   </td>
                 </tr>
 
@@ -345,7 +366,9 @@
                     calibration certificate on testing equipment.</td>
                   <td class="px-3 py-2 text-center">
                     <a href="../NCR-Folder-Samples/NCR-0010.html"
-                      class="bg-blue-100 text-[#215683] px-3 py-1 rounded-full text-xs font-medium">View/Edit</a>
+                      class="bg-green-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
+                    <button id=""
+                      class="bg-red-100 text-[#215683] px-3 py-1 rounded-md text-xs font-medium">Close</button>
                   </td>
                 </tr>
               </tbody>

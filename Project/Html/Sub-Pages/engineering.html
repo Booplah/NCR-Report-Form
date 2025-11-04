@@ -166,7 +166,11 @@
                         <form style="display: grid; grid-template-columns: 1fr; gap: 14px;" novalidate>
                             <div class="two-col">
                                 <div>
-                                    <label>Engineer Name <span class="required">*</span></label>
+                                    <div class="space-between flex place-content-between mx-auto">
+                                        <label>Engineer Name <span class="required">*</span></label>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                            alt="Help icon" onclick="openHelpModel()" />
+                                    </div>
                                     <input type="text" class="input" required>
                                 </div>
                                 <div>
@@ -253,6 +257,27 @@
         </main>
 
         <script defer src="../../Scripts/app.js"></script>
+            <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        let modal = document.getElementById('helperModal');
+
+        window.openHelpModel = function () {
+          modal.classList.remove('hidden');
+          modal.addEventListener('click', handleOutsideClick);
+        }
+
+        window.closeHelpModel = function () {
+          modal.classList.add('hidden');
+          modal.removeEventListener('click', handleOutsideClick);
+        }
+
+        function handleOutsideClick(e) {
+          if (e.target === modal) {
+            closeHelpModel();
+          }
+        }
+      })
+    </script>
     </div>
 
 </body>

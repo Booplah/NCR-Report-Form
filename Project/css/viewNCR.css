@@ -126,3 +126,90 @@ h1 {
     margin-top: 25px;
     margin-bottom: 10px;
 }
+
+/* Section-Tabs */
+.section-tabs {
+    max-width: 90%;
+    margin: 14px auto 8px auto;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+.tab-btn {
+    background: #ffffff;
+    border: 1px solid #cac2cf;
+    border-radius: 9999px;
+    padding: 8px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.tab-btn:hover {
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+.tab-btn.active {
+    background: #2D6EA7;
+    color: #fff;
+    border-color: #2D6EA7;
+}
+
+/* Section visibility */
+.ncr-section { display: none; }
+.ncr-section.active { display: block; }
+
+/* Print: show all sections when printing */
+/* Print only the report area */
+@media print {
+  /* hide chrome around the report */
+  .sidebar,
+  .main-header,
+  footer,
+  .btn-container,
+  .section-tabs { display: none !important; }
+
+  /* expand report */
+  .view-ncr-field {
+    box-shadow: none !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 16px !important;
+    background: #fff !important;
+  }
+
+  /* make sure all sections are visible in print */
+  .ncr-section { display: block !important; }
+
+  /* cleaner page margins */
+  @page { margin: 12mm; }
+
+  body { background: #fff !important; }
+}
+/* PDF hints to avoid ugly splits */
+.row, .field-box, .inline-field { break-inside: avoid; page-break-inside: avoid; }
+/* ===== Compact layout only for PDF export ===== */
+.pdf-export .view-ncr-field {
+  max-width: 100%;
+  margin: 0;                 /* remove outside whitespace */
+  padding: 16px 20px;        /* tighter padding */
+  box-shadow: none;          /* no drop shadow in PDF */
+  border-radius: 0;
+  background: #fff;
+}
+
+.pdf-export h1 { margin-bottom: 4px; font-size: 18px; }
+.pdf-export .ncr-sum { margin-bottom: 10px; font-size: 12px; }
+
+.pdf-export .row { gap: 8px; margin-bottom: 10px; }
+.pdf-export .field-box { padding: 8px; }
+.pdf-export .field-label { margin-bottom: 6px; font-size: 12px; }
+.pdf-export .field-value { font-size: 12px; }
+.pdf-export .inline-field { padding: 6px; font-size: 12px; }
+
+.pdf-export .section-header {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  padding: 6px 8px;
+}

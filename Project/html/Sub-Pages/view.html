@@ -15,7 +15,7 @@
         rel="stylesheet">
 </head>
 
-<body class="page-container">
+<body class="page-container" data-page="view-ncr">
     <!-- Sidebar Navigation -->
     <aside class="sidebar">
         <div class="sidebar-content">
@@ -88,16 +88,30 @@
         <main class="main-content">
             <div class="max-w-4xl mx-auto" style="margin-top: -20px;">
                 <div class="btn-container">
-                    <a href="#" onclick="window.print(); return false;" class="btn-action">Download PDF</a>
+                    <a href="#" id="btnDownloadPDF" class="btn-action">Download PDF</a>
                     <a href="../../html/Sidebar/edit-ncr.html" class="btn-action">Edit NCR</a>
                     <a href="../../html/Sidebar/dashboard.html" class="btn-action">Back</a>
                 </div>
+
+                <!--  Tabs to select each section -->
+                <div class="section-tabs">
+                    <button class="tab-btn active" data-target="all">Full Report</button>
+
+                    <button class="tab-btn" data-target="sec-quality">Quality Representative</button>
+                    <button class="tab-btn" data-target="sec-engineering">Engineering</button>
+                    <button class="tab-btn" data-target="sec-purchasing">Purchasing</button>
+                    <button class="tab-btn" data-target="sec-final">Final Review</button>
+                </div>
+
+
                 <!-- NCR Form Content -->
                 <div class="view-ncr-field">
                     <h1>Non-Conformance Report</h1>
                     <div class="ncr-sum">
                         NCR No: <strong>2025-023</strong> | Status: <strong>Active</strong> | Date: Oct 10 2025
                     </div>
+                    <!-- Quality Representative Section -->
+                  <div id="sec-quality" class="ncr-section active">
 
                     <div class="section-header">Quality Representative</div>
 
@@ -194,8 +208,11 @@
                             <div class="field-value">2025/10/10</div>
                         </div>
                     </div>
+                  </div> <!-- End of Quality Representative Section -->
 
                     <!-- Engineering Section -->
+                   <div id="sec-engineering" class="ncr-section">
+
                     <div class="section-header" style="background-color:#58a899;">Engineering</div>
                     <div class="row">
                         <div class="field-box">
@@ -298,8 +315,11 @@
                             </div>
                         </div>
                     </div>
+                  </div> <!-- End of Engineering Section -->
 
                     <!-- Purchasing Section -->
+                   <div id="sec-purchasing" class="ncr-section">
+
                     <div class="section-header" style="background-color:#497ba1;">Purchasing</div>
                     <div class="row">
                         <div class="field-box" style="flex:1;">
@@ -371,8 +391,11 @@
                             <div class="field-value">2025/10/11</div>
                         </div>
                     </div>
+                  </div> <!-- End of Purchasing Section -->
 
                     <!-- Final Review Section -->
+                   <div id="sec-final" class="ncr-section">
+
                     <div class="section-header" style="background-color:#292980;">Final Review</div>
 
                     <div class="row">
@@ -421,6 +444,7 @@
                             <div class="field-value">2025/10/16</div>
                         </div>
                     </div>
+                  </div> <!-- End of Final Review Section -->
                 </div>
             </div>
         </main>
@@ -436,7 +460,10 @@
         </footer>
     </div>
 
-    <script src="../Scripts/app.js"></script>
+    
+    <script src="../../Scripts/view.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" referrerpolicy="no-referrer"></script>
+
 </body>
 
 </html>

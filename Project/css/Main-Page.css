@@ -1,27 +1,40 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+main {
+  overflow: auto;
+}
+
 .page-container {
   display: flex;
   min-height: 100vh;
   background-color: #f8f9fbee;
   color: #1e293b;
   font-family: 'Inter', sans-serif;
+  overflow: hidden;
 }
 
-/* Sidebar */
 .sidebar {
+  flex: 0 0 13%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: #ffffff;
   border-right: 1px solid #e4e7ecfb;
-  width: 16rem;
-  position: fixed;
   height: 100vh;
+  position: relative;
+}
+.sidebar-items {
+  padding-top: 1rem;
 }
 
 .menu-link {
   display: block;
   padding: 0.45rem 0.9rem;
-  font-size: 0.9rem;
+  font-size: .95rem;
   font-weight: 500;
   color: #6f7680;
   text-decoration: none;
@@ -43,14 +56,20 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-left: 16rem; 
+  height: 100vh;
+  overflow: hidden;
+}
+.page-content main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
 }
 
 .logo-image {
   display: flex;
   justify-content: center;
-  padding-bottom: 0.7rem;
-  padding-top: 0.7rem;
+  padding-bottom: 0.3rem;
+  padding-top: 0.3rem;
 }
 
 .siderbar-items {
@@ -157,7 +176,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .header-title {

@@ -1,0 +1,204 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CrossFire NCR – Engineering</title>
+    <link rel="stylesheet" href="../../css/create-ncr.css">
+    <link rel="stylesheet" href="../../css/Main-Page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="page-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-logo">
+                <a href="../index.html" class="logo-image">
+                    <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo"
+                        style="width: auto; height: 80%;">
+                </a>
+            </div>
+            <hr>
+            <ul class="sidebar-items">
+                <li class="siderbar-item">
+                    <a href="../../Html/index.html" class="menu-link">Home</a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="../../Html/Sidebar/dashboard.html" class="menu-link">Dashboard</a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="../../Html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="../../Html/Sidebar/admin.html" class="menu-link">Admin Page</a>
+                </li>
+                <li class="siderbar-item">
+                    <details class="dropdown-menu">
+                        <summary class="dropdown-toggle">
+                            <span class="dropdown-label">Help & About</span>
+                            <span class="dropdown-arrow"></span>
+                        </summary>
+
+                        <ul class="dropdown-items">
+                            <li>
+                                <a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a>
+                            </li>
+                            <li>
+                                <a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a>
+                            </li>
+                            <li>
+                                <a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-footer">
+            <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
+        </div>
+    </aside>
+
+    <!-- Main Page/Header  -->
+    <div class="page-content">
+        <header class="main-header">
+            <div class="header-content">
+                <a href="#" class="header-title">
+                    <h1 class="page-title">Create NCR - Engineering</h1>
+                </a>
+                <nav class="header-navigation">
+                    <ul class="header-links">
+                        <li class="account-info">
+                            <p class="account-name"><strong class="account-label">Account</strong></p>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 ">
+
+            <div class="max-w-4xl mx-auto space-between">
+                <div>
+                    <h2 class="sr-only">Steps</h2>
+
+
+                </div>
+                <section id="view-create">
+                    <div class="card pad">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <h2>Engineering</h2>
+                        </div>
+
+                        <form id="ncrForm" style="display:grid;grid-template-columns:1fr;gap:12px" novalidate>
+                            <div class="two-co l">
+                                <div>
+                                    <label>Name of Engineer <span class="required">*</span></label>
+                                    <input type="text" class="input" id="engineerName" required>
+                                    <div class="error" role="alert" aria-live="polite"></div>
+                                </div>
+                                <div>
+                                    <label>Date <span class="required">*</span></label>
+                                    <input type="date" class="input" id="engineeringDate" required>
+                                    <div class="error" role="alert" aria-live="polite"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="revisionDetails">
+                                <div class="two-col">
+                                    <div>
+                                        <label>Original Rev. Number:</label>
+                                        <input type="text" class="input" id="originalRevNumber">
+                                    </div>
+                                    <div>
+                                        <label>Date <span class="required">*</span></label>
+                                        <input type="date" class="input" id="engineeringDate" required>
+                                        <div class="error" role="alert" aria-live="polite"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="revisionDetails">
+                                <div class="two-col">
+                                    <div>
+                                        <label>Updated Rev. Number:</label>
+                                        <input type="text" class="input" id="updatedRevNumber">
+                                    </div>
+                                    <div>
+                                        <label>Revision Date:</label>
+                                        <input type="date" class="input" id="revisionDate">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Message to customer detailing issues:</label>
+                                <textarea class="input" id="messageToCustomer" rows="3"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Disposition (Sequence of work steps required when “Repair” or “Rework”
+                                    indicated):</label>
+                                <textarea class="input" id="dispositionDetails" rows="3"></textarea>
+                            </div>
+
+                            <div class="two-col">
+                                <fieldset class="form-group">
+                                    <legend>Require Updating <span class="required">*</span></legend>
+                                    <label><input type="radio" name="drawingUpdate" required> Yes</label>
+                                    <label><input type="radio" name="drawingUpdate"> No</label>
+                                    <div class="error" role="alert" aria-live="polite"></div>
+                                </fieldset>
+
+                                <fieldset class="form-group">
+                                    <legend>Require Notification<span class="required">*</span></legend>
+                                    <label><input type="radio" name="requireNotification" required> Yes</label>
+                                    <label><input type="radio" name="requireNotification"> No</label>
+                                    <div class="error" role="alert" aria-live="polite"></div>
+                                </fieldset>
+                            </div>
+                            
+                            <fieldset class="form-group">
+                                <legend>Review by CF Engineering <span class="required">*</span></legend>
+                                <label><input type="radio" name="reviewByEngineering" required> Use As Is</label>
+                                <label><input type="radio" name="reviewByEngineering"> Repair</label>
+                                <label><input type="radio" name="reviewByEngineering"> Rework</label>
+                                <label><input type="radio" name="reviewByEngineering"> Scrap</label>
+                                <div class="error" role="alert" aria-live="polite"></div>
+                            </fieldset>
+
+                            <div class="actions">
+                                <button type="submit" class="btn primary">Save NCR</button>
+                                <button type="button" class="btn" id="btnCancel">Cancel</button>
+                                <a href="../Sidebar/create-ncr.html" type="button" class="btn">Back</a>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="pt-10">
+                <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
+                    <ul class="flex flex-wrap justify-center gap-4 text-xs">
+                        <li><a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a></li>
+                    </ul>
+                    <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </main>
+
+        <script defer src="../../Scripts/app.js"></script>
+    </div>
+
+</body>
+
+</html>

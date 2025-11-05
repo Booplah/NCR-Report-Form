@@ -22,7 +22,7 @@ function setCurrentUserRole(role) {
 function disableFieldsByRole(role) {
   // Define which roles can edit which sections
   const editableSections = {
-    [ROLE_QA]: ['qa-section'],
+    [ROLE_QA]: ['qa-section', 'insp-section'],
     [ROLE_ENGINEER]: ['eng-section'],
     [ROLE_PROCUREMENT]: ['proc-section'],
     [ROLE_INSPECTOR]: ['insp-section'],
@@ -140,11 +140,10 @@ function validateForm() {
   // Find all editable fields that are part of the currently editable section
   const currentRole = getCurrentUserRole();
   const editableSections = {
-      [ROLE_QA]: ['qa-section'],
+      [ROLE_QA]: ['qa-section', 'insp-section'],
       [ROLE_ENGINEER]: ['eng-section'],
       [ROLE_PROCUREMENT]: ['proc-section'],
-      [ROLE_INSPECTOR]: ['insp-section'],
-      [ROLE_ADMIN]: ['qa-section', 'eng-section', 'proc-section', 'insp-section'] 
+      
   };
   
   const isQaEditable = editableSections[currentRole] && editableSections[currentRole].includes('qa-section');
@@ -242,7 +241,7 @@ if (ncrForm) {
         engineeringDept: getVal('engineeringDept'),
         engDate: getVal('engDate'),
 
-        // Procurement Fields 
+        // Purchasing  Fields 
         purchDecision: getCheckedVal('purchDecision'),
         carRaised: getCheckedVal('carRaised'),
         carNumber: getVal('carNumber'),

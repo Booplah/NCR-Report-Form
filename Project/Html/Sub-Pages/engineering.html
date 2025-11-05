@@ -157,155 +157,204 @@
                     </div>
                 </div>
 
-<!-- Form -->
-<section id="view-create">
-    <div class="card pad">
-        <h2 class="section-header" style="color: white; background-color:#58a899; margin-bottom: 30px;">Engineering</h2>
-        <form id="engineeringForm" style="display: grid; grid-template-columns: 1fr; gap: 14px;" novalidate>
-            <div class="two-col">
-                <div>
-                    <div class="flex justify-between items-center">
-                        <label for="engineerName">Engineer Name <span class="required">*</span></label>
-                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                            onclick="openHelpModel()" />
-                    </div>
-                    <input id="engineerName" name="engineerName" type="text" class="input" required placeholder="ex: John Smith" aria-describedby="err-engineerName">
-                    <div id="err-engineerName" class="error" role="alert" aria-live="polite"></div>
-                </div>
+                <!-- Form -->
+                <section id="view-create">
+                    <div class="card pad">
+                        <h2 class="section-header" style="color: white; background-color:#58a899; margin-bottom: 30px;">
+                            Engineering</h2>
+                        <form id="engineeringForm" style="display: grid; grid-template-columns: 1fr; gap: 14px;"
+                            novalidate>
+                            <div class="two-col">
+                                <div>
+                                    <div class="flex justify-between items-center">
+                                        <label for="engineerName">Engineer Name <span class="required">*</span></label>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                                            onclick="openHelpModel()" />
+                                    </div>
+                                    <input id="engineerName" name="engineerName" type="text" class="input" required
+                                        placeholder="ex: John Smith" aria-describedby="err-engineerName">
+                                    <div id="err-engineerName" class="error" role="alert" aria-live="polite"></div>
+                                </div>
 
-                <div>
-                    <div class="flex justify-between items-center">
-                        <label for="engineerDate">Date <span class="required">*</span></label>
-                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                            onclick="openHelpModel()" />
+                                <div>
+                                    <div class="flex justify-between items-center">
+                                        <label for="engineerDate">Date <span class="required">*</span></label>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                                            onclick="openHelpModel()" />
+                                    </div>
+                                    <input id="engineerDate" name="engineerDate" type="date" class="input" required
+                                        aria-describedby="err-engineerDate">
+                                    <div id="err-engineerDate" class="error" role="alert" aria-live="polite"></div>
+                                </div>
+                            </div>
+
+                            <div class="two-col">
+                                <div>
+                                    <div class="flex justify-between items-center">
+                                        <label for="originalRevision">Original Revision Number <span
+                                                class="opt">(Optional)</span></label>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                                            onclick="openHelpModel()" />
+                                    </div>
+                                    <input id="originalRevision" name="originalRevision" type="text" class="input"
+                                        placeholder="ex: REV-001">
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between items-center">
+                                        <label for="updatedRevision">Updated Revision Number <span
+                                                class="opt">(Optional)</span></label>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                                            onclick="openHelpModel()" />
+                                    </div>
+                                    <input id="updatedRevision" name="updatedRevision" type="text" class="input"
+                                        placeholder="ex: REV-002">
+                                </div>
+                            </div>
+
+                            <div class="two-col">
+                                <div>
+                                    <div class="flex justify-between items-center">
+                                        <label for="revisionDate">Revision Date <span
+                                                class="opt">(Optional)</span></label>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                                            onclick="openHelpModel()" />
+                                    </div>
+                                    <input id="revisionDate" name="revisionDate" type="date" class="input">
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between items-center">
+                                        <label for="engineeringDept">Engineering Department <span
+                                                class="required">*</span></label>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                                            onclick="openHelpModel()" />
+                                    </div>
+                                    <input id="engineeringDept" name="engineeringDept" type="text" class="input"
+                                        required placeholder="ex: Mechanical Engineering"
+                                        aria-describedby="err-engineeringDept">
+                                    <div id="err-engineeringDept" class="error" role="alert" aria-live="polite"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between items-center">
+                                    <label for="customerMessage">Message to Customer Detailing Issues <span
+                                            class="opt">(Optional)</span></label>
+                                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                                        onclick="openHelpModel()" />
+                                </div>
+                                <textarea id="customerMessage" name="customerMessage" class="input" rows="3"
+                                    placeholder="Detail any issues to communicate to the customer..."></textarea>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between items-center">
+                                    <label for="disposition">Disposition (Sequence of work steps required when "Repair"
+                                        or "Rework" indicated) <span class="required">*</span></label>
+                                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                                        onclick="openHelpModel()" />
+                                </div>
+                                <textarea id="disposition" name="disposition" class="input" rows="3" required
+                                    placeholder="Describe the sequence of work steps required..."
+                                    aria-describedby="err-disposition"></textarea>
+                                <div id="err-disposition" class="error" role="alert" aria-live="polite"></div>
+                            </div>
+
+                            <div class="two-col">
+                                <fieldset class="form-group">
+                                    <div class="flex justify-between items-center">
+                                        <legend id="legend-requireUpdate">Require Update <span
+                                                class="opt">(Optional)</span></legend>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                                            onclick="openHelpModel()" />
+                                    </div>
+                                    <div role="radiogroup" aria-labelledby="legend-requireUpdate">
+                                        <label for="update-yes"><input id="update-yes" type="radio" name="requireUpdate"
+                                                value="Yes"> Yes</label>
+                                        <label for="update-no"><input id="update-no" type="radio" name="requireUpdate"
+                                                value="No"> No</label>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="form-group">
+                                    <div class="flex justify-between items-center">
+                                        <legend id="legend-requireNotification">Required Notification <span
+                                                class="opt">(Optional)</span></legend>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                                            onclick="openHelpModel()" />
+                                    </div>
+                                    <div role="radiogroup" aria-labelledby="legend-requireNotification">
+                                        <label for="notification-yes"><input id="notification-yes" type="radio"
+                                                name="requireNotification" value="Yes"> Yes</label>
+                                        <label for="notification-no"><input id="notification-no" type="radio"
+                                                name="requireNotification" value="No"> No</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <fieldset class="form-group">
+                                <div class="flex justify-between items-center">
+                                    <legend id="legend-reviewByEngineering">Review by CF Engineering <span
+                                            class="required">*</span></legend>
+                                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                                        onclick="openHelpModel()" />
+                                </div>
+                                <div role="radiogroup" aria-labelledby="legend-reviewByEngineering" class="input">
+                                    <label for="review-useAsIs"><input id="review-useAsIs" type="radio"
+                                            name="reviewByEngineering" value="Use As Is" required> Use As Is</label>
+                                    <label for="review-repair"><input id="review-repair" type="radio"
+                                            name="reviewByEngineering" value="Repair"> Repair</label>
+                                    <label for="review-rework"><input id="review-rework" type="radio"
+                                            name="reviewByEngineering" value="Rework"> Rework</label>
+                                    <label for="review-scrap"><input id="review-scrap" type="radio"
+                                            name="reviewByEngineering" value="Scrap"> Scrap</label>
+                                </div>
+                                <div id="err-reviewByEngineering" class="error" role="alert" aria-live="polite"></div>
+                            </fieldset>
+
+                            <div class="actions">
+                                <button type="submit" class="btn primary">Save</button>
+                                <button type="button" class="btn" id="btnCancel">Cancel</button>
+                                <button type="button" class="btn" onclick="openSubmitModel()">Submit</button>
+
+                                <div id="submitModal"
+                                    class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
+                                    role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                                    <div id="modalSubmitBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
+                                        onclick="event.stopPropagation()">
+                                        <h2 id="submitModalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">
+                                            Your work submitted.
+                                            Good job!</h2>
+
+                                        <div class="mt-4">
+                                            <p class="text-pretty text-gray-700">
+                                                Rest assured, your work is saved, and email sent to next employee
+                                                responsible for the next
+                                                portion.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <input id="engineerDate" name="engineerDate" type="date" class="input" required aria-describedby="err-engineerDate">
-                    <div id="err-engineerDate" class="error" role="alert" aria-live="polite"></div>
-                </div>
+                </section>
             </div>
-
-            <div class="two-col">
-                <div>
-                    <div class="flex justify-between items-center">
-                        <label for="originalRevision">Original Revision Number <span class="opt">(Optional)</span></label>
-                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                            onclick="openHelpModel()" />
-                    </div>
-                    <input id="originalRevision" name="originalRevision" type="text" class="input" placeholder="ex: REV-001">
-                </div>
-
-                <div>
-                    <div class="flex justify-between items-center">
-                        <label for="updatedRevision">Updated Revision Number <span class="opt">(Optional)</span></label>
-                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                            onclick="openHelpModel()" />
-                    </div>
-                    <input id="updatedRevision" name="updatedRevision" type="text" class="input" placeholder="ex: REV-002">
-                </div>
-            </div>
-
-            <div class="two-col">
-                <div>
-                    <div class="flex justify-between items-center">
-                        <label for="revisionDate">Revision Date <span class="opt">(Optional)</span></label>
-                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                            onclick="openHelpModel()" />
-                    </div>
-                    <input id="revisionDate" name="revisionDate" type="date" class="input">
-                </div>
-
-                <div>
-                    <div class="flex justify-between items-center">
-                        <label for="engineeringDept">Engineering Department <span class="required">*</span></label>
-                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                            onclick="openHelpModel()" />
-                    </div>
-                    <input id="engineeringDept" name="engineeringDept" type="text" class="input" required placeholder="ex: Mechanical Engineering" aria-describedby="err-engineeringDept">
-                    <div id="err-engineeringDept" class="error" role="alert" aria-live="polite"></div>
-                </div>
-            </div>
-
-            <div>
-                <div class="flex justify-between items-center">
-                    <label for="customerMessage">Message to Customer Detailing Issues <span class="opt">(Optional)</span></label>
-                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                        onclick="openHelpModel()" />
-                </div>
-                <textarea id="customerMessage" name="customerMessage" class="input" rows="3" placeholder="Detail any issues to communicate to the customer..."></textarea>
-            </div>
-
-            <div>
-                <div class="flex justify-between items-center">
-                    <label for="disposition">Disposition (Sequence of work steps required when "Repair" or "Rework" indicated) <span class="required">*</span></label>
-                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                        onclick="openHelpModel()" />
-                </div>
-                <textarea id="disposition" name="disposition" class="input" rows="3" required placeholder="Describe the sequence of work steps required..." aria-describedby="err-disposition"></textarea>
-                <div id="err-disposition" class="error" role="alert" aria-live="polite"></div>
-            </div>
-
-            <div class="two-col">
-                <fieldset class="form-group">
-                    <div class="flex justify-between items-center">
-                        <legend id="legend-requireUpdate">Require Update <span class="opt">(Optional)</span></legend>
-                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                            onclick="openHelpModel()" />
-                    </div>
-                    <div role="radiogroup" aria-labelledby="legend-requireUpdate">
-                        <label for="update-yes"><input id="update-yes" type="radio" name="requireUpdate" value="Yes"> Yes</label>
-                        <label for="update-no"><input id="update-no" type="radio" name="requireUpdate" value="No"> No</label>
-                    </div>
-                </fieldset>
-
-                <fieldset class="form-group">
-                    <div class="flex justify-between items-center">
-                        <legend id="legend-requireNotification">Required Notification <span class="opt">(Optional)</span></legend>
-                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                            onclick="openHelpModel()" />
-                    </div>
-                    <div role="radiogroup" aria-labelledby="legend-requireNotification">
-                        <label for="notification-yes"><input id="notification-yes" type="radio" name="requireNotification" value="Yes"> Yes</label>
-                        <label for="notification-no"><input id="notification-no" type="radio" name="requireNotification" value="No"> No</label>
-                    </div>
-                </fieldset>
-            </div>
-
-            <fieldset class="form-group">
-                <div class="flex justify-between items-center">
-                    <legend id="legend-reviewByEngineering">Review by CF Engineering <span class="required">*</span></legend>
-                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                        onclick="openHelpModel()" />
-                </div>
-                <div role="radiogroup" aria-labelledby="legend-reviewByEngineering" class="input">
-                    <label for="review-useAsIs"><input id="review-useAsIs" type="radio" name="reviewByEngineering" value="Use As Is" required> Use As Is</label>
-                    <label for="review-repair"><input id="review-repair" type="radio" name="reviewByEngineering" value="Repair"> Repair</label>
-                    <label for="review-rework"><input id="review-rework" type="radio" name="reviewByEngineering" value="Rework"> Rework</label>
-                    <label for="review-scrap"><input id="review-scrap" type="radio" name="reviewByEngineering" value="Scrap"> Scrap</label>
-                </div>
-                <div id="err-reviewByEngineering" class="error" role="alert" aria-live="polite"></div>
-            </fieldset>
-
-            <div class="actions">
-                <button type="submit" class="btn primary">Save</button>
-                <button type="button" class="btn" id="btnCancel">Cancel</button>
-            </div>
-
-            <div id="helperModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4 rounded-lg" role="dialog"
-                aria-modal="true" aria-labelledby="modalTitle">
-                <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
-                    onclick="event.stopPropagation()">
-                    <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Info</h2>
-                    <div class="mt-4">
-                        <p class="text-pretty text-gray-700">
-                            Detailed Information on select help-info...
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</section>
-            </div>
+            
+                            <div id="helperModal"
+                                class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4 rounded-lg"
+                                role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                                <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
+                                    onclick="event.stopPropagation()">
+                                    <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Info</h2>
+                                    <div class="mt-4">
+                                        <p class="text-pretty text-gray-700">
+                                            Detailed Information on select help-info...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
 
             <footer class="pt-10">
                 <div class="flex flex-col items-center justify-center gap-4 text-center py-4">

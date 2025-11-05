@@ -319,7 +319,7 @@
 
                                 <div class="actions mt-5" style="text-align: right;">
                                     <button type="button" class="btn" id="btnCancel">Cancel</button>
-                                    <button type="submit" class="btn primary">Save Changes</button>
+                                    <button type="submit" class="btn primary" onclick="openSubmitModel()">Save Changes</button>
                                 </div>
                             </div>
                         </details>
@@ -376,8 +376,23 @@
                                 </div>
 
                                 <div class="actions mt-5" style="text-align: right;">
-                                    <button type="button" class="btn" id="btnCancel">Cancel</button>
-                                    <button type="submit" class="btn primary">Save Final Review</button>
+                                    <button type="button" class="btn" id="btnCancelFinal">Cancel</button>
+                                    <button type="submit" class="btn-action" onclick="openSubmitModel()">Save Final Review</button>
+
+                                  <div id="submitModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
+                                       role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                                    <div id="modalSubmitBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
+                                         onclick="event.stopPropagation()">
+                                      <h2 id="submitModalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Your work submitted. Good job!</h2>
+
+                                      <div class="mt-4">
+                                        <p class="text-pretty text-gray-700">
+                                          Rest assured, your work is saved.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+
                                 </div>
                             </div>
                         </details>
@@ -394,7 +409,29 @@
         <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
       </div>
     </footer>
-        <script defer src="../../Scripts/app.js"></script>
+      <script defer src="../../Scripts/app.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          let submitModal = document.getElementById('submitModal')
+
+          window.openSubmitModel = function () {
+            submitModal.classList.remove('hidden');
+            submitModal.addEventListener('click', handleOutsideClick);
+          }
+
+          window.closeSubmitModel = function () {
+            submitModal.classList.add('hidden');
+            submitModal.addEventListener('click', handleOutsideClick);
+          }
+
+          function handleOutsideClick(e) {
+            if (e.target === submitModal){
+              closeSubmitModel();
+              window.location.href = './Dashboard.html';
+            }
+          }
+        })
+      </script>
     </div>
 </body>
 

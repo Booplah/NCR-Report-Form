@@ -69,7 +69,7 @@
     <header class="main-header">
       <div class="header-content">
         <a href="#" class="header-title">
-          <h1 class="page-title">Dashboard</h1>
+          <h1 class="page-title">New NCR Creation</h1>
         </a>
         <nav class="header-navigation">
           <ul class="header-links">
@@ -306,47 +306,46 @@
         <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
       </div>
     </footer>
-
-    <script defer src="../../Scripts/app.js"></script>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        let modal = document.getElementById('helperModal');
-        let submitModal = document.getElementById('submitModal')
-
-        window.openHelpModel = function () {
-          modal.classList.remove('hidden');
-          modal.addEventListener('click', handleOutsideClick);
-        }
-
-        window.closeHelpModel = function () {
-          modal.classList.add('hidden');
-          modal.removeEventListener('click', handleOutsideClick);
-        }
-
-        window.openSubmitModel = function () {
-          submitModal.classList.remove('hidden');
-          submitModal.addEventListener('click', handleOutsideClick);
-        }
-
-        window.closeSubmitModel = function () {
-          submitModal.classList.add('hidden');
-          submitModal.addEventListener('click', handleOutsideClick);
-        }
-
-        function handleOutsideClick(e) {
-          if (e.target === modal) {
-            closeHelpModel();
-          }
-          else if (e.target === submitModal){
-            closeSubmitModel();
-            window.location.href = './Dashboard.html';
-          }
-        }
-      })
-    </script>
   </div>
-  </div>
+
+  <script defer src="../../Scripts/app.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let modal = document.getElementById('helperModal');
+      let submitModal = document.getElementById('submitModal')
+
+      window.openHelpModel = function () {
+        modal.classList.remove('hidden');
+        modal.addEventListener('click', handleOutsideClick);
+      }
+
+      window.closeHelpModel = function () {
+        modal.classList.add('hidden');
+        modal.removeEventListener('click', handleOutsideClick);
+      }
+
+      window.openSubmitModel = function () {
+        submitModal.classList.remove('hidden');
+        submitModal.addEventListener('click', handleOutsideClick);
+      }
+
+      window.closeSubmitModel = function () {
+        submitModal.classList.add('hidden');
+        submitModal.addEventListener('click', handleOutsideClick);
+      }
+
+      function handleOutsideClick(e) {
+        if (e.target === modal) {
+          closeHelpModel();
+        }
+        else if (e.target === submitModal){
+          closeSubmitModel();
+          window.location.href = './Dashboard.html';
+        }
+      }
+    })
+  </script>
 </body>
 
 </html>

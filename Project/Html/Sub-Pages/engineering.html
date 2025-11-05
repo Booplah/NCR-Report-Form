@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,64 +9,45 @@
     <link rel="stylesheet" href="../../css/Main-Page.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body class="page-container">
-    <!-- Sidebar Navigation -->
+    <!-- Sidebar -->
     <aside class="sidebar">
         <div class="sidebar-content">
             <div class="sidebar-logo">
                 <a href="../index.html" class="logo-image">
-                    <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo"
-                        style="width: auto; height: 80%;">
+                    <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
                 </a>
             </div>
             <hr>
             <ul class="sidebar-items">
-                <li class="siderbar-item">
-                    <a href="../../Html/index.html" class="menu-link">Home</a>
-                </li>
-                <li class="siderbar-item">
-                    <a href="../../Html/Sidebar/dashboard.html" class="menu-link">Dashboard</a>
-                </li>
-                <li class="siderbar-item">
-                    <a href="../../Html/Sidebar/create-ncr.html" class="menu-link active">Create NCR</a>
-                </li>
-                <li class="siderbar-item">
-                    <a href="../../Html/Sidebar/admin.html" class="menu-link">Admin Page</a>
-                </li>
+                <li class="siderbar-item"><a href="../../Html/index.html" class="menu-link">Home</a></li>
+                <li class="siderbar-item"><a href="../../Html/Sidebar/dashboard.html" class="menu-link">Dashboard</a></li>
+                <li class="siderbar-item"><a href="../../Html/Sidebar/create-ncr.html" class="menu-link active">Create NCR</a></li>
+                <li class="siderbar-item"><a href="../../Html/Sidebar/admin.html" class="menu-link">Admin Page</a></li>
                 <li class="siderbar-item">
                     <details class="dropdown-menu">
                         <summary class="dropdown-toggle">
                             <span class="dropdown-label">Help & About</span>
                             <span class="dropdown-arrow"></span>
                         </summary>
-
                         <ul class="dropdown-items">
-                            <li>
-                                <a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a>
-                            </li>
-                            <li>
-                                <a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a>
-                            </li>
-                            <li>
-                                <a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a>
-                            </li>
+                            <li><a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a></li>
+                            <li><a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a></li>
+                            <li><a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a></li>
                         </ul>
                     </details>
                 </li>
             </ul>
         </div>
-
         <div class="sidebar-footer">
             <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
         </div>
     </aside>
 
-    <!-- Main Page/Header  -->
+    <!-- Main Content -->
     <div class="page-content">
         <header class="main-header">
             <div class="header-content">
@@ -83,107 +64,76 @@
             </div>
         </header>
 
-        <!-- Main Content -->
-        <main class="flex-1 p-6 ">
-
-            <!-- Progression -->
+        <main class="flex-1 p-6">
+            <!-- Progress Steps -->
             <div class="max-w-4xl mx-auto space-between gap-5">
                 <div class="pb-10">
                     <h2 class="sr-only">Steps</h2>
-
                     <div class="after:mt-4 after:block after:h-1 after:w-full after:rounded-lg after:bg-gray-200">
                         <ol class="flex justify-between text-sm font-medium text-gray-600">
-
-                            <!-- p1 -->
                             <li class="relative flex justify-start text-blue-500">
                                 <a href="../Sidebar/create-ncr.html" class="flex items-center space-x-2">
                                     <span class="absolute start-0 -bottom-7 rounded-full bg-blue-500 text-white">
-                                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                            fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd"></path>
+                                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                         </svg>
                                     </span>
                                 </a>
                                 <span class="sm:block">Quality Rep</span>
                             </li>
-
-                            <!-- p2 -->
                             <li class="relative flex justify-center text-blue-500">
                                 <span class="absolute -bottom-[1.75rem] left-1/2 -translate-x-1/2 rounded-full">
-                                    <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                            clip-rule="evenodd"></path>
+                                    <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                     </svg>
                                 </span>
-
                                 <span class="sm:block">Engineering</span>
                             </li>
-
-                            <!-- p3 -->
                             <li class="relative flex justify-center">
                                 <a href="../Sidebar/create-ncr.html" class="flex items-center space-x-2">
-                                    <span
-                                        class="absolute -bottom-[1.75rem] left-1/2 -translate-x-1/2 rounded-full bg-gray-500 text-white">
-                                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                            fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd"></path>
+                                    <span class="absolute -bottom-[1.75rem] left-1/2 -translate-x-1/2 rounded-full bg-gray-500 text-white">
+                                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                         </svg>
                                     </span>
                                 </a>
                                 <span class="sm:block">Purchasing</span>
                             </li>
-
-                            <!-- p4 -->
                             <li class="relative flex justify-end">
                                 <a href="../Sidebar/create-ncr.html" class="flex items-center space-x-2">
                                     <span class="absolute end-0 -bottom-[1.75rem] rounded-full bg-gray-500 text-white">
-                                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                            fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd"></path>
+                                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                         </svg>
                                     </span>
                                 </a>
-                                <span class=" sm:block">Details</span>
+                                <span class="sm:block">Details</span>
                             </li>
                         </ol>
                     </div>
                 </div>
 
-                <!-- Form -->
+                <!-- Form Section -->
                 <section id="view-create">
                     <div class="card pad">
-                        <h2 class="section-header" style="color: white; background-color:#58a899; margin-bottom: 30px;">
-                            Engineering</h2>
-                        <form id="engineeringForm" style="display: grid; grid-template-columns: 1fr; gap: 14px;"
-                            novalidate>
+                        <h2 class="section-header" style="color: white; background-color:#58a899; margin-bottom: 30px;">Engineering</h2>
+                        <form id="engineeringForm" style="display: grid; grid-template-columns: 1fr; gap: 14px;" novalidate>
+                            
                             <div class="two-col">
                                 <div>
                                     <div class="flex justify-between items-center">
                                         <label for="engineerName">Engineer Name <span class="required">*</span></label>
-                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                                            onclick="openHelpModel()" />
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help" onclick="openHelpModel()" />
                                     </div>
-                                    <input id="engineerName" name="engineerName" type="text" class="input" required
-                                        placeholder="ex: John Smith" aria-describedby="err-engineerName">
+                                    <input id="engineerName" name="engineerName" type="text" class="input" required placeholder="ex: John Smith" aria-describedby="err-engineerName">
                                     <div id="err-engineerName" class="error" role="alert" aria-live="polite"></div>
                                 </div>
-
                                 <div>
                                     <div class="flex justify-between items-center">
                                         <label for="engineerDate">Date <span class="required">*</span></label>
-                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                                            onclick="openHelpModel()" />
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help" onclick="openHelpModel()" />
                                     </div>
-                                    <input id="engineerDate" name="engineerDate" type="date" class="input" required
-                                        aria-describedby="err-engineerDate">
+                                    <input id="engineerDate" name="engineerDate" type="date" class="input" required aria-describedby="err-engineerDate">
                                     <div id="err-engineerDate" class="error" role="alert" aria-live="polite"></div>
                                 </div>
                             </div>
@@ -191,124 +141,88 @@
                             <div class="two-col">
                                 <div>
                                     <div class="flex justify-between items-center">
-                                        <label for="originalRevision">Original Revision Number <span
-                                                class="opt">(Optional)</span></label>
-                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                                            onclick="openHelpModel()" />
+                                        <label for="originalRevision">Original Revision Number <span class="opt">(Optional)</span></label>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help" onclick="openHelpModel()" />
                                     </div>
-                                    <input id="originalRevision" name="originalRevision" type="text" class="input"
-                                        placeholder="ex: REV-001">
+                                    <input id="originalRevision" name="originalRevision" type="text" class="input" placeholder="ex: REV-001">
                                 </div>
-
                                 <div>
                                     <div class="flex justify-between items-center">
-                                        <label for="updatedRevision">Updated Revision Number <span
-                                                class="opt">(Optional)</span></label>
-                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                                            onclick="openHelpModel()" />
+                                        <label for="updatedRevision">Updated Revision Number <span class="opt">(Optional)</span></label>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help" onclick="openHelpModel()" />
                                     </div>
-                                    <input id="updatedRevision" name="updatedRevision" type="text" class="input"
-                                        placeholder="ex: REV-002">
+                                    <input id="updatedRevision" name="updatedRevision" type="text" class="input" placeholder="ex: REV-002">
                                 </div>
                             </div>
 
                             <div class="two-col">
                                 <div>
                                     <div class="flex justify-between items-center">
-                                        <label for="revisionDate">Revision Date <span
-                                                class="opt">(Optional)</span></label>
-                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                                            onclick="openHelpModel()" />
+                                        <label for="revisionDate">Revision Date <span class="opt">(Optional)</span></label>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help" onclick="openHelpModel()" />
                                     </div>
                                     <input id="revisionDate" name="revisionDate" type="date" class="input">
                                 </div>
-
                                 <div>
                                     <div class="flex justify-between items-center">
-                                        <label for="engineeringDept">Engineering Department <span
-                                                class="required">*</span></label>
-                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                                            onclick="openHelpModel()" />
+                                        <label for="engineeringDept">Engineering Department <span class="required">*</span></label>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help" onclick="openHelpModel()" />
                                     </div>
-                                    <input id="engineeringDept" name="engineeringDept" type="text" class="input"
-                                        required placeholder="ex: Mechanical Engineering"
-                                        aria-describedby="err-engineeringDept">
+                                    <input id="engineeringDept" name="engineeringDept" type="text" class="input" required placeholder="ex: Mechanical Engineering" aria-describedby="err-engineeringDept">
                                     <div id="err-engineeringDept" class="error" role="alert" aria-live="polite"></div>
                                 </div>
                             </div>
 
                             <div>
                                 <div class="flex justify-between items-center">
-                                    <label for="customerMessage">Message to Customer Detailing Issues <span
-                                            class="opt">(Optional)</span></label>
-                                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                                        onclick="openHelpModel()" />
+                                    <label for="customerMessage">Message to Customer Detailing Issues <span class="opt">(Optional)</span></label>
+                                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help" onclick="openHelpModel()" />
                                 </div>
-                                <textarea id="customerMessage" name="customerMessage" class="input" rows="3"
-                                    placeholder="Detail any issues to communicate to the customer..."></textarea>
+                                <textarea id="customerMessage" name="customerMessage" class="input" rows="3" placeholder="Detail any issues to communicate to the customer..."></textarea>
                             </div>
 
                             <div>
                                 <div class="flex justify-between items-center">
-                                    <label for="disposition">Disposition (Sequence of work steps required when "Repair"
-                                        or "Rework" indicated) <span class="required">*</span></label>
-                                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                                        onclick="openHelpModel()" />
+                                    <label for="disposition">Disposition (Sequence of work steps required when "Repair" or "Rework" indicated) <span class="required">*</span></label>
+                                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help" onclick="openHelpModel()" />
                                 </div>
-                                <textarea id="disposition" name="disposition" class="input" rows="3" required
-                                    placeholder="Describe the sequence of work steps required..."
-                                    aria-describedby="err-disposition"></textarea>
+                                <textarea id="disposition" name="disposition" class="input" rows="3" required placeholder="Describe the sequence of work steps required..." aria-describedby="err-disposition"></textarea>
                                 <div id="err-disposition" class="error" role="alert" aria-live="polite"></div>
                             </div>
 
                             <div class="two-col">
                                 <fieldset class="form-group">
                                     <div class="flex justify-between items-center">
-                                        <legend id="legend-requireUpdate">Require Update <span
-                                                class="opt">(Optional)</span></legend>
-                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                                            onclick="openHelpModel()" />
+                                        <legend id="legend-requireUpdate">Require Update <span class="opt">(Optional)</span></legend>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help" onclick="openHelpModel()" />
                                     </div>
                                     <div role="radiogroup" aria-labelledby="legend-requireUpdate">
-                                        <label for="update-yes"><input id="update-yes" type="radio" name="requireUpdate"
-                                                value="Yes"> Yes</label>
-                                        <label for="update-no"><input id="update-no" type="radio" name="requireUpdate"
-                                                value="No"> No</label>
+                                        <label for="update-yes"><input id="update-yes" type="radio" name="requireUpdate" value="Yes"> Yes</label>
+                                        <label for="update-no"><input id="update-no" type="radio" name="requireUpdate" value="No"> No</label>
                                     </div>
                                 </fieldset>
-
                                 <fieldset class="form-group">
                                     <div class="flex justify-between items-center">
-                                        <legend id="legend-requireNotification">Required Notification <span
-                                                class="opt">(Optional)</span></legend>
-                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                                            onclick="openHelpModel()" />
+                                        <legend id="legend-requireNotification">Required Notification <span class="opt">(Optional)</span></legend>
+                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help" onclick="openHelpModel()" />
                                     </div>
                                     <div role="radiogroup" aria-labelledby="legend-requireNotification">
-                                        <label for="notification-yes"><input id="notification-yes" type="radio"
-                                                name="requireNotification" value="Yes"> Yes</label>
-                                        <label for="notification-no"><input id="notification-no" type="radio"
-                                                name="requireNotification" value="No"> No</label>
+                                        <label for="notification-yes"><input id="notification-yes" type="radio" name="requireNotification" value="Yes"> Yes</label>
+                                        <label for="notification-no"><input id="notification-no" type="radio" name="requireNotification" value="No"> No</label>
                                     </div>
                                 </fieldset>
                             </div>
 
                             <fieldset class="form-group">
                                 <div class="flex justify-between items-center">
-                                    <legend id="legend-reviewByEngineering">Review by CF Engineering <span
-                                            class="required">*</span></legend>
-                                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
-                                        onclick="openHelpModel()" />
+                                    <legend id="legend-reviewByEngineering">Review by CF Engineering <span class="required">*</span></legend>
+                                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help" onclick="openHelpModel()" />
                                 </div>
                                 <div role="radiogroup" aria-labelledby="legend-reviewByEngineering" class="input">
-                                    <label for="review-useAsIs"><input id="review-useAsIs" type="radio"
-                                            name="reviewByEngineering" value="Use As Is" required> Use As Is</label>
-                                    <label for="review-repair"><input id="review-repair" type="radio"
-                                            name="reviewByEngineering" value="Repair"> Repair</label>
-                                    <label for="review-rework"><input id="review-rework" type="radio"
-                                            name="reviewByEngineering" value="Rework"> Rework</label>
-                                    <label for="review-scrap"><input id="review-scrap" type="radio"
-                                            name="reviewByEngineering" value="Scrap"> Scrap</label>
+                                    <label for="review-useAsIs"><input id="review-useAsIs" type="radio" name="reviewByEngineering" value="Use As Is" required> Use As Is</label>
+                                    <label for="review-repair"><input id="review-repair" type="radio" name="reviewByEngineering" value="Repair"> Repair</label>
+                                    <label for="review-rework"><input id="review-rework" type="radio" name="reviewByEngineering" value="Rework"> Rework</label>
+                                    <label for="review-scrap"><input id="review-scrap" type="radio" name="reviewByEngineering" value="Scrap"> Scrap</label>
                                 </div>
                                 <div id="err-reviewByEngineering" class="error" role="alert" aria-live="polite"></div>
                             </fieldset>
@@ -317,45 +231,32 @@
                                 <button type="submit" class="btn primary">Save</button>
                                 <button type="button" class="btn" id="btnCancel">Cancel</button>
                                 <button type="button" class="btn" onclick="openSubmitModel()">Submit</button>
-
-                                <div id="submitModal"
-                                    class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
-                                    role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-                                    <div id="modalSubmitBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
-                                        onclick="event.stopPropagation()">
-                                        <h2 id="submitModalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">
-                                            Your work submitted.
-                                            Good job!</h2>
-
-                                        <div class="mt-4">
-                                            <p class="text-pretty text-gray-700">
-                                                Rest assured, your work is saved, and email sent to next employee
-                                                responsible for the next
-                                                portion.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </form>
                     </div>
                 </section>
             </div>
-            
-                            <div id="helperModal"
-                                class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4 rounded-lg"
-                                role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-                                <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
-                                    onclick="event.stopPropagation()">
-                                    <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Info</h2>
-                                    <div class="mt-4">
-                                        <p class="text-pretty text-gray-700">
-                                            Detailed Information on select help-info...
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
 
+            <!-- Modals -->
+            <div id="helperModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg" onclick="event.stopPropagation()">
+                    <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Info</h2>
+                    <div class="mt-4">
+                        <p class="text-pretty text-gray-700">Detailed Information on select help-info...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="submitModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                <div id="modalSubmitBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg" onclick="event.stopPropagation()">
+                    <h2 id="submitModalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Your work submitted. Good job!</h2>
+                    <div class="mt-4">
+                        <p class="text-pretty text-gray-700">Rest assured, your work is saved, and email sent to next employee responsible for the next portion.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
             <footer class="pt-10">
                 <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
                     <ul class="flex flex-wrap justify-center gap-4 text-xs">
@@ -366,32 +267,43 @@
                 </div>
             </footer>
         </main>
-
-        <script defer src="../../Scripts/app.js"></script>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                let modal = document.getElementById('helperModal');
-
-                window.openHelpModel = function () {
-                    modal.classList.remove('hidden');
-                    modal.addEventListener('click', handleOutsideClick);
-                }
-
-                window.closeHelpModel = function () {
-                    modal.classList.add('hidden');
-                    modal.removeEventListener('click', handleOutsideClick);
-                }
-
-                function handleOutsideClick(e) {
-                    if (e.target === modal) {
-                        closeHelpModel();
-                    }
-                }
-            })
-        </script>
     </div>
 
-</body>
+    <script defer src="../../Scripts/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let modal = document.getElementById('helperModal');
+            let submitModal = document.getElementById('submitModal');
 
+            window.openHelpModel = function () {
+                modal.classList.remove('hidden');
+                modal.addEventListener('click', handleOutsideClick);
+            }
+
+            window.closeHelpModel = function () {
+                modal.classList.add('hidden');
+                modal.removeEventListener('click', handleOutsideClick);
+            }
+
+            window.openSubmitModel = function () {
+                submitModal.classList.remove('hidden');
+                submitModal.addEventListener('click', handleOutsideClick);
+            }
+
+            window.closeSubmitModel = function () {
+                submitModal.classList.add('hidden');
+                submitModal.removeEventListener('click', handleOutsideClick);
+            }
+
+            function handleOutsideClick(e) {
+                if (e.target === modal) {
+                    closeHelpModel();
+                } else if (e.target === submitModal) {
+                    closeSubmitModel();
+                    window.location.href = './Dashboard.html';
+                }
+            }
+        })
+    </script>
+</body>
 </html>

@@ -1,8 +1,9 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create NCR</title>
+  <title>CrossFire NCR – Quality Representative</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../../css/Main-Page.css">
   <link rel="stylesheet" href="../../css/create-ncr.css">
@@ -69,7 +70,7 @@
     <header class="main-header">
       <div class="header-content">
         <a href="#" class="header-title">
-          <h1 class="page-title">Dashboard</h1>
+          <h1 class="page-title">Create NCR - Quality Representative</h1>
         </a>
         <nav class="header-navigation">
           <ul class="header-links">
@@ -83,13 +84,84 @@
 
     <!-- Main Content -->
     <main class="flex-1 p-6">
+
+      <!-- Progression -->
+            <div class="max-w-4xl mx-auto space-between gap-5">
+                <div class="pb-10">
+                    <h2 class="sr-only">Steps</h2>
+
+                    <div class="after:mt-4 after:block after:h-1 after:w-full after:rounded-lg after:bg-gray-200">
+                        <ol class="flex justify-between text-sm font-medium text-gray-600">
+
+                            <!-- p1 -->
+                            <li class="relative flex justify-start text-blue-500">
+                                    <span class="absolute start-0 -bottom-7 rounded-full">
+                                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                <span class="sm:block">Quality Rep</span>
+                            </li>
+
+                            <!-- p2 -->
+                            <li class="relative flex justify-center">
+                                <a href="../Sub-Pages/engineering.html" class="flex items-center space-x-2">
+                                    <span
+                                        class="absolute -bottom-[1.75rem] left-1/2 -translate-x-1/2 rounded-full bg-gray-500 text-white">
+                                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+
+                                <span class="sm:block">Engineering</span>
+                            </li>
+
+                            <!-- p3 -->
+                            <li class="relative flex justify-center">
+                                <a href="" class="flex items-center space-x-2">
+                                    <span
+                                        class="absolute -bottom-[1.75rem] left-1/2 -translate-x-1/2 rounded-full bg-gray-500 text-white">
+                                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <span class="sm:block">Purchasing</span>
+                            </li>
+
+                            <!-- p4 -->
+                            <li class="relative flex justify-end">
+                                <a href="" class="flex items-center space-x-2">
+                                    <span class="absolute end-0 -bottom-[1.75rem] rounded-full bg-gray-500 text-white">
+                                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <span class=" sm:block">Details</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
       <div class="max-w-4xl mx-auto">
         <!-- CREATE -->
         <section id="view-create">
           <div class="card pad">
-            <div>
               <h2 class="section-header" style="color: white; margin-bottom: 30px;">Quality Representative</h2>
-            </div>
 
             <form id="ncrForm" style="margin-top:12px" novalidate>
 
@@ -234,7 +306,7 @@
                   </div>
                 </fieldset>
                 <br>
-                <div >
+                <div>
                   <div>
                     <div class="flex items-center justify-between">
                       <label for="reportedBy">Quality Representative's Name <span class="required"
@@ -242,20 +314,6 @@
                       <img src="../../Images/HelpIcon.png" class="w-5 h-auto cursor-pointer" alt="Help icon"
                         onclick="openHelpModel()" />
 
-                      <div id="helperModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
-                        role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-                        <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
-                          onclick="event.stopPropagation()">
-                          <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Info</h2>
-
-                          <div class="mt-4">
-                            <p class="text-pretty text-gray-700">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu
-                              consectetur. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
                       <input id="reportedBy" name="reportedBy" class="input" type="text" placeholder="ex: Dave kendell"
                         aria-describedby="err-reportedBy" />
                       <div id="err-reportedBy" class="error" role="alert" aria-live="polite"></div>
@@ -270,25 +328,39 @@
                   </div>
                 </div>
                 <div class="actions">
-                  <button type="button" class="btn" id="btnValidate">Reset</button>
-                  <button type="submit" class="btn primary">Save NCR</button>
-                  <a href="../Sub-Pages/engineering.html" type="button" class="btn">Next</a>
+                  <button type="submit" class="btn primary">Save</button>
+                  <button type="button" class="btn" id="btnValidate">Cancel</button>
                 </div>
+
 
             </form>
           </div>
         </section>
       </div>
+                      <div id="helperModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
+                  role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                  <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
+                    onclick="event.stopPropagation()">
+                    <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Info</h2>
+
+                    <div class="mt-4">
+                      <p class="text-pretty text-gray-700">
+                        Detailed Information on select help-info...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                  <footer class="pt-10">
+                <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
+                    <ul class="flex flex-wrap justify-center gap-4 text-xs">
+                        <li><a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a></li>
+                    </ul>
+                    <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
+                </div>
+            </footer>
     </main>
-    <footer class="left-64 right-0 bg-white border-t border-gray-200 py-3 z-10">
-      <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
-        <ul class="flex flex-wrap justify-center gap-4 text-xs">
-          <li><a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a></li>
-          <li><a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a></li>
-        </ul>
-        <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
-      </div>
-    </footer>
 
     <script defer src="../../Scripts/app.js"></script>
 

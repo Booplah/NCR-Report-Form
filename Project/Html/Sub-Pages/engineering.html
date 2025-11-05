@@ -33,7 +33,7 @@
                     <a href="../../Html/Sidebar/dashboard.html" class="menu-link">Dashboard</a>
                 </li>
                 <li class="siderbar-item">
-                    <a href="../../Html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a>
+                    <a href="../../Html/Sidebar/create-ncr.html" class="menu-link active">Create NCR</a>
                 </li>
                 <li class="siderbar-item">
                     <a href="../../Html/Sidebar/admin.html" class="menu-link">Admin Page</a>
@@ -136,7 +136,7 @@
                                         </svg>
                                     </span>
                                 </a>
-                                <span class="sm:block">Address</span>
+                                <span class="sm:block">Purchasing</span>
                             </li>
 
                             <!-- p4 -->
@@ -151,98 +151,160 @@
                                         </svg>
                                     </span>
                                 </a>
-                                <span class=" sm:block">Payment</span>
+                                <span class=" sm:block">Details</span>
                             </li>
                         </ol>
                     </div>
                 </div>
 
-                <!-- Form -->
-                <section id="view-create">
-                    <div class="card pad">
-                        <div style="display:flex;justify-content:space-between;align-items:center">
-                            <h2>Engineering</h2>
-                        </div>
-                        <form style="display: grid; grid-template-columns: 1fr; gap: 14px;" novalidate>
-                            <div class="two-col">
-                                <div>
-                                    <div class="space-between flex place-content-between mx-auto">
-                                        <label>Engineer Name <span class="required">*</span></label>
-                                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
-                                            alt="Help icon" onclick="openHelpModel()" />
-                                    </div>
-                                    <input type="text" class="input" required>
-                                </div>
-                                <div>
-                                    <label>Date <span class="required">*</span></label>
-                                    <input type="date" class="input" required>
-                                </div>
-                            </div>
-
-                            <div class="two-col">
-                                <div>
-                                    <label>Original Revision Number <span class="opt">(Optional)</span></label>
-                                    <input type="text" class="input">
-                                </div>
-                                <div>
-                                    <label>Updated Revision Number <span class="opt">(Optional)</span></label>
-                                    <input type="text" class="input">
-                                </div>
-                            </div>
-
-                            <div class="two-col">
-                                <div>
-                                    <label>Revision Date <span class="opt">(Optional)</span></label>
-                                    <input type="date" class="input">
-                                </div>
-                                <div>
-                                    <label>Engineering Department <span class="required">*</span></label>
-                                    <input type="text" class="input" required>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label>Message to Customer Detailing Issues <span class="opt">(Optional)</span></label>
-                                <textarea class="input" rows="3"></textarea>
-                            </div>
-
-                            <div>
-                                <label>Disposition (Sequence of work steps required when “Repair” or “Rework” indicated)
-                                    <span class="required">*</span></label>
-                                <textarea class="input" rows="3" required></textarea>
-                            </div>
-
-                            <div class="two-col">
-                                <fieldset class="form-group">
-                                    <legend>Require Update <span class="opt">(Optional)</span></legend>
-                                    <label><input type="radio" name="requireUpdate"> Yes</label>
-                                    <label><input type="radio" name="requireUpdate"> No</label>
-                                </fieldset>
-
-                                <fieldset class="form-group">
-                                    <legend>Required Notification <span class="opt">(Optional)</span></legend>
-                                    <label><input type="radio" name="requireNotification"> Yes</label>
-                                    <label><input type="radio" name="requireNotification"> No</label>
-                                </fieldset>
-                            </div>
-
-                            <fieldset class="form-group">
-                                <legend>Review by CF Engineering <span class="required">*</span></legend>
-                                <label><input type="radio" name="reviewByEngineering" required> Use As Is</label>
-                                <label><input type="radio" name="reviewByEngineering"> Repair</label>
-                                <label><input type="radio" name="reviewByEngineering"> Rework</label>
-                                <label><input type="radio" name="reviewByEngineering"> Scrap</label>
-                            </fieldset>
-
-                            <div class="actions">
-                                <button type="button" class="btn cancel-btn">Cancel</button>
-                                <button type="submit" class="btn primary save-btn">Save</button>
-                                <a href="../Sidebar/create-ncr.html" class="btn">Back</a>
-                            </div>
-                        </form>
-
+<!-- Form -->
+<section id="view-create">
+    <div class="card pad">
+        <h2 class="section-header" style="color: white; background-color:#58a899; margin-bottom: 30px;">Engineering</h2>
+        <form id="engineeringForm" style="display: grid; grid-template-columns: 1fr; gap: 14px;" novalidate>
+            <div class="two-col">
+                <div>
+                    <div class="flex justify-between items-center">
+                        <label for="engineerName">Engineer Name <span class="required">*</span></label>
+                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                            onclick="openHelpModel()" />
                     </div>
-                </section>
+                    <input id="engineerName" name="engineerName" type="text" class="input" required placeholder="ex: John Smith" aria-describedby="err-engineerName">
+                    <div id="err-engineerName" class="error" role="alert" aria-live="polite"></div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center">
+                        <label for="engineerDate">Date <span class="required">*</span></label>
+                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                            onclick="openHelpModel()" />
+                    </div>
+                    <input id="engineerDate" name="engineerDate" type="date" class="input" required aria-describedby="err-engineerDate">
+                    <div id="err-engineerDate" class="error" role="alert" aria-live="polite"></div>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div>
+                    <div class="flex justify-between items-center">
+                        <label for="originalRevision">Original Revision Number <span class="opt">(Optional)</span></label>
+                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                            onclick="openHelpModel()" />
+                    </div>
+                    <input id="originalRevision" name="originalRevision" type="text" class="input" placeholder="ex: REV-001">
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center">
+                        <label for="updatedRevision">Updated Revision Number <span class="opt">(Optional)</span></label>
+                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                            onclick="openHelpModel()" />
+                    </div>
+                    <input id="updatedRevision" name="updatedRevision" type="text" class="input" placeholder="ex: REV-002">
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div>
+                    <div class="flex justify-between items-center">
+                        <label for="revisionDate">Revision Date <span class="opt">(Optional)</span></label>
+                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                            onclick="openHelpModel()" />
+                    </div>
+                    <input id="revisionDate" name="revisionDate" type="date" class="input">
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center">
+                        <label for="engineeringDept">Engineering Department <span class="required">*</span></label>
+                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                            onclick="openHelpModel()" />
+                    </div>
+                    <input id="engineeringDept" name="engineeringDept" type="text" class="input" required placeholder="ex: Mechanical Engineering" aria-describedby="err-engineeringDept">
+                    <div id="err-engineeringDept" class="error" role="alert" aria-live="polite"></div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex justify-between items-center">
+                    <label for="customerMessage">Message to Customer Detailing Issues <span class="opt">(Optional)</span></label>
+                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                        onclick="openHelpModel()" />
+                </div>
+                <textarea id="customerMessage" name="customerMessage" class="input" rows="3" placeholder="Detail any issues to communicate to the customer..."></textarea>
+            </div>
+
+            <div>
+                <div class="flex justify-between items-center">
+                    <label for="disposition">Disposition (Sequence of work steps required when "Repair" or "Rework" indicated) <span class="required">*</span></label>
+                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                        onclick="openHelpModel()" />
+                </div>
+                <textarea id="disposition" name="disposition" class="input" rows="3" required placeholder="Describe the sequence of work steps required..." aria-describedby="err-disposition"></textarea>
+                <div id="err-disposition" class="error" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="two-col">
+                <fieldset class="form-group">
+                    <div class="flex justify-between items-center">
+                        <legend id="legend-requireUpdate">Require Update <span class="opt">(Optional)</span></legend>
+                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                            onclick="openHelpModel()" />
+                    </div>
+                    <div role="radiogroup" aria-labelledby="legend-requireUpdate">
+                        <label for="update-yes"><input id="update-yes" type="radio" name="requireUpdate" value="Yes"> Yes</label>
+                        <label for="update-no"><input id="update-no" type="radio" name="requireUpdate" value="No"> No</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <div class="flex justify-between items-center">
+                        <legend id="legend-requireNotification">Required Notification <span class="opt">(Optional)</span></legend>
+                        <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                            onclick="openHelpModel()" />
+                    </div>
+                    <div role="radiogroup" aria-labelledby="legend-requireNotification">
+                        <label for="notification-yes"><input id="notification-yes" type="radio" name="requireNotification" value="Yes"> Yes</label>
+                        <label for="notification-no"><input id="notification-no" type="radio" name="requireNotification" value="No"> No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <fieldset class="form-group">
+                <div class="flex justify-between items-center">
+                    <legend id="legend-reviewByEngineering">Review by CF Engineering <span class="required">*</span></legend>
+                    <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help"
+                        onclick="openHelpModel()" />
+                </div>
+                <div role="radiogroup" aria-labelledby="legend-reviewByEngineering" class="input">
+                    <label for="review-useAsIs"><input id="review-useAsIs" type="radio" name="reviewByEngineering" value="Use As Is" required> Use As Is</label>
+                    <label for="review-repair"><input id="review-repair" type="radio" name="reviewByEngineering" value="Repair"> Repair</label>
+                    <label for="review-rework"><input id="review-rework" type="radio" name="reviewByEngineering" value="Rework"> Rework</label>
+                    <label for="review-scrap"><input id="review-scrap" type="radio" name="reviewByEngineering" value="Scrap"> Scrap</label>
+                </div>
+                <div id="err-reviewByEngineering" class="error" role="alert" aria-live="polite"></div>
+            </fieldset>
+
+            <div class="actions">
+                <button type="submit" class="btn primary">Save</button>
+                <button type="button" class="btn" id="btnCancel">Cancel</button>
+            </div>
+
+            <div id="helperModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4 rounded-lg" role="dialog"
+                aria-modal="true" aria-labelledby="modalTitle">
+                <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
+                    onclick="event.stopPropagation()">
+                    <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Info</h2>
+                    <div class="mt-4">
+                        <p class="text-pretty text-gray-700">
+                            Detailed Information on select help-info...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
             </div>
 
             <footer class="pt-10">
@@ -257,27 +319,28 @@
         </main>
 
         <script defer src="../../Scripts/app.js"></script>
-            <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        let modal = document.getElementById('helperModal');
 
-        window.openHelpModel = function () {
-          modal.classList.remove('hidden');
-          modal.addEventListener('click', handleOutsideClick);
-        }
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                let modal = document.getElementById('helperModal');
 
-        window.closeHelpModel = function () {
-          modal.classList.add('hidden');
-          modal.removeEventListener('click', handleOutsideClick);
-        }
+                window.openHelpModel = function () {
+                    modal.classList.remove('hidden');
+                    modal.addEventListener('click', handleOutsideClick);
+                }
 
-        function handleOutsideClick(e) {
-          if (e.target === modal) {
-            closeHelpModel();
-          }
-        }
-      })
-    </script>
+                window.closeHelpModel = function () {
+                    modal.classList.add('hidden');
+                    modal.removeEventListener('click', handleOutsideClick);
+                }
+
+                function handleOutsideClick(e) {
+                    if (e.target === modal) {
+                        closeHelpModel();
+                    }
+                }
+            })
+        </script>
     </div>
 
 </body>

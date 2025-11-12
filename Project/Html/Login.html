@@ -28,20 +28,14 @@
   </h1>
   <div class="flex flex-row space-x-9">
 
-    <a href="./index.html">
-      <div class="dept-square">
-        Quality
-      </div>
+    <a href="#" class="role-link" data-role="Quality">
+    <div class="dept-square">Quality</div>
     </a>
-    <a href="./index.html">
-      <div class="dept-square">
-        Engineering
-      </div>
+   <a href="#" class="role-link" data-role="Engineering">
+    <div class="dept-square">Engineering</div>
     </a>
-    <a href="./index.html">
-      <div class="dept-square">
-        Purchasing
-      </div>
+   <a href="#" class="role-link" data-role="Purchasing">
+    <div class="dept-square">Purchasing</div>
     </a>
   </div>
 </div>
@@ -80,6 +74,22 @@
     }
 </style>
 
+/* JavaScript to handle role selection and redirection */
+<script>
+  (function () {
+    const ROLE_KEY = 'crossfire.role';
+    document.querySelectorAll('.role-link').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const role = a.getAttribute('data-role');
+        localStorage.setItem(ROLE_KEY, role);
+        // optional: clear unread state per demo run
+        // localStorage.removeItem('crossfire.notifications'); 
+        window.location.href = './index.html';
+      });
+    });
+  })();
+</script>
 </body>
 </html>
 

@@ -8,6 +8,7 @@
     <title>CrossFire NCR – View NCR</title>
     <link rel="stylesheet" href="../../css/viewNCR.css">
     <link rel="stylesheet" href="../../css/Main-Page.css">
+    <link rel="stylesheet" href="../../css/notifications.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -76,6 +77,22 @@
                 </a>
                 <nav class="header-navigation">
                     <ul class="header-links">
+                        <!-- 🔔 Notification Bell + Dropdown -->
+        <li class="notif-container">
+          <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false" aria-label="Notifications">
+            <i data-lucide="bell"></i>
+            <span id="notif-badge" class="notif-badge" style="display:none;">0</span>
+          </button>
+
+          <div id="notif-dropdown" class="notif-dropdown">
+            <div class="notif-head">
+              <span>Notifications</span>
+              <button id="notif-markall" class="notif-markall">Mark all read</button>
+            </div>
+            <ul id="notif-list" class="notif-list"></ul>
+            <div id="notif-empty" class="notif-empty" style="display:none;">You’re all caught up.</div>
+          </div>
+        </li>
                         <li>
                             <p class="account-name"><strong class="account-label">Account</strong></p>
                         </li>
@@ -111,7 +128,7 @@
                         NCR No: <strong>2025-023</strong> | Status: <strong>Active</strong> | Date: Oct 10 2025
                     </div>
                     <!-- Quality Representative Section -->
-                  <div id="sec-quality" class="ncr-section active">
+                  <section id="sec-quality" class="ncr-section active">
 
                     <div class="section-header">Quality Representative</div>
 
@@ -208,10 +225,10 @@
                             <div class="field-value">2025/10/10</div>
                         </div>
                     </div>
-                  </div> <!-- End of Quality Representative Section -->
+                  </section> <!-- End of Quality Representative Section -->
 
                     <!-- Engineering Section -->
-                   <div id="sec-engineering" class="ncr-section">
+                   <section id="sec-engineering" class="ncr-section">
 
                     <div class="section-header" style="background-color:#58a899;">Engineering</div>
                     <div class="row">
@@ -315,11 +332,15 @@
                             </div>
                         </div>
                     </div>
+<<<<<<< Updated upstream
                     
                   </div> <!-- End of Engineering Section -->
+=======
+                  </section> <!-- End of Engineering Section -->
+>>>>>>> Stashed changes
 
                     <!-- Purchasing Section -->
-                   <div id="sec-purchasing" class="ncr-section">
+                   <section id="sec-purchasing" class="ncr-section">
 
                     <div class="section-header" style="background-color:#497ba1;">Purchasing</div>
                     <div class="row">
@@ -392,10 +413,10 @@
                             <div class="field-value">2025/10/11</div>
                         </div>
                     </div>
-                  </div> <!-- End of Purchasing Section -->
+                   </section> <!-- End of Purchasing Section -->
 
                     <!-- Final Review Section -->
-                   <div id="sec-final" class="ncr-section">
+                   <section id="sec-final" class="ncr-section">
 
                     <div class="section-header" style="background-color:#292980;">Final Review</div>
 
@@ -445,7 +466,7 @@
                             <div class="field-value">2025/10/16</div>
                         </div>
                     </div>
-                  </div> <!-- End of Final Review Section -->
+                  </section> <!-- End of Final Review Section -->
                 </div>
             </div>
             <footer class="pt-10">
@@ -464,6 +485,12 @@
     
     <script src="../../Scripts/view.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../../Scripts/notifications-demo.js"></script>
+    <script>
+        if (window.lucide) lucide.createIcons(); // replaces all <i data-lucide="..."> with SVG icons
+    </script>
+
 
 </body>
 

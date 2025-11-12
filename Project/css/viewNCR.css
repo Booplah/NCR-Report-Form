@@ -159,9 +159,9 @@ h1 {
 }
 
 .tab-btn.active {
-    background: #2D6EA7;
+    background: #ccd1d4;
     color: #fff;
-    border-color: #2D6EA7;
+    border-color: #5f676d;
 }
 
 /* Section visibility */
@@ -221,3 +221,5 @@ h1 {
   margin-bottom: 6px;
   padding: 6px 8px;
 }
+
+

@@ -9,6 +9,30 @@ console.log("view.js loaded");
   const sections = Array.from(document.querySelectorAll(".ncr-section"));
   if (!tabsContainer || !tabs.length || !sections.length) return;
 
+    /* helper that checks the URL */
+  function getInitialTarget() {
+    const params = new URLSearchParams(window.location.search);
+    let target = params.get("section");  // e.g. "sec-quality"
+    if (!target && window.location.hash) {
+      target = window.location.hash.slice(1); // fallback to #hash
+    }
+     // Allow short aliases, just in case
+  const alias = {
+    quality: "sec-quality",
+    engineering: "sec-engineering",
+    purchasing: "sec-purchasing",
+    all: "all"
+  };
+    // validate that it's an existing section ID or "all"
+    const validIds = sections.map(s => s.id);
+    if (target && (target === "all" || validIds.includes(target))) {
+      return target;
+    }
+    return "all";
+  }
+
+  /*  END of inserted helper */
+
   function show(targetId) {
     if (targetId === "all") {
       // show every section
@@ -22,7 +46,16 @@ console.log("view.js loaded");
   }
 
   // initialize to Full Report
-  show("all");
+   const initial = getInitialTarget();
+  show(initial);
+
+  
+  // optional: scroll that section into view
+  if (initial !== "all") {
+    const el = document.getElementById(initial);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  /* END of changed section */
 
   // click to switch
   tabsContainer.addEventListener("click", (e) => {

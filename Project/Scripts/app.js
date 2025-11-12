@@ -78,7 +78,7 @@ function validateForm() {
   let valid = true;
   const requiredFields = [
     'ncrNumber', 'dateReported', 'processApplicable', 'itemDescriptionSAP',
-    'supplierName', 'qtyReceived', 'qtyDefective', 'poOrProdNo', 
+    'supplierName', 'qtyReceived', 'qtyDefective', 'poOrProdNo',
     'salesOrderNo', 'defectDescription', 'reportedBy'
   ];
 
@@ -98,7 +98,7 @@ function validateForm() {
   const radios = document.getElementsByName('itemMarkedNonconforming');
   const errorRadio = document.getElementById('err-itemMarkedNonconforming');
   const checked = Array.from(radios).some(radio => radio.checked);
-  
+
   if (radios.length > 0 && !checked) {
     errorRadio.textContent = 'You must select an option.';
     valid = false;
@@ -129,7 +129,7 @@ function validateEngineeringForm() {
   const reviewRadios = document.getElementsByName('reviewByEngineering');
   const errorReview = document.getElementById('err-reviewByEngineering');
   const reviewChecked = Array.from(reviewRadios).some(radio => radio.checked);
-  
+
   if (reviewRadios.length > 0 && !reviewChecked) {
     errorReview.textContent = 'You must select a review option.';
     valid = false;
@@ -173,7 +173,7 @@ if (ncrForm) {
       status: 'In Progress',
       currentStage: 'Engineering',
       createdAt: new Date().toISOString(),
-      
+
       docNum: getVal('docNum'),
       cfEngDisposition: getCheckedVal('cfEngDisposition'),
       reqNotif: getCheckedVal('reqNotif'),
@@ -205,7 +205,7 @@ if (ncrForm) {
 
     ncrList.push(newNcr);
     localStorage.setItem('ncrList', JSON.stringify(ncrList));
-    
+
     alert('NCR created successfully ✅');
     window.location.href = '../Sub-Pages/engineering.html';
   });
@@ -215,7 +215,6 @@ const engineeringForm = document.getElementById('engineeringForm');
 if (engineeringForm) {
   engineeringForm.addEventListener('submit', function (event) {
     event.preventDefault();
-
     if (!validateEngineeringForm()) {
       alert('Please complete all the required fields in the Engineering section.');
       return;
@@ -270,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Real-time Validation - Quality Rep
   const requiredFields = [
     'ncrNumber', 'dateReported', 'processApplicable', 'itemDescriptionSAP',
-    'supplierName', 'qtyReceived', 'qtyDefective', 'poOrProdNo', 
+    'supplierName', 'qtyReceived', 'qtyDefective', 'poOrProdNo',
     'salesOrderNo', 'defectDescription', 'reportedBy'
   ];
 
@@ -335,12 +334,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const engCancelBtn = document.getElementById('btnCancel');
-  if (engCancelBtn) {
-    engCancelBtn.addEventListener('click', () => {
-      if (confirm('Are you sure you want to cancel? Any unsaved changes will be lost.')) {
-        window.location.href = '../Sidebar/create-ncr.html';
+document.querySelectorAll('button[id^="btnCancel"]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const form = btn.closest('form');
+          if (confirm('Are you sure you want to cancel? Any unsaved changes will be lost.')) {
+        form.reset()
       }
-    });
-  }
+    if (form) form.reset();
+  });
 });
+
+
+
+
+
+}
+);

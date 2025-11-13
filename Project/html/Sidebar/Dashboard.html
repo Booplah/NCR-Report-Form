@@ -6,6 +6,7 @@
   <title>Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../../css/Main-Page.css">
+  <link rel="stylesheet" href="../../css/notifications.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -57,6 +58,22 @@
           <ul class="header-links">
             <li class="account-info">
               <p class="account-name"><strong class="account-label">Account</strong></p>
+            </li>
+            <!-- 🔔 Notification Bell + Dropdown -->
+            <li class="notif-container">
+              <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false" aria-label="Notifications">
+                <i data-lucide="bell"></i>
+                  <span id="notif-badge" class="notif-badge" style="display:none;">0</span>
+              </button>
+
+              <div id="notif-dropdown" class="notif-dropdown">
+                <div class="notif-head">
+                 <span>Notifications</span>
+                <button id="notif-markall" class="notif-markall">Mark all read</button>
+               </div>
+               <ul id="notif-list" class="notif-list"></ul>
+               <div id="notif-empty" class="notif-empty" style="display:none;">You’re all caught up.</div>
+              </div>
             </li>
           </ul>
         </nav>
@@ -329,5 +346,12 @@
   </div>
 
   <script src="../../Scripts/Dashboard.js"></script>
+  <!-- script for notification system -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../../Scripts/notifications-demo.js"></script>
+    <script>
+        if (window.lucide) lucide.createIcons(); // replaces all <i data-lucide="..."> with SVG icons
+    </script>
+    <!--end of notification system script-->
 </body>
 </html>

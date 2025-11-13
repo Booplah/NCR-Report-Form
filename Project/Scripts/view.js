@@ -4,65 +4,76 @@ console.log("view.js loaded");
 (function () {
   if (!(document.body && document.body.dataset.page === "view-ncr")) return;
 
-  const tabsContainer = document.querySelector(".section-tabs");
-  const tabs = tabsContainer ? Array.from(tabsContainer.querySelectorAll(".tab-btn")) : [];
+  const tabs = Array.from(document.querySelectorAll(".progress-tab[data-target]"));
   const sections = Array.from(document.querySelectorAll(".ncr-section"));
-  if (!tabsContainer || !tabs.length || !sections.length) return;
+  const ACTIVE_TAB_CLASSES = "border-b-2 border-blue-600 px-4 py-2 text-md font-medium text-blue-600 transition-colors hover:text-blue-700";
+  const INACTIVE_TAB_CLASSES = "border-b-2 border-transparent px-4 py-2 text-md font-medium text-gray-600 transition-colors hover:text-gray-700";
 
-    /* helper that checks the URL */
-  function getInitialTarget() {
-    const params = new URLSearchParams(window.location.search);
-    let target = params.get("section");  // e.g. "sec-quality"
-    if (!target && window.location.hash) {
-      target = window.location.hash.slice(1); // fallback to #hash
-    }
-     // Allow short aliases, just in case
   const alias = {
     quality: "sec-quality",
     engineering: "sec-engineering",
+    procurement: "sec-purchasing",
     purchasing: "sec-purchasing",
+    final: "sec-final",
+    "final-review": "sec-final",
     all: "all"
   };
-    // validate that it's an existing section ID or "all"
-    const validIds = sections.map(s => s.id);
-    if (target && (target === "all" || validIds.includes(target))) {
-      return target;
-    }
-    return "all";
+
+  function normalizeTarget(raw) {
+    if (!raw) return null;
+    const trimmed = raw.trim().toLowerCase();
+    const candidate = trimmed.startsWith("sec-")
+      ? trimmed
+      : alias[trimmed] || null;
+    if (!candidate) return null;
+    return sections.some(sec => sec.id === candidate) ? candidate : null;
   }
 
-  /*  END of inserted helper */
+  function getInitialTarget() {
+    const params = new URLSearchParams(window.location.search);
+    const fromQuery = normalizeTarget(params.get("section"));
+    if (fromQuery) return fromQuery;
 
-  function show(targetId) {
-    if (targetId === "all") {
-      // show every section
-      sections.forEach(sec => sec.classList.add("active"));
-    } else {
-      // show only the selected section
-      sections.forEach(sec => sec.classList.toggle("active", sec.id === targetId));
-    }
-    // highlight the chosen tab
-    tabs.forEach(btn => btn.classList.toggle("active", btn.dataset.target === targetId));
+    const fromHash = normalizeTarget(window.location.hash?.slice(1));
+    if (fromHash) return fromHash;
+
+    return tabs[0]?.dataset.target || sections[0]?.id || null;
   }
 
-  // initialize to Full Report
-   const initial = getInitialTarget();
-  show(initial);
-
-  
-  // optional: scroll that section into view
-  if (initial !== "all") {
-    const el = document.getElementById(initial);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  function setActiveTab(targetId) {
+    tabs.forEach((tab) => {
+      const isActive = tab.dataset.target === targetId;
+      tab.setAttribute("aria-selected", isActive);
+      tab.className = `progress-tab ${isActive ? ACTIVE_TAB_CLASSES : INACTIVE_TAB_CLASSES}`;
+    });
   }
-  /* END of changed section */
 
-  // click to switch
-  tabsContainer.addEventListener("click", (e) => {
-    const btn = e.target.closest(".tab-btn");
-    if (!btn) return;
-    show(btn.dataset.target);
-  });
+  function showSection(targetId) {
+    sections.forEach((section) => {
+      const showAll = targetId === "all";
+      const matches = showAll || section.id === targetId;
+      section.classList.toggle("active", matches);
+      section.toggleAttribute("hidden", !matches);
+    });
+  }
+
+  function updateView(targetId) {
+    if (!targetId) return;
+    showSection(targetId);
+    setActiveTab(targetId);
+  }
+
+  if (tabs.length && sections.length) {
+    const initialTarget = getInitialTarget();
+    updateView(initialTarget);
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        if (!tab.dataset.target) return;
+        updateView(tab.dataset.target);
+      });
+    });
+  }
 
   // --- PDF download: export the entire report (all sections) ---
   (function () {

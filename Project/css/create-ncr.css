@@ -1,18 +1,9 @@
-/* Create NCR — Theme-only styles (scoped) */
+/* Main Create NCR Theme */
 :root {
-    --cf-bg: #f8fafc;
-    --cf-card: #ffffff;
-    --cf-border: #e5e7eb;
-    --cf-ink: #0f172a;
-    --cf-muted: #64748b;
-    --cf-accent: #275E8F;
-    --cf-accent-600: #275E8F;
-    --cf-accent-500: #2D6EA7;
-    --cf-danger: #dc2626;
-    --cf-success: #16a34a;
-    --cf-focus: 0 0 0 3px rgba(96, 139, 221, 0.35);
-    --radius: 14px;
-    --radius-sm: 10px;
+    --cf-bg: #f8fafc; --cf-card: #ffffff; --cf-border: #e5e7eb; --cf-ink: #0f172a;
+    --cf-muted: #64748b; --cf-accent: #ffffff; --cf-accent-600: #ffffff; --cf-accent-500: #2D6EA7;
+    --cf-danger: #dc2626; --cf-success: #16a34a; --cf-focus: 0 0 0 3px rgba(96, 139, 221, 0.35);
+    --radius: 14px; --radius-sm: 10px;
     --shadow-card: 0 10px 25px -10px rgba(2, 6, 23, .2), 0 2px 6px rgba(2, 6, 23, .06);
 }
 
@@ -35,33 +26,16 @@
     border: 1px solid var(--cf-border);
     border-radius: var(--radius);
     box-shadow: var(--shadow-card);
+    animation: cf-fade-in .18s ease-out both;
 }
 
-#view-create .pad {
-    padding: 18px;
-}
-
-@media (min-width: 768px) {
-    #view-create .pad {
-        padding: 22px;
-    }
-}
+#view-create .pad { padding: 18px; }
+@media (min-width: 768px) { #view-create .pad { padding: 22px; } }
 
 /* Form Grid */
-#view-create .formGrid {
-    gap: 14px;
-}
-
-#view-create .two-col {
-    display: grid;
-    gap: 12px;
-}
-
-@media (min-width: 640px) {
-    #view-create .two-col {
-        grid-template-columns: 1fr 1fr;
-    }
-}
+#view-create .formGrid { gap: 14px; }
+#view-create .two-col { display: grid; gap: 12px; }
+@media (min-width: 640px) { #view-create .two-col { grid-template-columns: 1fr 1fr; } }
 
 /* Labels & Text */
 #view-create label {
@@ -70,22 +44,14 @@
     font-weight: 600;
 }
 
-.form-group label {
-    margin-right: 20px;
-    gap: 5px;
-}
-
+.form-group label { margin-right: 20px; gap: 5px; }
 #view-create .muted { color: var(--cf-muted); }
 #view-create .required { color: var(--cf-danger); margin-left: 2px; font-weight: 700; }
 #view-create .opt { color: var(--cf-muted); font-weight: 500; font-size: .85em; }
 
 /* Inputs */
-#view-create .input,
-#view-create input[type="text"],
-#view-create input[type="date"],
-#view-create input[type="number"],
-#view-create select,
-#view-create textarea {
+#view-create .input, #view-create input[type="text"], #view-create input[type="date"],
+#view-create input[type="number"], #view-create select, #view-create textarea {
     width: 100%;
     appearance: none;
     background: #fff;
@@ -96,21 +62,11 @@
     transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease;
 }
 
-#view-create textarea.input {
-    min-height: 96px;
-    resize: vertical;
-}
+#view-create textarea.input { min-height: 96px; resize: vertical; }
 
 /* Input States */
-#view-create .input:hover,
-#view-create select:hover,
-#view-create textarea:hover {
-    border-color: #d1d5db;
-}
-
-#view-create .input:focus,
-#view-create select:focus,
-#view-create textarea:focus {
+#view-create .input:hover, #view-create select:hover, #view-create textarea:hover { border-color: #d1d5db; }
+#view-create .input:focus, #view-create select:focus, #view-create textarea:focus {
     outline: none;
     border-color: var(--cf-accent-600);
     box-shadow: var(--cf-focus);
@@ -137,15 +93,11 @@
     background: #fff;
 }
 
-#view-create fieldset legend {
-    padding: 0 6px;
-}
+#view-create fieldset legend { padding: 0 6px; }
 
 /* Buttons */
 #view-create .btn {
-    --btn-bg: #ffffff;
-    --btn-ink: var(--cf-ink);
-    --btn-border: var(--cf-border);
+    --btn-bg: #ffffff; --btn-ink: var(--cf-ink); --btn-border: var(--cf-border);
     --btn-shadow: 0 2px 6px rgba(2, 6, 23, .06);
     display: inline-flex;
     align-items: center;
@@ -167,14 +119,11 @@
     box-shadow: 0 6px 16px -6px rgba(2, 6, 23, .15), 0 2px 6px rgba(2, 6, 23, .06);
 }
 
-#view-create .btn:active {
-    transform: translateY(1px);
-}
+#view-create .btn:active { transform: translateY(1px); }
 
 #view-create .btn.primary {
     --btn-bg: linear-gradient(180deg, var(--cf-accent-500), var(--cf-accent-600));
-    --btn-ink: #fff;
-    --btn-border: transparent;
+    --btn-ink: #fff; --btn-border: transparent;
     background-color: #2D6EA7;
     color: #fff;
     border: none;
@@ -185,50 +134,26 @@
     background: #275E8F;
 }
 
-#view-create .btn.sm {
-    padding: 8px 12px;
-    font-size: .92rem;
-    border-radius: 10px;
-}
+#view-create .btn.sm { padding: 8px 12px; font-size: .92rem; border-radius: 10px; }
 
-/* Actions */
-#view-create .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 6px;
-}
-
-/* Utilities */
+/* Actions & Utilities */
+#view-create .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
 #view-create ::placeholder { color: #9aa3af; }
 
 #view-create input[type=number]::-webkit-outer-spin-button,
-#view-create input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-#view-create input[type=number] {
-    -moz-appearance: textfield;
-}
+#view-create input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+#view-create input[type=number] { -moz-appearance: textfield; }
 
 /* Animations */
-@media (prefers-reduced-motion: no-preference) {
-    #view-create .card {
-        animation: cf-fade-in .18s ease-out both;
-    }
-
-    @keyframes cf-fade-in {
-        from { opacity: 0; transform: translateY(4px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+@keyframes cf-fade-in {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Status Colors */
 #view-create .text-success { color: var(--cf-success); }
 #view-create .text-info { color: var(--cf-accent-600); }
 
-/* Section Header */
 .section-header {
     background-color: #292980;
     color: white;

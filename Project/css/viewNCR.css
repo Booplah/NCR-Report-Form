@@ -1,7 +1,7 @@
+/* Main NCR View Styles */
 .btn-container {
     text-align: right;
     margin-top: 25px;
-    margin-right: 3em;
 }
 
 .btn-action {
@@ -26,8 +26,7 @@
 
 .view-ncr-field {
     background: #fafafa;
-    max-width: 90%;
-    margin: 10px auto 30px auto;
+    margin-top: 5px;
     border-radius: 12px;
     box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.05);
     padding: 30px 60px;
@@ -57,21 +56,13 @@ h1 {
     background: #fff;
     border: 1px solid #cac2cf;
     border-radius: 6px;
-    padding: 10px 10px;
+    padding: 10px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
 
-.field-label {
-    font-size: 13px;
-    color: #4e4c50;
-    border-bottom: 1.6px solid #292980;
-    padding-bottom: 2px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-.field-header {
+.field-label, .field-header {
     font-size: 13px;
     color: #4e4c50;
     border-bottom: 1.6px solid #292980;
@@ -112,10 +103,6 @@ h1 {
     color: #292980;
 }
 
-.inline-field .field-value {
-    color: #222;
-}
-
 .small-description {
     font-size: 11px;
     color: #555;
@@ -125,7 +112,6 @@ h1 {
 }
 
 .section-header {
-    background-color: #292980;
     color: white;
     text-align: center;
     padding: 8px 10px;
@@ -133,9 +119,14 @@ h1 {
     font-weight: bold;
     margin-top: 5px;
     margin-bottom: 10px;
+    margin-bottom: 30px;
 }
+.section-header.quality { background-color: #28287E;}
+.section-header.engineering { background-color: #58a899; }
+.section-header.procurement { background-color: #497BA1; }
+.section-header.final-review { background-color: #808080; }
 
-/* Section-Tabs */
+/* Section Tabs */
 .section-tabs {
     max-width: 90%;
     margin: 14px auto 8px auto;
@@ -154,72 +145,47 @@ h1 {
     transition: box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
-.tab-btn:hover {
-    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-}
-
-.tab-btn.active {
-    background: #ccd1d4;
-    color: #fff;
-    border-color: #5f676d;
-}
+.tab-btn:hover { box-shadow: 0 1px 6px rgba(0,0,0,0.08); }
+.tab-btn.active { background: #ccd1d4; color: #fff; border-color: #5f676d; }
 
 /* Section visibility */
 .ncr-section { display: none; }
 .ncr-section.active { display: block; }
 
-/* Print: show all sections when printing */
-/* Print only the report area */
+/* Print Styles */
 @media print {
-  /* hide chrome around the report */
-  .sidebar,
-  .main-header,
-  footer,
-  .btn-container,
-  .section-tabs { display: none !important; }
-
-  /* expand report */
-  .view-ncr-field {
-    box-shadow: none !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 16px !important;
-    background: #fff !important;
-  }
-
-  /* make sure all sections are visible in print */
-  .ncr-section { display: block !important; }
-
-  /* cleaner page margins */
-  @page { margin: 12mm; }
-
-  body { background: #fff !important; }
+    .sidebar, .main-header, footer, .btn-container, .section-tabs { display: none !important; }
+    
+    .view-ncr-field {
+        box-shadow: none !important;
+        max-width: 100% !important;
+        padding-top: 10rem;
+        background: #fff !important;
+    }
+    
+    .ncr-section { display: block !important; }
+    @page { margin: 12mm; }
+    body { background: #fff !important; }
 }
-/* PDF hints to avoid ugly splits */
+
+/* PDF Export Styles */
 .row, .field-box, .inline-field { break-inside: avoid; page-break-inside: avoid; }
-/* ===== Compact layout only for PDF export ===== */
+
 .pdf-export .view-ncr-field {
-  max-width: 100%;
-  margin: 0;                 /* remove outside whitespace */
-  padding: 16px 20px;        /* tighter padding */
-  box-shadow: none;          /* no drop shadow in PDF */
-  border-radius: 0;
-  background: #fff;
+    max-width: 100%;
+    margin: 0;
+    padding: 16px 20px;
+    box-shadow: none;
+    border-radius: 0;
+    background: #fff;
 }
 
 .pdf-export h1 { margin-bottom: 4px; font-size: 18px; }
 .pdf-export .ncr-sum { margin-bottom: 10px; font-size: 12px; }
-
 .pdf-export .row { gap: 8px; margin-bottom: 10px; }
 .pdf-export .field-box { padding: 8px; }
 .pdf-export .field-label { margin-bottom: 6px; font-size: 12px; }
 .pdf-export .field-value { font-size: 12px; }
 .pdf-export .inline-field { padding: 6px; font-size: 12px; }
-
-.pdf-export .section-header {
-  margin-top: 12px;
-  margin-bottom: 6px;
-  padding: 6px 8px;
-}
-
+.pdf-export .section-header { margin-top: 12px; margin-bottom: 6px; padding: 6px 8px; }
 

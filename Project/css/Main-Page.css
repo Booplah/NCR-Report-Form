@@ -31,7 +31,8 @@ main {
   padding-top: 1rem;
 }
 
-.menu-link {
+.menu-link,
+.dropdown-toggle{
   display: flex;
   padding: 0.45rem 0.9rem;
   font-size: .95rem;
@@ -41,7 +42,7 @@ main {
   border-radius: 6px;
   transition: background 0.2s ease;
   align-items: center;
-  gap: 10px;               /* space between icon and text */          
+  gap: 10px;       
 }
 
 .sidebar-content {
@@ -94,7 +95,7 @@ main {
   list-style: none;
 }
 
-.dropdown-toggle {
+/* .dropdown-toggle {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,7 +104,7 @@ main {
   cursor: pointer;
   text-decoration: none;
   border-radius: 6px;
-}
+} */
 
 .dropdown-toggle:hover {
   background: #f1f3f6;

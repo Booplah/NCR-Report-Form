@@ -17,6 +17,9 @@
     display: inline-block;
     transition: background-color 0.3s ease;
 }
+.btn-action.closeBtn{
+background: #ff0000;
+}
 
 .btn-action:hover {
     background-color: #275E8F;

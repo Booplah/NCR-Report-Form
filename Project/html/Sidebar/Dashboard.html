@@ -80,20 +80,18 @@
             <li class="account-info">
               <p class="account-name"><strong class="account-label">Account</strong></p>
             </li>
-            <!-- 🔔 Notification Bell + Dropdown -->
             <li class="notif-container">
               <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false" aria-label="Notifications">
                 <i data-lucide="bell"></i>
-                  <span id="notif-badge" class="notif-badge" style="display:none;">0</span>
+                <span id="notif-badge" class="notif-badge" style="display:none;">0</span>
               </button>
-
               <div id="notif-dropdown" class="notif-dropdown">
                 <div class="notif-head">
-                 <span>Notifications</span>
-                <button id="notif-markall" class="notif-markall">Mark all read</button>
-               </div>
-               <ul id="notif-list" class="notif-list"></ul>
-               <div id="notif-empty" class="notif-empty" style="display:none;">You’re all caught up.</div>
+                  <span>Notifications</span>
+                  <button id="notif-markall" class="notif-markall">Mark all read</button>
+                </div>
+                <ul id="notif-list" class="notif-list"></ul>
+                <div id="notif-empty" class="notif-empty" style="display:none;">You're all caught up.</div>
               </div>
             </li>
           </ul>
@@ -101,7 +99,7 @@
       </div>
     </header>
 
-    <!-- Main -->
+    <!-- Main Content -->
     <main class="flex-1 p-9">
       <div class="max-w-6xl mx-auto">
         <!-- Status Cards -->
@@ -133,7 +131,7 @@
           </div>
         </div>
 
-        <!-- NCR List -->
+        <!-- NCR List Section -->
         <div class="mb-7">
           <h3 class="text-2xl font-semibold text-gray-800 mb-5">NCR List</h3>
         </div>
@@ -202,7 +200,7 @@
               </details>
 
               <button id="resetAllFilters" class="px-3 py-2.5 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 text-sm font-medium">Reset All</button>
-              <button id="toggleNCRList" class="ml-auto hover:text-[#3285C9] font-medium focus:outline-none">View All NCRs ▼</button>
+              <button id="toggleNCRList" class="ml-auto hover:text-[#2D6EA7] font-medium focus:outline-none">View All NCRs ▼</button>
             </div>
           </div>
 
@@ -228,7 +226,7 @@
                   <td class="px-3 py-2">2025-10-05</td>
                   <td class="px-3 py-2">Incorrect batch labeling detected during inspection.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../../html/Sub-Pages/view.html" class="btn-view-edit">
+                    <a href="../NCR-Samples/View-NCR-001.html" class="btn-view-edit">
                       View/Edit
                     </a>
                     
@@ -241,7 +239,7 @@
                   <td class="px-3 py-2">2025-10-09</td>
                   <td class="px-3 py-2">Dimensional deviation found in metal part assembly.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0002.html" class="btn-view-edit">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-002.html" class="btn-view-edit">View/Edit</a>
                                       </td>
                 </tr>
                 <tr>
@@ -251,7 +249,7 @@
                   <td class="px-3 py-2">2025-10-01</td>
                   <td class="px-3 py-2">Packaging defect corrected and verified.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0003.html" class="btn-view-edit">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-003.html" class="btn-view-edit">View/Edit</a>
                     
                   </td>
                 </tr>
@@ -262,7 +260,7 @@
                   <td class="px-3 py-2">2025-10-10</td>
                   <td class="px-3 py-2 truncate" title="Surface finish non-compliance on final assembly.">Surface finish non-compliance on final assembly.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0004.html" class="btn-view-edit">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-004.html" class="btn-view-edit">View/Edit</a>
                     
                   </td>
                 </tr>
@@ -273,7 +271,7 @@
                   <td class="px-3 py-2">2025-09-28</td>
                   <td class="px-3 py-2 truncate" title="Unverified supplier component variance reported.">Unverified supplier component variance reported.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0005.html" class="btn-view-edit">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-005.html" class="btn-view-edit">View/Edit</a>
                     
                   </td>
                 </tr>
@@ -287,7 +285,7 @@
                   <td class="px-3 py-2">2025-10-11</td>
                   <td class="px-3 py-2 truncate" title="Incorrect torque values detected in component assembly.">Incorrect torque values detected in component assembly.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0006.html" class="btn-view-edit">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-006.html" class="btn-view-edit">View/Edit</a>
                     
                   </td>
                 </tr>
@@ -298,7 +296,7 @@
                   <td class="px-3 py-2">2025-09-25</td>
                   <td class="px-3 py-2 truncate" title="Incorrect lot traceability information resolved after review.">Incorrect lot traceability information resolved after review.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0007.html" class="btn-view-edit">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-007.html" class="btn-view-edit">View/Edit</a>
                     
                   </td>
                 </tr>
@@ -309,7 +307,7 @@
                   <td class="px-3 py-2">2025-10-03</td>
                   <td class="px-3 py-2 truncate" title="Electrical test failure in circuit board batch.">Electrical test failure in circuit board batch.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0008.html" class="btn-view-edit">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-008.html" class="btn-view-edit">View/Edit</a>
                     
                   </td>
                 </tr>
@@ -320,7 +318,7 @@
                   <td class="px-3 py-2">2025-09-27</td>
                   <td class="px-3 py-2 truncate" title="Material substitution found without authorization.">Material substitution found without authorization.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0009.html" class="btn-view-edit">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-009.html" class="btn-view-edit">View/Edit</a>
                     
                   </td>
                 </tr>
@@ -331,15 +329,39 @@
                   <td class="px-3 py-2">2025-09-20</td>
                   <td class="px-3 py-2 truncate" title="Outdated calibration certificate on testing equipment.">Outdated calibration certificate on testing equipment.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0010.html" class="btn-view-edit">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-010.html" class="btn-view-edit">View/Edit</a>
                     
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
+          
+          <!-- Pagination -->
+          <ul class="overflow-x-auto p-5 flex justify-center gap-1 text-gray-900">
+            <li>
+              <a href="#" class="grid size-8 place-content-center rounded border border-gray-200 transition-colors hover:bg-gray-50 rtl:rotate-180" aria-label="Previous page">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="block size-8 rounded border border-bg-[#2D6EA7] bg-[#2D6EA7] text-center text-sm/8 font-medium text-white">1</li>
+            <li><a href="#" class="block size-8 rounded border border-gray-200 text-center text-sm/8 font-medium transition-colors hover:bg-gray-50">2</a></li>
+            <li><a href="#" class="block size-8 rounded border border-gray-200 text-center text-sm/8 font-medium transition-colors hover:bg-gray-50">3</a></li>
+            <li><a href="#" class="block size-8 rounded border border-gray-200 text-center text-sm/8 font-medium transition-colors hover:bg-gray-50">4</a></li>
+            <li>
+              <a href="#" class="grid size-8 place-content-center rounded border border-gray-200 transition-colors hover:bg-gray-50 rtl:rotate-180" aria-label="Next page">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
+      
+      <!-- Footer -->
       <footer class="pt-10">
         <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
           <ul class="flex flex-wrap justify-center gap-4 text-xs">
@@ -364,16 +386,14 @@
         </footer>
       </div>
     </div>
-
   </div>
 
+  <!-- Scripts -->
   <script src="../../Scripts/Dashboard.js"></script>
-  <!-- script for notification system -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="../../Scripts/notifications-demo.js"></script>
-    <script>
-        if (window.lucide) lucide.createIcons(); // replaces all <i data-lucide="..."> with SVG icons
-    </script>
-    <!--end of notification system script-->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="../../Scripts/notifications-demo.js"></script>
+  <script>
+    if (window.lucide) lucide.createIcons();
+  </script>
 </body>
 </html>

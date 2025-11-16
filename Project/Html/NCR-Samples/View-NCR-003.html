@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossFire NCR – View NCR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css/viewNCR.css">
+    <link rel="stylesheet" href="../../css/Main-Page.css">
+    <link rel="stylesheet" href="../../css/notifications.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-container" data-page="view-ncr">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-logo">
+                <a href="../index.html" class="logo-image">
+                    <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
+                </a>
+            </div>
+            <hr>
+            <ul class="sidebar-items">
+                <li class="siderbar-item"><a href="../../Html/index.html" class="menu-link">Home</a></li>
+                <li class="siderbar-item"><a href="../../Html/Sidebar/dashboard.html" class="menu-link active">Dashboard</a></li>
+                <li class="siderbar-item"><a href="../../Html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a></li>
+                <li class="siderbar-item"><a href="../../Html/Sidebar/admin.html" class="menu-link">Admin Page</a></li>
+                <li class="siderbar-item">
+                    <details class="dropdown-menu">
+                        <summary class="dropdown-toggle">
+                            <span class="dropdown-label">Help & About</span>
+                            <span class="dropdown-arrow"></span>
+                        </summary>
+                        <ul class="dropdown-items">
+                            <li><a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a></li>
+                            <li><a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a></li>
+                            <li><a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-footer">
+            <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
+        </div>
+    </aside>
+
+    <div class="page-content">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-content">
+                <a href="#" class="header-title">
+                    <h1 class="page-title">CrossFire - View NCR</h1>
+                </a>
+                <nav class="header-navigation">
+                    <ul class="header-links">
+                        <!-- Notification Bell -->
+                        <li class="notif-container">
+                            <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false" aria-label="Notifications">
+                                <i data-lucide="bell"></i>
+                                <span id="notif-badge" class="notif-badge" style="display:none;">0</span>
+                            </button>
+                            <div id="notif-dropdown" class="notif-dropdown">
+                                <div class="notif-head">
+                                    <span>Notifications</span>
+                                    <button id="notif-markall" class="notif-markall">Mark all read</button>
+                                </div>
+                                <ul id="notif-list" class="notif-list"></ul>
+                                <div id="notif-empty" class="notif-empty" style="display:none;">You're all caught up.</div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="account-name"><strong class="account-label">Account</strong></p>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="max-w-4xl mx-auto">
+
+                <!-- Progress Steps -->
+                <div class="-mb-px border-b border-gray-200">
+                    <div role="tablist" class="flex gap-1">
+                        <label role="tab" aria-selected="false" class="border-b-2 border-transparent px-4 py-2 text-md font-medium text-gray-400 transition-colors hover:text-gray-700" >Quality Representative</label>
+                        <button role="tab" aria-selected="true" class="border-b-2 border-blue-600 px-4 py-2 text-md font-medium text-blue-600 transition-colors hover:text-d blue-700" >Engineer</button>
+                        <label role="tab" aria-selected="false" class="border-b-2 border-transparent px-4 py-2 text-md font-medium text-gray-400 transition-colors hover:text-gray-700" >Procurement</label>
+                        <label role="tab" aria-selected="false" class="border-b-2 border-transparent px-4 py-2 text-md font-medium text-gray-400 transition-colors hover:text-gray-700" >Final Review</label>
+                    </div>
+                </div>
+
+                                <div class="btn-container">
+                    <a href="#" id="btnDownloadPDF" class="btn-action">Download PDF</a>
+                    <a href="../../html/Sidebar/edit-ncr.html" class="btn-action">Edit NCR</a>
+                    <a href="../../html/Sidebar/dashboard.html" class="btn-action">Back</a>
+                </div>
+
+                <!-- NCR Form Content -->
+                <div class="view-ncr-field">
+                    <h1>Non-Conformance Report</h1>
+                    <div class="ncr-sum">NCR No: <strong>2025-003</strong> | Status: <strong>Active</strong> | Date: Oct 10 2025</div>
+                    
+                    <!-- Quality Representative Section -->
+                    <section id="sec-quality" class="ncr-section">
+                        <div class="section-header quality">Quality Representative</div>
+                        <div class="row">
+                            <div class="field-box">
+                                <div class="field-label">Identify Process Applicable</div>
+                                <div class="field-value">
+                                    <label><input type="checkbox" id="chkSupplier" name="chkSupplier" checked disabled> Supplier or Rec-Insp</label>
+                                    <label><input type="checkbox" id="chkWIP" name="chkWIP" disabled> WIP (Production Order)</label>
+                                </div>
+                            </div>
+                            <div class="field-box">
+                                <div class="field-label">Supplier Name</div>
+                                <div class="field-value">ABC Components</div>
+                            </div>
+                            <div class="ncr-number">
+                                <div class="inline-field"><span class="field-label">NCR No.</span><span class="field-value">2025-003</span></div>
+                                <div class="inline-field"><span class="field-label">PO or Prod No.</span><span class="field-value">PO-1013</span></div>
+                                <div class="inline-field"><span class="field-label">Sales Order No.</span><span class="field-value">SO-0613</span></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="field-box" style="flex:5;">
+                                <div class="field-label">Description of Item</div>
+                                <div class="field-value">LED Ring Light + Phone Holder</div>
+                            </div>
+                            <div class="field-box">
+                                <div class="field-label">Quantity Received</div>
+                                <div class="field-value">100 boxes</div>
+                            </div>
+                            <div class="field-box">
+                                <div class="field-label">Quantity Defective</div>
+                                <div class="field-value">10 boxes</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="field-box full-width">
+                                <div class="field-label">Description of Defect <small>(in as much detail as possible, use page 2 if necessary)</small></div>
+                                <div class="field-value">Mobile phone clip is broken, and USB cable is frayed.</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="field-box">
+                                <div class="field-label">Item marked Nonconforming</div>
+                                <div class="field-value">
+                                    <label><input type="checkbox" id="chkYes" name="chkYes" checked disabled> Yes</label>
+                                    <label><input type="checkbox" id="chkNo" name="chkNo" disabled> No</label>
+                                </div>
+                            </div>
+                            <div class="small-description">Completed NCR to be forwarded to HBC Engineering and Operations Manager complete with any relevant documents attached (pictures, actual measurements, material certs, etc.)</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="inline-field half-width">
+                                <div class="field-label">Quality Representative's Name:</div>
+                                <div class="field-value">Miranda Smith</div>
+                            </div>
+                            <div class="inline-field half-width">
+                                <div class="field-label">Date:</div>
+                                <div class="field-value">2025/10/10</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Engineering Section -->
+                    <section id="sec-engineering" class="ncr-section active" hidden>
+                        <div class="section-header engineering">Engineering</div>
+                        <div class="row">
+                            <div class="field-box">
+                                <div class="field-label" style="border-color: #58a899;">Review by CF Engineering: <small>(indicate disposition by "checking" one of the following)</small></div>
+                                <div class="field-value">
+                                    <label><input type="checkbox" id="chk-use-as-is" name="chk-use-as-is" disabled> Use As Is</label>
+                                    <label><input type="checkbox" id="chk-repair" name="chk-repair" disabled> Repair</label>
+                                    <label><input type="checkbox" id="chk-rework" name="chk-rework" checked disabled> Rework</label>
+                                    <label><input type="checkbox" id="chk-scrap" name="chk-scrap" disabled> Scrap</label>
+                                </div>
+                            </div>
+                            <div class="field-box">
+                                <div class="field-label" style="border-color:#58a899;">Does customer require notification of NCR<br><small>(If "Yes", then raise message to customer detailing issues)</small></div>
+                                <div class="field-value">
+                                    <label><input type="checkbox" id="chk-yes" name="chk-yes" disabled> Yes</label>
+                                    <label><input type="checkbox" id="chk-no" name="chk-no" checked disabled> No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="field-box">
+                                <div class="field-label" style="border-color: #58a899;">Disposition <small>(Sequence of work steps required when "repair" or "rework" indicated)</small></div>
+                                <div class="field-value">
+                                    1. Remove defective phone holder clips from ring lights.<br>
+                                    2. Install new phone holder clips.<br>
+                                    3. Test functionality of USB cable.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="field-box half-width">
+                                <div class="field-label" style="border-color: #58a899;">Does the drawing require updating?</div>
+                                <div class="field-value">
+                                    <label><input type="checkbox" id="chk-yes" name="chk-yes" disabled> Yes</label>
+                                    <label><input type="checkbox" id="chk-no" name="chk-no" checked disabled> No</label>
+                                </div>
+                            </div>
+                            <div class="ncr-number">
+                                <div class="inline-field"><div class="field-label" style="color: #58a899;">Original Rev. Number:</div><div class="field-value">REV-3030</div></div>
+                                <div class="inline-field"><div class="field-label" style="color: #58a899;">Updated Rev. Number:</div><div class="field-value">REV-3031</div></div>
+                            </div>
+                            <div class="ncr-number">
+                                <div class="inline-field"><div class="field-label" style="color: #58a899;">Name of Engineer:</div><div class="field-value">Hugh Johnson</div></div>
+                                <div class="inline-field"><div class="field-label" style="color: #58a899;">Revision Date:</div><div class="field-value">2025/10/11</div></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Purchasing Section -->
+                    <section id="sec-purchasing" class="ncr-section" hidden>
+                        <div class="section-header procurement">Purchasing</div>
+                        <div class="row">
+                            <div class="field-box">
+                                <div class="field-label" style="border-color: #497ba1;">Purchasing's Preliminary Decision:</div>
+                                <div class="field-value">
+                                    <label><input type="checkbox" id="chk-rework in-house" name="chk-rework in-house" checked disabled> Rework "In-House"</label>
+                                    <label><input type="checkbox" id="chk-return" name="chk-return" disabled> Return to Supplier for either "rework" or "replacement"</label>
+                                    <label><input type="checkbox" id="chk-scrap" name="chk-scrap" disabled> Scrap in House</label>
+                                    <label><input type="checkbox" id="chk-defer" name="chk-defer" disabled> Defer for HBC Engineering Review</label>
+                                </div>
+                            </div>
+                            <div class="ncr-number">
+                                <div class="inline-field">
+                                    <div class="field-label" style="color:#4e4c50">Was a CAR raised?<br><small style="font-weight: lighter;">If "yes", indicate CAR#</small></div>
+                                    <div class="field-value">
+                                        <label><input type="checkbox" id="chk-yes" name="chk-yes" disabled> Yes</label>
+                                        <label><input type="checkbox" id="chk-no" name="chk-no" checked disabled> No</label>
+                                    </div>
+                                </div>
+                                <div class="inline-field">
+                                    <div class="field-label" style="color:#4e4c50">Follow-up Required?<br><small style="font-weight: lighter;">(If "yes", indicate type & expected date)</small></div>
+                                    <div class="field-value">
+                                        <label><input type="checkbox" id="chk-yes" name="chk-yes" disabled> Yes</label>
+                                        <label><input type="checkbox" id="chk-no" name="chk-no" checked disabled> No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="inline-field half-width">
+                                <div class="field-label" style="color: #497ba1;">Operation's Manager:</div>
+                                <div class="field-value">Linda Brown</div>
+                            </div>
+                            <div class="inline-field half-width">
+                                <div class="field-label" style="color: #497ba1;">Date:</div>
+                                <div class="field-value">2025/10/11</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Final Review Section -->
+                    <section id="sec-final" class="ncr-section" hidden>
+                        <div class="section-header final-review">Final Review</div>
+                        <div class="row">
+                            <div class="inline-field">
+                                <div class="field-label" style="color: #4e4c50;">Re-Inspected Acceptable?<br><small style="color: black; font-weight: lighter;">(If "No", please record a new NCR)</small></div>
+                                <div class="field-value">
+                                    <label><input type="checkbox" id="chk-yes" name="chk-yes" checked disabled> Yes</label>
+                                    <label><input type="checkbox" id="chk-no" name="chk-no" disabled> No</label>
+                                </div>
+                            </div>
+                            <div class="inline-field">
+                                <div class="field-label">Inspector's Name:</div>
+                                <div class="field-value">John Doe</div>
+                            </div>
+                            <div class="inline-field">
+                                <div class="field-label">Date:</div>
+                                <div class="field-value">2025/10/15</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="inline-field">
+                                <div class="field-label" style="color: #4e4c50;">NCR Closed:</div>
+                                <div class="field-value"><label><input type="checkbox" id="chk-yes" name="chk-yes" checked disabled> Yes</label></div>
+                            </div>
+                            <div class="inline-field">
+                                <div class="field-label">Quality Department:</div>
+                                <div class="field-value">QD-1</div>
+                            </div>
+                            <div class="inline-field">
+                                <div class="field-label">Date:</div>
+                                <div class="field-value">2025/10/16</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <footer class="pt-10">
+                <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
+                    <ul class="flex flex-wrap justify-center gap-4 text-xs">
+                        <li><a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a></li>
+                    </ul>
+                    <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script defer src="../../Scripts/app.js"></script>
+    <script src="../../Scripts/view.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../../Scripts/notifications-demo.js"></script>
+    <script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

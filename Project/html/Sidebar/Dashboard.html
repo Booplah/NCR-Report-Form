@@ -23,20 +23,41 @@
       </div>
       <hr>
       <ul class="sidebar-items">
-        <li class="siderbar-item"><a href="../../Html/index.html" class="menu-link">Home</a></li>
-        <li class="siderbar-item"><a href="../../Html/Sidebar/dashboard.html" class="menu-link active">Dashboard</a></li>
-        <li class="siderbar-item"><a href="../../Html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a></li>
-        <li class="siderbar-item"><a href="../../html/Sidebar/admin.html" class="menu-link">Admin Page</a></li>
+        <li class="siderbar-item"><a href="../../Html/index.html" class="menu-link">
+          <i data-lucide="home"></i>
+          <span>Home</span></a></li>
+        <li class="siderbar-item">
+          <a href="../../Html/Sidebar/dashboard.html" class="menu-link active">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span></a></li>
+        <li class="siderbar-item"><a href="../../Html/Sidebar/create-ncr.html" class="menu-link">
+          <i data-lucide="file-plus"></i>
+          <span>Create NCR</span></a></li>
+        <li class="siderbar-item">
+          <a href="../../html/Sidebar/admin.html" class="menu-link">
+            <i data-lucide="settings"></i>
+            <span>Admin Page</span></a></li>
         <li class="siderbar-item">
           <details class="dropdown-menu">
             <summary class="dropdown-toggle">
+              <i data-lucide="help-circle"></i>
               <span class="dropdown-label">Help & About</span>
+              
               <span class="dropdown-arrow"></span>
             </summary>
             <ul class="dropdown-items">
-              <li><a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a></li>
-              <li><a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a></li>
-              <li><a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a></li>
+              <li><a href="../Sidebar/help-about.html" class="dropdown-link">
+                <i data-lucide="info"></i>
+                <span>About This Project</span>
+              </a></li>
+              <li><a href="../Sidebar/help-usage.html" class="dropdown-link">
+                <i data-lucide="book-open"></i>
+                <span>User Guide</span>
+              </a></li>
+              <li><a href="../Sidebar/help-contacts.html" class="dropdown-link">
+                <i data-lucide="phone"></i>
+                <span>Contact & Support</span>
+              </a></li>
             </ul>
           </details>
         </li>
@@ -207,8 +228,10 @@
                   <td class="px-3 py-2">2025-10-05</td>
                   <td class="px-3 py-2">Incorrect batch labeling detected during inspection.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../../html/Sub-Pages/view.html" class="bg-green-100 px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
-                    <button class="bg-red-100 px-3 py-1 rounded-md text-xs font-medium">Close</button>
+                    <a href="../../html/Sub-Pages/view.html" class="btn-view-edit">
+                      View/Edit
+                    </a>
+                    
                   </td>
                 </tr>
                 <tr>
@@ -218,9 +241,8 @@
                   <td class="px-3 py-2">2025-10-09</td>
                   <td class="px-3 py-2">Dimensional deviation found in metal part assembly.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0002.html" class="bg-green-100 px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
-                    <button class="bg-red-100 px-3 py-1 rounded-md text-xs font-medium">Close</button>
-                  </td>
+                    <a href="../NCR-Folder-Samples/NCR-0002.html" class="btn-view-edit">View/Edit</a>
+                                      </td>
                 </tr>
                 <tr>
                   <td class="px-3 py-2 font-medium text-gray-900">NCR-003</td>
@@ -229,8 +251,8 @@
                   <td class="px-3 py-2">2025-10-01</td>
                   <td class="px-3 py-2">Packaging defect corrected and verified.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0003.html" class="bg-green-100 px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
-                    <button class="bg-red-100 px-3 py-1 rounded-md text-xs font-medium">Close</button>
+                    <a href="../NCR-Folder-Samples/NCR-0003.html" class="btn-view-edit">View/Edit</a>
+                    
                   </td>
                 </tr>
                 <tr>
@@ -240,8 +262,8 @@
                   <td class="px-3 py-2">2025-10-10</td>
                   <td class="px-3 py-2 truncate" title="Surface finish non-compliance on final assembly.">Surface finish non-compliance on final assembly.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0004.html" class="bg-green-100 px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
-                    <button class="bg-red-100 px-3 py-1 rounded-md text-xs font-medium">Close</button>
+                    <a href="../NCR-Folder-Samples/NCR-0004.html" class="btn-view-edit">View/Edit</a>
+                    
                   </td>
                 </tr>
                 <tr>
@@ -251,8 +273,8 @@
                   <td class="px-3 py-2">2025-09-28</td>
                   <td class="px-3 py-2 truncate" title="Unverified supplier component variance reported.">Unverified supplier component variance reported.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0005.html" class="bg-green-100 px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
-                    <button class="bg-red-100 px-3 py-1 rounded-md text-xs font-medium">Close</button>
+                    <a href="../NCR-Folder-Samples/NCR-0005.html" class="btn-view-edit">View/Edit</a>
+                    
                   </td>
                 </tr>
               </tbody>
@@ -265,8 +287,8 @@
                   <td class="px-3 py-2">2025-10-11</td>
                   <td class="px-3 py-2 truncate" title="Incorrect torque values detected in component assembly.">Incorrect torque values detected in component assembly.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0006.html" class="bg-green-100 px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
-                    <button class="bg-red-100 px-3 py-1 rounded-md text-xs font-medium">Close</button>
+                    <a href="../NCR-Folder-Samples/NCR-0006.html" class="btn-view-edit">View/Edit</a>
+                    
                   </td>
                 </tr>
                 <tr>
@@ -276,8 +298,8 @@
                   <td class="px-3 py-2">2025-09-25</td>
                   <td class="px-3 py-2 truncate" title="Incorrect lot traceability information resolved after review.">Incorrect lot traceability information resolved after review.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0007.html" class="bg-green-100 px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
-                    <button class="bg-red-100 px-3 py-1 rounded-md text-xs font-medium">Close</button>
+                    <a href="../NCR-Folder-Samples/NCR-0007.html" class="btn-view-edit">View/Edit</a>
+                    
                   </td>
                 </tr>
                 <tr>
@@ -287,8 +309,8 @@
                   <td class="px-3 py-2">2025-10-03</td>
                   <td class="px-3 py-2 truncate" title="Electrical test failure in circuit board batch.">Electrical test failure in circuit board batch.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0008.html" class="bg-green-100 px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
-                    <button class="bg-red-100 px-3 py-1 rounded-md text-xs font-medium">Close</button>
+                    <a href="../NCR-Folder-Samples/NCR-0008.html" class="btn-view-edit">View/Edit</a>
+                    
                   </td>
                 </tr>
                 <tr>
@@ -298,8 +320,8 @@
                   <td class="px-3 py-2">2025-09-27</td>
                   <td class="px-3 py-2 truncate" title="Material substitution found without authorization.">Material substitution found without authorization.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0009.html" class="bg-green-100 px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
-                    <button class="bg-red-100 px-3 py-1 rounded-md text-xs font-medium">Close</button>
+                    <a href="../NCR-Folder-Samples/NCR-0009.html" class="btn-view-edit">View/Edit</a>
+                    
                   </td>
                 </tr>
                 <tr>
@@ -309,8 +331,8 @@
                   <td class="px-3 py-2">2025-09-20</td>
                   <td class="px-3 py-2 truncate" title="Outdated calibration certificate on testing equipment.">Outdated calibration certificate on testing equipment.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Folder-Samples/NCR-0010.html" class="bg-green-100 px-3 py-1 rounded-md text-xs font-medium">View/Edit</a>
-                    <button class="bg-red-100 px-3 py-1 rounded-md text-xs font-medium">Close</button>
+                    <a href="../NCR-Folder-Samples/NCR-0010.html" class="btn-view-edit">View/Edit</a>
+                    
                   </td>
                 </tr>
               </tbody>

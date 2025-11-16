@@ -189,3 +189,53 @@ h1 {
 .pdf-export .inline-field { padding: 6px; font-size: 12px; }
 .pdf-export .section-header { margin-top: 12px; margin-bottom: 6px; padding: 6px 8px; }
 
+/* Close NCR button style */
+/* Overlay (dark background) */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;                  /* hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Popup box */
+.modal-box {
+  background: #fff;
+  padding: 30px 35px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.modal-box h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Buttons inside popup */
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.modal-btn {
+  border: 2px solid #dee0e3;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+
+.modal-btn:hover {
+  opacity: 0.9;
+  color: rgb(32, 33, 36);
+  background-color: #eeefef;
+  border-color: #275E8F;
+}

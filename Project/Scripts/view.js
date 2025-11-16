@@ -119,3 +119,32 @@ console.log("view.js loaded");
   });
 })();
 })();
+
+//pop-up for close NCR button
+const btnClose = document.getElementById('btnCloseNCR');
+const modal = document.getElementById('closeNCRModal');
+const confirmBtn = document.getElementById('confirmClose');
+const cancelBtn = document.getElementById('cancelClose');
+
+// show popup
+btnClose.addEventListener('click', (e) => {
+  e.preventDefault();
+  modal.style.display = 'flex';   // show the overlay
+});
+
+// hide on cancel
+cancelBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// confirm action
+confirmBtn.addEventListener('click', () => {
+  modal.querySelector('.modal-box h3').textContent = 'NCR Closed';
+  confirmBtn.style.display = 'none';
+  cancelBtn.textContent = 'OK';
+  // redirect to dashboard after a short pause
+  setTimeout(() => {
+    window.location.href = "../../html/Sidebar/dashboard.html";
+  }, 1200);
+});
+

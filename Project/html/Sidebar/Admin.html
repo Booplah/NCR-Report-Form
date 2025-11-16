@@ -25,33 +25,55 @@
     <hr>
       <ul class="sidebar-items">
         <li class="siderbar-item">
-          <a href="../../Html/index.html" class="menu-link">Home</a>
+          <a href="../../Html/index.html" class="menu-link">
+            <i data-lucide="home"></i>
+      <span>Home</span>
+          </a>
         </li>
         <li class="siderbar-item">
-          <a href="../../Html/Sidebar/dashboard.html" class="menu-link">Dashboard</a>
+          <a href="../../Html/Sidebar/dashboard.html" class="menu-link">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span>
+          </a>
         </li>
         <li class="siderbar-item">
-          <a href="../../Html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a>
+          <a href="../../Html/Sidebar/create-ncr.html" class="menu-link">
+            <i data-lucide="file-plus"></i>
+            <span>Create NCR</span>
+          </a>
         </li>
         <li class="siderbar-item">
-          <a href="../../html/Sidebar/admin.html" class="menu-link active">Admin Page</a>
+          <a href="../../html/Sidebar/admin.html" class="menu-link active">
+            <i data-lucide="settings"></i>
+            <span>Admin Page</span>
+          </a>
         </li>
         <li class="siderbar-item">
           <details class="dropdown-menu">
             <summary class="dropdown-toggle">
+              <i data-lucide="help-circle"></i>
               <span class="dropdown-label">Help & About</span>
               <span class="dropdown-arrow"></span>
             </summary>
 
             <ul class="dropdown-items">
               <li>
-                <a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a>
+                <a href="../Sidebar/help-about.html" class="dropdown-link">
+                  <i data-lucide="info"></i>
+            <span>About This Project</span>
+                </a>
               </li>
               <li>
-                <a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a>
+                <a href="../Sidebar/help-usage.html" class="dropdown-link">
+                  <i data-lucide="book-open"></i>
+                  <span>User Guide</span>
+                </a>
               </li>
               <li>
-                <a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a>
+                <a href="../Sidebar/help-contacts.html" class="dropdown-link">
+                  <i data-lucide="phone"></i>
+                  <span>Contact & Support</span>
+                </a>
               </li>
             </ul>
           </details>
@@ -98,6 +120,11 @@
   </div>
 
   <script src="../Scripts/app.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
 </body>
 
 </html>

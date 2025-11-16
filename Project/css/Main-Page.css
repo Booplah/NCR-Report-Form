@@ -18,7 +18,7 @@ main {
 }
 
 .sidebar {
-  flex: 0 0 13%;
+  flex: 0 0 15%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -32,7 +32,7 @@ main {
 }
 
 .menu-link {
-  display: block;
+  display: flex;
   padding: 0.45rem 0.9rem;
   font-size: .95rem;
   font-weight: 500;
@@ -40,6 +40,8 @@ main {
   text-decoration: none;
   border-radius: 6px;
   transition: background 0.2s ease;
+  align-items: center;
+  gap: 10px;               /* space between icon and text */          
 }
 
 .sidebar-content {
@@ -130,13 +132,15 @@ main {
 }
 
 .dropdown-link {
-  display: block;
+  display: flex;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   font-weight: 500;
   color: #6f7680;
   text-decoration: none;
   border-radius: 6px;
+  align-items: center;
+  gap: 10px;
 }
 
 .dropdown-link:hover {
@@ -213,4 +217,20 @@ main {
 
 .account-label {
   font-size: 1rem;
+}
+.btn-view-edit {
+  background-color: white;
+  color: rgb(54, 54, 54);
+  border: 1px solid #535454;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.btn-view-edit:hover {
+  background-color: #f4f4f4;
+  border-color: #292929;
+  color: black;
 }

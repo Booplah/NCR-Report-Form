@@ -95,9 +95,12 @@
                     </div>
                 </div>
                                 <div class="btn-container">
+                                    
+
                     <a href="#" id="btnDownloadPDF" class="btn-action">Download PDF</a>
                     <a href="../../html/Sidebar/edit-ncr.html" class="btn-action">Edit NCR</a>
                     <a href="../../html/Sidebar/dashboard.html" class="btn-action">Back</a>
+                    <a href="#" id="btnCloseNCR" class="btn-action">Close NCR</a>
                 </div>
 
                 <!-- NCR Form Content -->
@@ -317,6 +320,16 @@
             </footer>
         </main>
     </div>
+<!-- Close NCR Popup -->
+<div id="closeNCRModal" class="modal-overlay">
+  <div class="modal-box">
+    <h3>Are you sure you want to close this NCR?</h3>
+    <div class="modal-buttons">
+      <button id="confirmClose" class="modal-btn confirm">Close NCR</button>
+      <button id="cancelClose" class="modal-btn cancel">Cancel</button>
+    </div>
+  </div>
+</div>
 
     <script defer src="../../Scripts/app.js"></script>
     <script src="../../Scripts/view.js" defer></script>

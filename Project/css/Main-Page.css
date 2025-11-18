@@ -230,3 +230,8 @@ main {
     background-color: #d9ffe6;
     border: 1px solid  #d9ffe6;
 }
+
+.btnActions.view{
+    background-color: #f6d9ff;
+    border: 1px solid  #d9ffe6;
+}

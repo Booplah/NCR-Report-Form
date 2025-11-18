@@ -68,13 +68,15 @@ h1 {
     flex-direction: column;
 }
 
-.field-label, .field-header {
+.field-label{
     font-size: 13px;
     color: #4e4c50;
-    border-bottom: 1.6px solid #292980;
-    padding-bottom: 2px;
-    margin-bottom: 10px;
     font-weight: bold;
+}
+.field-header{
+    border-bottom: 1.6px solid #292980;
+        padding-bottom: 2px;
+    margin-bottom: 10px;
 }
 
 .field-value {

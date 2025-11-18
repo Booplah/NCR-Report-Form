@@ -123,14 +123,23 @@
                             <div class="form-grid">
                                 <div class="row">
                                     <div class="field-box">
-                                        <label for="processApplicable" class="field-label">Identify Process
-                                            Applicable</label>
+                                        
+                                        <div class="flex justify-between field-header">
+                                            <label for="processApplicable" class="field-label">Identify Process
+                                                Applicable<span class="required" aria-hidden="true">*</span></label>
+                                                
+                                                <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer" alt="Help icon" onclick="openHelpModel()" />
+                                            </div>
+                                            
                                         <select id="processApplicable" name="processApplicable" class="input">
                                             <option value="">Select…</option>
                                             <option value="Supplier or Rec-Insp">Supplier or Rec-Insp</option>
                                             <option value="WIP (Production Order)">WIP (Production Order)</option>
                                         </select>
+                                        
+                                        <div id="err-ncrNumber" class="error" role="alert" aria-live="polite"></div>
                                     </div>
+                                    
                                     <div class="field-box">
                                         <label for="supplierName" class="field-label">Supplier Name</label>
                                         <input id="supplierName" name="supplierName" class="input" type="text"
@@ -229,6 +238,15 @@
                 </div>
             </div>
 
+                                <div id="helperModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+          <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg" onclick="event.stopPropagation()">
+            <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Info</h2>
+            <div class="mt-4">
+              <p class="text-pretty text-gray-700">Detailed Information on select help-info...</p>
+            </div>
+          </div>
+        </div>
+
             <!-- Footer -->
             <footer class="pt-10">
                 <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
@@ -241,7 +259,7 @@
             </footer>
         </main>
     </div>
-    <script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', () => {
             let submitModal = document.getElementById('submitModal');
 
@@ -262,7 +280,43 @@
                 }
             }
         })
-    </script>
+    </script> -->
+
+              <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let modal = document.getElementById('helperModal');
+      let submitModal = document.getElementById('submitModal')
+
+      window.openHelpModel = function () {
+        modal.classList.remove('hidden');
+        modal.addEventListener('click', handleOutsideClick);
+      }
+
+      window.closeHelpModel = function () {
+        modal.classList.add('hidden');
+        modal.removeEventListener('click', handleOutsideClick);
+      }
+
+      window.openSubmitModel = function () {
+        submitModal.classList.remove('hidden');
+        submitModal.addEventListener('click', handleOutsideClick);
+      }
+
+      window.closeSubmitModel = function () {
+        submitModal.classList.add('hidden');
+        submitModal.addEventListener('click', handleOutsideClick);
+      }
+
+      function handleOutsideClick(e) {
+        if (e.target === modal) {
+          closeHelpModel();
+        } else if (e.target === submitModal) {
+          closeSubmitModel();
+          window.location.href = './Dashboard.html';
+        }
+      }
+    })
+  </script>
 
     <!-- Notification System -->
      <script defer src="../../Scripts/app.js"></script>

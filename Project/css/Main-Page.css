@@ -95,16 +95,6 @@ main {
   list-style: none;
 }
 
-/* .dropdown-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.45rem 0.9rem;
-  color: #6f7680;
-  cursor: pointer;
-  text-decoration: none;
-  border-radius: 6px;
-} */
 
 .dropdown-toggle:hover {
   background: #f1f3f6;

@@ -57,6 +57,7 @@ function handleQualitySubmit(e) {
     ];
 
     if (!validateFields(required)) return alert("Please fill all required fields.");
+    if (window.lucide) lucide.createIcons();
 
     const get = id => document.getElementById(id)?.value || "";
     const getChecked = name => document.querySelector(`input[name="${name}"]:checked`)?.value || "";

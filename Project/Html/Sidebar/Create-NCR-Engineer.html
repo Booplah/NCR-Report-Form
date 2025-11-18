@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrossFire NCR – Engineering</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../../css/create-ncr.css">
     <link rel="stylesheet" href="../../css/viewNCR.css">
     <link rel="stylesheet" href="../../css/Main-Page.css">
@@ -16,14 +14,12 @@
         href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
 </head>
-
 <body class="page-container">
-    <!-- Sidebar -->
     <aside class="sidebar">
         <div class="sidebar-content">
             <div class="sidebar-logo">
                 <a href="../index.html" class="logo-image">
-                    <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo"
+                    <img loading="lazy" src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo"
                         style="width: auto; height: 80%;">
                 </a>
             </div>
@@ -75,8 +71,6 @@
             <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
         </div>
     </aside>
-
-    <!-- Main Content -->
     <div class="page-content">
         <header class="main-header">
             <div class="header-content">
@@ -88,7 +82,6 @@
                         <li class="account-info">
                             <p class="account-name"><strong class="account-label">Account</strong></p>
                         </li>
-                        <!-- Notification Bell -->
                         <li class="notif-container">
                             <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false"
                                 aria-label="Notifications">
@@ -109,10 +102,8 @@
                 </nav>
             </div>
         </header>
-
         <main class="flex-1 p-6">
             <div class="max-w-4xl mx-auto gap-5">
-                <!-- Progress Steps -->
                 <div class="-mb-px border-b border-gray-200">
                     <div role="tablist" class="flex gap-1">
                         <button type="button" role="tab" aria-selected="false" class="progress-tab"
@@ -121,9 +112,7 @@
                             data-step="engineering">Engineer</button>
                     </div>
                 </div>
-                <!-- Form Sections -->
                 <section id="view-create" class="pt-6">
-                    <!-- Quality Representative -->
                     <div class="card pad progress-section" data-step-content="quality" hidden>
                         <h2 class="section-header quality">Quality Representative</h2>
                         <form id="formQualityRep" novalidate>
@@ -154,7 +143,6 @@
                                             value="SO-0613">
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="field-box" style="flex: 2;">
                                         <label for="itemDescriptionSAP" class="field-label">Description of Item
@@ -173,14 +161,12 @@
                                             value="10">
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="field-box full-width">
                                         <label for="defectDescription" class="field-label">Description of Defect</label>
                                         <textarea id="defectDescription" name="defectDescription" class="input" rows="3">Mobile phone clip is broken, and USB cable is frayed.</textarea>
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="field-box">
                                         <label class="field-label">Item marked Nonconforming</label>
@@ -196,7 +182,6 @@
                                         <input type="file" id="fileNCR" multiple class="input">
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="field-box">
                                         <label for="reportedBy" class="field-label">Quality Representative's
@@ -214,8 +199,6 @@
                             </fieldset>
                         </form>
                     </div>
-
-                    <!-- Engineering Section -->
                     <div class="card pad progress-section" data-step-content="engineering">
                         <h2 class="section-header engineering">Engineering</h2>
                         <form id="formEngineering" novalidate>
@@ -235,7 +218,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="field-box" style="flex: 2;">
                                         <label for="dispositionDetails" class="field-label">Disposition</label>
@@ -251,7 +233,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="field-box">
                                         <label class="field-label">Drawing Update Required?</label>
@@ -271,7 +252,6 @@
                                             placeholder="REV-3031">
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="field-box">
                                             <label for="enginName" class="field-label">Engineer Name</label>
@@ -280,38 +260,31 @@
                                         </div>
                                         <div class="field-box">
                                         <label for="engDate" class="field-label">Date</label>
-                                        <input id="engDate" name="engDate" class="input" type="date"
-                                            placeholder="2025-10-11">
+                                        <input id="engDate" name="engDate" class="input" type="date">
                                     </div>
                                 </div>
-
                                 <div class="actions">
-                                    <button type="button" class="btn-action" onclick="openSubmitModel()">Submit</button>
+                                    <button type="button" class="btn-action" onclick="openSubmitModal()">Submit</button>
                                     <button type="submit" class="btn">Save</button>
                                     <button type="button" class="btn btn-cancel">Cancel</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-
                 </section>
             </div>
-
-            <!-- Modals -->
             <div id="submitModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
-                role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                role="dialog" aria-modal="true" aria-labelledby="submitModalTitle">
                 <div id="modalSubmitBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
                     onclick="event.stopPropagation()">
-                    <h2 id="submitModalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Your work submitted.
+                    <h2 id="submitModalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl" style="color: green;">Your work submitted.
                         Good job!</h2>
                     <div class="mt-4">
-                        <p class="text-pretty text-gray-700">Rest assured, your work is saved, and email sent to next
+                        <p class="text-pretty text-gray-700">Rest assured, your work is saved, and an email sent to next
                             employee responsible for the next portion.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Footer -->
             <footer class="pt-10">
                 <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
                     <ul class="flex flex-wrap justify-center gap-4 text-xs">
@@ -326,31 +299,25 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             let submitModal = document.getElementById('submitModal');
-
-            window.openSubmitModel = function () {
+            window.openSubmitModal = function () {
                 submitModal.classList.remove('hidden');
                 submitModal.addEventListener('click', handleOutsideClick);
             }
-
-            window.closeSubmitModel = function () {
+            window.closeSubmitModal = function () {
                 submitModal.classList.add('hidden');
                 submitModal.removeEventListener('click', handleOutsideClick);
             }
-
             function handleOutsideClick(e) {
                 if (e.target === submitModal) {
-                    closeSubmitModel();
+                    closeSubmitModal();
                     window.location.href = './Dashboard.html';
                 }
             }
         })
     </script>
-
-    <!-- Notification System -->
-     <script defer src="../../Scripts/app.js"></script>
+    <script defer src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../../Scripts/notifications-demo.js"></script>
-    <script>if (window.lucide) lucide.createIcons();</script>
+    <script defer src="../../Scripts/app.js"></script>
 </body>
-
 </html>

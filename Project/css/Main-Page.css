@@ -219,10 +219,10 @@ main {
 .account-label {
   font-size: 1rem;
 }
-.btn-view-edit {
-  background-color: white;
+.btnActions {
+  background-color: #E2EFFE;
   color: rgb(54, 54, 54);
-  border: 1px solid #535454;
+  border: 1px solid rgb(194, 221, 252);
   border-radius: 6px;
   padding: 4px 10px;
   font-size: 0.75rem;
@@ -230,8 +230,13 @@ main {
   text-decoration: none;
   transition: all 0.2s ease;
 }
-.btn-view-edit:hover {
-  background-color: #f4f4f4;
-  border-color: #292929;
+.btnActions:hover {
+  background-color: #d3e7ff;
+  border-color: #E2EFFE;
   color: black;
+}
+
+.btnActions.create{
+    background-color: #d9ffe6;
+    border: 1px solid  #d9ffe6;
 }

@@ -37,7 +37,7 @@
         </a>
     </li>
     <li class="siderbar-item">
-        <a href="../../Html/Sidebar/create-ncr.html" class="menu-link">
+        <a href="../../Html/Sidebar/Create-NCR.html" class="menu-link">
             <i data-lucide="file-plus"></i>
             <span>Create NCR</span>
         </a>
@@ -126,10 +126,10 @@
                 <!-- Progress Steps -->
                 <div class="-mb-px border-b border-gray-200">
                     <div role="tablist" class="flex gap-1">
-                        <label role="tab" aria-selected="false" class="border-b-2 border-transparent px-4 py-2 text-md font-medium text-gray-400 transition-colors hover:text-gray-700" >Quality Representative</label>
-                        <button role="tab" aria-selected="true" class="border-b-2 border-blue-600 px-4 py-2 text-md font-medium text-blue-600 transition-colors hover:text-d blue-700" >Engineer</button>
-                        <label role="tab" aria-selected="false" class="border-b-2 border-transparent px-4 py-2 text-md font-medium text-gray-400 transition-colors hover:text-gray-700" >Procurement</label>
-                        <label role="tab" aria-selected="false" class="border-b-2 border-transparent px-4 py-2 text-md font-medium text-gray-400 transition-colors hover:text-gray-700" >Final Review</label>
+                        <button type="button" role="tab" aria-selected="false" class="progress-tab"
+                            data-step="quality">Quality Representative</button>
+                        <button type="button" role="tab" aria-selected="true" class="progress-tab"
+                            data-step="engineering">Engineer</button>
                     </div>
                 </div>
 
@@ -146,7 +146,7 @@
                     <div class="ncr-sum">NCR No: <strong>2025-023</strong> | Status: <strong>Active</strong> | Date: Oct 10 2025</div>
                     
                     <!-- Quality Representative Section -->
-                    <section id="sec-quality" class="ncr-section">
+                    <section id="sec-quality" class="progress-section" data-step-content="quality">
                         <div class="section-header quality">Quality Representative</div>
                         <div class="row">
                             <div class="field-box">
@@ -213,7 +213,7 @@
                     </section>
 
                     <!-- Engineering Section -->
-                    <section id="sec-engineering" class="ncr-section active" hidden>
+                    <section id="sec-engineering" class="progress-section" data-step-content="engineering" hidden>
                         <div class="section-header engineering">Engineering</div>
                         <div class="row">
                             <div class="field-box">
@@ -265,7 +265,7 @@
                     </section>
 
                     <!-- Purchasing Section -->
-                    <section id="sec-purchasing" class="ncr-section" hidden>
+                    <section id="sec-purchasing" class="progress-section" data-step-content="procurement" hidden>
                         <div class="section-header procurement">Purchasing</div>
                         <div class="row">
                             <div class="field-box">
@@ -308,7 +308,7 @@
                     </section>
 
                     <!-- Final Review Section -->
-                    <section id="sec-final" class="ncr-section" hidden>
+                    <section id="sec-final" class="progress-section" data-step-content="final-review" hidden>
                         <div class="section-header final-review">Final Review</div>
                         <div class="row">
                             <div class="inline-field">

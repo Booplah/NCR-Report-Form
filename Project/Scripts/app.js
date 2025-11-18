@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Progress Tabs Management
     const tabs = document.querySelectorAll(".progress-tab");
     const sections = document.querySelectorAll(".progress-section");
-    const ACTIVE_TAB_CLASSES = "borer-b-2 border-blue-600 px-4 py-2 text-md font-medium text-blue-600 transition-colors hover:text-dblue-700";
+    const ACTIVE_TAB_CLASSES = "border-b-2 border-blue-600 px-4 py-2 text-md font-medium text-blue-600 transition-colors hover:text-dblue-700";
     const INACTIVE_TAB_CLASSES = "border-b-2 border-transparent px-4 py-2 text-md font-medium text-gray-600 transition-colors hover:text-gray-700";
 
     if (tabs.length && sections.length) {

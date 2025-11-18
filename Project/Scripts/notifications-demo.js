@@ -1,6 +1,6 @@
 
 (function () {
-  const STORAGE_KEY = 'crossfire.notifications';
+  const STORAGE_KEY = 'crossfire.notifications.v2';
   const ROLE_KEY = 'crossfire.role';
 
   // ---------- helpers ----------
@@ -53,10 +53,10 @@
           ncrId: 123,
           type: 'QUALITY_DONE',
           title: 'New NCR - Quality Inspection completed',
-          message: 'NCR #123 is ready for Engineering review',
+          message: 'NCR #123 is ready for Engineering revidsadasdew',
           createdAt: t - 1000 * 60 * 6,   // 6m ago
           read: false,
-          url: 'view.html?section=sec-quality',
+          url: '/Project/Html/Sidebar/Create-NCR-Engineer.html',
           audience: 'Engineering'
         },
         {
@@ -67,7 +67,7 @@
           message: 'NCR #118 is ready for Engineering review',
           createdAt: t - 1000 * 60 * 60 * 2, // 2h ago
           read: false,
-          url: 'view.html?section=sec-quality',
+          url: '/Project/Html/Sidebar/Create-NCR-Engineer.html',
           audience: 'Engineering'
         },
 

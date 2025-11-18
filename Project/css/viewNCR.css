@@ -18,7 +18,10 @@
     transition: background-color 0.3s ease;
 }
 .btn-action.closeBtn{
-background: #ff0000;
+background: #d60202be;
+}
+.btn-action.closeBtn:hover{
+    background: #a50000be;
 }
 
 .btn-action:hover {
@@ -198,7 +201,7 @@ h1 {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.5);
-  display: none;                  /* hidden by default */
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 999;

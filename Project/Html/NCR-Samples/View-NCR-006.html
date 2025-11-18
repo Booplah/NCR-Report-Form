@@ -24,21 +24,60 @@
             </div>
             <hr>
             <ul class="sidebar-items">
-                <li class="siderbar-item"><a href="../../Html/index.html" class="menu-link">Home</a></li>
-                <li class="siderbar-item"><a href="../../Html/Sidebar/dashboard.html" class="menu-link active">Dashboard</a></li>
-                <li class="siderbar-item"><a href="../../Html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a></li>
-                <li class="siderbar-item"><a href="../../Html/Sidebar/admin.html" class="menu-link">Admin Page</a></li>
-                <li class="siderbar-item">
-                    <details class="dropdown-menu">
-                        <summary class="dropdown-toggle">
-                            <span class="dropdown-label">Help & About</span>
-                            <span class="dropdown-arrow"></span>
-                        </summary>
-                        <ul class="dropdown-items">
-                            <li><a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a></li>
-                            <li><a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a></li>
-                            <li><a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a></li>
-                        </ul>
+    <li class="siderbar-item">
+        <a href="../../Html/index.html" class="menu-link">
+            <i data-lucide="home"></i>
+            <span>Home</span>
+        </a>
+    </li>
+    <li class="siderbar-item">
+        <a href="../../Html/Sidebar/dashboard.html" class="menu-link active">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+    <li class="siderbar-item">
+        <a href="../../Html/Sidebar/create-ncr.html" class="menu-link">
+            <i data-lucide="file-plus"></i>
+            <span>Create NCR</span>
+        </a>
+    </li>
+    <li class="siderbar-item">
+        <a href="../../Html/Sidebar/admin.html" class="menu-link">
+            <i data-lucide="settings"></i>
+            <span>Admin Page</span>
+        </a>
+    </li>
+    <li class="siderbar-item">
+        <details class="dropdown-menu">
+            <summary class="menu-link">
+                <i data-lucide="help-circle"></i>
+                <span class="dropdown-label">Help & About</span>
+                <span class="dropdown-arrow"></span>
+            </summary>
+            <ul class="dropdown-items">
+                <li>
+                    <a href="../Sidebar/help-about.html" class="dropdown-link">
+                        <i data-lucide="info"></i>
+                        <span>About This Project</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Sidebar/help-usage.html" class="dropdown-link">
+                        <i data-lucide="book-open"></i>
+                        <span>How to Use</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Sidebar/help-contacts.html" class="dropdown-link">
+                        <i data-lucide="phone"></i>
+                        <span>Contact & Support</span>
+                    </a>
+                </li>
+            </ul>
+        </details>
+    </li>
+</ul>
                     </details>
                 </li>
             </ul>
@@ -95,10 +134,11 @@
                 </div>
 
                                 <div class="btn-container">
-                    <a href="#" id="btnDownloadPDF" class="btn-action">Download PDF</a>
-                    <a href="../../html/Sidebar/edit-ncr.html" class="btn-action">Edit NCR</a>
-                    <a href="../../html/Sidebar/dashboard.html" class="btn-action">Back</a>
-                </div>
+    <a href="#" id="btnDownloadPDF" class="btn-action">Download PDF</a>
+    <a href="../../html/Sidebar/Edit-NCR-006.html" class="btn-action">Edit NCR</a>
+    <a href="../../html/Sidebar/dashboard.html" class="btn-action">Back</a>
+    <a href="#" id="btnCloseNCR" class="btn-action closeBtn">Close NCR</a>
+</div>
 
                 <!-- NCR Form Content -->
                 <div class="view-ncr-field">
@@ -318,7 +358,19 @@
         </main>
     </div>
 
-    <script defer src="../../Scripts/app.js"></script>
+    <!-- Close NCR Popup -->
+<div id="closeNCRModal" class="modal-overlay">
+  <div class="modal-box">
+    <h3>Are you sure you want to close this NCR?</h3>
+    <div class="modal-buttons">
+      <button id="confirmClose" class="modal-btn confirm">Close NCR</button>
+      <button id="cancelClose" class="modal-btn cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+    
+<script defer src="../../Scripts/app.js"></script>
     <script src="../../Scripts/view.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/lucide@latest"></script>

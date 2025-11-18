@@ -24,22 +24,63 @@
                 </a>
             </div>
             <hr>
-            <ul class="sidebar-items">
-                <li class="siderbar-item"><a href="../../Html/index.html" class="menu-link">Home</a></li>
-                <li class="siderbar-item"><a href="../../Html/Sidebar/dashboard.html" class="menu-link active">Dashboard</a></li>
-                <li class="siderbar-item"><a href="../../Html/Sidebar/create-ncr.html" class="menu-link">Create NCR</a></li>
-                <li class="siderbar-item"><a href="../../Html/Sidebar/admin.html" class="menu-link">Admin Page</a></li>
-                <li class="siderbar-item">
-                    <details class="dropdown-menu">
-                        <summary class="dropdown-toggle">
-                            <span class="dropdown-label">Help & About</span>
-                            <span class="dropdown-arrow"></span>
-                        </summary>
-                        <ul class="dropdown-items">
-                            <li><a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a></li>
-                            <li><a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a></li>
-                            <li><a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a></li>
-                        </ul>
+            
+<ul class="sidebar-items">
+    <li class="siderbar-item">
+        <a href="../../Html/index.html" class="menu-link">
+            <i data-lucide="home"></i>
+            <span>Home</span>
+        </a>
+    </li>
+    <li class="siderbar-item">
+        <a href="../../Html/Sidebar/dashboard.html" class="menu-link active">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+    <li class="siderbar-item">
+        <a href="../../Html/Sidebar/create-ncr.html" class="menu-link">
+            <i data-lucide="file-plus"></i>
+            <span>Create NCR</span>
+        </a>
+    </li>
+    <li class="siderbar-item">
+        <a href="../../Html/Sidebar/admin.html" class="menu-link">
+            <i data-lucide="settings"></i>
+            <span>Admin Page</span>
+        </a>
+    </li>
+    <li class="siderbar-item">
+        <details class="dropdown-menu">
+            <summary class="menu-link">
+                <i data-lucide="help-circle"></i>
+                <span class="dropdown-label">Help & About</span>
+                <span class="dropdown-arrow"></span>
+            </summary>
+            <ul class="dropdown-items">
+                <li>
+                    <a href="../Sidebar/help-about.html" class="dropdown-link">
+                        <i data-lucide="info"></i>
+                        <span>About This Project</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Sidebar/help-usage.html" class="dropdown-link">
+                        <i data-lucide="book-open"></i>
+                        <span>How To Use</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Sidebar/help-contacts.html" class="dropdown-link">
+                        <i data-lucide="phone"></i>
+                        <span>Contact & Support</span>
+                    </a>
+                </li>
+            </ul>
+        </details>
+    </li>
+</ul>
+
                     </details>
                 </li>
             </ul>
@@ -96,7 +137,7 @@
                 <!-- Form Sections -->
                 <section id="view-create" class="pt-6">
                     <!-- Quality Representative -->
-                    <div class="card pad" hidden>
+                    <div class="card pad">
                         <h2 class="section-header quality">Quality Representative</h2>
                         <form id="formQualityRep" novalidate>
                             <div class="form-grid">
@@ -184,7 +225,7 @@
                     </div>
 
                     <!-- Engineering Section -->
-                    <div class="card pad">
+                    <div class="card pad" hidden>
                         <h2 class="section-header engineering">Engineering</h2>
                         <form id="formEngineering">
                             <div class="form-grid">

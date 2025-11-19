@@ -15,14 +15,51 @@
 </head>
 
 <body class="page-container">
-   <!-- Sidebar  -->
-<aside class="sidebar">
-  <div class="sidebar-content">
-    <div class="sidebar-logo">
-      <a href="../home.html" class="logo-image">
-        <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
-      </a>
+  <!-- Sidebar  -->
+  <aside class="sidebar">
+    <div class="sidebar-content">
+      <div class="sidebar-logo">
+        <a href="../index.html" class="logo-image">
+          <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
+        </a>
+      </div>
+      <hr>
+            <ul class="sidebar-items">
+                <li class="siderbar-item">
+                    <a href="../../Html/index.html" class="menu-link">Home</a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="../../Html/Sidebar/dashboard.html" class="menu-link">Dashboard</a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="../../Html/Sidebar/create-ncr.html" class="menu-link active">Create NCR</a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="../../Html/Sidebar/admin.html" class="menu-link">Admin Page</a>
+                </li>
+                <li class="siderbar-item">
+                    <details class="dropdown-menu">
+                        <summary class="dropdown-toggle">
+                            <span class="dropdown-label">Help & About</span>
+                            <span class="dropdown-arrow"></span>
+                        </summary>
+
+                        <ul class="dropdown-items">
+                            <li>
+                                <a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a>
+                            </li>
+                            <li>
+                                <a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a>
+                            </li>
+                            <li>
+                                <a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
     </div>
+
     <hr>
     <ul class=siderbar-items>
       <li class="siderbar-item">
@@ -52,34 +89,30 @@
             </li>
             <li>
               <a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a>
+
+
+    <div class="sidebar-footer">
+      <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
+    </div>
+  </aside>
+
+  <!-- Main Page/Header  -->
+  <div class="page-content">
+    <header class="main-header">
+      <div class="header-content">
+        <a href="#" class="header-title">
+          <h1 class="page-title">Dashboard</h1>
+        </a>
+        <nav class="header-navigation">
+          <ul class="header-links">
+            <li class="account-info">
+              <p class="account-name"><strong class="account-label">Account</strong></p>
+
             </li>
           </ul>
-        </details>
-      </li>
-    </ul>
-  </div>
-
-  <div class="sidebar-footer">
-    <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
-  </div>
-</aside>
-
-<!-- Main Page/Header  -->
-<div class="page-content">
-  <header class="main-header">
-    <div class="header-content">
-      <a href="#" class="header-title">
-        <h1 class="page-title">Dashboard</h1>
-      </a>
-      <nav class="header-navigation">
-        <ul class="header-links">
-          <li class="account-info">
-            <p class="account-name"><strong class="account-label">Account</strong></p>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        </nav>
+      </div>
+    </header>
 
     <!-- Main Content -->
     <main class="flex-1 p-6">
@@ -98,7 +131,7 @@
                   <input id="ncrNumber" name="ncrNumber" class="input" type="text" placeholder="ex: NCR-2025-003"
                     aria-describedby="err-ncrNumber" />
                   <div id="err-ncrNumber" class="error" role="alert" aria-live="polite"></div>
-                </div>    
+                </div>
 
                 <div>
                   <label for="dateReported">Date <span class="required" aria-hidden="true">*</span></label>
@@ -165,7 +198,7 @@
                     <div id="err-qtyDefective" class="error" role="alert" aria-live="polite"></div>
                   </div>
                 </div>
-                
+
                 <div>
                   <label for="defectDescription">Description of Defect <span class="required"
                       aria-hidden="true">*</span></label>
@@ -186,6 +219,7 @@
                   <div>
                     <label id="legend-itemMarked" style="font-weight:600">Item marked Nonconforming <span
                         class="required" aria-hidden="true">*</span></label>
+                        
                     <div id="itemMarkedNonconformingGroup" class="input" role="radiogroup"
                       aria-labelledby="legend-itemMarked">
                       <label for="mark-yes"><input id="mark-yes" type="radio" name="itemMarkedNonconforming"
@@ -206,9 +240,15 @@
                 </div>
 
                 <div class="actions">
+
                   <button type="reset" class="btn" id="btnValidate">Reset</button>
 
                   <button type="submit" class="btn primary"  id="savencr">Save NCR</button>
+
+                  <button type="button" class="btn" id="btnValidate">Reset</button>
+                  <button type="submit" class="btn primary">Save NCR</button>
+                  <a href="../Sub-Pages/engineering.html" type="button" class="btn">Next</a>
+
                 </div>
               </div>
             </form>
@@ -216,7 +256,7 @@
         </section>
       </div>
     </main>
-        <footer class="left-64 right-0 bg-white border-t border-gray-200 py-3 z-10">
+    <footer class="left-64 right-0 bg-white border-t border-gray-200 py-3 z-10">
       <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
         <ul class="flex flex-wrap justify-center gap-4 text-xs">
           <li><a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a></li>

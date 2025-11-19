@@ -1,113 +1,64 @@
-/* Create NCR — Theme-only styles (scoped) */
-/* -------------------------------------------------- */
-/* tokens and colours pallets */
+/* Main Create NCR Theme */
 :root {
-    --cf-bg: #f8fafc;
-    /* slate-50 */
-    --cf-card: #ffffff;
-    --cf-border: #e5e7eb;
-    /* gray-200 */
-    --cf-ink: #0f172a;
-    /* slate-900 */
-    --cf-muted: #64748b;
-    /* slate-500 */
-    --cf-accent: #275E8F;
-    /* purple-700 */
-    --cf-accent-600: #275E8F;
-    /* purple-600 */
-    --cf-accent-500: #2D6EA7;
-    /* purple-500 */
-    --cf-danger: #dc2626;
-    /* red-600 */
-    --cf-success: #16a34a;
-    /* green-600 */
-    --cf-focus: 0 0 0 3px rgba(96, 139, 221, 0.35);
-    --radius: 14px;
-    --radius-sm: 10px;
+    --cf-bg: #f8fafc; --cf-card: #ffffff; --cf-border: #e5e7eb; --cf-ink: #0f172a;
+    --cf-muted: #64748b; --cf-accent: #ffffff; --cf-accent-600: #ffffff; --cf-accent-500: #2D6EA7;
+    --cf-danger: #dc2626; --cf-success: #16a34a; --cf-focus: 0 0 0 3px rgba(96, 139, 221, 0.35);
+    --radius: 14px; --radius-sm: 10px;
     --shadow-card: 0 10px 25px -10px rgba(2, 6, 23, .2), 0 2px 6px rgba(2, 6, 23, .06);
 }
 
+<<<<<<< HEAD
 .form-group label {
   margin-right: 20px;
   gap: 5px;
 }
+=======
+/* Main Container */
+>>>>>>> 317eff63e677d07e4bfb37583cd6c15fd9f122ff
 #view-create {
-    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
     color: var(--cf-ink);
 }
 
-/* Headings */
 #view-create h2 {
-    font-family: "Alan Sans", "Inter", ui-sans-serif, system-ui;
+    font-family: "Alan Sans", "Inter", sans-serif;
     color: var(--cf-accent);
     font-weight: 700;
     letter-spacing: .2px;
 }
 
-
+/* Card & Layout */
 #view-create .card {
     background: var(--cf-card);
     border: 1px solid var(--cf-border);
     border-radius: var(--radius);
     box-shadow: var(--shadow-card);
+    animation: cf-fade-in .18s ease-out both;
 }
 
-#view-create .pad {
-    padding: 18px 18px;
-}
+#view-create .pad { padding: 18px; }
+@media (min-width: 768px) { #view-create .pad { padding: 22px; } }
 
-@media (min-width: 768px) {
-    #view-create .pad {
-        padding: 22px;
-    }
-}
+/* Form Grid */
+#view-create .formGrid { gap: 14px; }
+#view-create .two-col { display: grid; gap: 12px; }
+@media (min-width: 640px) { #view-create .two-col { grid-template-columns: 1fr 1fr; } }
 
-/*  From Grid*/
-#view-create .formGrid {
-    gap: 14px;
-}
-
-#view-create .two-col {
-    display: grid;
-    gap: 12px;
-}
-
-@media (min-width: 640px) {
-    #view-create .two-col {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-/* Labels and helpers */
+/* Labels & Text */
 #view-create label {
     display: inline-block;
     margin-bottom: 6px;
     font-weight: 600;
 }
 
-#view-create .muted {
-    color: var(--cf-muted);
-}
+.form-group label { margin-right: 20px; gap: 5px; }
+#view-create .muted { color: var(--cf-muted); }
+#view-create .required { color: var(--cf-danger); margin-left: 2px; font-weight: 700; }
+#view-create .opt { color: var(--cf-muted); font-weight: 500; font-size: .85em; }
 
-#view-create .required {
-    color: var(--cf-danger);
-    margin-left: 2px;
-    font-weight: 700;
-}
-
-#view-create .opt {
-    color: var(--cf-muted);
-    font-weight: 500;
-    font-size: .85em;
-}
-
-/* Inputs unified */
-#view-create .input,
-#view-create input[type="text"],
-#view-create input[type="date"],
-#view-create input[type="number"],
-#view-create select,
-#view-create textarea {
+/* Inputs */
+#view-create .input, #view-create input[type="text"], #view-create input[type="date"],
+#view-create input[type="number"], #view-create select, #view-create textarea {
     width: 100%;
     appearance: none;
     background: #fff;
@@ -118,35 +69,23 @@
     transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease;
 }
 
-#view-create textarea.input {
-    min-height: 96px;
-    resize: vertical;
-}
+#view-create textarea.input { min-height: 96px; resize: vertical; }
 
-/* hover and focus */
-#view-create .input:hover,
-#view-create select:hover,
-#view-create textarea:hover {
-    border-color: #d1d5db;
-    /* gray-300 */
-}
-
-#view-create .input:focus,
-#view-create select:focus,
-#view-create textarea:focus {
+/* Input States */
+#view-create .input:hover, #view-create select:hover, #view-create textarea:hover { border-color: #d1d5db; }
+#view-create .input:focus, #view-create select:focus, #view-create textarea:focus {
     outline: none;
     border-color: var(--cf-accent-600);
     box-shadow: var(--cf-focus);
 }
 
-/* Invalid Status ( JS added aria-invalid="true") */
+/* Validation */
 #view-create [aria-invalid="true"] {
     border-color: var(--cf-danger) !important;
     box-shadow: 0 0 0 3px rgba(220, 38, 38, .15) !important;
     background-color: #fff7f7;
 }
 
-/* accesibles mistakes */
 #view-create .error {
     min-height: 1.15rem;
     font-size: .78rem;
@@ -154,22 +93,18 @@
     margin-top: 6px;
 }
 
-/* Fieldset radio */
+/* Fieldset */
 #view-create fieldset {
     border: 1px solid var(--cf-border);
     border-radius: var(--radius);
     background: #fff;
 }
 
-#view-create fieldset legend {
-    padding: 0 6px;
-}
+#view-create fieldset legend { padding: 0 6px; }
 
 /* Buttons */
 #view-create .btn {
-    --btn-bg: #ffffff;
-    --btn-ink: var(--cf-ink);
-    --btn-border: var(--cf-border);
+    --btn-bg: #ffffff; --btn-ink: var(--cf-ink); --btn-border: var(--cf-border);
     --btn-shadow: 0 2px 6px rgba(2, 6, 23, .06);
     display: inline-flex;
     align-items: center;
@@ -191,14 +126,11 @@
     box-shadow: 0 6px 16px -6px rgba(2, 6, 23, .15), 0 2px 6px rgba(2, 6, 23, .06);
 }
 
-#view-create .btn:active {
-    transform: translateY(1px);
-}
+#view-create .btn:active { transform: translateY(1px); }
 
 #view-create .btn.primary {
     --btn-bg: linear-gradient(180deg, var(--cf-accent-500), var(--cf-accent-600));
-    --btn-ink: #fff;
-    --btn-border: transparent;
+    --btn-ink: #fff; --btn-border: transparent;
     background-color: #2D6EA7;
     color: #fff;
     border: none;
@@ -209,65 +141,32 @@
     background: #275E8F;
 }
 
-#view-create .btn.sm {
-    padding: 8px 12px;
-    font-size: .92rem;
-    border-radius: 10px;
-}
+#view-create .btn.sm { padding: 8px 12px; font-size: .92rem; border-radius: 10px; }
 
-/* Actions Group */
-#view-create .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 6px;
-}
+/* Actions & Utilities */
+#view-create .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+#view-create ::placeholder { color: #9aa3af; }
 
-/* Placeholders */
-#view-create ::placeholder {
-    color: #9aa3af;
-}
-
-/* Numbers  */
 #view-create input[type=number]::-webkit-outer-spin-button,
-#view-create input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+#view-create input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+#view-create input[type=number] { -moz-appearance: textfield; }
+
+/* Animations */
+@keyframes cf-fade-in {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-#view-create input[type=number] {
-    -moz-appearance: textfield;
-}
+/* Status Colors */
+#view-create .text-success { color: var(--cf-success); }
+#view-create .text-info { color: var(--cf-accent-600); }
 
-/* Micro animation */
-@media (prefers-reduced-motion: no-preference) {
-    #view-create .card {
-        animation: cf-fade-in .18s ease-out both;
-    }
-
-    @keyframes cf-fade-in {
-        from {
-            opacity: 0;
-            transform: translateY(4px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-}
-
-/* Success Status messages */
-#view-create .text-success {
-    color: var(--cf-success);
-}
-
-#view-create .text-info {
-    color: var(--cf-accent-600);
-}
-
-/* Compability of hidden attributte (if the browser does not apply) */
-#view-create[hidden] {
-    display: none !important;
+.section-header {
+    background-color: #292980;
+    color: white;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin: 10px 0;
 }

@@ -13,7 +13,7 @@
     rel="stylesheet">
 </head>
 
-<body class="page-container">
+<body class="page-container min-h-screen">
    <!-- Sidebar  -->
 <aside class="sidebar">
   <div class="sidebar-content">
@@ -23,6 +23,7 @@
       </a>
     </div>
     <hr>
+<<<<<<< HEAD
 
     <ul class=siderbar-items>
       <li class="siderbar-item">
@@ -94,6 +95,64 @@
                 </li>
             </ul>
 
+=======
+      <ul class="sidebar-items">
+        <li class="siderbar-item">
+          <a href="../../Html/index.html" class="menu-link">
+            <i data-lucide="home"></i>
+      <span>Home</span>
+          </a>
+        </li>
+        <li class="siderbar-item">
+          <a href="../../Html/Sidebar/dashboard.html" class="menu-link">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="siderbar-item">
+          <a href="../../Html/Sidebar/create-ncr.html" class="menu-link">
+            <i data-lucide="file-plus"></i>
+            <span>Create NCR</span>
+          </a>
+        </li>
+        <li class="siderbar-item">
+          <a href="../../html/Sidebar/admin.html" class="menu-link active">
+            <i data-lucide="settings"></i>
+            <span>Admin Page</span>
+          </a>
+        </li>
+        <li class="siderbar-item">
+          <details class="dropdown-menu">
+            <summary class="dropdown-toggle">
+              <i data-lucide="help-circle"></i>
+              <span class="dropdown-label">Help & About</span>
+              <span class="dropdown-arrow"></span>
+            </summary>
+
+            <ul class="dropdown-items">
+              <li>
+                <a href="../Sidebar/help-about.html" class="dropdown-link">
+                  <i data-lucide="info"></i>
+            <span>About This Project</span>
+                </a>
+              </li>
+              <li>
+                <a href="../Sidebar/help-usage.html" class="dropdown-link">
+                  <i data-lucide="book-open"></i>
+                  <span>User Guide</span>
+                </a>
+              </li>
+              <li>
+                <a href="../Sidebar/help-contacts.html" class="dropdown-link">
+                  <i data-lucide="phone"></i>
+                  <span>Contact & Support</span>
+                </a>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+>>>>>>> 317eff63e677d07e4bfb37583cd6c15fd9f122ff
   </div>
 
   <div class="sidebar-footer">
@@ -121,20 +180,25 @@
   <!-- Main -->
     <main class="flex-1 flex flex-col justify-center items-center text-center p-10">
       <h2><STRONG class="text-[40px]">Admin Dashboard</STRONG></h2>
-      <p>Admininstration will be implemented in prototype 2...</p>
+      <p>Administration will be implemented in a later prototype...</p>
     </main>
-        <footer class="left-64 right-0 bg-white border-t border-gray-200 py-3 z-10">
-    <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
-      <ul class="flex flex-wrap justify-center gap-4 text-xs">
-        <li><a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a></li>
-        <li><a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a></li>
-      </ul>
-      <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
-    </div>
-  </footer>
+    <footer class="pt-10">
+      <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
+        <ul class="flex flex-wrap justify-center gap-4 text-xs">
+          <li><a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a></li>
+          <li><a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a></li>
+        </ul>
+        <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
+      </div>
+    </footer>
   </div>
 
   <script src="../Scripts/app.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
 </body>
 
 </html>

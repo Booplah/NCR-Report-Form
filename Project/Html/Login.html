@@ -4,30 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/Main-Page.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet">
-  <!-- Load Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-<!--  <style>-->
-<!--      /* Using Tailwind's 'Inter' font stack */-->
-<!--      body {-->
-<!--          font-family: 'Inter';-->
-<!--      }-->
 
-<!--  </style>-->
   <title>Department Selector</title>
-</head>
+</head> 
 <body class="bg-[rgb(23,52,81)] min-h-screen flex items-center justify-center font-sans p-4">
 
 <div class="text-center">
   <h1 class="text-3xl font-bold text-[rgb(255,255,255)] mb-10">
     Choose Department
   </h1>
+  <hr class="border-t-2 border-white mb-10"/>
+  <br/>
   <div class="flex flex-row space-x-9">
-
     <a href="#" class="role-link" data-role="Quality">
     <div class="dept-square">Quality</div>
     </a>
@@ -43,7 +32,7 @@
     .dept-square {
         /* Sizing and layout */
         width: 10rem;  /* 160px */
-        height: 10rem; /* 160px */
+        height: 4.3rem; 
         display: flex;
         border-color: #2D6EA7;
         border-style: solid;
@@ -56,7 +45,7 @@
         color: rgb(89, 151, 200); /* Text color for squares */
 
         /* Style & Interaction */
-        border-radius: 0.5rem; /* rounded-lg */
+        border-radius: 0.9rem; /* rounded-lg */
         font-weight: 600; /* semi-bold */
         font-size: 1.5rem; /* text-xl */
         cursor: pointer;

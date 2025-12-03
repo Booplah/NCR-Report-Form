@@ -209,29 +209,3 @@ main {
 .account-label {
   font-size: 1rem;
 }
-.btnActions {
-  background-color: #E2EFFE;
-  color: rgb(54, 54, 54);
-  border: 1px solid rgb(194, 221, 252);
-  border-radius: 6px;
-  padding: 4px 10px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-.btnActions:hover {
-  background-color: #d3e7ff;
-  border-color: #E2EFFE;
-  color: black;
-}
-
-.btnActions.create{
-    background-color: #d9ffe6;
-    border: 1px solid  #d9ffe6;
-}
-
-.btnActions.view{
-    background-color: #f6d9ff;
-    border: 1px solid  #d9ffe6;
-}

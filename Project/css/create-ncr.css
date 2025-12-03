@@ -109,50 +109,6 @@
 
 #view-create fieldset legend { padding: 0 6px; }
 
-/* Buttons */
-#view-create .btn {
-    --btn-bg: #ffffff; --btn-ink: var(--cf-ink); --btn-border: var(--cf-border);
-    --btn-shadow: 0 2px 6px rgba(2, 6, 23, .06);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-    padding: 10px 14px;
-    border-radius: 12px;
-    border: 1px solid var(--btn-border);
-    background: var(--btn-bg);
-    color: var(--btn-ink);
-    font-weight: 600;
-    box-shadow: var(--btn-shadow);
-    transition: transform .06s ease, box-shadow .15s ease, border-color .15s ease;
-    cursor: pointer;
-}
-
-#view-create .btn:hover {
-    border-color: #d1d5db;
-    box-shadow: 0 6px 16px -6px rgba(2, 6, 23, .15), 0 2px 6px rgba(2, 6, 23, .06);
-}
-
-#view-create .btn:active { transform: translateY(1px); }
-
-#view-create .btn.primary {
-    --btn-bg: linear-gradient(180deg, var(--cf-accent-500), var(--cf-accent-600));
-    --btn-ink: #fff; --btn-border: transparent;
-    background-color: #2D6EA7;
-    color: #fff;
-    border: none;
-}
-
-#view-create .btn.primary:hover {
-    box-shadow: 0 10px 22px -10px rgba(2, 6, 23, .15), 0 2px 6px rgba(2, 6, 23, .06);
-    background: #275E8F;
-}
-
-#view-create .btn.sm { padding: 8px 12px; font-size: .92rem; border-radius: 10px; }
-
-
-
-
 /* Actions & Utilities */
 #view-create .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
 #view-create ::placeholder { color: #9aa3af; }

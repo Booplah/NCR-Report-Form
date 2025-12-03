@@ -1,35 +1,4 @@
 /* Main NCR View Styles */
-.btn-container {
-    text-align: right;
-    margin-top: 25px;
-}
-
-.btn-action {
-    background-color: #2D6EA7;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 8px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    margin-left: 5px;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-.btn-action.closeBtn{
-background: #d60202be;
-}
-.btn-action.closeBtn:hover{
-    background: #a50000be;
-}
-
-.btn-action:hover {
-    background-color: #275E8F;
-    color: white;
-    text-decoration: none;
-}
-
 .view-ncr-field {
     background: #fafafa;
     margin-top: 5px;
@@ -143,19 +112,6 @@ h1 {
     justify-content: flex-start;
 }
 
-.tab-btn {
-    background: #ffffff;
-    border: 1px solid #cac2cf;
-    border-radius: 9999px;
-    padding: 8px 14px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: box-shadow 0.2s ease, background-color 0.2s ease;
-}
-
-.tab-btn:hover { box-shadow: 0 1px 6px rgba(0,0,0,0.08); }
-.tab-btn.active { background: #ccd1d4; color: #fff; border-color: #5f676d; }
-
 /* Section visibility */
 .ncr-section { display: none; }
 .ncr-section.active { display: block; }
@@ -223,27 +179,4 @@ h1 {
   color: #333;
   margin-bottom: 15px;
   font-weight: 600;
-}
-
-/* Buttons inside popup */
-.modal-buttons {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
-}
-
-.modal-btn {
-  border: 2px solid #dee0e3;
-  padding: 6px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-
-.modal-btn:hover {
-  opacity: 0.9;
-  color: rgb(32, 33, 36);
-  background-color: #eeefef;
-  border-color: #275E8F;
 }

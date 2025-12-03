@@ -7,6 +7,7 @@
     <title>CrossFire NCR – Engineering</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../../css/create-ncr.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
     <link rel="stylesheet" href="../../css/viewNCR.css">
     <link rel="stylesheet" href="../../css/Main-Page.css">
     <link rel="stylesheet" href="../../css/notifications.css">
@@ -255,10 +256,8 @@
                                     </div>
 
                                     <div class="actions">
-                                        <button type="button" class="btn-action"
-                                            onclick="openSubmitModel()">Submit</button>
-                                        <button type="submit" class="btn">Save</button>
-                                        <button type="button" class="btn btn-cancel">Cancel</button>
+                                        <button type="submit" class="btn-action">Create</button>
+                                        <button type="button" class="btn btn-cancel" onclick="window.location.href='./Dashboard.html'">Cancel</button>
                                     </div>
                                 </div>
                             </form>
@@ -271,7 +270,7 @@
                 role="dialog" aria-modal="true" aria-labelledby="modalTitle">
                 <div id="modalSubmitBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
                     onclick="event.stopPropagation()">
-                    <h2 id="submitModalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Your work submitted.
+                    <h2 id="submitModalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl" style="color: green;">Your work submitted.
                         Good job!</h2>
                     <div class="mt-4">
                         <p class="text-pretty text-gray-700">Rest assured, your work is saved, and email sent to next
@@ -291,6 +290,17 @@
                 </div>
             </div>
 
+            <div id="confirmModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
+                role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
+                    onclick="event.stopPropagation()">
+                    <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Confirmation</h2>
+                    <div class="mt-4">
+                        <p class="text-pretty text-gray-700">Are you sure you want to cancel? This action will delete your progress.</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- Footer -->
             <footer class="pt-10">
                 <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
@@ -303,33 +313,12 @@
             </footer>
         </main>
     </div>
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            let submitModal = document.getElementById('submitModal');
-
-            window.openSubmitModel = function () {
-                submitModal.classList.remove('hidden');
-                submitModal.addEventListener('click', handleOutsideClick);
-            }
-
-            window.closeSubmitModel = function () {
-                submitModal.classList.add('hidden');
-                submitModal.removeEventListener('click', handleOutsideClick);
-            }
-
-            function handleOutsideClick(e) {
-                if (e.target === submitModal) {
-                    closeSubmitModel();
-                    window.location.href = './Dashboard.html';
-                }
-            }
-        })
-    </script> -->
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             let modal = document.getElementById('helperModal');
             let submitModal = document.getElementById('submitModal')
+            let confirmModel = document.getElementById('confirmModal');
 
             window.openHelpModel = function () {
                 modal.classList.remove('hidden');
@@ -352,9 +341,13 @@
             }
 
             function handleOutsideClick(e) {
-                if (e.target === modal) {
-                    closeHelpModel();
-                } else if (e.target === submitModal) {
+                if (e.target === modal)
+                    closeHelpModel(); 
+                else if (e.target === submitModal) {
+                    closeSubmitModel();
+                    window.location.href = './Dashboard.html';
+                } 
+                else if (e.target === submitModal) {
                     closeSubmitModel();
                     window.location.href = './Dashboard.html';
                 }

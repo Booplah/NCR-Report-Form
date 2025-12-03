@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CrossFire NCR – Engineering</title>
+    <title>CrossFire NCR – Operations </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../../css/create-ncr.css">
     <link rel="stylesheet" href="../../css/viewNCR.css">
@@ -120,7 +120,9 @@
                         <button type="button" role="tab" aria-selected="false" class="progress-tab"
                             data-step="engineering">Engineer</button>
                         <button type="button" role="tab" aria-selected="true" class="progress-tab"
-                            data-step="procurement">Procurement</button>
+                            data-step="procurement">Operations</button>
+                         <button type="button" role="tab" aria-selected="true" class="progress-tab"
+                            data-step="Final Review">Procurement</button>
                     </div>
                 </div>
                 <!-- Form Sections -->
@@ -224,7 +226,13 @@
                             <div class="form-grid">
                                 <div class="row">
                                     <div class="field-box">
-                                        <label class="field-label">Review by CF Engineering</label>
+                                         <div class="flex justify-between field-header">
+                                                <label for="processApplicable" class="field-label">Review by CF Engineering<span class="required" aria-hidden="true">*</span></label>
+
+                                                <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                    alt="Help icon" onclick="openHelpModel()" />
+                                            </div>
+                                        
                                         <div class="radio-group two-col">
                                             <label><input type="radio" name="cfEngDisposition" value="Use As Is"> Use As
                                                 Is</label>
@@ -422,6 +430,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../../Scripts/notifications-demo.js"></script>
     <script>if (window.lucide) lucide.createIcons();</script>
+    <script src="../../Scripts/role-manager.js"></script>
 </body>
 
 </html>

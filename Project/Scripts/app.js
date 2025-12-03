@@ -36,8 +36,8 @@ function generateNcrNumber() {
 }
 
 // Form Validation
-function validateFields(ids) {
-    let valid = true;
+function validateFields(ids, errorMessage = "This field is required.") {
+    let allValid = true;
     ids.forEach(id => {
         const el = document.getElementById(id);
         if (el && !el.value.trim()) {
@@ -46,10 +46,23 @@ function validateFields(ids) {
         } else if (el) {
             el.removeAttribute("aria-invalid");
         }
-    });
-    return valid;
-}
+        
+        const errEl = document.getElementById(`err-${id}`);
+        
+        if (!el) return; // Skip if element not found
 
+        // Handle error display
+        if (!el.value.trim()) {
+            el.classList.add("border-red-500");
+            if (errEl) errEl.textContent = errorMessage;
+            allValid = false;
+        } else {
+            el.classList.remove("border-red-500");
+            if (errEl) errEl.textContent = "";
+        }
+    });
+    return allValid;
+}
 // Quality Form Submission
 function handleQualitySubmit(e) {
     e.preventDefault();
@@ -118,7 +131,145 @@ function handleEngineerSubmit(e) {
     openSubmitModel();
     e.target.reset();
 }
+/*/ Engineering Form Submission
+function handleEngineeringSubmit(e) {
+    e.preventDefault();
 
+    // 1. Define required text/select fields (by ID)
+    const requiredIds = [
+        "dispositionDetails", 
+        "enginName", 
+        "engDate"
+    ];
+
+    // 2. Define required radio groups (by Name)
+    const requiredRadioGroups = [
+        "cfEngDisposition", 
+        "reqNotif", 
+        "reqUpdating"
+    ];
+
+    // 3. Perform Validation
+    let isValid = validateFields(requiredIds); // Helper from existing code
+
+    // Custom validation for Radio Groups
+    requiredRadioGroups.forEach(groupName => {
+        const checked = document.querySelector(`input[name="${groupName}"]:checked`);
+        if (!checked) {
+            isValid = false;
+            // Optional: Add error highlighting logic here if specific container IDs exist
+        }
+    });
+
+    if (!isValid) {
+        return alert("Please fill all required Engineering fields (Disposition, Notifications, Updates, Name, Date).");
+    }
+
+    // 4. Alert for Confirmation
+    const isConfirmed = confirm("Are you sure you want to submit the Engineering section?");
+    if (!isConfirmed) {
+        return; // Stop here if user cancelled
+    }
+
+    // 5. Normal Process (Save Data)
+    const get = id => document.getElementById(id)?.value || "";
+    const getRadio = name => document.querySelector(`input[name="${name}"]:checked`)?.value || "";
+
+    // Create Engineering Data Object
+    const engineeringData = {
+        disposition: getRadio("cfEngDisposition"),
+        dispositionDetails: get("dispositionDetails"),
+        customerNotification: getRadio("reqNotif"),
+        drawingUpdate: getRadio("reqUpdating"),
+        originalRev: get("origRevNum"),
+        updatedRev: get("updatedRev"),
+        engineerName: get("enginName"),
+        date: get("engDate"),
+        submittedAt: new Date().toISOString()
+    };
+
+    // Save to LocalStorage (Merging with existing list or current NCR context)
+    // For this prototype, we push to the list or update the last entry
+    const list = JSON.parse(localStorage.getItem("ncrList") || "[]");
+    if (list.length > 0) {
+        // Assuming we are updating the most recent NCR being worked on
+        const lastIndex = list.length - 1;
+        list[lastIndex] = { ...list[lastIndex], ...engineeringData };
+        localStorage.setItem("ncrList", JSON.stringify(list));
+    } else {
+        // Fallback if no NCR exists yet
+        localStorage.setItem("ncrList", JSON.stringify([engineeringData]));
+    }
+
+    alert("Engineering section saved successfully ✅");
+    // Optional: Redirect or reset
+    // e.target.reset(); 
+}
+
+function handleEngineeringSubmit(e) {
+    e.preventDefault();
+
+    // 1. Validate required text/date inputs
+    // Assuming Disposition, Engineer Name, and Date are mandatory
+    const requiredInputs = ["dispositionDetails", "enginName", "engDate"];
+    let inputsValid = validateFields(requiredInputs);
+    
+    // 2. Validate required radio group: "Review by CF Engineering" (name: cfEngDisposition)
+    const reviewRadioGroup = document.querySelector('input[name="cfEngDisposition"]:checked');
+    let reviewValid = !!reviewRadioGroup;
+    const reviewErrorDiv = document.getElementById('err-cfEngDisposition');
+
+    if (!reviewValid) {
+        if (reviewErrorDiv) reviewErrorDiv.textContent = "Please select a disposition option.";
+    } else {
+        if (reviewErrorDiv) reviewErrorDiv.textContent = "";
+    }
+
+    if (inputsValid && reviewValid) {
+        console.log("Engineering form submitted and validated successfully! (Data saved placeholder)");
+        alert("Engineering changes saved successfully. ✅");
+    } else {
+        alert("Please fill all required fields and correct the highlighted errors.");
+    }
+}*/
+// Engineering Form Submission - NEW FUNCTION WITH VALIDATION
+function handleEngineeringSubmit(e) {
+    e.preventDefault();
+
+    // 1. Validate required text/date inputs
+    // Assuming Disposition, Engineer Name, and Date are mandatory
+    const requiredInputs = ["dispositionDetails", "enginName", "engDate"];
+    let inputsValid = validateFields(requiredInputs);
+    
+    // 2. Validate required radio group: "Review by CF Engineering" (name: cfEngDisposition)
+    const reviewRadioGroup = document.querySelector('input[name="cfEngDisposition"]:checked');
+    let reviewValid = !!reviewRadioGroup;
+    const reviewErrorDiv = document.getElementById('err-cfEngDisposition');
+
+    if (!reviewValid) {
+        if (reviewErrorDiv) reviewErrorDiv.textContent = "Please select a disposition option.";
+    } else {
+        if (reviewErrorDiv) reviewErrorDiv.textContent = "";
+    }
+
+    if (inputsValid && reviewValid) {
+        console.log("Engineering form submitted and validated successfully! (Data saved placeholder)");
+        alert("Engineering changes saved successfully. ✅");
+    } else {
+        alert("Please fill all required fields and correct the highlighted errors.");
+    }
+}
+
+// --- Initialization Block Update ---
+document.addEventListener("DOMContentLoaded", () => {
+    // ... existing code ...
+
+    // Bind Engineering Form
+    const formEng = document.getElementById("formEngineering");
+    if (formEng) {
+        formEng.addEventListener("submit", handleEngineeringSubmit);
+    }
+});
 // Main Initialization
 document.addEventListener("DOMContentLoaded", () => {
     let showSectionForRole = () => {};

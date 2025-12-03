@@ -135,7 +135,7 @@
                                             </div>
 
                                             <select id="processApplicable" name="processApplicable" class="input">
-                                                <option value="">Select…</option>
+                                                <option value="">Click to Select</option>
                                                 <option value="Supplier or Rec-Insp">Supplier or Rec-Insp</option>
                                                 <option value="WIP (Production Order)">WIP (Production Order)</option>
                                             </select>
@@ -150,7 +150,7 @@
                                                     alt="Help icon" onclick="openHelpModel()" />
                                             </div>
                                              <input id="supplierName" name="supplierName" class="input" type="text"
-                                                    placeholder="ABC Components">
+                                                    placeholder="Ex:ABC Components">
                                         </div>
                                         <div class="field-box">
                                             <div class="flex justify-between field header">
@@ -159,11 +159,11 @@
                                                     alt="Help icon" onclick="openHelpModel()" />
                                             </div>
                                             <input id="ncrNumber" name="ncrNumber" class="input mb-2" type="text"
-                                                placeholder="NCR-2025-011" readonly>
+                                                placeholder="Ex: NCR-2025-011" readonly>
                                             <input id="poOrProdNo" name="poOrProdNo" class="input mb-2" type="text"
-                                                placeholder="PO-1013">
+                                                placeholder="Ex: PO-1013">
                                             <input id="salesOrderNo" name="salesOrderNo" class="input" type="text"
-                                                placeholder="SO-0613">
+                                                placeholder="Ex: SO-0613">
                                             
                                         </div>
                                     </div>
@@ -177,7 +177,7 @@
                                                     alt="Help icon" onclick="openHelpModel()" />
                                             </div>
                                             <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input"
-                                                type="text" placeholder="LED Ring Light + Phone Holder">
+                                                type="text" placeholder="Ex: LED Ring Light + Phone Holder">
                                         </div>
                                         <div class="field-box" style="flex: 1;">
                                             <div class="flex justify-between field-header">
@@ -186,7 +186,7 @@
                                                     alt="Help icon" onclick="openHelpModel()" />
                                             </div>
                                             <input id="qtyReceived" name="qtyReceived" class="input" type="number"
-                                                placeholder="100">
+                                                placeholder="Ex: 100">
                                         </div>
                                         <div class="field-box" style="flex: 1;">
                                             <div class="flex justify-between field-header">
@@ -195,7 +195,7 @@
                                                     alt="Help icon" onclick="openHelpModel()" />
                                             </div>
                                             <input id="qtyDefective" name="qtyDefective" class="input" type="number"
-                                                placeholder="10">
+                                                placeholder="Ex: 10">
                                         </div>
                                     </div>
 
@@ -209,7 +209,7 @@
                                             </div>
                                             <textarea id="defectDescription" name="defectDescription" class="input"
                                                 rows="3"
-                                                placeholder="Mobile phone clip is broken, and USB cable is frayed."></textarea>
+                                                placeholder="Ex: Mobile phone clip is broken, and USB cable is frayed."></textarea>
                                         </div>
                                     </div>
 
@@ -242,7 +242,7 @@
                                             <label for="reportedBy" class="field-label">Quality Representative's
                                                 Name</label>
                                             <input id="reportedBy" name="reportedBy" class="input" type="text"
-                                                placeholder="Dave Kendell">
+                                                placeholder="Ex: Dave Kendell">
                                         </div>
                                         <div class="field-box">
                                             <div class="flex justify-between field-header">
@@ -251,7 +251,7 @@
                                                     alt="Help icon" onclick="openHelpModel()" />
                                             </div>
                                             <input id="dateReported" name="dateReported" class="input" type="date"
-                                                placeholder="2025-11-04">
+                                                placeholder="Ex: 2025-11-04">
                                         </div>
                                     </div>
 
@@ -360,6 +360,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../../Scripts/notifications-demo.js"></script>
     <script>if (window.lucide) lucide.createIcons();</script>
+    <script src="../../Scripts/role-manager.js"></script>
 </body>
 
 </html>

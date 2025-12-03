@@ -338,6 +338,7 @@
                                     <div class="field-box">
                                         <label for="carNumber" class="field-label">If Yes, indicate CAR #</label>
                                         <input id="carNumber" name="carNumber" class="input" type="text" placeholder="Ex: 67">
+                                        <div id="err-carNumber" class="error" role="alert" aria-live="polite"></div>
                                     </div>
                                 </div>
 
@@ -364,19 +365,21 @@
                                             Name</label>
                                         <input id="operationsManager" name="operationsManager" class="input" type="text"
                                             placeholder="Ex: Melissa Brown">
+                                        <div id="err-operationsManager" class="error" role="alert" aria-live="polite"></div>
                                     </div>
                                     <div class="field-box">
                                         <label for="operationsManagerDate" class="field-label">Date</label>
                                         <input id="operationsManagerDate" name="operationsManagerDate" class="input"
                                             type="date" value="2025-10-11">
+                                        <div id="err-operationsManagerDate" class="error" role="alert" aria-live="polite"></div>    
                                     </div>
                                 </div>
 
                                 <div class="actions">
-                                    <button type="button" class="btn submit" onclick="openModal('submitModal')">
+                                    <button type="button" class="btn submit" onclick="handleProcurementSubmit(event, 'submit')">
                                         Submit</button>
 
-                                    <button type="button" class="btn save" onclick="openModal('saveModal')">
+                                    <button type="button" class="btn save"  onclick="handleProcurementSubmit(event, 'save')">
                                         Save</button>
 
                                     <button type="button" class="btn cancel" onclick="openModal('confirmModal')">
@@ -462,10 +465,10 @@
                                 </div>
 
                                 <div class="actions">
-                                    <button type="button" class="btn submit" onclick="openModal('submitModal')">
+                                    <button type="button" class="btn submit"  onclick="handleProcurementSubmit(event, 'submit')">
                                         Submit</button>
 
-                                    <button type="button" class="btn save" onclick="openModal('saveModal')">
+                                    <button type="button" class="btn save" onclick="handleProcurementSubmit(event, 'save')">
                                         Save</button>
 
                                     <button type="button" class="btn cancel" onclick="openModal('confirmModal')">

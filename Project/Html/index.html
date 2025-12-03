@@ -5,6 +5,7 @@
   <title>Home</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../css/Main-Page.css">
+  <link rel="stylesheet" href="../css/buttons.css">
   <link rel="stylesheet" href="../css/notifications.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -124,7 +125,7 @@
       <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
         Welcome to
 
-        <strong style="color: #2d6ea7;"> CrossFire NCR </strong>
+        <p style="color: #2d6ea7;"> CrossFire NCR </p>
 
       </h1>
 
@@ -135,15 +136,12 @@
 
 
       <div class="mt-4 flex justify-center gap-4 sm:mt-6">
-        <a class="inline-block rounded border border-gray-200 bg-[#2D6EA7] px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-[#275E8F]"
-          href="../Html/Sidebar/Create-NCR.html">
-          Create NCR
-        </a>
-
-        <a class="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900"
-          href="../Html/Sidebar/dashboard.html">
+        <button class="btn-action" onclick="window.location.href='../Html/Sidebar/Create-NCR.html'">
+          New NCR
+        </button>
+        <button class="btn-action" onclick="window.location.href='../Html/Sidebar/dashboard.html'">
           View Dashboard
-        </a>
+        </button>
       </div>
   </main>
 

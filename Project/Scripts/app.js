@@ -43,6 +43,13 @@ function validateFields(ids, errorMessage = "This field is required.") {
     let allValid = true;
     ids.forEach(id => {
         const el = document.getElementById(id);
+        if (el && !el.value.trim()) {
+            el.setAttribute("aria-invalid", "true");
+            valid = false;
+        } else if (el) {
+            el.removeAttribute("aria-invalid");
+        }
+        
         const errEl = document.getElementById(`err-${id}`);
 
         if (!el) return; // Skip if element not found
@@ -67,7 +74,7 @@ function handleQualitySubmit(e) {
         "defectDescription", "reportedBy"
     ];
 
-    if (!validateFields(required)) return alert("Please fill all required fields.");
+    if (!validateFields(required)) return;
 
     const get = id => document.getElementById(id)?.value || "";
     const getChecked = name => document.querySelector(`input[name="${name}"]:checked`)?.value || "";
@@ -77,14 +84,54 @@ function handleQualitySubmit(e) {
         process: get("processApplicable"), qtyReceived: get("qtyReceived"), qtyDefective: get("qtyDefective"),
         description: get("defectDescription"), marked: getChecked("itemMarkedNonconforming"),
         reportedBy: get("reportedBy"), disposition: get("dispositionDetails"),
-        enginName: get("enginName"), engDate: get("engDate"), createdAt: new Date().toISOString()
+        enginName: get("enginName"), engDate: get("engDate"), createdAt: new Date().toISOString()   
     };
 
     const list = JSON.parse(localStorage.getItem("ncrList") || "[]");
     list.push(ncr);
     localStorage.setItem("ncrList", JSON.stringify(list));
 
-    alert("NCR created successfully ✅");
+    openSubmitModel();
+    e.target.reset();
+}
+
+// Engineer Form Submission
+function handleEngineerSubmit(e) {
+    e.preventDefault();
+    const required = 
+    [
+        "cfEngDisposition", 
+        "dispositionDetails", 
+        "reqNotif", 
+        "reqUpdating", 
+        "origRevNum", 
+        "updatedRev", 
+        "enginName", 
+        "engDate"
+    ];
+
+    if (!validateFields(required)) return;
+
+    const get = id => document.getElementById(id)?.value || "";
+    const getChecked = name => document.querySelector(`input[name="${name}"]:checked`)?.value || "";
+
+    const ncr = {
+        cf: get("cfEngDisposition"), 
+        disp: get("dispositionDetails"), 
+        reqcust: get("reqNotif"),
+        drawUpdate: get("reqUpdating"),
+        origRevNum: get("origRevNum"), 
+        updatedRevNum: get("updatedRev"),
+        enginName: get("enginName"), 
+        engDate: get("engDate"), 
+        createdAt: new Date().toISOString()   
+    };
+
+    const list = JSON.parse(localStorage.getItem("ncrList") || "[]");
+    list.push(ncr);
+    localStorage.setItem("ncrList", JSON.stringify(list));
+
+    openSubmitModel();
     e.target.reset();
 }
 /*/ Engineering Form Submission

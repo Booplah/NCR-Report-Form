@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../css/viewNCR.css">
     <link rel="stylesheet" href="../../css/Main-Page.css">
     <link rel="stylesheet" href="../../css/notifications.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -88,7 +89,7 @@
                     <ul class="header-links">
                         <li class="account-info">
                             <p class="account-name"><strong class="account-label">Account</strong></p>
-                        </li>
+                        </li><!-- This is confusing; Tima -->
                         <!-- Notification Bell -->
                         <li class="notif-container">
                             <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false"
@@ -227,7 +228,11 @@
                             <div class="form-grid">
                                 <div class="row">
                                     <div class="field-box">
-                                        <label class="field-label">Review by CF Engineering*</label>
+                                        <div class="flex justify-between field-header">
+                                            <label class="field-label">Review by CF Engineering</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
                                         <div class="radio-group two-col">
                                             <label><input type="radio" name="cfEngDisposition" value="Use As Is"> Use As Is</label>
                                             <label><input type="radio" name="cfEngDisposition" value="Repair"> Repair</label>
@@ -240,14 +245,23 @@
 
                                 <div class="row">
                                     <div class="field-box" style="flex: 2;">
-                                        <label for="dispositionDetails" class="field-label">Disposition*</label>
+                                        <div class="flex justify-between field-header">
+                                            <label for="dispositionDetails" class="field-label">Disposition</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+
                                         <textarea id="dispositionDetails" name="dispositionDetails" class="input"
                                             rows="4"
                                             placeholder=" Ex: 1. Remove defective phone holder clips. 2. Install new clips. 3. Test USB cable functionality"></textarea>
                                         <div id="err-dispositionDetails" class="error" role="alert" aria-live="polite"></div>
                                     </div>
                                     <div class="field-box" style="flex: 1;">
-                                        <label class="field-label">Customer Notification Required?</label>
+                                        <div class="flex justify-between field-header">
+                                            <label class="field-label">Customer Notification Required?</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
                                         <div class="radio-group">
                                             <label><input type="radio" name="reqNotif" value="Yes"> Yes</label>
                                             <label><input type="radio" name="reqNotif" value="No"> No</label>
@@ -257,20 +271,34 @@
 
                                 <div class="row">
                                     <div class="field-box">
-                                        <label class="field-label">Drawing Update Required?</label>
+                                        <div class="flex justify-between field-header">
+                                            <label class="field-label">Drawing Update Required?</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+
+                                        </div>
                                         <div class="radio-group">
                                             <label><input type="radio" name="reqUpdating" value="Yes"> Yes</label>
                                             <label><input type="radio" name="reqUpdating" value="No"> No</label>
                                         </div>
                                     </div>
                                     <div class="field-box">
-                                        <label for="origRevNum" class="field-label">Original Rev. Number</label>
+                                        <div class="flex justify-between field-header">
+                                            <label for="origRevNum" class="field-label">Original Rev. Number</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
                                         <input id="origRevNum" name="origRevNum" class="input" type="text"
                                             placeholder="Ex: REV-3030">
                                         <div id="err-origRevNum" class="error" role="alert" aria-live="polite"></div>
                                     </div>
                                     <div class="field-box">
-                                        <label for="updatedRev" class="field-label">Updated Rev. Number</label>
+                                        <div class="flex justify-between field-header">
+                                            <label for="updatedRev" class="field-label">Updated Rev. Number</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+
+                                        </div>
                                         <input id="updatedRev" name="updatedRev" class="input" type="text"
                                             placeholder="Ex: REV-3031">
                                         <div id="err-updatedRev" class="error" role="alert" aria-live="polite"></div>
@@ -293,37 +321,19 @@
                                 </div>
 
                                 <div class="actions">
-                                    <button type="button" class="btn-action" onclick="openSubmitModel()">Submit</button>
-                                    <button type="submit" class="btn">Save</button>
-                                    <button type="button" class="btn btn-cancel">Cancel</button>
+                                    <button type="button" class="btn submit" onclick="openModal('submitModal')">Submit</button>
+
+                                    <button type="button" class="btn save" onclick="openModal('saveModal')">Save</button>
+
+                                    <button type="button" class="btn cancel"
+                                        onclick="openModal('confirmModal')">Cancel</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-            <!-- Modals -->
-            <div id="submitModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
-                role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-                <div id="modalSubmitBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
-                    onclick="event.stopPropagation()">
-                    <h2 id="submitModalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Your work submitted.
-                        Good job!</h2>
-                    <div class="mt-4">
-                        <p class="text-pretty text-gray-700">Rest assured, your work is saved, and email sent to next
-                            employee responsible for the next portion.</p>
-                    </div>
-                </div>
+                </section>
             </div>
 
-            <div id="helperModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
-                role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-                <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
-                    onclick="event.stopPropagation()">
-                    <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Info</h2>
-                    <div class="mt-4">
-                        <p class="text-pretty text-gray-700">Detailed Information on select help-info...</p>
-                    </div>
-                </div>
-            </div>
             <!-- Footer -->
             <footer class="pt-10">
                 <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
@@ -336,46 +346,11 @@
             </footer>
         </main>
     </div>
+
     <script defer src="../../Scripts/app.js"></script>
-  <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            let modal = document.getElementById('helperModal');
-            let submitModal = document.getElementById('submitModal')
-
-            window.openHelpModel = function () {
-                modal.classList.remove('hidden');
-                modal.addEventListener('click', handleOutsideClick);
-            }
-
-            window.closeHelpModel = function () {
-                modal.classList.add('hidden');
-                modal.removeEventListener('click', handleOutsideClick);
-            }
-
-            window.openSubmitModel = function () {
-                submitModal.classList.remove('hidden');
-                submitModal.addEventListener('click', handleOutsideClick);
-            }
-
-            window.closeSubmitModel = function () {
-                submitModal.classList.add('hidden');
-                submitModal.addEventListener('click', handleOutsideClick);
-            }
-
-            function handleOutsideClick(e) {
-                if (e.target === modal) {
-                    closeHelpModel();
-                } else if (e.target === submitModal) {
-                    closeSubmitModel();
-                    window.location.href = './Dashboard.html';
-                }
-            }
-        })
-    </script>
-    <!-- Notification System -->
-
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../../Scripts/notifications-demo.js"></script>
+    <script src="../../Scripts/modals.js"></script>
     <script>if (window.lucide) lucide.createIcons();</script>
     <script src="../../Scripts/role-manager.js"></script>
 </body>

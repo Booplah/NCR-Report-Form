@@ -122,279 +122,363 @@
                         <button type="button" role="tab" aria-selected="false" class="progress-tab"
                             data-step="engineering">Engineer</button>
                         <button type="button" role="tab" aria-selected="true" class="progress-tab"
-                            data-step="procurement">Operations</button>
+                            data-step="operations">Operations</button>
                         <button type="button" role="tab" aria-selected="true" class="progress-tab"
-                            data-step="Final Review">Procurement</button>
+                            data-step="procurement">Procurement</button>
                     </div>
                 </div>
                 <!-- Form Sections -->
                 <section id="view-create" class="pt-6">
-                   
-                        <!-- Quality Representative -->
-                        <div class="card pad progress-section" data-step-content="quality" hidden>
-                            <h2 class="section-header quality">Quality Representative</h2>
-                            <form id="formQualityRep" novalidate>
-                                <div class="form-grid">
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <label for="processApplicable" class="field-label">Identify Process
-                                                Applicable</label>
-                                            <select id="processApplicable" name="processApplicable" class="input">
-                                                <option value="">Select…</option>
-                                                <option value="Supplier or Rec-Insp">Supplier or Rec-Insp</option>
-                                                <option value="WIP (Production Order)">WIP (Production Order)</option>
-                                            </select>
-                                        </div>
-                                        <div class="field-box">
-                                            <label for="supplierName" class="field-label">Supplier Name</label>
-                                            <input id="supplierName" name="supplierName" class="input" type="text"
-                                                placeholder="ABC Components">
-                                        </div>
-                                        <div class="field-box">
-                                            <label class="field-label">NCR/PO/SO</label>
-                                            <input id="ncrNumber" name="ncrNumber" class="input mb-2" type="text"
-                                                placeholder="NCR-2025-011" readonly>
-                                            <input id="poOrProdNo" name="poOrProdNo" class="input mb-2" type="text"
-                                                placeholder="PO-1013">
-                                            <input id="salesOrderNo" name="salesOrderNo" class="input" type="text"
-                                                placeholder="SO-0613">
+
+                    <!-- Quality Representative -->
+                    <div class="card pad progress-section" data-step-content="quality" hidden>
+                        <h2 class="section-header quality">Quality Representative</h2>
+                        <form id="formQualityRep" novalidate data-section-role="proc-section">
+                            <div class="form-grid">
+                                <div class="row">
+                                    <div class="field-box">
+                                        <label for="processApplicable" class="field-label">Identify Process
+                                            Applicable</label>
+                                        <select id="processApplicable" name="processApplicable" class="input">
+                                            <option value="">Select…</option>
+                                            <option value="Supplier or Rec-Insp"selected>Supplier or Rec-Insp</option>
+                                            <option value="WIP (Production Order)">WIP (Production Order)</option>
+                                        </select>
+                                    </div>
+                                    <div class="field-box">
+                                        <label for="supplierName" class="field-label">Supplier Name</label>
+                                        <input id="supplierName" name="supplierName" class="input" type="text"
+                                            value="ABC Components">
+                                    </div>
+                                    <div class="field-box">
+                                        <label class="field-label">NCR/PO/SO</label>
+                                        <input id="ncrNumber" name="ncrNumber" class="input mb-2" type="text"
+                                            value="NCR-2025-011" readonly>
+                                        <input id="poOrProdNo" name="poOrProdNo" class="input mb-2" type="text"
+                                            value="PO-1013">
+                                        <input id="salesOrderNo" name="salesOrderNo" class="input" type="text"
+                                            value="SO-0613">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box" style="flex: 2;">
+                                        <label for="itemDescriptionSAP" class="field-label">Description of Item
+                                            (including SAP No.)</label>
+                                        <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input"
+                                            type="text" value="LED Ring Light + Phone Holder">
+                                    </div>
+                                    <div class="field-box" style="flex: 1;">
+                                        <label for="qtyReceived" class="field-label">Quantity Received</label>
+                                        <input id="qtyReceived" name="qtyReceived" class="input" type="number"
+                                            value="100">
+                                    </div>
+                                    <div class="field-box" style="flex: 1;">
+                                        <label for="qtyDefective" class="field-label">Quantity Defective</label>
+                                        <input id="qtyDefective" name="qtyDefective" class="input" type="number"
+                                            value="10">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box full-width">
+                                        <label for="defectDescription" class="field-label">Description of
+                                            Defect</label>
+                                        <textarea id="defectDescription" name="defectDescription" class="input" rows="3"
+                                             >"Mobile phone clip is broken, and USB cable is frayed."</textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box">
+                                        <label class="field-label">Item marked Nonconforming</label>
+                                        <div class="radio-group">
+                                            <label><input type="radio" name="itemMarkedNonconforming" value="Yes" checked>
+                                                Yes</label>
+                                            <label><input type="radio" name="itemMarkedNonconforming" value="No">
+                                                No</label>
                                         </div>
                                     </div>
-
-                                    <div class="row">
-                                        <div class="field-box" style="flex: 2;">
-                                            <label for="itemDescriptionSAP" class="field-label">Description of Item
-                                                (including SAP No.)</label>
-                                            <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input"
-                                                type="text" placeholder="LED Ring Light + Phone Holder">
-                                        </div>
-                                        <div class="field-box" style="flex: 1;">
-                                            <label for="qtyReceived" class="field-label">Quantity Received</label>
-                                            <input id="qtyReceived" name="qtyReceived" class="input" type="number"
-                                                placeholder="100">
-                                        </div>
-                                        <div class="field-box" style="flex: 1;">
-                                            <label for="qtyDefective" class="field-label">Quantity Defective</label>
-                                            <input id="qtyDefective" name="qtyDefective" class="input" type="number"
-                                                placeholder="10">
-                                        </div>
+                                    <div class="field-box">
+                                        <label for="fileNCR" class="field-label">Attachment Upload</label>
+                                        <input  id="fileNCR" multiple class="input" value="No files chosen">
                                     </div>
+                                </div>
 
-                                    <div class="row">
-                                        <div class="field-box full-width">
-                                            <label for="defectDescription" class="field-label">Description of
-                                                Defect</label>
-                                            <textarea id="defectDescription" name="defectDescription" class="input"
-                                                rows="3"
-                                                placeholder="Mobile phone clip is broken, and USB cable is frayed."></textarea>
-                                        </div>
+                                <div class="row">
+                                    <div class="field-box">
+                                        <label for="reportedBy" class="field-label">Quality Representative's
+                                            Name</label>
+                                        <input id="reportedBy" name="reportedBy" class="input" type="text"
+                                            value="Dave Kendell">
                                     </div>
-
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <label class="field-label">Item marked Nonconforming</label>
-                                            <div class="radio-group">
-                                                <label><input type="radio" name="itemMarkedNonconforming" value="Yes">
-                                                    Yes</label>
-                                                <label><input type="radio" name="itemMarkedNonconforming" value="No">
-                                                    No</label>
-                                            </div>
-                                        </div>
-                                        <div class="field-box">
-                                            <label for="fileNCR" class="field-label">Attachment Upload</label>
-                                            <input type="file" id="fileNCR" multiple class="input">
-                                        </div>
+                                    <div class="field-box">
+                                        <label for="dateReported" class="field-label">Date Reported</label>
+                                        <input id="dateReported" name="dateReported" class="input" type="date"
+                                            value="2025-11-04">
                                     </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
 
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <label for="reportedBy" class="field-label">Quality Representative's
-                                                Name</label>
-                                            <input id="reportedBy" name="reportedBy" class="input" type="text"
-                                                placeholder="Dave Kendell">
+                    <!-- Engineering Section -->
+                    <div class="card pad progress-section" data-step-content="engineering">
+                        <h2 class="section-header engineering">Engineering</h2>
+                        <form id="formEngineering" novalidate data-section-role="proc-section">
+                            <div class="form-grid">
+                                <div class="row">
+                                    <div class="field-box">
+                                        <div class="flex justify-between field-header">
+                                            <label for="processApplicable" class="field-label">Review by CF
+                                                Engineering<span class="required" aria-hidden="true">*</span></label>
+
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openHelpModel()" />
                                         </div>
-                                        <div class="field-box">
-                                            <label for="dateReported" class="field-label">Date Reported</label>
-                                            <input id="dateReported" name="dateReported" class="input" type="date"
-                                                placeholder="2025-11-04">
+
+                                        <div class="radio-group two-col">
+                                            <label><input type="radio" name="cfEngDisposition" value="Use As Is">
+                                                Use As
+                                                Is</label>
+                                            <label><input type="radio" name="cfEngDisposition" value="Repair" checked>
+                                                Repair</label>
+                                            <label><input type="radio" name="cfEngDisposition" value="Rework">
+                                                Rework</label>
+                                            <label><input type="radio" name="cfEngDisposition" value="Scrap">
+                                                Scrap</label>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
 
-                        <!-- Engineering Section -->
-                        <div class="card pad progress-section" data-step-content="engineering">
-                            <h2 class="section-header engineering">Engineering</h2>
-                            <form id="formEngineering" novalidate>
-                                <div class="form-grid">
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <div class="flex justify-between field-header">
-                                                <label for="processApplicable" class="field-label">Review by CF
-                                                    Engineering<span class="required"
-                                                        aria-hidden="true">*</span></label>
-
-                                                <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
-                                                    alt="Help icon" onclick="openHelpModel()" />
-                                            </div>
-
-                                            <div class="radio-group two-col">
-                                                <label><input type="radio" name="cfEngDisposition" value="Use As Is">
-                                                    Use As
-                                                    Is</label>
-                                                <label><input type="radio" name="cfEngDisposition" value="Repair">
-                                                    Repair</label>
-                                                <label><input type="radio" name="cfEngDisposition" value="Rework">
-                                                    Rework</label>
-                                                <label><input type="radio" name="cfEngDisposition" value="Scrap">
-                                                    Scrap</label>
-                                            </div>
-                                        </div>
+                                <div class="row">
+                                    <div class="field-box" style="flex: 2;">
+                                        <label for="dispositionDetails" class="field-label">Disposition</label>
+                                        <textarea id="dispositionDetails" name="dispositionDetails" class="input"
+                                            rows="4"
+                                            >1. Remove defective phone holder clips. 2. Install new clips. 3. Test USB cable functionality"</textarea>
                                     </div>
-
-                                    <div class="row">
-                                        <div class="field-box" style="flex: 2;">
-                                            <label for="dispositionDetails" class="field-label">Disposition</label>
-                                            <textarea id="dispositionDetails" name="dispositionDetails" class="input"
-                                                rows="4"
-                                                placeholder="1. Remove defective phone holder clips. 2. Install new clips. 3. Test USB cable functionality"></textarea>
-                                        </div>
-                                        <div class="field-box" style="flex: 1;">
-                                            <label class="field-label">Customer Notification Required?</label>
-                                            <div class="radio-group">
-                                                <label><input type="radio" name="reqNotif" value="Yes"> Yes</label>
-                                                <label><input type="radio" name="reqNotif" value="No"> No</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <label class="field-label">Drawing Update Required?</label>
-                                            <div class="radio-group">
-                                                <label><input type="radio" name="reqUpdating" value="Yes"> Yes</label>
-                                                <label><input type="radio" name="reqUpdating" value="No"> No</label>
-                                            </div>
-                                        </div>
-                                        <div class="field-box">
-                                            <label for="origRevNum" class="field-label">Original Rev. Number</label>
-                                            <input id="origRevNum" name="origRevNum" class="input" type="text"
-                                                placeholder="REV-3030">
-                                        </div>
-                                        <div class="field-box">
-                                            <label for="updatedRev" class="field-label">Updated Rev. Number</label>
-                                            <input id="updatedRev" name="updatedRev" class="input" type="text"
-                                                placeholder="REV-3031">
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <label for="enginName" class="field-label">Engineer Name</label>
-                                            <input id="enginName" name="enginName" class="input" type="text"
-                                                placeholder="Warren Tarasuk">
-                                        </div>
-                                        <div class="field-box">
-                                            <label for="engDate" class="field-label">Date</label>
-                                            <input id="engDate" name="engDate" class="input" type="date"
-                                                placeholder="2025-10-11">
+                                    <div class="field-box" style="flex: 1;">
+                                        <label class="field-label">Customer Notification Required?</label>
+                                        <div class="radio-group">
+                                            <label><input type="radio" name="reqNotif" value="Yes" checked> Yes</label>
+                                            <label><input type="radio" name="reqNotif" value="No"> No</label>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
 
-                        <!-- Operations Section -->
-                        <div class="card pad progress-section" data-step-content="procurement" hidden>
-                            <h2 class="section-header procurement">Procurement</h2>
-                            <form id="formProcurement" novalidate>
-                                <div class="form-grid">
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <label class="field-label">Purchasing's Preliminary Decision</label>
-                                            <div class="radio-group two-col">
-                                                <label><input type="radio" name="purchDecision" value="Rework In-House"
-                                                        checked> Rework In-House</label>
-                                                <label><input type="radio" name="purchDecision"
-                                                        value="Return to Supplier">
-                                                    Return to Supplier</label>
-                                                <label><input type="radio" name="purchDecision" value="Scrap in House">
-                                                    Scrap in House</label>
-                                                <label><input type="radio" name="purchDecision"
-                                                        value="Defer for HBC Engineering Review"> Defer for HBC
-                                                    Engineering
-                                                    Review</label>
-                                            </div>
+                                <div class="row">
+                                    <div class="field-box">
+                                        <label class="field-label">Drawing Update Required?</label>
+                                        <div class="radio-group">
+                                            <label><input type="radio" name="reqUpdating" value="Yes" checked> Yes</label>
+                                            <label><input type="radio" name="reqUpdating" value="No"> No</label>
                                         </div>
                                     </div>
-
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <label class="field-label">Was a CAR raised?</label>
-                                            <div class="radio-group">
-                                                <label><input type="radio" name="carRaised" value="Yes"> Yes</label>
-                                                <label><input type="radio" name="carRaised" value="No" checked>
-                                                    No</label>
-                                            </div>
-                                        </div>
-                                        <div class="field-box">
-                                            <label for="carNumber" class="field-label">If Yes, indicate CAR #</label>
-                                            <input id="carNumber" name="carNumber" class="input" type="text">
-                                        </div>
+                                    <div class="field-box">
+                                        <label for="origRevNum" class="field-label">Original Rev. Number</label>
+                                        <input id="origRevNum" name="origRevNum" class="input" type="text"
+                                            value="REV-3030">
                                     </div>
-
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <label class="field-label">Follow-up Required?</label>
-                                            <div class="radio-group">
-                                                <label><input type="radio" name="followUpRequired" value="Yes">
-                                                    Yes</label>
-                                                <label><input type="radio" name="followUpRequired" value="No" checked>
-                                                    No</label>
-                                            </div>
-                                        </div>
-                                        <div class="field-box">
-                                            <label for="followUpDetails" class="field-label">If Yes, indicate type &
-                                                expected date</label>
-                                            <input id="followUpDetails" name="followUpDetails" class="input"
-                                                type="text">
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <label for="operationsManager" class="field-label">Operations Manager
-                                                Name</label>
-                                            <input id="operationsManager" name="operationsManager" class="input"
-                                                type="text" value="Linda Brown">
-                                        </div>
-                                        <div class="field-box">
-                                            <label for="operationsManagerDate" class="field-label">Date</label>
-                                            <input id="operationsManagerDate" name="operationsManagerDate" class="input"
-                                                type="date" value="2025-10-11">
-                                        </div>
-                                    </div>
-
-                                    <div class="actions">
-                                        <button type="button" class="btn submit" 
-                                            onclick="openModal('submitModal')">
-                                            Submit</button>
-
-                                        <button type="button" class="btn save" 
-                                            onclick="openModal('saveModal')">
-                                            Save</button>
-
-                                        <button type="button" class="btn cancel" 
-                                            onclick="openModal('confirmModal')">
-                                            Cancel</button>
+                                    <div class="field-box">
+                                        <label for="updatedRev" class="field-label">Updated Rev. Number</label>
+                                        <input id="updatedRev" name="updatedRev" class="input" type="text"
+                                            value="REV-3031">
                                     </div>
                                 </div>
-                            </form>
-                        </div>
 
+                                <div class="row">
+                                    <div class="field-box">
+                                        <label for="enginName" class="field-label">Engineer Name</label>
+                                        <input id="enginName" name="enginName" class="input" type="text"
+                                            value="Warren Tarasuk">
+                                    </div>
+                                    <div class="field-box">
+                                        <label for="engDate" class="field-label">Date</label>
+                                        <input id="engDate" name="engDate" class="input" type="date"
+                                         value="2025-10-11">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Operations Section -->
+                    <div class="card pad progress-section" data-step-content="operations" hidden>
+                        <h2 class="section-header operations">Operations</h2>
+                        <form id="formOperations" novalidate>
+                            <div class="form-grid">
+                                <div class="row">
+                                    <div class="field-box">
+                                        <label class="field-label">Purchasing's Preliminary Decision</label>
+                                        <div class="radio-group two-col">
+                                            <label><input type="radio" name="purchDecision" value="Rework In-House"
+                                                    > Rework In-House</label>
+                                            <label><input type="radio" name="purchDecision" value="Return to Supplier">
+                                                Return to Supplier</label>
+                                            <label><input type="radio" name="purchDecision" value="Scrap in House">
+                                                Scrap in House</label>
+                                            <label><input type="radio" name="purchDecision"
+                                                    value="Defer for HBC Engineering Review"> Defer for HBC
+                                                Engineering
+                                                Review</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box">
+                                        <label class="field-label">Was a CAR raised?</label>
+                                        <div class="radio-group">
+                                            <label><input type="radio" name="carRaised" value="Yes"> Yes</label>
+                                            <label><input type="radio" name="carRaised" value="No" >
+                                                No</label>
+                                        </div>
+                                    </div>
+                                    <div class="field-box">
+                                        <label for="carNumber" class="field-label">If Yes, indicate CAR #</label>
+                                        <input id="carNumber" name="carNumber" class="input" type="text" placeholder="Ex: 67">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box">
+                                        <label class="field-label">Follow-up Required?</label>
+                                        <div class="radio-group">
+                                            <label><input type="radio" name="followUpRequired" value="Yes">
+                                                Yes</label>
+                                            <label><input type="radio" name="followUpRequired" value="No" >
+                                                No</label>
+                                        </div>
+                                    </div>
+                                    <div class="field-box">
+                                        <label for="followUpDetails" class="field-label">If Yes, indicate type &
+                                            expected date</label>
+                                        <input id="followUpDetails" name="followUpDetails" class="input" type="text" placeholder=" Ex: Email - 29/Feb/2026">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box">
+                                        <label for="operationsManager" class="field-label">Operations Manager
+                                            Name</label>
+                                        <input id="operationsManager" name="operationsManager" class="input" type="text"
+                                            placeholder="Ex: Melissa Brown">
+                                    </div>
+                                    <div class="field-box">
+                                        <label for="operationsManagerDate" class="field-label">Date</label>
+                                        <input id="operationsManagerDate" name="operationsManagerDate" class="input"
+                                            type="date" value="2025-10-11">
+                                    </div>
+                                </div>
+
+                                <div class="actions">
+                                    <button type="button" class="btn submit" onclick="openModal('submitModal')">
+                                        Submit</button>
+
+                                    <button type="button" class="btn save" onclick="openModal('saveModal')">
+                                        Save</button>
+
+                                    <button type="button" class="btn cancel" onclick="openModal('confirmModal')">
+                                        Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Procuremnt Section -->
+                    <div class="card pad progress-section" data-step-content="procurement" hidden>
+                        <h2 class="section-header procurement">Procurement</h2>
+                        <form id="formProcurement" novalidate>
+                            <div class="form-grid">
+
+                                <div class="row">
+                                    <div class="field-box full-width">
+                                        <label class="field-label">Supplier Disposition Decision</label>
+                                        <div class="radio-group two-col">
+                                            <label><input type="radio" name="supplierDispositionDecision" value="Return"
+                                                    id="decisionReturn"> Return rejected items to supplier</label>
+                                            <label><input type="radio" name="supplierDispositionDecision"
+                                                    value="Dispose" id="decisionDispose"> Permit dispose on site</label>
+                                        </div>
+                                        <div id="err-supplierDispositionDecision" class="error" role="alert"
+                                            aria-live="polite">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="returnDetailsBlock">
+                                    <h3 class="field-header">Return Logistics (Required if returning to supplier)</h3>
+                                    <div class="row">
+                                        <div class="field-box" style="flex:1;">
+                                            <label for="rmaNumber" class="field-label">RMA #</label>
+                                            <input id="rmaNumber" name="rmaNumber" class="input" type="text"
+                                                placeholder="RMA #">
+                                            <div id="err-rmaNumber" class="error" role="alert" aria-live="polite"></div>
+                                        </div>
+                                        <div class="field-box" style="flex:2;">
+                                            <label for="carrierDetails" class="field-label">Carrier information with
+                                                account #</label>
+                                            <input id="carrierDetails" name="carrierDetails" class="input" type="text"
+                                                placeholder="Ex: FedEx Acct: 12345">
+                                            <div id="err-carrierDetails" class="error" role="alert" aria-live="polite">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box full-width">
+                                        <label for="expectedReturnDate" class="field-label">Procurement to add date when
+                                            replacement/reworked item will be received/returned</label>
+                                        <input id="expectedReturnDate" name="expectedReturnDate" class="input"
+                                            type="date">
+                                    </div>
+                                </div>
+
+                                <h3 class="field-header">Administrative & Financial </h3>
+                                <div class="row">
+                                    <div class="field-box full-width"
+                                        style="display:flex; flex-direction:column; gap:12px; padding: 20px;">
+
+                                        <label>
+                                            <input type="checkbox" name="sapReturnCompleteCheck"
+                                                id="sapReturnCompleteCheck" value="Completed">
+                                            Supplier return has been completed in SAP
+                                        </label>
+
+                                        <label>
+                                            <input type="checkbox" name="creditExpectedCheck" id="creditExpectedCheck"
+                                                value="Expected">
+                                            Expecting a credit from the supplier
+                                        </label>
+
+                                        <label>
+                                            <input type="checkbox" name="billingSupplierReworkCheck"
+                                                id="billingSupplierReworkCheck" value="Billing">
+                                            Billing the supplier for expenses incurred in rework
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="actions">
+                                    <button type="button" class="btn submit" onclick="openModal('submitModal')">
+                                        Submit</button>
+
+                                    <button type="button" class="btn save" onclick="openModal('saveModal')">
+                                        Save</button>
+
+                                    <button type="button" class="btn cancel" onclick="openModal('confirmModal')">
+                                        Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </section>
             </div>
+
+
+
 
             <!-- Footer -->
             <footer class="pt-10">
@@ -408,7 +492,51 @@
             </footer>
         </main>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let submitModal = document.getElementById('submitModal');
 
+            window.openSubmitModel = function () {
+                submitModal.classList.remove('hidden');
+                submitModal.addEventListener('click', handleOutsideClick);
+            }
+
+            window.closeSubmitModel = function () {
+                submitModal.classList.add('hidden');
+                submitModal.removeEventListener('click', handleOutsideClick);
+            }
+
+            function handleOutsideClick(e) {
+                if (e.target === submitModal) {
+                    closeSubmitModel();
+                    window.location.href = './Dashboard.html';
+                }
+            }
+        })
+        // Simple script to toggle visibility of return details based on radio choice
+        document.addEventListener('DOMContentLoaded', () => {
+            // ... (existing code for form listeners)
+
+            const form = document.getElementById('formProcurement');
+            const returnBlock = document.getElementById('returnDetailsBlock');
+
+            function toggleReturnDetails() {
+                const decision = form.querySelector('input[name="supplierDispositionDecision"]:checked')?.value;
+                if (returnBlock) {
+                    // Return details are shown only if 'Return' is selected.
+                    returnBlock.style.display = decision === 'Return' ? 'block' : 'none';
+                }
+            }
+
+            form.addEventListener('change', (e) => {
+                if (e.target.name === 'supplierDispositionDecision') {
+                    toggleReturnDetails();
+                }
+            });
+            // Initial state load (if editing an existing NCR)
+            toggleReturnDetails();
+        });
+    </script>
     <!-- Notification System -->
     <script defer src="../../Scripts/app.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -416,6 +544,9 @@
     <script src="../../Scripts/modals.js"></script>
     <script>if (window.lucide) lucide.createIcons();</script>
     <script src="../../Scripts/role-manager.js"></script>
+
+
+
 </body>
 
 </html>

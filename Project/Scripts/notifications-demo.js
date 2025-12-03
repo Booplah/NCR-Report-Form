@@ -1,6 +1,6 @@
 
 (function () {
-  const STORAGE_KEY = 'crossfire.notifications.v2';
+  const STORAGE_KEY = 'crossfire.notifications.v3';
   const ROLE_KEY = 'crossfire.role';
 
   // ---------- helpers ----------
@@ -94,6 +94,31 @@
           url: 'view.html?section=sec-quality',
           audience: 'Quality'
         },
+        // Purchasing audience
+            
+      {
+        id: 'n-005',
+        ncrId: 140,
+        type: 'ENGINEERING_DONE',
+        title: 'Engineering portion completed for a new NCR',
+        message: 'NCR #140 is ready for Purchasing review.',
+        createdAt: t - 1000 * 60 * 15, // 15m ago
+        read: false,
+        url: '/Project/Html/Sidebar/Create-NCR-Procurement.html',
+        audience: 'Purchasing'
+      },
+      {
+        id: 'n-006',
+        ncrId: 140,
+        type: 'FINAL_REVIEW_NOTIFIED',
+        title: 'Quality Rep has been notified for final review',
+        message: 'NCR #140 has been sent to Quality for final review.',
+        createdAt: t - 1000 * 60 * 3, // 3m ago
+        read: false,
+        url: '/Project/Html/NCR-Samples/View-NCR-001.html#sec-purchasing',
+        audience: 'Purchasing'
+      },
+
       ]
     };
     saveAll(data);
@@ -180,6 +205,8 @@
     switch (type) {
       case 'QUALITY_DONE': return '<i data-lucide="check-circle"></i>';
       case 'EMAIL_SENT_TO_ENGINEERING': return '<i data-lucide="send"></i>'; 
+      case 'ENGINEERING_DONE': return '<i data-lucide="wrench"></i>';
+      case 'FINAL_REVIEW_NOTIFIED': return '<i data-lucide="flag"></i>';
       default: return '<i data-lucide="bell"></i>';
     }
   }

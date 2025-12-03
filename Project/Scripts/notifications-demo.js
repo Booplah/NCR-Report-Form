@@ -115,7 +115,7 @@
         message: 'NCR #140 has been sent to Quality for final review.',
         createdAt: t - 1000 * 60 * 3, // 3m ago
         read: false,
-        url: '/Project/Html/NCR-Samples/View-NCR-001.html#sec-purchasing',
+        url: '/Project/Html/NCR-Samples/Create-NCR-Final.html',
         audience: 'Purchasing'
       },
 

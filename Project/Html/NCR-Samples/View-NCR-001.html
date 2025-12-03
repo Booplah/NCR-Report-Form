@@ -6,6 +6,7 @@
     <title>CrossFire NCR – View NCR</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../../css/viewNCR.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
     <link rel="stylesheet" href="../../css/Main-Page.css">
     <link rel="stylesheet" href="../../css/notifications.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -133,12 +134,14 @@
                     </div>
                 </div>
 
-                                <div class="btn-container">
-    <a href="#" id="btnDownloadPDF" class="btn-action">Download PDF</a>
-    <a href="../../Html/NCR-Samples/Edit-NCR-001.html" class="btn-action">Edit NCR</a>
-    <a href="../../html/Sidebar/dashboard.html" class="btn-action">Back</a>
-    <a href="#" id="btnCloseNCR" class="btn-action closeBtn">Close NCR</a>
-</div>
+                <div class="btn-container">
+                    <a href="#" id="btnDownloadPDF" class="btn save">Download PDF</a>
+                    <a href="../../Html/NCR-Samples/Edit-NCR-001.html" class="btn submit">Edit NCR</a>
+                    <a href="../../html/Sidebar/dashboard.html" class="btn save">Back</a>
+                    <button type="button" class="btn cancel"
+                        onclick="openModal('confirmModal')">
+                        Close NCR</button>
+                </div>
 
                 <!-- NCR Form Content -->
                 <div class="view-ncr-field">
@@ -372,6 +375,7 @@
     
 <script defer src="../../Scripts/app.js"></script>
     <script src="../../Scripts/view.js" defer></script>
+    <script src="../../Scripts/modals.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../../Scripts/notifications-demo.js"></script>

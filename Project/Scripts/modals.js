@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Configure modal-specific actions (optional)
     const modalConfig = {
         submitModal: { redirect: './Dashboard.html' },
-        saveModal: { redirect: './Dashboard.html' },
+        saveModal: { redirect: 'NCR-Report-Form/Project/html/Sidebar/Dashboard.html' },
         helperModal: {},
         confirmModal: {}
     };

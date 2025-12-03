@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,9 @@
     <link rel="stylesheet" href="../../css/notifications.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="page-container">
@@ -20,69 +23,70 @@
         <div class="sidebar-content">
             <div class="sidebar-logo">
                 <a href="../index.html" class="logo-image">
-                    <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
+                    <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo"
+                        style="width: auto; height: 80%;">
                 </a>
             </div>
             <hr>
-            
-<ul class="sidebar-items">
-    <li class="siderbar-item">
-        <a href="../../Html/index.html" class="menu-link">
-            <i data-lucide="home"></i>
-            <span>Home</span>
-        </a>
-    </li>
-    <li class="siderbar-item">
-        <a href="../../Html/Sidebar/dashboard.html" class="menu-link active">
-            <i data-lucide="layout-dashboard"></i>
-            <span>Dashboard</span>
-        </a>
-    </li>
-    <li class="siderbar-item">
-        <a href="../../Html/Sidebar/Create-NCR.html" class="menu-link">
-            <i data-lucide="file-plus"></i>
-            <span>Create NCR</span>
-        </a>
-    </li>
-    <li class="siderbar-item">
-        <a href="../../Html/Sidebar/admin.html" class="menu-link">
-            <i data-lucide="settings"></i>
-            <span>Admin Page</span>
-        </a>
-    </li>
-    <li class="siderbar-item">
-        <details class="dropdown-menu">
-            <summary class="menu-link">
-                <i data-lucide="help-circle"></i>
-                <span class="dropdown-label">Help & About</span>
-                <span class="dropdown-arrow"></span>
-            </summary>
-            <ul class="dropdown-items">
-                <li>
-                    <a href="../Sidebar/help-about.html" class="dropdown-link">
-                        <i data-lucide="info"></i>
-                        <span>About This Project</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../Sidebar/help-usage.html" class="dropdown-link">
-                        <i data-lucide="book-open"></i>
-                        <span>How To Use</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../Sidebar/help-contacts.html" class="dropdown-link">
-                        <i data-lucide="phone"></i>
-                        <span>Contact & Support</span>
-                    </a>
-                </li>
-            </ul>
-        </details>
-    </li>
-</ul>
 
+            <ul class="sidebar-items">
+                <li class="siderbar-item">
+                    <a href="../../Html/index.html" class="menu-link">
+                        <i data-lucide="home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="../../Html/Sidebar/dashboard.html" class="menu-link active">
+                        <i data-lucide="layout-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="../../Html/Sidebar/Create-NCR.html" class="menu-link">
+                        <i data-lucide="file-plus"></i>
+                        <span>Create NCR</span>
+                    </a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="../../Html/Sidebar/admin.html" class="menu-link">
+                        <i data-lucide="settings"></i>
+                        <span>Admin Page</span>
+                    </a>
+                </li>
+                <li class="siderbar-item">
+                    <details class="dropdown-menu">
+                        <summary class="menu-link">
+                            <i data-lucide="help-circle"></i>
+                            <span class="dropdown-label">Help & About</span>
+                            <span class="dropdown-arrow"></span>
+                        </summary>
+                        <ul class="dropdown-items">
+                            <li>
+                                <a href="../Sidebar/help-about.html" class="dropdown-link">
+                                    <i data-lucide="info"></i>
+                                    <span>About This Project</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../Sidebar/help-usage.html" class="dropdown-link">
+                                    <i data-lucide="book-open"></i>
+                                    <span>How To Use</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../Sidebar/help-contacts.html" class="dropdown-link">
+                                    <i data-lucide="phone"></i>
+                                    <span>Contact & Support</span>
+                                </a>
+                            </li>
+                        </ul>
                     </details>
                 </li>
+            </ul>
+
+            </details>
+            </li>
             </ul>
         </div>
         <div class="sidebar-footer">
@@ -104,7 +108,8 @@
                         </li>
                         <!-- Notification Bell -->
                         <li class="notif-container">
-                            <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false" aria-label="Notifications">
+                            <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false"
+                                aria-label="Notifications">
                                 <i data-lucide="bell"></i>
                                 <span id="notif-badge" class="notif-badge" style="display:none;">0</span>
                             </button>
@@ -114,7 +119,8 @@
                                     <button id="notif-markall" class="notif-markall">Mark all read</button>
                                 </div>
                                 <ul id="notif-list" class="notif-list"></ul>
-                                <div id="notif-empty" class="notif-empty" style="display:none;">You're all caught up.</div>
+                                <div id="notif-empty" class="notif-empty" style="display:none;">You're all caught up.
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -148,88 +154,95 @@
                                             <label for="processApplicable" class="field-label">Identify Process
                                                 Applicable</label>
                                             <select id="processApplicable" name="processApplicable" class="input">
-                                            <option value="">Select…</option>
-                                            <option value="Supplier or Rec-Insp" selected>Supplier or Rec-Insp</option>
-                                            <option value="WIP (Production Order)">WIP (Production Order)</option>
-                                        </select>
-                                    </div>
-                                    <div class="field-box">
-                                        <label for="supplierName" class="field-label">Supplier Name</label>
-                                        <input id="supplierName" name="supplierName" class="input" type="text"
-                                            value="ABC Components">
-                                    </div>
-                                    <div class="field-box">
-                                        <label class="field-label">NCR/PO/SO</label>
-                                        <input id="ncrNumber" name="ncrNumber" class="input mb-2" type="text"
-                                            value="NCR-2025-002" readonly>
-                                        <input id="poOrProdNo" name="poOrProdNo" class="input mb-2" type="text"
-                                            value="PO-1013">
-                                        <input id="salesOrderNo" name="salesOrderNo" class="input" type="text"
-                                            value="SO-0613">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="field-box" style="flex: 2;">
-                                        <label for="itemDescriptionSAP" class="field-label">Description of Item
-                                            (including SAP No.)</label>
-                                        <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input"
-                                            type="text" value="LED Ring Light + Phone Holder">
-                                    </div>
-                                    <div class="field-box" style="flex: 1;">
-                                        <label for="qtyReceived" class="field-label">Quantity Received</label>
-                                        <input id="qtyReceived" name="qtyReceived" class="input" type="number"
-                                            value="100">
-                                    </div>
-                                    <div class="field-box" style="flex: 1;">
-                                        <label for="qtyDefective" class="field-label">Quantity Defective</label>
-                                        <input id="qtyDefective" name="qtyDefective" class="input" type="number"
-                                            value="10">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="field-box full-width">
-                                        <label for="defectDescription" class="field-label">Description of Defect</label>
-                                        <textarea id="defectDescription" name="defectDescription" class="input" rows="3">Mobile phone clip is broken, and USB cable is frayed.</textarea>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="field-box">
-                                        <label class="field-label">Item marked Nonconforming</label>
-                                        <div class="radio-group">
-                                            <label><input type="radio" name="itemMarkedNonconforming" value="Yes" checked>
-                                                Yes</label>
-                                            <label><input type="radio" name="itemMarkedNonconforming" value="No">
-                                                No</label>
+                                                <option value="">Select…</option>
+                                                <option value="Supplier or Rec-Insp" selected>Supplier or Rec-Insp
+                                                </option>
+                                                <option value="WIP (Production Order)">WIP (Production Order)</option>
+                                            </select>
+                                        </div>
+                                        <div class="field-box">
+                                            <label for="supplierName" class="field-label">Supplier Name</label>
+                                            <input id="supplierName" name="supplierName" class="input" type="text"
+                                                value="ABC Components">
+                                        </div>
+                                        <div class="field-box">
+                                            <label class="field-label">NCR/PO/SO</label>
+                                            <input id="ncrNumber" name="ncrNumber" class="input mb-2" type="text"
+                                                value="NCR-2025-002" readonly>
+                                            <input id="poOrProdNo" name="poOrProdNo" class="input mb-2" type="text"
+                                                value="PO-1013">
+                                            <input id="salesOrderNo" name="salesOrderNo" class="input" type="text"
+                                                value="SO-0613">
                                         </div>
                                     </div>
-                                    <div class="field-box">
-                                        <label for="fileNCR" class="field-label">Attachment Upload</label>
-                                        <input type="file" id="fileNCR" multiple class="input">
-                                    </div>
-                                </div>
 
-                                <div class="row">
-                                    <div class="field-box">
-                                        <label for="reportedBy" class="field-label">Quality Representative's Name</label>
-                                        <input id="reportedBy" name="reportedBy" class="input" type="text" value="Miranda Smith">
+                                    <div class="row">
+                                        <div class="field-box" style="flex: 2;">
+                                            <label for="itemDescriptionSAP" class="field-label">Description of Item
+                                                (including SAP No.)</label>
+                                            <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input"
+                                                type="text" value="LED Ring Light + Phone Holder">
+                                        </div>
+                                        <div class="field-box" style="flex: 1;">
+                                            <label for="qtyReceived" class="field-label">Quantity Received</label>
+                                            <input id="qtyReceived" name="qtyReceived" class="input" type="number"
+                                                value="100">
+                                        </div>
+                                        <div class="field-box" style="flex: 1;">
+                                            <label for="qtyDefective" class="field-label">Quantity Defective</label>
+                                            <input id="qtyDefective" name="qtyDefective" class="input" type="number"
+                                                value="10">
+                                        </div>
                                     </div>
-                                    <div class="field-box">
-                                        <label for="status" class="field-label">Status</label>
-                                        <select id="status" name="status" class="input">
-                                            <option>Open</option>
-                                            <option selected>Closed</option>
-                                        </select>
+
+                                    <div class="row">
+                                        <div class="field-box full-width">
+                                            <label for="defectDescription" class="field-label">Description of
+                                                Defect</label>
+                                            <textarea id="defectDescription" name="defectDescription" class="input"
+                                                rows="3">Mobile phone clip is broken, and USB cable is frayed.</textarea>
+                                        </div>
                                     </div>
-                                    <div class="field-box">
-                                        <label for="dateReported" class="field-label">Date Reported</label>
-                                        <input id="dateReported" name="dateReported" class="input" type="date" value="2025-11-04">
+
+                                    <div class="row">
+                                        <div class="field-box">
+                                            <label class="field-label">Item marked Nonconforming</label>
+                                            <div class="radio-group">
+                                                <label><input type="radio" name="itemMarkedNonconforming" value="Yes"
+                                                        checked>
+                                                    Yes</label>
+                                                <label><input type="radio" name="itemMarkedNonconforming" value="No">
+                                                    No</label>
+                                            </div>
+                                        </div>
+                                        <div class="field-box">
+                                            <label for="fileNCR" class="field-label">Attachment Upload</label>
+                                            <input type="file" id="fileNCR" multiple class="input">
+                                        </div>
                                     </div>
+
+                                    <div class="row">
+                                        <div class="field-box">
+                                            <label for="reportedBy" class="field-label">Quality Representative's
+                                                Name</label>
+                                            <input id="reportedBy" name="reportedBy" class="input" type="text"
+                                                value="Miranda Smith">
+                                        </div>
+                                        <div class="field-box">
+                                            <label for="status" class="field-label">Status</label>
+                                            <select id="status" name="status" class="input">
+                                                <option>Open</option>
+                                                <option selected>Closed</option>
+                                            </select>
+                                        </div>
+                                        <div class="field-box">
+                                            <label for="dateReported" class="field-label">Date Reported</label>
+                                            <input id="dateReported" name="dateReported" class="input" type="date"
+                                                value="2025-11-04">
+                                        </div>
+                                    </div>
+
                                 </div>
-                                
-                            </div>
                             </fieldset>
                         </form>
                     </div>
@@ -243,19 +256,27 @@
                                     <div class="field-box">
                                         <label class="field-label">Review by CF Engineering</label>
                                         <div class="radio-group two-col">
-                                            <label><input type="radio" name="cfEngDisposition" value="Use As Is"> Use As Is</label>
-                                            <label><input type="radio" name="cfEngDisposition" value="Repair"> Repair</label>
-                                            <label><input type="radio" name="cfEngDisposition" value="Rework" checked> Rework</label>
-                                            <label><input type="radio" name="cfEngDisposition" value="Scrap"> Scrap</label>
+                                            <label><input type="radio" name="cfEngDisposition" value="Use As Is"> Use As
+                                                Is</label>
+                                            <label><input type="radio" name="cfEngDisposition" value="Repair">
+                                                Repair</label>
+                                            <label><input type="radio" name="cfEngDisposition" value="Rework" checked>
+                                                Rework</label>
+                                            <label><input type="radio" name="cfEngDisposition" value="Scrap">
+                                                Scrap</label>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="field-box flex-2">
-                                        <label for="dispositionDetails" class="field-label">Disposition</label>
-                                        <textarea id="dispositionDetails" name="dispositionDetails" class="input" rows="4">1. Remove defective phone holder clips. 2. Install new clips. 3. Test USB cable functionality.</textarea>
+                                        <label for="dispositionDetails" class="field-label">Disposition *</label>
+                                        <textarea id="dispositionDetails" name="dispositionDetails" class="input"
+                                            rows="4">1. Remove defective phone holder clips. 2. Install new clips. 3. Test USB cable functionality.</textarea>
+                                        <div id="err-dispositionDetails" class="error" role="alert" aria-live="polite">
+                                        </div>
                                     </div>
+
                                     <div class="field-box flex-1">
                                         <label class="field-label">Customer Notification Required?</label>
                                         <div class="radio-group">
@@ -275,18 +296,21 @@
                                     </div>
                                     <div class="field-box">
                                         <label for="origRevNum" class="field-label">Original Rev. Number</label>
-                                        <input id="origRevNum" name="origRevNum" class="input" type="text" value="REV-3030">
+                                        <input id="origRevNum" name="origRevNum" class="input" type="text"
+                                            value="REV-3030">
                                     </div>
                                     <div class="field-box">
                                         <label for="updatedRev" class="field-label">Updated Rev. Number</label>
-                                        <input id="updatedRev" name="updatedRev" class="input" type="text" value="REV-3031">
+                                        <input id="updatedRev" name="updatedRev" class="input" type="text"
+                                            value="REV-3031">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="field-box">
                                         <label for="enginName" class="field-label">Engineer Name</label>
-                                        <input id="enginName" name="enginName" class="input" type="text" value="Hugh Johnson">
+                                        <input id="enginName" name="enginName" class="input" type="text"
+                                            value="Hugh Johnson">
                                     </div>
                                     <div class="field-box">
                                         <label for="engDate" class="field-label">Date</label>
@@ -311,10 +335,15 @@
                                     <div class="field-box">
                                         <label class="field-label">Purchasing's Preliminary Decision</label>
                                         <div class="radio-group two-col">
-                                            <label><input type="radio" name="purchDecision" value="Rework In-House" checked> Rework In-House</label>
-                                            <label><input type="radio" name="purchDecision" value="Return to Supplier"> Return to Supplier</label>
-                                            <label><input type="radio" name="purchDecision" value="Scrap in House"> Scrap in House</label>
-                                            <label><input type="radio" name="purchDecision" value="Defer for HBC Engineering Review"> Defer for HBC Engineering Review</label>
+                                            <label><input type="radio" name="purchDecision" value="Rework In-House"
+                                                    checked> Rework In-House</label>
+                                            <label><input type="radio" name="purchDecision" value="Return to Supplier">
+                                                Return to Supplier</label>
+                                            <label><input type="radio" name="purchDecision" value="Scrap in House">
+                                                Scrap in House</label>
+                                            <label><input type="radio" name="purchDecision"
+                                                    value="Defer for HBC Engineering Review"> Defer for HBC Engineering
+                                                Review</label>
                                         </div>
                                     </div>
                                 </div>
@@ -338,23 +367,28 @@
                                         <label class="field-label">Follow-up Required?</label>
                                         <div class="radio-group">
                                             <label><input type="radio" name="followUpRequired" value="Yes"> Yes</label>
-                                            <label><input type="radio" name="followUpRequired" value="No" checked> No</label>
+                                            <label><input type="radio" name="followUpRequired" value="No" checked>
+                                                No</label>
                                         </div>
                                     </div>
                                     <div class="field-box">
-                                        <label for="followUpDetails" class="field-label">If Yes, indicate type & expected date</label>
+                                        <label for="followUpDetails" class="field-label">If Yes, indicate type &
+                                            expected date</label>
                                         <input id="followUpDetails" name="followUpDetails" class="input" type="text">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="field-box">
-                                        <label for="operationsManager" class="field-label">Operations Manager Name</label>
-                                        <input id="operationsManager" name="operationsManager" class="input" type="text" value="Linda Brown">
+                                        <label for="operationsManager" class="field-label">Operations Manager
+                                            Name</label>
+                                        <input id="operationsManager" name="operationsManager" class="input" type="text"
+                                            value="Linda Brown">
                                     </div>
                                     <div class="field-box">
                                         <label for="operationsManagerDate" class="field-label">Date</label>
-                                        <input id="operationsManagerDate" name="operationsManagerDate" class="input" type="date" value="2025-10-11">
+                                        <input id="operationsManagerDate" name="operationsManagerDate" class="input"
+                                            type="date" value="2025-10-11">
                                     </div>
                                 </div>
 
@@ -375,12 +409,14 @@
                                     <div class="field-box">
                                         <label class="field-label">Re-Inspected Acceptable?</label>
                                         <div class="radio-group">
-                                            <label><input type="radio" name="reInspectAcceptable" value="Yes" checked> Yes</label>
+                                            <label><input type="radio" name="reInspectAcceptable" value="Yes" checked>
+                                                Yes</label>
                                             <label><input type="radio" name="reInspectAcceptable" value="No"> No</label>
                                         </div>
                                     </div>
                                     <div class="field-box">
-                                        <label for="newNcrNumber" class="field-label">New NCR Number (If Re-Inspect is No)</label>
+                                        <label for="newNcrNumber" class="field-label">New NCR Number (If Re-Inspect is
+                                            No)</label>
                                         <input id="newNcrNumber" name="newNcrNumber" class="input" type="text">
                                     </div>
                                 </div>
@@ -388,11 +424,13 @@
                                 <div class="row">
                                     <div class="field-box">
                                         <label for="inspectorName" class="field-label">Inspector's Name</label>
-                                        <input id="inspectorName" name="inspectorName" class="input" type="text" value="John Doe">
+                                        <input id="inspectorName" name="inspectorName" class="input" type="text"
+                                            value="John Doe">
                                     </div>
                                     <div class="field-box">
                                         <label for="inspectorDate" class="field-label">Date</label>
-                                        <input id="inspectorDate" name="inspectorDate" class="input" type="date" value="2025-10-15">
+                                        <input id="inspectorDate" name="inspectorDate" class="input" type="date"
+                                            value="2025-10-15">
                                     </div>
                                 </div>
 
@@ -406,11 +444,14 @@
                                     </div>
                                     <div class="field-box">
                                         <label for="qualityDepartment" class="field-label">Quality Department</label>
-                                        <input id="qualityDepartment" name="qualityDepartment" class="input" type="text" value="QD-1">
+                                        <input id="qualityDepartment" name="qualityDepartment" class="input" type="text"
+                                            value="QD-1">
                                     </div>
                                     <div class="field-box">
-                                        <label for="qualityDepartmentDate" class="field-label">Date (NCR Closed Date)</label>
-                                        <input id="qualityDepartmentDate" name="qualityDepartmentDate" class="input" type="date" value="2025-10-16">
+                                        <label for="qualityDepartmentDate" class="field-label">Date (NCR Closed
+                                            Date)</label>
+                                        <input id="qualityDepartmentDate" name="qualityDepartmentDate" class="input"
+                                            type="date" value="2025-10-16">
                                     </div>
                                 </div>
 
@@ -439,11 +480,12 @@
     </div>
 
     <script defer src="../../Scripts/app.js"></script>
-    
+
     <!-- Notification System -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../../Scripts/notifications-demo.js"></script>
     <script>if (window.lucide) lucide.createIcons();</script>
     <script src="../../Scripts/role-manager.js"></script>
 </body>
+
 </html>

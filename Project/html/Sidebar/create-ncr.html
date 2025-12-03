@@ -117,188 +117,155 @@
 
                 <!-- Form Sections -->
                 <section id="view-create" class="pt-6">
-                   
-                        <!-- Quality Representative -->
-                        <div class="card pad progress-section">
-                            <h2 class="section-header quality">Quality Representative</h2>
-                            <form id="formQualityRep" novalidate>
-                                <div class="form-grid">
-                                    <div class="row">
-                                        <div class="field-box">
 
-                                            <div class="flex justify-between field-header">
-                                                <label for="processApplicable" class="field-label">Identify Process
-                                                    Applicable<span class="required" aria-hidden="true">*</span></label>
+                    <!-- Quality Representative -->
+                    <div class="card pad progress-section">
+                        <h2 class="section-header quality">Quality Representative</h2>
+                        <form id="formQualityRep" novalidate>
+                            <div class="form-grid">
+                                <div class="row">
+                                    <div class="field-box">
 
-                                                <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
-                                                    alt="Help icon" onclick="openHelpModel()" />
-                                            </div>
+                                        <div class="flex justify-between field-header">
+                                            <label for="processApplicable" class="field-label">Identify Process
+                                                Applicable<span class="required" aria-hidden="true">*</span></label>
 
-                                            <select id="processApplicable" name="processApplicable" class="input">
-                                                <option value="">Click to Select</option>
-                                                <option value="Supplier or Rec-Insp">Supplier or Rec-Insp</option>
-                                                <option value="WIP (Production Order)">WIP (Production Order)</option>
-                                            </select>
-
-                                            <div id="err-ncrNumber" class="error" role="alert" aria-live="polite"></div>
-                                        </div>
-
-                                        <div class="field-box">
-                                            <div class="flex justify-between field-header">
-                                                <label for="supplierName" class="field-label">Supplier Name</label>
                                             <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
-                                                    alt="Help icon" onclick="openHelpModel()" />
-                                            </div>
-                                             <input id="supplierName" name="supplierName" class="input" type="text"
-                                                    placeholder="Ex:ABC Components">
+                                                alt="Help icon" onclick="openModal('helperModal')" />
                                         </div>
-                                        <div class="field-box">
-                                            <div class="flex justify-between field header">
-                                            <label class="field-label">NCR/PO/SO</label>
-                                             <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
-                                                    alt="Help icon" onclick="openHelpModel()" />
-                                            </div>
-                                            <input id="ncrNumber" name="ncrNumber" class="input mb-2" type="text"
-                                                placeholder="Ex: NCR-2025-011" readonly>
-                                            <input id="poOrProdNo" name="poOrProdNo" class="input mb-2" type="text"
-                                                placeholder="Ex: PO-1013">
-                                            <input id="salesOrderNo" name="salesOrderNo" class="input" type="text"
-                                                placeholder="Ex: SO-0613">
-                                            
-                                        </div>
+
+                                        <select id="processApplicable" name="processApplicable" class="input">
+                                            <option value="">Click to Select</option>
+                                            <option value="Supplier or Rec-Insp">Supplier or Rec-Insp</option>
+                                            <option value="WIP (Production Order)">WIP (Production Order)</option>
+                                        </select>
+
+                                        <div id="err-ncrNumber" class="error" role="alert" aria-live="polite"></div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="field-box" style="flex: 2;">
-                                            <div class="flex justify-between field-header">
+                                    <div class="field-box">
+                                        <div class="flex justify-between field-header">
+                                            <label for="supplierName" class="field-label">Supplier Name</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+                                        <input id="supplierName" name="supplierName" class="input" type="text"
+                                            placeholder="Ex:ABC Components">
+                                    </div>
+                                    <div class="field-box">
+                                        <div class="flex justify-between field header">
+                                            <label class="field-label">NCR/PO/SO</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+                                        <input id="ncrNumber" name="ncrNumber" class="input mb-2" type="text"
+                                            placeholder="Ex: NCR-2025-011" readonly>
+                                        <input id="poOrProdNo" name="poOrProdNo" class="input mb-2" type="text"
+                                            placeholder="Ex: PO-1013">
+                                        <input id="salesOrderNo" name="salesOrderNo" class="input" type="text"
+                                            placeholder="Ex: SO-0613">
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box" style="flex: 2;">
+                                        <div class="flex justify-between field-header">
                                             <label for="itemDescriptionSAP" class="field-label">Description of Item
                                                 (including SAP No.)</label>
                                             <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
-                                                    alt="Help icon" onclick="openHelpModel()" />
-                                            </div>
-                                            <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input"
-                                                type="text" placeholder="Ex: LED Ring Light + Phone Holder">
+                                                alt="Help icon" onclick="openModal('helperModal')" />
                                         </div>
-                                        <div class="field-box" style="flex: 1;">
-                                            <div class="flex justify-between field-header">
+                                        <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input"
+                                            type="text" placeholder="Ex: LED Ring Light + Phone Holder">
+                                    </div>
+                                    <div class="field-box" style="flex: 1;">
+                                        <div class="flex justify-between field-header">
                                             <label for="qtyReceived" class="field-label">Quantity Received</label>
                                             <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
-                                                    alt="Help icon" onclick="openHelpModel()" />
-                                            </div>
-                                            <input id="qtyReceived" name="qtyReceived" class="input" type="number"
-                                                placeholder="Ex: 100">
+                                                alt="Help icon" onclick="openModal('helperModal')" />
                                         </div>
-                                        <div class="field-box" style="flex: 1;">
-                                            <div class="flex justify-between field-header">
+                                        <input id="qtyReceived" name="qtyReceived" class="input" type="number"
+                                            placeholder="Ex: 100">
+                                    </div>
+                                    <div class="field-box" style="flex: 1;">
+                                        <div class="flex justify-between field-header">
                                             <label for="qtyDefective" class="field-label">Quantity Defective</label>
                                             <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
-                                                    alt="Help icon" onclick="openHelpModel()" />
-                                            </div>
-                                            <input id="qtyDefective" name="qtyDefective" class="input" type="number"
-                                                placeholder="Ex: 10">
+                                                alt="Help icon" onclick="openModal('helperModal')" />
                                         </div>
+                                        <input id="qtyDefective" name="qtyDefective" class="input" type="number"
+                                            placeholder="Ex: 10">
                                     </div>
+                                </div>
 
-                                    <div class="row">
-                                        <div class="field-box full-width">
-                                            <div class="flex justify-between field-header">
+                                <div class="row">
+                                    <div class="field-box full-width">
+                                        <div class="flex justify-between field-header">
                                             <label for="defectDescription" class="field-label">Description of
                                                 Defect</label>
                                             <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
-                                                    alt="Help icon" onclick="openHelpModel()" />
-                                            </div>
-                                            <textarea id="defectDescription" name="defectDescription" class="input"
-                                                rows="3"
-                                                placeholder="Ex: Mobile phone clip is broken, and USB cable is frayed."></textarea>
+                                                alt="Help icon" onclick="openModal('helperModal')" />
                                         </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <div class=" flex justify-between field-header">
-                                            <label class="field-label">Item marked Nonconforming</label>
-                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
-                                                    alt="Help icon" onclick="openHelpModel()" />
-                                            </div>
-                                            <div class="radio-group">
-                                                <label><input type="radio" name="itemMarkedNonconforming" value="Yes">
-                                                    Yes</label>
-                                                <label><input type="radio" name="itemMarkedNonconforming" value="No">
-                                                    No</label>
-                                            </div>
-                                        </div>
-                                        <div class="field-box">
-                                            <div class="flex justify-between field-header">
-                                            <label for="fileNCR" class="field-label">Attachment Upload</label>
-                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
-                                                    alt="Help icon" onclick="openHelpModel()" />
-                                            </div>
-                                            <input type="file" id="fileNCR" multiple class="input">
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <label for="reportedBy" class="field-label">Quality Representative's
-                                                Name</label>
-                                            <input id="reportedBy" name="reportedBy" class="input" type="text"
-                                                placeholder="Ex: Dave Kendell">
-                                        </div>
-                                        <div class="field-box">
-                                            <div class="flex justify-between field-header">
-                                            <label for="dateReported" class="field-label">Date Reported</label>
-                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
-                                                    alt="Help icon" onclick="openHelpModel()" />
-                                            </div>
-                                            <input id="dateReported" name="dateReported" class="input" type="date"
-                                                placeholder="Ex: 2025-11-04">
-                                        </div>
-                                    </div>
-
-                                    <div class="actions">
-                                        <button type="submit" class="btn-action">Create</button>
-                                        <button type="button" class="btn btn-cancel" onclick="window.location.href='./Dashboard.html'">Cancel</button>
+                                        <textarea id="defectDescription" name="defectDescription" class="input" rows="3"
+                                            placeholder="Ex: Mobile phone clip is broken, and USB cable is frayed."></textarea>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
+
+                                <div class="row">
+                                    <div class="field-box">
+                                        <div class=" flex justify-between field-header">
+                                            <label class="field-label">Item marked Nonconforming</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+                                        <div class="radio-group">
+                                            <label><input type="radio" name="itemMarkedNonconforming" value="Yes">
+                                                Yes</label>
+                                            <label><input type="radio" name="itemMarkedNonconforming" value="No">
+                                                No</label>
+                                        </div>
+                                    </div>
+                                    <div class="field-box">
+                                        <div class="flex justify-between field-header">
+                                            <label for="fileNCR" class="field-label">Attachment Upload</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+                                        <input type="file" id="fileNCR" multiple class="input">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box">
+                                        <label for="reportedBy" class="field-label">Quality Representative's
+                                            Name</label>
+                                        <input id="reportedBy" name="reportedBy" class="input" type="text"
+                                            placeholder="Ex: Dave Kendell">
+                                    </div>
+                                    <div class="field-box">
+                                        <div class="flex justify-between field-header">
+                                            <label for="dateReported" class="field-label">Date Reported</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+                                        <input id="dateReported" name="dateReported" class="input" type="date"
+                                            placeholder="Ex: 2025-11-04">
+                                    </div>
+                                </div>
+
+                                <div class="actions">
+                                    <button type="button" class="btn save"
+                                        onclick="openModal('submitModal')">
+                                        Create</button>
+                                    <button type="button" class="btn cancel"
+                                        onclick="openModal('confirmModal')">
+                                        Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </section>
-            </div>
-
-            <!-- Modals -->
-            <div id="submitModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
-                role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-                <div id="modalSubmitBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
-                    onclick="event.stopPropagation()">
-                    <h2 id="submitModalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl" style="color: green;">Your work submitted.
-                        Good job!</h2>
-                    <div class="mt-4">
-                        <p class="text-pretty text-gray-700">Rest assured, your work is saved, and email sent to next
-                            employee responsible for the next portion.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="helperModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
-                role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-                <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
-                    onclick="event.stopPropagation()">
-                    <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Info</h2>
-                    <div class="mt-4">
-                        <p class="text-pretty text-gray-700">Detailed Information on select help-info...</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="confirmModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
-                role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-                <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
-                    onclick="event.stopPropagation()">
-                    <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Confirmation</h2>
-                    <div class="mt-4">
-                        <p class="text-pretty text-gray-700">Are you sure you want to cancel? This action will delete your progress.</p>
-                    </div>
-                </div>
             </div>
 
             <!-- Footer -->
@@ -314,51 +281,11 @@
         </main>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            let modal = document.getElementById('helperModal');
-            let submitModal = document.getElementById('submitModal')
-            let confirmModel = document.getElementById('confirmModal');
-
-            window.openHelpModel = function () {
-                modal.classList.remove('hidden');
-                modal.addEventListener('click', handleOutsideClick);
-            }
-
-            window.closeHelpModel = function () {
-                modal.classList.add('hidden');
-                modal.removeEventListener('click', handleOutsideClick);
-            }
-
-            window.openSubmitModel = function () {
-                submitModal.classList.remove('hidden');
-                submitModal.addEventListener('click', handleOutsideClick);
-            }
-
-            window.closeSubmitModel = function () {
-                submitModal.classList.add('hidden');
-                submitModal.addEventListener('click', handleOutsideClick);
-            }
-
-            function handleOutsideClick(e) {
-                if (e.target === modal)
-                    closeHelpModel(); 
-                else if (e.target === submitModal) {
-                    closeSubmitModel();
-                    window.location.href = './Dashboard.html';
-                } 
-                else if (e.target === submitModal) {
-                    closeSubmitModel();
-                    window.location.href = './Dashboard.html';
-                }
-            }
-        })
-    </script>
-
     <!-- Notification System -->
     <script defer src="../../Scripts/app.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../../Scripts/notifications-demo.js"></script>
+    <script src="../../Scripts/modals.js"></script>
     <script>if (window.lucide) lucide.createIcons();</script>
     <script src="../../Scripts/role-manager.js"></script>
 </body>

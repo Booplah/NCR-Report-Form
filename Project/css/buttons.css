@@ -87,8 +87,8 @@
 
 .modal-btn:hover {
     opacity: 0.9;
-    color: rgb(32, 33, 36);
-    background-color: #ff8f8f;
+    color: rgb(255, 0, 0);
+    background-color: #facfcf;
     border-color: #ff0000;
 }
 
@@ -221,7 +221,7 @@
 }
 
 .btn.submit:hover {
-    border-color: #a5fcc1;
+    border-color: #1af860;
     background: linear-gradient(135deg, #ffffff 0%, #a5fcc1 50%, #a5fcc1 100%);
     color: #116a36;
     box-shadow: 0 6px 16px -6px rgba(68, 88, 239, 0.2), 0 2px 6px rgba(2, 6, 23, .06);

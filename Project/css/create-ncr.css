@@ -136,3 +136,9 @@
     font-weight: bold;
     margin: 10px 0;
 }
+.error {
+    min-height: 1.15rem;
+    font-size: .78rem;
+    color: var(--cf-danger);
+    margin-top: 6px;
+}

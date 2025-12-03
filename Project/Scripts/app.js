@@ -1,6 +1,6 @@
 // Main NCR Application Controller
 const ROLES = {
-    QA: "QA", ENGINEER: "ENGINEER", PROCUREMENT: "PROCUREMENT", INSPECTOR: "INSPECTOR", ADMIN: "ADMIN"
+    QA: "QA", ENGINEER: "ENGINEER", OPERATIONS: "OPERATIONS", PROCUREMENT: "PROCUREMENT", INSPECTOR: "INSPECTOR", ADMIN: "ADMIN"
 };
 
 // Role Management
@@ -13,11 +13,14 @@ function disableFieldsByRole(role) {
     const editable = {
         [ROLES.QA]: ["qa-section", "insp-section"],
         [ROLES.ENGINEER]: ["eng-section"],
-        [ROLES.PROCUREMENT]: ["proc-section"],
+        // FIX: Map Operations role to 'ops-section'
+        [ROLES.OPERATIONS]: ["ops-section"],
+        // FIX: Map Procurement role to 'proc-section'
+        [ROLES.PROCUREMENT]: ["proc-section"], 
         [ROLES.INSPECTOR]: ["insp-section"],
-        [ROLES.ADMIN]: ["qa-section", "eng-section", "proc-section", "insp-section"]
+        // FIX: Update ADMIN to include both new sections
+        [ROLES.ADMIN]: ["qa-section", "eng-section", "ops-section", "proc-section", "insp-section"]
     };
-
     document.querySelectorAll("[data-section-role]").forEach(section => {
         const isEditable = editable[role]?.includes(section.dataset.sectionRole);
         section.querySelectorAll("input, select, textarea, .actions button").forEach(el => {
@@ -41,7 +44,7 @@ function validateFields(ids, errorMessage = "This field is required.") {
     ids.forEach(id => {
         const el = document.getElementById(id);
         const errEl = document.getElementById(`err-${id}`);
-        
+
         if (!el) return; // Skip if element not found
 
         // Handle error display
@@ -193,7 +196,7 @@ function handleEngineeringSubmit(e) {
     // Assuming Disposition, Engineer Name, and Date are mandatory
     const requiredInputs = ["dispositionDetails", "enginName", "engDate"];
     let inputsValid = validateFields(requiredInputs);
-    
+
     // 2. Validate required radio group: "Review by CF Engineering" (name: cfEngDisposition)
     const reviewRadioGroup = document.querySelector('input[name="cfEngDisposition"]:checked');
     let reviewValid = !!reviewRadioGroup;
@@ -212,7 +215,70 @@ function handleEngineeringSubmit(e) {
         alert("Please fill all required fields and correct the highlighted errors.");
     }
 }
+// Handler for Operations Section
+function handleOperationsSubmit(e) {
+    e.preventDefault();
 
+    // Validate required fields: Operations Manager Name and Date.
+    const requiredInputs = ["operationsManager", "operationsManagerDate"];
+    let inputsValid = validateFields(requiredInputs);
+
+    if (inputsValid) {
+        console.log("Operations form submitted and validated successfully! (Data saved placeholder)");
+        alert("Operations changes saved successfully. ✅");
+    } else {
+        alert("Please fill all required fields and correct the highlighted errors.");
+    }
+}
+function handleProcurementSubmit(e) {
+    e.preventDefault();
+
+    // 1. Mandatory Decision Check: "Supplier Disposition Decision" radio group
+    const requiredRadio = document.querySelector('input[name="supplierDispositionDecision"]:checked');
+    let radioValid = !!requiredRadio;
+    const radioErrorDiv = document.getElementById('err-supplierDispositionDecision');
+    let conditionalValid = true;
+
+    // Clear previous error states for return fields
+    const rmaEl = document.getElementById('rmaNumber');
+    const carrierEl = document.getElementById('carrierDetails');
+    if (rmaEl) rmaEl.classList.remove("border-red-500");
+    if (carrierEl) carrierEl.classList.remove("border-red-500");
+    
+    if (!radioValid) {
+        if (radioErrorDiv) radioErrorDiv.textContent = "Please select a disposition decision (Return or Dispose).";
+    } else {
+        if (radioErrorDiv) radioErrorDiv.textContent = "";
+
+        // 2. Conditional Validation: If 'Return' is selected, RMA # and Carrier Info are mandatory.
+        if (requiredRadio.value === 'Return') {
+             let rmaValid = true;
+             let carrierValid = true;
+
+             if (rmaEl && !rmaEl.value.trim()) {
+                 rmaEl.classList.add("border-red-500");
+                 rmaValid = false;
+             }
+             
+             if (carrierEl && !carrierEl.value.trim()) {
+                 carrierEl.classList.add("border-red-500");
+                 carrierValid = false;
+             }
+             
+             if (!rmaValid || !carrierValid) {
+                 conditionalValid = false;
+                 // Note: Using alert for consolidated error message
+             }
+        }
+    }
+
+    if (radioValid && conditionalValid) {
+        console.log("Procurement form submitted and validated successfully! (Data saved placeholder)");
+        alert("Procurement changes saved successfully. ✅");
+    } else {
+        alert("Please correct the highlighted errors and ensure a disposition decision is made.");
+    }
+}
 // --- Initialization Block Update ---
 document.addEventListener("DOMContentLoaded", () => {
     // ... existing code ...
@@ -225,7 +291,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // Main Initialization
 document.addEventListener("DOMContentLoaded", () => {
-    let showSectionForRole = () => {};
+    let showSectionForRole = () => { };
     // Auto-generate NCR Number
     const ncrNum = document.getElementById("ncrNumber");
     if (ncrNum && !ncrNum.value) {
@@ -238,7 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const role = normalizeRoleValue(getCurrentUserRole());
     setCurrentUserRole(role);
     disableFieldsByRole(role);
-    
+
     if (roleSelector) {
         roleSelector.value = role;
         roleSelector.addEventListener("change", e => {
@@ -252,6 +318,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Form Submission
     const formQA = document.getElementById("formQualityRep");
     if (formQA) formQA.addEventListener("submit", handleQualitySubmit);
+    // Form Submission: Attach submit handler for Operations form
+    const formOperations = document.getElementById("formOperations");
+    if (formOperations) formOperations.addEventListener("submit", handleOperationsSubmit);
+
+    // Form Submission: Attach submit handler for Procurement form (calls revised function)
+    const formProcurement = document.getElementById("formProcurement");
+    if (formProcurement) formProcurement.addEventListener("submit", handleProcurementSubmit);
 
     // Cancel Buttons
     document.querySelectorAll(".btn-cancel").forEach(btn => {
@@ -294,11 +367,10 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         const roleStepMap = {
-            [ROLES.QA]: "quality", [ROLES.ENGINEER]: "engineering", 
-            [ROLES.PROCUREMENT]: "procurement", [ROLES.INSPECTOR]: "final-review", 
-            [ROLES.ADMIN]: "quality"
+            [ROLES.QA]: "quality", [ROLES.ENGINEER]: "engineering",
+            [ROLES.OPERATIONS]: "operations", [ROLES.PROCUREMENT]: "procurement",
+            [ROLES.INSPECTOR]: "final-review", [ROLES.ADMIN]: "quality"
         };
-
         showSectionForRole = (selectedRole) => {
             const targetStep = roleStepMap[selectedRole];
             if (targetStep) {

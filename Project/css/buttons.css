@@ -78,17 +78,19 @@
 
 .modal-btn {
     border: 2px solid #dee0e3;
+    background-color: #e6c1c1;
     padding: 6px 14px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 500;
+    border-color: #ffdada;
 }
 
 
 .modal-btn:hover {
     opacity: 0.9;
     color: rgb(255, 0, 0);
-    background-color: #facfcf;
+    /* background-color: #facfcf; */
     border-color: #ff0000;
 }
 
@@ -137,7 +139,7 @@
 
 /* Cancel Button */
 .btn.cancel {
-    --btn-bg: #ffffff;
+    --btn-bg: #fbdcdc;
     --btn-ink: var(--cf-ink);
     --btn-border: var(--cf-border);
     --btn-shadow: 0 2px 6px rgba(2, 6, 23, .06);
@@ -149,7 +151,7 @@
     border-radius: 12px;
     border: 1px solid var(--btn-border);
     background: var(--btn-bg);
-    color: var(--btn-ink);
+    color: #b10000;
     font-weight: 600;
     box-shadow: var(--btn-shadow);
     transition: transform .06s ease, box-shadow .15s ease, border-color .15s ease, background .3s ease, color .3s ease;
@@ -159,7 +161,7 @@
 .btn.cancel:hover {
     border-color: #fca5a5;
     background: linear-gradient(135deg, #ffffff 0%, #fee2e2 50%, #fecaca 100%);
-    color: #dc2626;
+
     box-shadow: 0 6px 16px -6px rgba(239, 68, 68, .2), 0 2px 6px rgba(2, 6, 23, .06);
 }
 
@@ -169,7 +171,7 @@
 
 /* Save Button */
 .btn.save {
-    --btn-bg: #ffffff;
+    --btn-bg: #dce7fc;
     --btn-ink: var(--cf-ink);
     --btn-border: var(--cf-border);
     --btn-shadow: 0 2px 6px rgba(2, 6, 23, .06);
@@ -181,7 +183,7 @@
     border-radius: 12px;
     border: 1px solid var(--btn-border);
     background: var(--btn-bg);
-    color: var(--btn-ink);
+    color: #2663dc;
     font-weight: 600;
     box-shadow: var(--btn-shadow);
     transition: transform .06s ease, box-shadow .15s ease, border-color .15s ease, background .3s ease, color .3s ease;
@@ -190,8 +192,7 @@
 
 .btn.save:hover {
     border-color: #a5cffc;
-    background: linear-gradient(135deg, #ffffff 0%, #a5cffc 50%, #a5cffc 100%);
-    color: #2663dc;
+    background: linear-gradient(135deg, #ffffff 0%, #cce3fc 50%, #accff4 100%);
     box-shadow: 0 6px 16px -6px rgba(68, 88, 239, 0.2), 0 2px 6px rgba(2, 6, 23, .06);
 }
 
@@ -201,7 +202,7 @@
 
 /* Submit Button */
 .btn.submit {
-    --btn-bg: #ffffff;
+    --btn-bg: #d6ffe7;
     --btn-ink: var(--cf-ink);
     --btn-border: var(--cf-border);
     --btn-shadow: 0 2px 6px rgba(2, 6, 23, .06);
@@ -213,7 +214,7 @@
     border-radius: 12px;
     border: 1px solid var(--btn-border);
     background: var(--btn-bg);
-    color: var(--btn-ink);
+    color: #008f3b;
     font-weight: 600;
     box-shadow: var(--btn-shadow);
     transition: transform .06s ease, box-shadow .15s ease, border-color .15s ease, background .3s ease, color .3s ease;
@@ -223,7 +224,6 @@
 .btn.submit:hover {
     border-color: #1af860;
     background: linear-gradient(135deg, #ffffff 0%, #a5fcc1 50%, #a5fcc1 100%);
-    color: #116a36;
     box-shadow: 0 6px 16px -6px rgba(68, 88, 239, 0.2), 0 2px 6px rgba(2, 6, 23, .06);
 }
 

@@ -1,14 +1,4 @@
-  <link rel="stylesheet" href="../css/buttons.css">
-
-<div id="submitModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div id="modalSubmitBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg" onclick="event.stopPropagation()">
-      <h2 id="submitModalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl" style="color: green">Your work submitted.</h2>
-      <div class="mt-4">
-        <p class="text-pretty text-gray-700">Rest assured, your work is saved, and email sent to next
-            employee responsible for the next reporting section.</p>
-      </div>
-  </div>
-</div>
+<link rel="stylesheet" href="../css/buttons.css">
 
 <div id="helperModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
   role="dialog" aria-modal="true" aria-labelledby="modalTitle">
@@ -20,9 +10,19 @@
   </div>
 </div>
 
+<div id="submitModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div id="modalSubmitBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg" style="background-color: #d6ffe7;" onclick="event.stopPropagation()">
+      <h2 id="submitModalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl" style="color: green">Your work submitted.</h2>
+      <div class="mt-4">
+        <p class="text-pretty text-gray-700">Rest assured, your work is saved, and email sent to next
+            employee responsible for the next reporting section.</p>
+      </div>
+  </div>
+</div>
+
 <div id="confirmModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
   role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg" onclick="event.stopPropagation()">
+  <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg" style="background-color: #ffe7e7;" onclick="event.stopPropagation()">
       <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl" style="color: red;">Are you sure you want to cancel the report?</h2>
       <div class="mt-4">
         <p class="text-pretty text-gray-700">The report will be saved and stopped at current section. Email will be sent to Quality Department proposing to start a new report.</p>
@@ -35,7 +35,7 @@
 
 <div id="saveModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"
   role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg" onclick="event.stopPropagation()">
+  <div id="modalBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg" style="background-color: #d6e6ff;" onclick="event.stopPropagation()">
     <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl" style="color: rgb(0, 121, 208)">Success. Your work saved.</h2>
   </div>
 </div>

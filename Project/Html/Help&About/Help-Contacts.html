@@ -1,0 +1,109 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Support</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css/Main-Page.css">
+    <link rel="stylesheet" href="../../css/help-about.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="page-container">
+  <aside class="sidebar">
+    <div class="sidebar-content">
+      <div class="sidebar-logo">
+        <a href="../index.html" class="logo-image">
+          <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
+        </a>
+      </div>
+
+      <hr>
+            <ul class="sidebar-items">
+                <!-- <li class="siderbar-item">
+                    <a href="./index.html" class="menu-link">Home</a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="./dashboard.html" class="menu-link">Dashboard</a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="./Create-NCR.html" class="menu-link">Create NCR</a>
+                </li> -->
+                <li class="siderbar-item">
+                        <summary class="dropdown-toggle">
+                            <span class="dropdown-label">Help & About</span>
+                            <span class="dropdown-arrow"></span>
+                        </summary>
+
+                        <ul class="dropdown-items">
+                            <li>
+                                <a href="./Help-About.html" class="dropdown-link">About This Project</a>
+                            </li>
+                            <li>
+                                <a href="./Help-Usage.html" class="dropdown-link">How To Use</a>
+                            </li>
+                            <li>
+                                <a href="./Help-Contacts.html" class="dropdown-link active">Contact & Support</a>
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+    </div>
+    <div class="sidebar-footer">
+      <a href="../Login.html" class="menu-link">Logout</a>
+    </div>
+  </aside>
+
+  <div class="page-content">
+    <header class="main-header">
+      <div class="header-content">
+        <a href="#" class="header-title">
+          <h1 class="page-title">Contact & Support</h1>
+        </a>
+        <!-- <nav class="header-navigation">
+          <ul class="header-links">
+            <div class="account-info">
+              <p class="account-name"><strong class="account-label">Account</strong></p>
+            </div>
+          </ul>
+        </nav> -->
+      </div>
+    </header>
+
+    <main class="flex-1 p-6">
+    <div class="content-wrap">
+        <article class="content-card">
+          <div class="meta">Help / About → Contact & Support</div>
+          <h2>Support</h2>
+          <p>If you run into trouble, try these first:</p>
+          <ul>
+            <li>- Refresh the page and re-enter any missing required fields.</li>
+            <li>- Check file paths for images/attachments.</li>
+            <li>- Use the role tabs to confirm you are in the correct view.</li>
+          </ul>
+
+          <h2 class="mt-6">Contact</h2>
+          <p>Email: <a class="Email" href="mailto:vtruong1@ncstudents.niagaracollege.ca">trava@tech.com</a></p>
+
+          <div class="mt-6">
+            <a href="./Help-Usage.html" class="inline-flex items-center rounded-lg border px-3 py-2 text-sm hover:bg-gray-50">Back</a>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="pt-10">
+      <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
+        <ul class="flex flex-wrap justify-center gap-4 text-xs">
+          <li><a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a></li>
+          <li><a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a></li>
+        </ul>
+        <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

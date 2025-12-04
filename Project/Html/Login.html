@@ -4,82 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/Main-Page.css">
+  <link rel="stylesheet" href="../css/login.css">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <title>Department Selector</title>
 </head> 
 <body class="bg-[rgb(23,52,81)] min-h-screen flex items-center justify-center font-sans p-4">
-
-<div class="text-center">
-  <h1 class="text-3xl font-bold text-[rgb(255,255,255)] mb-10">
-    Choose Department
-  </h1>
-  <hr class="border-t-2 border-white mb-10"/>
-  <br/>
-  <div class="flex flex-row space-x-9">
-    <a href="#" class="role-link" data-role="Quality">
-    <div class="dept-square">Quality</div>
-    </a>
-   <a href="#" class="role-link" data-role="Engineering">
-    <div class="dept-square">Engineering</div>
-    </a>
-   <a href="#" class="role-link" data-role="Purchasing">
-    <div class="dept-square">Purchasing</div>
-    </a>
+  <div class="text-center">
+    <h1 class="text-3xl font-bold text-[rgb(255,255,255)] mb-10">
+      Choose Department
+    </h1>
+    <hr class="border-t-2 border-white mb-10"/>
+    <br/>
+    <div class="flex flex-row space-x-9">
+      <a href="./QA/index.html">
+      <div class="dept-square">QA</div>
+      </a>
+    <a href="./EM/index.html">
+      <div class="dept-square">Engineer</div>
+      </a>
+    <a href="./OM/index.html">
+      <div class="dept-square">Procurement</div>
+      </a>
+      <a href="./Admin/Admin.html">
+      <div class="dept-square">Admin</div>
+      </a>
+    </div>
   </div>
-</div>
-<style>
-    .dept-square {
-        /* Sizing and layout */
-        width: 10rem;  /* 160px */
-        height: 4.3rem; 
-        display: flex;
-        border-color: #2D6EA7;
-        border-style: solid;
-        border-width: 5px;
-        align-items: center;
-        justify-content: center;
-
-        /* Colors */
-        background-color: white;
-        color: rgb(89, 151, 200); /* Text color for squares */
-
-        /* Style & Interaction */
-        border-radius: 0.9rem; /* rounded-lg */
-        font-weight: 600; /* semi-bold */
-        font-size: 1.5rem; /* text-xl */
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-
-        /* Ensure squares don't shrink */
-        flex-shrink: 0;
-    }
-
-    .dept-square:hover {
-        background-color: #f3f4f6; /* Tailwind's gray-100 */
-        transform: translateY(-4px); /* Slight lift on hover */
-        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    }
-</style>
-
-<!-- JavaScript to handle role selection and redirection -->
-<script>
-  (function () {
-    const ROLE_KEY = 'crossfire.role';
-    document.querySelectorAll('.role-link').forEach(a => {
-      a.addEventListener('click', (e) => {
-        e.preventDefault();
-        const role = a.getAttribute('data-role');
-        localStorage.setItem(ROLE_KEY, role);
-        // optional: clear unread state per demo run
-        // localStorage.removeItem('crossfire.notifications'); 
-        window.location.href = './index.html';
-      });
-    });
-  })();
-</script>
-    <script src="../Scripts/role-manager.js"></script>
 </body>
 </html>
 

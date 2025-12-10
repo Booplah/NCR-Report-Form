@@ -30,7 +30,7 @@
             <hr>
             <ul class="sidebar-items">
                 <li class="siderbar-item">
-                    <a href="../../Html/index.html" class="menu-link">
+                    <a href="../../Html/QA/index.html" class="menu-link">
                         <i data-lucide="home"></i>
                         <span>Home</span>
                     </a>
@@ -76,7 +76,7 @@
             </ul>
         </div>
         <div class="sidebar-footer">
-            <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
+            <a href="../Login.html" class="menu-link">Logout</a>
         </div>
     </aside>
 
@@ -90,9 +90,6 @@
                 <nav class="header-navigation">
                     <ul class="header-links">
                         <!-- Notification Bell -->
-                        <li>
-                            <p class="account-name"><strong class="account-label">Account</strong></p>
-                        </li>
                         <li class="notif-container">
                             <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false"
                                 aria-label="Notifications">
@@ -109,6 +106,9 @@
                                 </div>
                             </div>
                         </li>
+                        <li>
+                            <p class="account-name"><strong class="account-label">Operations Manager</strong></p>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -123,16 +123,16 @@
                     <div role="tablist" class="flex gap-1">
                         <button type="button" role="tab" aria-selected="false" class="progress-tab"
                             data-step="quality">Quality Representative</button>
-                        <button type="button" role="tab" aria-selected="true" class="progress-tab"
-                            data-step="engineering">Engineer</button>
                         <button type="button" role="tab" aria-selected="false" class="progress-tab"
-                            data-step="operation">Operation</button>
+                            data-step="engineering">Engineer</button>
+                        <button type="button" role="tab" aria-selected="true" class="progress-tab"
+                            data-step="procurement">Operations & Procurement</button>
                     </div>
                 </div>
 
                 <div class="btn-container">
                     <button id="btnDownloadPDF" class="btn save">Download</button>
-                    <button onclick="window.location.href='./edit-ncr.html'"
+                    <button onclick="window.location.href='../../Html/NCR-Samples/Edit-NCR-001.html'"
                         class="btn submit">Edit NCR</button>
                     <button onclick="window.location.href='../../html/Sidebar/dashboard.html'"
                         class="btn save">Back</button>
@@ -296,7 +296,7 @@
 
                     <!-- Purchasing Section -->
                     <section id="sec-purchasing" class="progress-section" data-step-content="procurement" hidden>
-                        <div class="section-header procurement">Purchasing</div>
+                        <div class="section-header operations">Operations</div>
                         <div class="row">
                             <div class="field-box">
                                 <div class="field-label" style="border-color: #497ba1;">Purchasing's Preliminary
@@ -345,6 +345,87 @@
                                 <div class="field-value">2025/10/11</div>
                             </div>
                         </div>
+                        <h2 class="section-header procurement">Procurement </h2>
+
+                        <div class="form-grid">
+
+                            <div class="row">
+                                <div class="field-box full-width">
+                                    <label class="field-label">Supplier Disposition Decision</label>
+                                    <div class="radio-group two-col">
+                                        <label><input type="radio" name="supplierDispositionDecision" value="Return"
+                                                id="decisionReturn"> Return rejected
+                                            items to supplier</label>
+                                        <label><input type="radio" name="supplierDispositionDecision" value="Dispose"
+                                                id="decisionDispose"> Permit dispose on
+                                            site</label>
+                                    </div>
+                                    <div id="err-supplierDispositionDecision" class="error" role="alert"
+                                        aria-live="polite">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="returnDetailsBlock">
+                                <h3 class="field-header">Return Logistics (Required if returning to
+                                    supplier)</h3>
+                                <div class="row">
+                                    <div class="field-box" style="flex:1;">
+                                        <label for="rmaNumber" class="field-label">RMA #</label>
+                                        <input id="rmaNumber" name="rmaNumber" class="input" type="text"
+                                            placeholder="RMA #">
+                                        <div id="err-rmaNumber" class="error" role="alert" aria-live="polite">
+                                        </div>
+                                    </div>
+                                    <div class="field-box" style="flex:2;">
+                                        <label for="carrierDetails" class="field-label">Carrier
+                                            information with
+                                            account #</label>
+                                        <input id="carrierDetails" name="carrierDetails" class="input" type="text"
+                                            placeholder="Ex: FedEx Acct: 12345">
+                                        <div id="err-carrierDetails" class="error" role="alert" aria-live="polite">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="field-box full-width">
+                                    <label for="expectedReturnDate" class="field-label">Procurement to
+                                        add date when
+                                        replacement/reworked item will be received/returned</label>
+                                    <input id="expectedReturnDate" name="expectedReturnDate" class="input" type="date">
+                                </div>
+                            </div>
+
+                            <h3 class="field-header">Administrative & Financial </h3>
+                            <div class="row">
+                                <div class="field-box full-width"
+                                    style="display:flex; flex-direction:column; gap:12px; padding: 20px;">
+
+                                    <label>
+                                        <input type="checkbox" name="sapReturnCompleteCheck" id="sapReturnCompleteCheck"
+                                            value="Completed">
+                                        Supplier return has been completed in SAP
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="creditExpectedCheck" id="creditExpectedCheck"
+                                            value="Expected">
+                                        Expecting a credit from the supplier
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="billingSupplierReworkCheck"
+                                            id="billingSupplierReworkCheck" value="Billing">
+                                        Billing the supplier for expenses incurred in rework
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        </div>
+
                     </section>
 
                     <!-- Final Review Section -->
@@ -422,7 +503,7 @@
     <script src="../../Scripts/modals.js"></script>
     <script src="../../Scripts/notifications-demo.js"></script>
     <script>if (window.lucide) lucide.createIcons();</script>
-    <script src="../../Scripts/role-manager.js"></script>
 </body>
 
 </html>
+<!--  OM should have a button to email NCRs  -->

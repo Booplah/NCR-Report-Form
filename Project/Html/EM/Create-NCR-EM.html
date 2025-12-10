@@ -82,7 +82,7 @@
         <header class="main-header">
             <div class="header-content">
                 <a href="#" class="header-title">
-                    <h1 class="page-title">Create NCR - Quality Department</h1>
+                    <h1 class="page-title">Create NCR - Engineering Department</h1>
                 </a>
                 <nav class="header-navigation">
                     <ul class="header-links">
@@ -124,104 +124,106 @@
                 </div>
                 <!-- Form Sections -->
                 <section id="view-create" class="pt-6">
+                    <h1>Non-Conformance Report</h1>
+                    <div class="ncr-sum">NCR No: <strong>2025-023</strong> | Status: <strong>Active</strong> | Date: Oct
+                        10 2025</div>
                     <!-- Quality Representative -->
-                    <div class="card pad progress-section" data-step-content="quality" hidden>
+                    <div class="progress-section" data-step-content="quality" hidden data-section-role="proc-section">
                         <h2 class="section-header quality">Quality Representative</h2>
                         <form id="formQualityRep" novalidate>
-                            <fieldset disabled>
-                                <div class="form-grid">
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <label for="processApplicable" class="field-label">Identify Process
-                                                Applicable</label>
+                            <div class="form-grid">
+                                <div class="row">
+                                    <div class="field-box">
+                                        <label for="processApplicable" class="field-label">Identify Process
+                                            Applicable</label>
 
-                                            <select id="processApplicable" name="processApplicable" class="input">
-                                                <option value="">Select…</option>
-                                                <option value="Supplier or Rec-Insp" selected>Supplier or Rec-Insp
-                                                </option>
-                                                <option value="WIP (Production Order)">WIP (Production Order)</option>
-                                            </select>
-                                        </div>
-                                        <div class="field-box">
-                                            <label for="supplierName" class="field-label">Supplier Name</label>
-                                            <input id="supplierName" name="supplierName" class="input" type="text"
-                                                value="ABC Components">
-                                        </div>
-                                        <div class="field-box">
-                                            <label class="field-label">NCR/PO/SO</label>
-                                            <input id="ncrNumber" name="ncrNumber" class="input mb-2" type="text"
-                                                value="NCR-2025-002" readonly>
-                                            <input id="poOrProdNo" name="poOrProdNo" class="input mb-2" type="text"
-                                                value="PO-1013">
-                                            <input id="salesOrderNo" name="salesOrderNo" class="input" type="text"
-                                                value="SO-0613">
-                                        </div>
+                                        <select id="processApplicable" name="processApplicable" class="input">
+                                            <option value="">Select…</option>
+                                            <option value="Supplier or Rec-Insp" selected>Supplier or Rec-Insp
+                                            </option>
+                                            <option value="WIP (Production Order)">WIP (Production Order)</option>
+                                        </select>
                                     </div>
-
-                                    <div class="row">
-                                        <div class="field-box" style="flex: 2;">
-                                            <label for="itemDescriptionSAP" class="field-label">Description of Item
-                                                (including SAP No.)</label>
-                                            <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input"
-                                                type="text" value="LED Ring Light + Phone Holder">
-                                        </div>
-                                        <div class="field-box" style="flex: 1;">
-                                            <label for="qtyReceived" class="field-label">Quantity Received</label>
-                                            <input id="qtyReceived" name="qtyReceived" class="input" type="number"
-                                                value="100">
-                                        </div>
-                                        <div class="field-box" style="flex: 1;">
-                                            <label for="qtyDefective" class="field-label">Quantity Defective</label>
-                                            <input id="qtyDefective" name="qtyDefective" class="input" type="number"
-                                                value="10">
-                                        </div>
+                                    <div class="field-box">
+                                        <label for="supplierName" class="field-label">Supplier Name</label>
+                                        <input id="supplierName" name="supplierName" class="input" type="text"
+                                            value="ABC Components">
                                     </div>
-
-                                    <div class="row">
-                                        <div class="field-box full-width">
-                                            <label for="defectDescription" class="field-label">Description of
-                                                Defect</label>
-                                            <textarea id="defectDescription" name="defectDescription" class="input"
-                                                rows="3">Mobile phone clip is broken, and USB cable is frayed.</textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <label class="field-label">Item marked Nonconforming</label>
-                                            <div class="radio-group">
-                                                <label><input type="radio" name="itemMarkedNonconforming" value="Yes"
-                                                        checked>
-                                                    Yes</label>
-                                                <label><input type="radio" name="itemMarkedNonconforming" value="No">
-                                                    No</label>
-                                            </div>
-                                        </div>
-                                        <div class="field-box">
-                                            <label for="fileNCR" class="field-label">Attachment Upload</label>
-                                            <input type="file" id="fileNCR" multiple class="input">
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="field-box">
-                                            <label for="reportedBy" class="field-label">Quality Representative's
-                                                Name</label>
-                                            <input id="reportedBy" name="reportedBy" class="input" type="text"
-                                                value="Dave Kendell">
-                                        </div>
-                                        <div class="field-box">
-                                            <label for="dateReported" class="field-label">Date Reported</label>
-                                            <input id="dateReported" name="dateReported" class="input" type="date"
-                                                value="2025-11-04">
-                                        </div>
+                                    <div class="field-box">
+                                        <label class="field-label">NCR/PO/SO</label>
+                                        <input id="ncrNumber" name="ncrNumber" class="input mb-2" type="text"
+                                            value="NCR-2025-002" readonly>
+                                        <input id="poOrProdNo" name="poOrProdNo" class="input mb-2" type="text"
+                                            value="PO-1013">
+                                        <input id="salesOrderNo" name="salesOrderNo" class="input" type="text"
+                                            value="SO-0613">
                                     </div>
                                 </div>
-                            </fieldset>
+
+                                <div class="row">
+                                    <div class="field-box" style="flex: 2;">
+                                        <label for="itemDescriptionSAP" class="field-label">Description of Item
+                                            (including SAP No.)</label>
+                                        <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input"
+                                            type="text" value="LED Ring Light + Phone Holder">
+                                    </div>
+                                    <div class="field-box" style="flex: 1;">
+                                        <label for="qtyReceived" class="field-label">Quantity Received</label>
+                                        <input id="qtyReceived" name="qtyReceived" class="input" type="number"
+                                            value="100">
+                                    </div>
+                                    <div class="field-box" style="flex: 1;">
+                                        <label for="qtyDefective" class="field-label">Quantity Defective</label>
+                                        <input id="qtyDefective" name="qtyDefective" class="input" type="number"
+                                            value="10">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box full-width">
+                                        <label for="defectDescription" class="field-label">Description of
+                                            Defect</label>
+                                        <textarea id="defectDescription" name="defectDescription" class="input"
+                                            rows="3">Mobile phone clip is broken, and USB cable is frayed.</textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box">
+                                        <label class="field-label">Item marked Nonconforming</label>
+                                        <div class="radio-group">
+                                            <label><input type="radio" name="itemMarkedNonconforming" value="Yes"
+                                                    checked>
+                                                Yes</label>
+                                            <label><input type="radio" name="itemMarkedNonconforming" value="No">
+                                                No</label>
+                                        </div>
+                                    </div>
+                                    <div class="field-box">
+                                        <label for="fileNCR" class="field-label">Attachment Upload</label>
+                                        <input type="file" id="fileNCR" multiple class="input">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box">
+                                        <label for="reportedBy" class="field-label">Quality Representative's
+                                            Name</label>
+                                        <input id="reportedBy" name="reportedBy" class="input" type="text"
+                                            value="Dave Kendell">
+                                    </div>
+                                    <div class="field-box">
+                                        <label for="dateReported" class="field-label">Date Reported</label>
+                                        <input id="dateReported" name="dateReported" class="input" type="date"
+                                            value="2025-11-04">
+                                    </div>
+                                </div>
+                            </div>
+
                         </form>
                     </div>
-<!-- Engineering Section -->
-                  <div class="card pad progress-section" data-step-content="engineering">
+                    <!-- Engineering Section -->
+                    <div class="progress-section" data-step-content="engineering">
                         <h2 class="section-header engineering">Engineering</h2>
                         <form id="formEngineering" novalidate>
                             <div class="form-grid">
@@ -233,12 +235,17 @@
                                                 alt="Help icon" onclick="openModal('helperModal')" />
                                         </div>
                                         <div class="radio-group two-col">
-                                            <label><input type="radio" name="cfEngDisposition" value="Use As Is"> Use As Is</label>
-                                            <label><input type="radio" name="cfEngDisposition" value="Repair"> Repair</label>
-                                            <label><input type="radio" name="cfEngDisposition" value="Rework"> Rework</label>
-                                            <label><input type="radio" name="cfEngDisposition" value="Scrap"> Scrap</label>
+                                            <label><input type="radio" name="cfEngDisposition" value="Use As Is"> Use As
+                                                Is</label>
+                                            <label><input type="radio" name="cfEngDisposition" value="Repair">
+                                                Repair</label>
+                                            <label><input type="radio" name="cfEngDisposition" value="Rework">
+                                                Rework</label>
+                                            <label><input type="radio" name="cfEngDisposition" value="Scrap">
+                                                Scrap</label>
                                         </div>
-                                        <div id="err-cfEngDisposition" class="error" role="alert" aria-live="polite"></div>
+                                        <div id="err-cfEngDisposition" class="error" role="alert" aria-live="polite">
+                                        </div>
                                     </div>
                                 </div>
 
@@ -253,7 +260,8 @@
                                         <textarea id="dispositionDetails" name="dispositionDetails" class="input"
                                             rows="4"
                                             placeholder=" Ex: 1. Remove defective phone holder clips. 2. Install new clips. 3. Test USB cable functionality"></textarea>
-                                        <div id="err-dispositionDetails" class="error" role="alert" aria-live="polite"></div>
+                                        <div id="err-dispositionDetails" class="error" role="alert" aria-live="polite">
+                                        </div>
                                     </div>
                                     <div class="field-box" style="flex: 1;">
                                         <div class="flex justify-between field-header">
@@ -320,11 +328,13 @@
                                 </div>
 
                                 <div class="actions">
-                                    <button type="button" class="btn submit" onclick="handleEngineeringSubmit(event, 'submit')">
+                                    <button type="button" class="btn submit"
+                                        onclick="handleEngineeringSubmit(event, 'submit')">
                                         Submit
                                     </button>
 
-                                    <button type="button" class="btn save" onclick="handleEngineeringSubmit(event, 'save')">
+                                    <button type="button" class="btn save"
+                                        onclick="handleEngineeringSubmit(event, 'save')">
                                         Save
                                     </button>
                                 </div>

@@ -215,89 +215,75 @@ function handleEngineeringSubmit(e) {
         alert("Please fill all required fields and correct the highlighted errors.");
     }
 }
-// Handler for Operations Section
-function handleOperationsSubmit(e) {
-    e.preventDefault();
+function handleProcurementSubmit(e) {
+    if (e) e.preventDefault(); // Prevenir recarga si viene de un evento submit
 
-    // Validate required fields: Operations Manager Name and Date.
-    const requiredInputs = ["operationsManager", "operationsManagerDate"];
-    let inputsValid = validateFields(requiredInputs);
-
-    if (inputsValid) {
-        console.log("Operations form submitted and validated successfully! (Data saved placeholder)");
-        alert("Operations changes saved successfully. ✅");
-    } else {
-        alert("Please fill all required fields and correct the highlighted errors.");
+    // 1. Validar campos de Operaciones (Nombre y Fecha)
+    // Estos campos están dentro del formulario formProcurement en el HTML
+    const opsIds = ["operationsManager", "operationsManagerDate"];
+    let opsValid = validateFields(opsIds); 
+    
+    // Si falla operaciones, mostramos alerta y detenemos
+    if (!opsValid) {
+        alert("Please fill in the Operations Manager Name and Date.");
+        return; 
     }
-}
-function handleProcurementSubmit(e, action = 'submit') {
-    e.preventDefault();
 
-    const form = document.getElementById('formProcurement');
-
-    // 1. Mandatory: Supplier Disposition Decision
-    const requiredRadio = form.querySelector('input[name="supplierDispositionDecision"]:checked');
-    const radioErrorDiv = document.getElementById('err-supplierDispositionDecision');
+    // 2. Validar Radio Button obligatorio: "Supplier Disposition Decision"
+    const requiredRadio = document.querySelector('input[name="supplierDispositionDecision"]:checked');
     let radioValid = !!requiredRadio;
-
-    if (!radioValid) {
-        if (radioErrorDiv) radioErrorDiv.textContent = "Please select Return or Dispose.";
-    } else {
-        if (radioErrorDiv) radioErrorDiv.textContent = "";
-    }
-
-    // 2. Conditional: If "Return" selected → RMA and Carrier required
+    const radioErrorDiv = document.getElementById('err-supplierDispositionDecision');
     let conditionalValid = true;
+
+    // Limpiar errores previos de RMA/Carrier
     const rmaEl = document.getElementById('rmaNumber');
     const carrierEl = document.getElementById('carrierDetails');
-
-    // Reset border styles
-    [rmaEl, carrierEl].forEach(el => el?.classList.remove("border-red-500"));
-
-    if (requiredRadio?.value === 'Return') {
-        if (!rmaEl?.value.trim()) {
-            rmaEl?.classList.add("border-red-500");
-            conditionalValid = false;
-        }
-        if (!carrierEl?.value.trim()) {
-            carrierEl?.classList.add("border-red-500");
-            conditionalValid = false;
-        }
-    }
-
-    // 3. Always require Operations Manager Name
-    const opsManager = document.getElementById('operationsManager');
-    const opsDate = document.getElementById('operationsManagerDate');
-    let managerValid = opsManager?.value.trim() !== '';
-
-    if (!managerValid) {
-        opsManager?.classList.add("border-red-500");
+    if (rmaEl) rmaEl.classList.remove("border-red-500");
+    if (carrierEl) carrierEl.classList.remove("border-red-500");
+    
+    if (!radioValid) {
+        if (radioErrorDiv) radioErrorDiv.textContent = "Please select a disposition decision (Return or Dispose).";
     } else {
-        opsManager?.classList.remove("border-red-500");
+        if (radioErrorDiv) radioErrorDiv.textContent = "";
+
+        if (requiredRadio.value === 'Return') {
+             let rmaValid = true;
+             let carrierValid = true;
+
+             if (rmaEl && !rmaEl.value.trim()) {
+                 rmaEl.classList.add("border-red-500");
+                 rmaValid = false;
+                
+                 const errRma = document.getElementById("err-rmaNumber");
+                 if(errRma) errRma.textContent = "RMA # is required for returns.";
+             }
+             
+             if (carrierEl && !carrierEl.value.trim()) {
+                 carrierEl.classList.add("border-red-500");
+                 carrierValid = false;
+                 const errCarr = document.getElementById("err-carrierDetails");
+                 if(errCarr) errCarr.textContent = "Carrier details are required.";
+             }
+             
+             if (!rmaValid || !carrierValid) {
+                 conditionalValid = false;
+             }
+        }
     }
 
-    // Final validation result
-    const allValid = radioValid && conditionalValid && managerValid;
+ 
+    if (opsValid && radioValid && conditionalValid) {
+        console.log("Procurement & Operations form submitted successfully!");
+        
+        // Aquí guardarías en localStorage si fuera necesario
+        // const list = JSON.parse(localStorage.getItem("ncrList") || "[]");
+        // ... lógica de guardado ...
 
-    if (allValid && action === 'submit') {
-        // Optional: Save to localStorage here if needed
-        alert("NCR successfully submitted by Operations & Procurement! Proceeding to Final Review...");
-
-        // REDIRECT TO FINAL REVIEW PAGE
-        window.location.href = "./ncr-final-review.html";
-    } else if (allValid && action === 'save') {
-        alert("Draft saved successfully!");
+        alert("Operations & Procurement changes saved successfully.");
+        
     } else {
-        alert("Please fix the highlighted errors before submitting.");
+        alert("Please correct the highlighted errors.");
     }
-}
-
-// Add this near the other event listeners (after formProcurement submit binding)
-const procurementSubmitBtn = document.getElementById('procurementSubmitBtn');
-if (procurementSubmitBtn) {
-    procurementSubmitBtn.addEventListener('click', (e) => {
-        handleProcurementSubmit(e, 'submit'); // 'submit' triggers redirect
-    });
 }
 // --- Initialization Block Update ---
 document.addEventListener("DOMContentLoaded", () => {

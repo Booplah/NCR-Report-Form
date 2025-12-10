@@ -17,7 +17,6 @@
 </head>
 
 <body class="page-container">
-  <!-- Sidebar -->
   <aside class="sidebar">
     <div class="sidebar-content">
       <div class="sidebar-logo">
@@ -27,23 +26,14 @@
       </div>
       <hr>
       <ul class="sidebar-items">
-        <li class="siderbar-item"><a href="../../Html/index.html" class="menu-link">
+        <li class="siderbar-item"><a href="index.html" class="menu-link">
             <i data-lucide="home"></i>
             <span>Home</span></a></li>
         <li class="siderbar-item">
-          <a href="../../Html/Sidebar/dashboard.html" class="menu-link active">
+          <a href="Dashboard.html" class="menu-link active">
             <i data-lucide="layout-dashboard"></i>
             <span>Dashboard</span></a>
         </li>
-        <li class="siderbar-item"><a href="../../Html/Sidebar/Create-NCR.html" class="menu-link">
-            <i data-lucide="file-plus"></i>
-            <span>Create NCR</span></a></li>
-        <li class="siderbar-item">
-          <a href="../../html/Sidebar/admin.html" class="menu-link">
-            <i data-lucide="settings"></i>
-            <span>Admin Page</span></a>
-        </li>
-        <li class="siderbar-item">
           <details class="dropdown-menu">
             <summary class="dropdown-toggle">
               <i data-lucide="help-circle"></i>
@@ -52,15 +42,15 @@
               <span class="dropdown-arrow"></span>
             </summary>
             <ul class="dropdown-items">
-              <li><a href="../Sidebar/Help-About.html" class="dropdown-link">
+              <li><a href="../Help&About/Help-About.html" class="dropdown-link">
                   <i data-lucide="info"></i>
                   <span>About This Project</span>
                 </a></li>
-              <li><a href="../Sidebar/help-usage.html" class="dropdown-link">
+              <li><a href="../Help&About/Help-Usage.html" class="dropdown-link">
                   <i data-lucide="book-open"></i>
                   <span>User Guide</span>
                 </a></li>
-              <li><a href="../Sidebar/help-contacts.html" class="dropdown-link">
+              <li><a href="../Help&About/Help-Contacts.html" class="dropdown-link">
                   <i data-lucide="phone"></i>
                   <span>Contact & Support</span>
                 </a></li>
@@ -70,21 +60,17 @@
       </ul>
     </div>
     <div class="sidebar-footer">
-      <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
+      <a href="../Login.html" class="help-link">Logout</a>
     </div>
   </aside>
-
-  <!-- Main Content -->
   <div class="page-content">
     <header class="main-header">
       <div class="header-content">
-        <a href="#" class="header-title">
-          <h1 class="page-title">Dashboard</h1>
-        </a>
+        <h1 class="page-title">Dashboard</h1>
         <nav class="header-navigation">
           <ul class="header-links">
             <li class="account-info">
-              <p class="account-name"><strong class="account-label">Account</strong></p>
+              <p class="account-name"><strong class="account-label">Operations Manager</strong></p>
             </li>
             <li class="notif-container">
               <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false"
@@ -146,9 +132,10 @@
         <div class="bg-white rounded-md shadow mb-7">
           <div class="px-5 py-3.5 border-b border-gray-200 flex justify-between items-center">
             <h3 class="text-lg font-semibold text-gray-800">Recent NCRs</h3>
-            <a href="../../Html/Sidebar/Create-NCR.html"
-              class="bg-[#2D6EA7] text-white px-4 py-2.5 rounded-md hover:bg-[#275E8F] text-center font-medium">Create
-              New NCR</a>
+            <button onclick="window.location.href = 'Create-NCR-OM.html'"
+              class="btn save">
+              Go to the most recent NCR
+            </button>
           </div>
 
           <!-- Filters -->
@@ -400,8 +387,6 @@
           </ul>
         </div>
       </div>
-
-      <!-- Footer -->
       <footer class="pt-10">
         <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
           <ul class="flex flex-wrap justify-center gap-4 text-xs">
@@ -412,33 +397,12 @@
         </div>
       </footer>
     </main>
-
-    <!-- Confirmation Modal -->
-    <div id="confirmationModal" class="fixed inset-0 z-50 grid place-content-center bg-black/50 p-4 hidden"
-      role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <div class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg">
-        <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Confirm Action</h2>
-        <div class="mt-4">
-          <p class="text-pretty text-gray-700">Are you sure you want to close this NCR?</p>
-        </div>
-        <footer class="mt-6 flex justify-end gap-2">
-          <button type="button"
-            class="rounded bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200">Cancel</button>
-          <button type="button"
-            class="rounded bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700">Confirm</button>
-        </footer>
-      </div>
-    </div>
   </div>
-
-  <!-- Scripts -->
   <script src="../../Scripts/Dashboard.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="../../Scripts/notifications-demo.js"></script>
   <script>
     if (window.lucide) lucide.createIcons();
   </script>
-    <script src="../../Scripts/role-manager.js"></script>
 </body>
-
 </html>

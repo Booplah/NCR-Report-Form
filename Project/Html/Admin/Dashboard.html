@@ -7,7 +7,6 @@
   <title>Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../../css/Main-Page.css">
-  <link rel="stylesheet" href="../../css/notifications.css">
   <link rel="stylesheet" href="../../css/buttons.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,99 +16,44 @@
 </head>
 
 <body class="page-container">
-  <!-- Sidebar -->
+
   <aside class="sidebar">
     <div class="sidebar-content">
       <div class="sidebar-logo">
-        <a href="../index.html" class="logo-image">
+        <a href="./index.html" class="logo-image">
           <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
         </a>
       </div>
       <hr>
       <ul class="sidebar-items">
-        <li class="siderbar-item"><a href="../../Html/index.html" class="menu-link">
-            <i data-lucide="home"></i>
-            <span>Home</span></a></li>
         <li class="siderbar-item">
-          <a href="../../Html/Sidebar/dashboard.html" class="menu-link active">
+          <a href="./Dashboard.html" class="menu-link active">
             <i data-lucide="layout-dashboard"></i>
             <span>Dashboard</span></a>
         </li>
-        <li class="siderbar-item"><a href="../../Html/Sidebar/Create-NCR.html" class="menu-link">
-            <i data-lucide="file-plus"></i>
-            <span>Create NCR</span></a></li>
         <li class="siderbar-item">
-          <a href="../../html/Sidebar/admin.html" class="menu-link">
+          <a href="./Admin.html" class="menu-link">
             <i data-lucide="settings"></i>
             <span>Admin Page</span></a>
-        </li>
-        <li class="siderbar-item">
-          <details class="dropdown-menu">
-            <summary class="dropdown-toggle">
-              <i data-lucide="help-circle"></i>
-              <span class="dropdown-label">Help & About</span>
-
-              <span class="dropdown-arrow"></span>
-            </summary>
-            <ul class="dropdown-items">
-              <li><a href="../Sidebar/Help-About.html" class="dropdown-link">
-                  <i data-lucide="info"></i>
-                  <span>About This Project</span>
-                </a></li>
-              <li><a href="../Sidebar/help-usage.html" class="dropdown-link">
-                  <i data-lucide="book-open"></i>
-                  <span>User Guide</span>
-                </a></li>
-              <li><a href="../Sidebar/help-contacts.html" class="dropdown-link">
-                  <i data-lucide="phone"></i>
-                  <span>Contact & Support</span>
-                </a></li>
-            </ul>
-          </details>
         </li>
       </ul>
     </div>
     <div class="sidebar-footer">
-      <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
+      <a href="./Help-Contacts.html" class="help-link">Support</a>
     </div>
   </aside>
 
-  <!-- Main Content -->
   <div class="page-content">
     <header class="main-header">
       <div class="header-content">
         <a href="#" class="header-title">
           <h1 class="page-title">Dashboard</h1>
         </a>
-        <nav class="header-navigation">
-          <ul class="header-links">
-            <li class="account-info">
-              <p class="account-name"><strong class="account-label">Account</strong></p>
-            </li>
-            <li class="notif-container">
-              <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false"
-                aria-label="Notifications">
-                <i data-lucide="bell"></i>
-                <span id="notif-badge" class="notif-badge" style="display:none;">0</span>
-              </button>
-              <div id="notif-dropdown" class="notif-dropdown">
-                <div class="notif-head">
-                  <span>Notifications</span>
-                  <button id="notif-markall" class="notif-markall">Mark all read</button>
-                </div>
-                <ul id="notif-list" class="notif-list"></ul>
-                <div id="notif-empty" class="notif-empty" style="display:none;">You're all caught up.</div>
-              </div>
-            </li>
-          </ul>
-        </nav>
       </div>
     </header>
 
-    <!-- Main Content -->
     <main class="flex-1 p-9">
       <div class="max-w-6xl mx-auto">
-        <!-- Status Cards -->
         <h3 class="text-2xl font-semibold text-gray-800 mb-5">Status</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-7">
           <div class="bg-white rounded-md shadow p-7 border border-blue-600 border-l-4">
@@ -138,20 +82,12 @@
           </div>
         </div>
 
-        <!-- NCR List Section -->
         <div class="mb-7">
           <h3 class="text-2xl font-semibold text-gray-800 mb-5">NCR List</h3>
         </div>
 
         <div class="bg-white rounded-md shadow mb-7">
-          <div class="px-5 py-3.5 border-b border-gray-200 flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-gray-800">Recent NCRs</h3>
-            <a href="../../Html/Sidebar/Create-NCR.html"
-              class="bg-[#2D6EA7] text-white px-4 py-2.5 rounded-md hover:bg-[#275E8F] text-center font-medium">Create
-              New NCR</a>
-          </div>
 
-          <!-- Filters -->
           <div class="px-5 py-3.5 border-b border-gray-200">
             <div class="flex flex-wrap gap-3">
               <input type="text" id="searchInput" placeholder="Search NCRs..."
@@ -227,10 +163,8 @@
             </div>
           </div>
 
-          <!-- NCR Table -->
           <div class="overflow-x-auto p-5">
             <table class="min-w-full divide-y divide-gray-200 text-sm">
-              <!-- NCR Types -->
               <thead class="bg-gray-50">
                 <tr>
                   <th class="px-3 py-2 text-left">NCR ID</th>
@@ -241,7 +175,6 @@
                   <th>Actions</th>
                 </tr>
               </thead>
-              <!-- Recent NCRs -->
               <tbody class="divide-y divide-gray-100">
                 <tr>
                   <td class="px-3 py-2 font-medium text-gray-900">NCR-002</td>
@@ -250,7 +183,7 @@
                   <td class="px-3 py-2">2025-10-09</td>
                   <td class="px-3 py-2">Dimensional deviation found in metal part assembly.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../Sidebar/Create-NCR-Engineer.html" class="btnActions create">Create Engineer</a>
+                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View</a>
                   </td>
                 </tr>
 
@@ -261,7 +194,7 @@
                   <td class="px-3 py-2">2025-10-01</td>
                   <td class="px-3 py-2">Packaging defect corrected and verified.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../Sidebar/Create-NCR-Engineer.html" class="btnActions create">Create Engineer</a>
+                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View</a>
                   </td>
                 </tr>
 
@@ -272,7 +205,7 @@
                   <td class="px-3 py-2">2025-09-28</td>
                   <td class="px-3 py-2 truncate">Unverified supplier component variance reported.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../Sidebar/Create-NCR-Engineer.html" class="btnActions create">Create Engineer</a>
+                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View</a>
                   </td>
                 </tr>
 
@@ -283,7 +216,7 @@
                   <td class="px-3 py-2">2025-10-05</td>
                   <td class="px-3 py-2">Incorrect batch labeling detected during inspection.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View</a>
                   </td>
                 </tr>
 
@@ -294,11 +227,10 @@
                   <td class="px-3 py-2">2025-10-10</td>
                   <td class="px-3 py-2 truncate">Surface finish non-compliance on final assembly.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View</a>
                   </td>
                 </tr>
               </tbody>
-              <!-- View All NCR -->
               <tbody id="extraNCRs" class="divide-y divide-gray-100 hidden">
 
                 <tr>
@@ -308,7 +240,7 @@
                   <td class="px-3 py-2">2025-10-11</td>
                   <td class="px-3 py-2 truncate">Incorrect torque values detected in component assembly.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View</a>
                   </td>
                 </tr>
 
@@ -319,7 +251,7 @@
                   <td class="px-3 py-2">2025-09-25</td>
                   <td class="px-3 py-2 truncate">Incorrect lot traceability information resolved.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View</a>
                   </td>
                 </tr>
 
@@ -330,7 +262,7 @@
                   <td class="px-3 py-2">2025-10-03</td>
                   <td class="px-3 py-2 truncate">Electrical test failure in circuit board batch.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View</a>
                   </td>
                 </tr>
 
@@ -341,7 +273,7 @@
                   <td class="px-3 py-2">2025-09-27</td>
                   <td class="px-3 py-2 truncate">Material substitution found without authorization.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View</a>
                   </td>
                 </tr>
 
@@ -352,16 +284,13 @@
                   <td class="px-3 py-2">2025-09-20</td>
                   <td class="px-3 py-2 truncate">Outdated calibration certificate on testing equipment.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View/Edit</a>
+                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View</a>
                   </td>
                 </tr>
-
               </tbody>
-
             </table>
           </div>
 
-          <!-- Pagination -->
           <ul class="overflow-x-auto p-5 flex justify-center gap-1 text-gray-900">
             <li>
               <a href="#"
@@ -401,7 +330,6 @@
         </div>
       </div>
 
-      <!-- Footer -->
       <footer class="pt-10">
         <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
           <ul class="flex flex-wrap justify-center gap-4 text-xs">
@@ -412,33 +340,13 @@
         </div>
       </footer>
     </main>
-
-    <!-- Confirmation Modal -->
-    <div id="confirmationModal" class="fixed inset-0 z-50 grid place-content-center bg-black/50 p-4 hidden"
-      role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <div class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg">
-        <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Confirm Action</h2>
-        <div class="mt-4">
-          <p class="text-pretty text-gray-700">Are you sure you want to close this NCR?</p>
-        </div>
-        <footer class="mt-6 flex justify-end gap-2">
-          <button type="button"
-            class="rounded bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200">Cancel</button>
-          <button type="button"
-            class="rounded bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700">Confirm</button>
-        </footer>
-      </div>
-    </div>
   </div>
 
-  <!-- Scripts -->
   <script src="../../Scripts/Dashboard.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="../../Scripts/notifications-demo.js"></script>
   <script>
     if (window.lucide) lucide.createIcons();
   </script>
-    <script src="../../Scripts/role-manager.js"></script>
 </body>
 
 </html>

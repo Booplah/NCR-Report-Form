@@ -19,14 +19,40 @@
         <img src="../../Images/Logo.png" class="h-12 w-12 object-cover rounded-lg shadow-sm" alt="Logo">
       </span>
 
-      <ul class="space-y-1">
-        <li><a href="../html/Home.html"class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-700 bg-gray-100">Home</a></li>
-        <li><a href="../html/Sidebar/dashboard.html"class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Dashboard</a></li>
-        <li><a href="../html/Sidebar/ViewNCR.html"class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">View NCRs</a></li>
-        <li><a href="../html/Sidebar/CreateNCR.html"class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Create NCR</a></li>
-        <li><a href="../html/Sidebar/help-about.html"class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Help & About</a>
-        <li><a href="../../html/Sidebar/admin.html" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Admin Page</a></li>
-      </ul>
+            <ul class="sidebar-items">
+                <li class="siderbar-item">
+                    <a href="../../Html/index.html" class="menu-link">Home</a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="../../Html/Sidebar/dashboard.html" class="menu-link">Dashboard</a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="../../Html/Sidebar/Create-NCR.html" class="menu-link">Create NCR</a>
+                </li>
+                <li class="siderbar-item">
+                    <a href="../../Html/Sidebar/admin.html" class="menu-link">Admin Page</a>
+                </li>
+                <li class="siderbar-item">
+                    <details class="dropdown-menu">
+                        <summary class="dropdown-toggle">
+                            <span class="dropdown-label">Help & About</span>
+                            <span class="dropdown-arrow"></span>
+                        </summary>
+
+                        <ul class="dropdown-items">
+                            <li>
+                                <a href="../Sidebar/help-about.html" class="dropdown-link active">About This Project</a>
+                            </li>
+                            <li>
+                                <a href="../Sidebar/help-usage.html" class="dropdown-link">How To Use</a>
+                            </li>
+                            <li>
+                                <a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
     </div>
 
     <div class="border-t border-gray-100">
@@ -90,5 +116,6 @@
       </div>
 
     </footer>  </div>
+    <script src="../../Scripts/role-manager.js"></script>
 </body>
 </html>

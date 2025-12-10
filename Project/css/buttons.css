@@ -1,0 +1,253 @@
+.btnActions {
+    background-color: #E2EFFE;
+    color: rgb(54, 54, 54);
+    border: 1px solid rgb(194, 221, 252);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btnActions:hover {
+    background-color: #d3e7ff;
+    border-color: #E2EFFE;
+    color: black;
+}
+
+.btnActions.create {
+    background-color: #d9ffe6;
+    border: 1px solid #d9ffe6;
+}
+
+.btnActions.view {
+    background-color: #f6d9ff;
+    border: 1px solid #d9ffe6;
+}
+
+.btn-container {
+    text-align: right;
+    margin-top: 25px;
+}
+
+.tab-btn {
+    background: #ffffff;
+    border: 1px solid #cac2cf;
+    border-radius: 9999px;
+    padding: 8px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-action {
+    background-color: #2D6EA7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-action:hover {
+    background-color: #275E8F;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-action.closeBtn {
+    background: #d60202be;
+}
+
+.btn-action.closeBtn:hover {
+    background: #fe0000be;
+}
+
+/* Buttons inside popup */
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.modal-btn {
+    border: 2px solid #dee0e3;
+    background-color: #e6c1c1;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    border-color: #ffdada;
+}
+
+
+.modal-btn:hover {
+    opacity: 0.9;
+    color: rgb(255, 0, 0);
+    /* background-color: #facfcf; */
+    border-color: #ff0000;
+}
+
+.tab-btn:hover {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.tab-btn.active {
+    background: #ccd1d4;
+    color: #fff;
+    border-color: #5f676d;
+}
+
+
+/* --- Global Buttons --- */
+
+/* Button */
+.btn {
+    --btn-bg: #ffffff;
+    --btn-ink: var(--cf-ink);
+    --btn-border: var(--cf-border);
+    --btn-shadow: 0 2px 6px rgba(2, 6, 23, .06);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--btn-border);
+    background: var(--btn-bg);
+    color: var(--btn-ink);
+    font-weight: 600;
+    box-shadow: var(--btn-shadow);
+    transition: transform .06s ease, box-shadow .15s ease, border-color .15s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border-color: #d1d5db;
+    box-shadow: 0 6px 16px -6px rgba(2, 6, 23, .15), 0 2px 6px rgba(2, 6, 23, .06);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Cancel Button */
+.btn.cancel {
+    --btn-bg: #fbdcdc;
+    --btn-ink: var(--cf-ink);
+    --btn-border: var(--cf-border);
+    --btn-shadow: 0 2px 6px rgba(2, 6, 23, .06);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--btn-border);
+    background: var(--btn-bg);
+    color: #b10000;
+    font-weight: 600;
+    box-shadow: var(--btn-shadow);
+    transition: transform .06s ease, box-shadow .15s ease, border-color .15s ease, background .3s ease, color .3s ease;
+    cursor: pointer;
+}
+
+.btn.cancel:hover {
+    border-color: #fca5a5;
+    background: linear-gradient(135deg, #ffffff 0%, #fee2e2 50%, #fecaca 100%);
+
+    box-shadow: 0 6px 16px -6px rgba(239, 68, 68, .2), 0 2px 6px rgba(2, 6, 23, .06);
+}
+
+.btn.cancel:active {
+    transform: translateY(1px);
+}
+
+/* Save Button */
+.btn.save {
+    --btn-bg: #dce7fc;
+    --btn-ink: var(--cf-ink);
+    --btn-border: var(--cf-border);
+    --btn-shadow: 0 2px 6px rgba(2, 6, 23, .06);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--btn-border);
+    background: var(--btn-bg);
+    color: #2663dc;
+    font-weight: 600;
+    box-shadow: var(--btn-shadow);
+    transition: transform .06s ease, box-shadow .15s ease, border-color .15s ease, background .3s ease, color .3s ease;
+    cursor: pointer;
+}
+
+.btn.save:hover {
+    border-color: #a5cffc;
+    background: linear-gradient(135deg, #ffffff 0%, #cce3fc 50%, #accff4 100%);
+    box-shadow: 0 6px 16px -6px rgba(68, 88, 239, 0.2), 0 2px 6px rgba(2, 6, 23, .06);
+}
+
+.btn.save:active {
+    transform: translateY(1px);
+}
+
+/* Submit Button */
+.btn.submit {
+    --btn-bg: #d6ffe7;
+    --btn-ink: var(--cf-ink);
+    --btn-border: var(--cf-border);
+    --btn-shadow: 0 2px 6px rgba(2, 6, 23, .06);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--btn-border);
+    background: var(--btn-bg);
+    color: #008f3b;
+    font-weight: 600;
+    box-shadow: var(--btn-shadow);
+    transition: transform .06s ease, box-shadow .15s ease, border-color .15s ease, background .3s ease, color .3s ease;
+    cursor: pointer;
+}
+
+.btn.submit:hover {
+    border-color: #1af860;
+    background: linear-gradient(135deg, #ffffff 0%, #a5fcc1 50%, #a5fcc1 100%);
+    box-shadow: 0 6px 16px -6px rgba(68, 88, 239, 0.2), 0 2px 6px rgba(2, 6, 23, .06);
+}
+
+.btn.submit:active {
+    transform: translateY(1px);
+}
+
+/* Primary Button */
+.btn.primary {
+    --btn-bg: linear-gradient(180deg, var(--cf-accent-500), var(--cf-accent-600));
+    --btn-ink: #fff;
+    --btn-border: transparent;
+    background-color: #2D6EA7;
+    color: #fff;
+    border: none;
+}
+
+.btn.primary:hover {
+    box-shadow: 0 10px 22px -10px rgba(2, 6, 23, .15), 0 2px 6px rgba(2, 6, 23, .06);
+    background: #275E8F;
+}
+
+.btn.sm {
+    padding: 8px 12px;
+    font-size: .92rem;
+    border-radius: 10px;
+}

@@ -15,7 +15,6 @@
 </head>
 
 <body class="page-container">
-  <!-- Sidebar Navigation -->
   <aside class="sidebar">
     <div class="sidebar-content">
       <div class="sidebar-logo">
@@ -25,59 +24,60 @@
       </div>
 
       <hr>
-            <ul class="sidebar-items">
-                <li class="siderbar-item">
-                    <a href="../../Html/index.html" class="menu-link">Home</a>
-                </li>
-                <li class="siderbar-item">
-                    <a href="../../Html/Sidebar/dashboard.html" class="menu-link">Dashboard</a>
-                </li>
-                <li class="siderbar-item">
-                    <a href="../../Html/Sidebar/Create-NCR.html" class="menu-link">Create NCR</a>
-                </li>
-                <li class="siderbar-item">
-                    <a href="../../Html/Sidebar/admin.html" class="menu-link">Admin Page</a>
-                </li>
-                <li class="siderbar-item">
-                        <summary class="dropdown-toggle">
-                            <span class="dropdown-label">Help & About</span>
-                            <span class="dropdown-arrow"></span>
-                        </summary>
+      <ul class="sidebar-items">
+          <!-- <li class="siderbar-item">
+              <a href="../index.html" class="menu-link">Home</a>
+          </li>
+          <li class="siderbar-item">
+              <a href="../../Html/Sidebar/dashboard.html" class="menu-link">Dashboard</a>
+          </li>
+          <li class="siderbar-item">
+              <a href="../../Html/Sidebar/Create-NCR.html" class="menu-link">Create NCR</a>
+          </li> -->
+          <li class="siderbar-item">
+            <summary class="dropdown-toggle">
+                <span class="dropdown-label">Help & About</span>
+                <span class="dropdown-arrow"></span>
+            </summary>
 
-                        <ul class="dropdown-items">
-                            <li>
-                                <a href="../Sidebar/help-about.html" class="dropdown-link">About This Project</a>
-                            </li>
-                            <li>
-                                <a href="../Sidebar/help-usage.html" class="dropdown-link active">How To Use</a>
-                            </li>
-                            <li>
-                                <a href="../Sidebar/help-contacts.html" class="dropdown-link">Contact & Support</a>
-                            </li>
-                        </ul>
-                </li>
+            <ul class="dropdown-items">
+              <li>
+                <a href="./Help-About.html" class="dropdown-link">
+                  About This Project
+                </a>
+              </li>
+              <li>
+                <a href="./Help-Usage.html" class="dropdown-link active">
+                  How To Use
+                </a>
+              </li>
+              <li>
+                <a href="./Help-Contacts.html" class="dropdown-link">
+                  Contact & Support
+                </a>
+              </li>
             </ul>
+          </li>
+      </ul>
     </div>
-
     <div class="sidebar-footer">
-      <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
+      <a href="../Login.html" class="menu-link">Logout</a>
     </div>
   </aside>
 
   <div class="page-content">
-    <!-- Header -->
     <header class="main-header">
       <div class="header-content">
         <a href="#" class="header-title">
           <h1 class="page-title">How To Use</h1>
         </a>
-        <nav class="header-navigation">
+        <!-- <nav class="header-navigation">
           <ul class="header-links">
             <div class="account-info">
               <p class="account-name"><strong class="account-label">Account</strong></p>
             </div>
           </ul>
-        </nav>
+        </nav> -->
       </div>
     </header>
 
@@ -99,13 +99,12 @@
           </ul>
 
           <div class="mt-6 flex gap-3">
-            <a href="../Sidebar/help-about.html" class="inline-flex items-center rounded-lg border px-3 py-2 text-sm hover:bg-gray-50">Back</a>
-            <a href="../Sidebar/help-contacts.html" class="inline-flex items-center rounded-lg border px-3 py-2 text-sm hover:bg-gray-50">Contact & Support →</a>
+            <a href="./Help-About.html" class="inline-flex items-center rounded-lg border px-3 py-2 text-sm hover:bg-gray-50">Back</a>
+            <a href="./Help-Contacts.html" class="inline-flex items-center rounded-lg border px-3 py-2 text-sm hover:bg-gray-50">Contact & Support →</a>
           </div>
         </article>
     </div>
   </main>
-  <!-- Footer -->
     <footer class="pt-10">
       <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
         <ul class="flex flex-wrap justify-center gap-4 text-xs">
@@ -116,6 +115,5 @@
       </div>
     </footer>
   </div>
-    <script src="../../Scripts/role-manager.js"></script>
 </body>
 </html>

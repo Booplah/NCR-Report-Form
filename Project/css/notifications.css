@@ -1,0 +1,120 @@
+/* notification container layout */
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* adjust spacing between bell and account */
+}
+
+.notif-container {
+  position: relative;
+}
+
+.notif-bell {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.notif-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 10px;
+  background:#877ff8; /* your purple */
+  color:#fff;
+}
+
+.notif-dropdown {
+  display:none;
+  position:absolute;
+  right:0;
+  top:120%;
+  width:320px;
+  background:#fff;
+  border:1px solid #d6d2d3;
+  border-radius:10px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.12);
+  z-index:100;
+}
+
+.notif-dropdown.open { display:block; }
+.notif-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 12px;
+  border-bottom:1px solid #d6d2d3;
+}
+.notif-list {
+  list-style:none;
+  margin:0;
+  padding:0;
+  max-height:300px;
+  overflow:auto;
+}
+.notif-item { border-bottom:1px solid #f0f0f0; }
+.notif-item:last-child { border-bottom:none; }
+.notif-link { display:block; padding:10px 12px; text-decoration:none; color:inherit; }
+.notif-link:hover { background:#f7f7f7; }
+.notif-title { font-weight:600; }
+.unread .notif-title { font-weight:700; }
+.notif-msg { font-size:12px; opacity:0.8; }
+.notif-meta { display:flex; align-items:center; gap:8px; }
+.notif-time { font-size:11px; opacity:.7; }
+.notif-dot { width:8px; height:8px; border-radius:999px; background:#877ff8; }
+.notif-empty { padding:16px; text-align:center; color:#888; }
+.notif-markall { font-size:12px; border:none; background:transparent; color:#877ff8; cursor:pointer; }
+.notif-markall:hover { text-decoration:underline; }
+.notif-bell i[data-lucide="bell"] {
+  width: 22px;
+  height: 22px;
+  stroke: #535454; /* dark grey header text color */
+}
+.notif-item .notif-main {
+  display: flex;
+  align-items: center;         /* ⬅️ keeps icon and label on the same line */
+  gap: 8px;                    /* small space between icon and title */
+}
+.notif-item .notif-type i {
+  width: 16px;                 /* ⬅️ smaller icon size */
+  height: 16px;
+  vertical-align: middle;
+}
+
+/* Title inline, not on a new block */
+.notif-item .notif-title {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-right: 8px;
+  display: inline;             /* ⬅️ keeps it on same line as icon */
+}
+
+.unread .notif-title { font-weight: 700; }
+/* Timestamp and dot aligned to the right edge */
+.notif-item .notif-meta {
+  margin-left: auto;           /* pushes time/dot to the far right */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Color change for QUALITY_DONE (check-circle) */
+.notif-type svg.lucide-check-circle[data-lucide="check-circle"] {
+  stroke: #292980;             /* ⬅️ your requested color */
+}
+
+/* Optional: make all type icons purple by default */
+.notif-type svg.lucide-send[data-lucide] {
+  stroke: #877ff8;
+}
+
+

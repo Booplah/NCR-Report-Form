@@ -39,3 +39,15 @@
     <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl" style="color: rgb(0, 121, 208)">Success. Your work saved.</h2>
   </div>
 </div>
+
+<div id="finalModal" class="hidden fixed inset-0 z-50 grid place-content-center bg-black/50 p-4"role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div id="modalSubmitBox" class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg" onclick="event.stopPropagation()">
+      <h2 id="finalModalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl" >You are about to finish the report.</h2>
+      <div class="mt-4">
+        <p class="text-pretty text-gray-700">Confirm to proceed to the Final Review.</p>
+        <div class="mt-6 flex justify-end gap-4">
+          <button type="button" class="btn" onclick="window.location.href='./ncr-final-review.html'">Confirm</button>
+        </div>
+      </div>
+  </div>
+</div>

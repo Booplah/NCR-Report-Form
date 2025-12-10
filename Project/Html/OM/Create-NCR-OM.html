@@ -460,19 +460,19 @@
 
 
                                 </div>
+<div class="actions">
+    <button type="button" class="btn submit" id="procurementSubmitBtn">
+        Proceed to Final Review
+    </button>
 
-                                <div class="actions">
-                                    <button type="button" class="btn submit"
-                                        onclick="handleProcurementSubmit(event, 'submit')">
-                                        Submit</button>
+    <button type="button" class="btn save" onclick="handleProcurementSubmit(event, 'save')">
+        Save Draft
+    </button>
 
-                                    <button type="button" class="btn save"
-                                        onclick="handleProcurementSubmit(event, 'save')">
-                                        Save</button>
-
-                                    <button type="button" class="btn cancel" onclick="openModal('confirmModal')">
-                                        Cancel</button>
-                                </div>
+    <button type="button" class="btn cancel" onclick="openModal('confirmModal')">
+        Cancel
+    </button>
+</div>
                             </div>
                         </form>
                     </div>

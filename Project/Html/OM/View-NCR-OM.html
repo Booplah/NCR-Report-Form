@@ -91,7 +91,7 @@
                     <ul class="header-links">
                         <!-- Notification Bell -->
                         <li>
-                            <p class="account-name"><strong class="account-label">Account</strong></p>
+                            <p class="account-name"><strong class="account-label">Operations Manager</strong></p>
                         </li>
                         <li class="notif-container">
                             <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false"
@@ -299,7 +299,7 @@
                     </section>
 
                     <!-- Purchasing Section -->
-                    <section id="sec-purchasing" class="progress-section" data-step-content="procurement" hidden data-section-role="proc-section">
+                    <section id="sec-purchasing" class="progress-section" data-step-content="procurement" hidden >
                         <div class="section-header operations">Operations</div>
                         <div class="row">
                             <div class="field-box">
@@ -342,7 +342,7 @@
                         <div class="row">
                             <div class="inline-field half-width">
                                 <div class="field-label" style="color: #497ba1;">Operation's Manager:</div>
-                                <div class="field-value">Linda Brown</div>
+                                <div class="field-value" >Linda Brown</div>
                             </div>
                             <div class="inline-field half-width">
                                 <div class="field-label" style="color: #497ba1;">Date:</div>
@@ -352,7 +352,6 @@
                         <h2 class="section-header procurement">Procurement </h2>
 
                                 <div class="form-grid">
-
                                     <div class="row">
                                         <div class="field-box full-width">
                                             <label class="field-label">Supplier Disposition Decision</label>
@@ -411,19 +410,19 @@
 
                                             <label>
                                                 <input type="checkbox" name="sapReturnCompleteCheck"
-                                                    id="sapReturnCompleteCheck" value="Completed">
+                                                    id="sapReturnCompleteCheck" value="Completed" disabled>
                                                 Supplier return has been completed in SAP
                                             </label>
 
                                             <label>
                                                 <input type="checkbox" name="creditExpectedCheck"
-                                                    id="creditExpectedCheck" value="Expected">
+                                                    id="creditExpectedCheck" value="Expected" checked disabled>
                                                 Expecting a credit from the supplier
                                             </label>
 
                                             <label>
                                                 <input type="checkbox" name="billingSupplierReworkCheck"
-                                                    id="billingSupplierReworkCheck" value="Billing">
+                                                    id="billingSupplierReworkCheck" value="Billing" disabled>
                                                 Billing the supplier for expenses incurred in rework
                                             </label>
                                         </div>

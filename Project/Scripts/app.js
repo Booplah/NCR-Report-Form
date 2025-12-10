@@ -16,7 +16,7 @@ function disableFieldsByRole(role) {
         // FIX: Map Operations role to 'ops-section'
         [ROLES.OPERATIONS]: ["ops-section"],
         // FIX: Map Procurement role to 'proc-section'
-        [ROLES.PROCUREMENT]: ["proc-section"], 
+        [ROLES.PROCUREMENT]: ["proc-section"],
         [ROLES.INSPECTOR]: ["insp-section"],
         // FIX: Update ADMIN to include both new sections
         [ROLES.ADMIN]: ["qa-section", "eng-section", "ops-section", "proc-section", "insp-section"]
@@ -221,12 +221,12 @@ function handleProcurementSubmit(e) {
     // 1. Validar campos de Operaciones (Nombre y Fecha)
     // Estos campos están dentro del formulario formProcurement en el HTML
     const opsIds = ["operationsManager", "operationsManagerDate"];
-    let opsValid = validateFields(opsIds); 
-    
+    let opsValid = validateFields(opsIds);
+
     // Si falla operaciones, mostramos alerta y detenemos
     if (!opsValid) {
         alert("Please fill in the Operations Manager Name and Date.");
-        return; 
+        return;
     }
 
     // 2. Validar Radio Button obligatorio: "Supplier Disposition Decision"
@@ -240,49 +240,47 @@ function handleProcurementSubmit(e) {
     const carrierEl = document.getElementById('carrierDetails');
     if (rmaEl) rmaEl.classList.remove("border-red-500");
     if (carrierEl) carrierEl.classList.remove("border-red-500");
-    
+
     if (!radioValid) {
         if (radioErrorDiv) radioErrorDiv.textContent = "Please select a disposition decision (Return or Dispose).";
     } else {
         if (radioErrorDiv) radioErrorDiv.textContent = "";
 
         if (requiredRadio.value === 'Return') {
-             let rmaValid = true;
-             let carrierValid = true;
+            let rmaValid = true;
+            let carrierValid = true;
 
-             if (rmaEl && !rmaEl.value.trim()) {
-                 rmaEl.classList.add("border-red-500");
-                 rmaValid = false;
-                
-                 const errRma = document.getElementById("err-rmaNumber");
-                 if(errRma) errRma.textContent = "RMA # is required for returns.";
-             }
-             
-             if (carrierEl && !carrierEl.value.trim()) {
-                 carrierEl.classList.add("border-red-500");
-                 carrierValid = false;
-                 const errCarr = document.getElementById("err-carrierDetails");
-                 if(errCarr) errCarr.textContent = "Carrier details are required.";
-             }
-             
-             if (!rmaValid || !carrierValid) {
-                 conditionalValid = false;
-             }
+            if (rmaEl && !rmaEl.value.trim()) {
+                rmaEl.classList.add("border-red-500");
+                rmaValid = false;
+
+                const errRma = document.getElementById("err-rmaNumber");
+                if (errRma) errRma.textContent = "RMA # is required for returns.";
+            }
+
+            if (carrierEl && !carrierEl.value.trim()) {
+                carrierEl.classList.add("border-red-500");
+                carrierValid = false;
+                const errCarr = document.getElementById("err-carrierDetails");
+                if (errCarr) errCarr.textContent = "Carrier details are required.";
+            }
+
+            if (!rmaValid || !carrierValid) {
+                conditionalValid = false;
+            }
         }
     }
 
- 
-    if (opsValid && radioValid && conditionalValid) {
-        console.log("Procurement & Operations form submitted successfully!");
-        
-        // Aquí guardarías en localStorage si fuera necesario
-        // const list = JSON.parse(localStorage.getItem("ncrList") || "[]");
-        // ... lógica de guardado ...
 
-        alert("Operations & Procurement changes saved successfully.");
-        
+    if (allValid && action === 'submit') {
+        alert("NCR successfully submitted by Operations & Procurement! Proceeding to Final Review...");
+
+        // REDIRECT TO FINAL REVIEW PAGE
+        window.location.href = "./ncr-final-review.html";
+    } else if (allValid && action === 'save') {
+        alert("Draft saved successfully!");
     } else {
-        alert("Please correct the highlighted errors.");
+        alert("Please fix the highlighted errors before submitting.");
     }
 }
 // --- Initialization Block Update ---
@@ -325,8 +323,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const formQA = document.getElementById("formQualityRep");
     if (formQA) formQA.addEventListener("submit", handleQualitySubmit);
     // Form Submission: Attach submit handler for Operations form
-    const formOperations = document.getElementById("formOperations");
-    if (formOperations) formOperations.addEventListener("submit", handleOperationsSubmit);
+    //const formOperations = document.getElementById("formOperations");
+    // if (formOperations) formOperations.addEventListener("submit", handleOperationsSubmit);
 
     // Form Submission: Attach submit handler for Procurement form (calls revised function)
     const formProcurement = document.getElementById("formProcurement");

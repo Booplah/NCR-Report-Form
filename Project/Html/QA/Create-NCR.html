@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CrossFire NCR – Engineering</title>
+    <title>CrossFire NCR – Quality Representative </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../../css/create-ncr.css">
     <link rel="stylesheet" href="../../css/buttons.css">
@@ -19,6 +19,7 @@
 </head>
 
 <body class="page-container">
+    <!-- Sidebar -->
     <aside class="sidebar">
         <div class="sidebar-content">
             <div class="sidebar-logo">
@@ -30,7 +31,7 @@
             <hr>
             <ul class="sidebar-items">
                 <li class="siderbar-item">
-                    <a href="./index.html" class="menu-link">
+                    <a href="../../Html/index.html" class="menu-link">
                         <i data-lucide="home"></i>
                         <span>Home</span>
                     </a>
@@ -39,7 +40,7 @@
                         <i data-lucide="layout-dashboard"></i>
                         <span>Dashboard</span>
                     </a></li>
-                <li class="siderbar-item"><a href="./Create-NCR.html" class="menu-link active">
+                <li class="siderbar-item"><a href="../../Html/Sidebar/Create-NCR.html" class="menu-link active">
                         <i data-lucide="file-plus"></i>
                         <span>Create NCR</span>
                     </a></li>
@@ -51,15 +52,15 @@
                             <span class="dropdown-arrow"></span>
                         </summary>
                         <ul class="dropdown-items">
-                            <li><a href="../Help&About/Help-About.html" class="dropdown-link">
+                            <li><a href="../Sidebar/help-about.html" class="dropdown-link">
                                     <i data-lucide="info"></i>
                                     <span>About This Project</span>
                                 </a></li>
-                            <li><a href="../Help&About/Help-Usage.html" class="dropdown-link">
+                            <li><a href="../Sidebar/help-usage.html" class="dropdown-link">
                                     <i data-lucide="book-open"></i>
                                     <span>User Guide</span>
                                 </a></li>
-                            <li><a href="../Help&About/Help-Contacts.html" class="dropdown-link">
+                            <li><a href="../Sidebar/help-contacts.html" class="dropdown-link">
                                     <i data-lucide="phone"></i>
                                     <span>Contact & Support</span>
                                 </a></li>
@@ -69,9 +70,11 @@
             </ul>
         </div>
         <div class="sidebar-footer">
-            <a href="../Login.html" class="menu-link">Logout</a>
+            <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
         </div>
     </aside>
+
+    <!-- Main Content -->
     <div class="page-content">
         <header class="main-header">
             <div class="header-content">
@@ -81,7 +84,7 @@
                 <nav class="header-navigation">
                     <ul class="header-links">
                         <li class="account-info">
-                            <p class="account-name"><strong class="account-label">Quality Assurance</strong></p>
+                            <p class="account-name"><strong class="account-label">Account</strong></p>
                         </li>
                         <!-- Notification Bell -->
                         <li class="notif-container">
@@ -104,9 +107,14 @@
                 </nav>
             </div>
         </header>
+
         <main class="flex-1 p-6">
             <div class="max-w-4xl mx-auto gap-5">
+
+                <!-- Form Sections -->
                 <section id="view-create" class="pt-6">
+
+                    <!-- Quality Representative -->
                     <div class="card pad progress-section">
                         <h2 class="section-header quality">Quality Representative</h2>
                         <form id="formQualityRep" novalidate>
@@ -116,9 +124,7 @@
 
                                         <div class="flex justify-between field-header">
                                             <label for="processApplicable" class="field-label">Identify Process
-                                                Applicable
-                                                <span class="required" aria-hidden="true">*</span>
-                                            </label>
+                                                Applicable<span class="required" aria-hidden="true">*</span></label>
 
                                             <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
                                                 alt="Help icon" onclick="openModal('helperModal')" />
@@ -245,26 +251,20 @@
                                 </div>
 
                                 <div class="actions">
-                                    <button type="button" class="btn submit"
-                                        onclick="openModal('submitModal')">
-                                        Create
-                                    </button>
-
                                     <button type="button" class="btn save"
-                                        onclick="openModal('saveModal')">
-                                        Save
-                                    </button>
-
-                                    <button type="button" class="btn"
+                                        onclick="openModal('submitModal')">
+                                        Create</button>
+                                    <button type="button" class="btn cancel"
                                         onclick="openModal('confirmModal')">
-                                        Back
-                                    </button>
+                                        Cancel</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </section>
             </div>
+
+            <!-- Footer -->
             <footer class="pt-10">
                 <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
                     <ul class="flex flex-wrap justify-center gap-4 text-xs">
@@ -276,10 +276,14 @@
             </footer>
         </main>
     </div>
+
+    <!-- Notification System -->
     <script defer src="../../Scripts/app.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../../Scripts/notifications-demo.js"></script>
     <script src="../../Scripts/modals.js"></script>
     <script>if (window.lucide) lucide.createIcons();</script>
+    <script src="../../Scripts/role-manager.js"></script>
 </body>
+
 </html>

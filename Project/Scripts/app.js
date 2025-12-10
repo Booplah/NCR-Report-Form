@@ -215,31 +215,27 @@ function handleEngineeringSubmit(e) {
         alert("Please fill all required fields and correct the highlighted errors.");
     }
 }
-// Handler for Operations Section
-function handleOperationsSubmit(e) {
-    e.preventDefault();
-
-    // Validate required fields: Operations Manager Name and Date.
-    const requiredInputs = ["operationsManager", "operationsManagerDate"];
-    let inputsValid = validateFields(requiredInputs);
-
-    if (inputsValid) {
-        console.log("Operations form submitted and validated successfully! (Data saved placeholder)");
-        alert("Operations changes saved successfully. ✅");
-    } else {
-        alert("Please fill all required fields and correct the highlighted errors.");
-    }
-}
 function handleProcurementSubmit(e) {
-    e.preventDefault();
+    if (e) e.preventDefault(); // Prevenir recarga si viene de un evento submit
 
-    // 1. Mandatory Decision Check: "Supplier Disposition Decision" radio group
+    // 1. Validar campos de Operaciones (Nombre y Fecha)
+    // Estos campos están dentro del formulario formProcurement en el HTML
+    const opsIds = ["operationsManager", "operationsManagerDate"];
+    let opsValid = validateFields(opsIds); 
+    
+    // Si falla operaciones, mostramos alerta y detenemos
+    if (!opsValid) {
+        alert("Please fill in the Operations Manager Name and Date.");
+        return; 
+    }
+
+    // 2. Validar Radio Button obligatorio: "Supplier Disposition Decision"
     const requiredRadio = document.querySelector('input[name="supplierDispositionDecision"]:checked');
     let radioValid = !!requiredRadio;
     const radioErrorDiv = document.getElementById('err-supplierDispositionDecision');
     let conditionalValid = true;
 
-    // Clear previous error states for return fields
+    // Limpiar errores previos de RMA/Carrier
     const rmaEl = document.getElementById('rmaNumber');
     const carrierEl = document.getElementById('carrierDetails');
     if (rmaEl) rmaEl.classList.remove("border-red-500");
@@ -250,7 +246,6 @@ function handleProcurementSubmit(e) {
     } else {
         if (radioErrorDiv) radioErrorDiv.textContent = "";
 
-        // 2. Conditional Validation: If 'Return' is selected, RMA # and Carrier Info are mandatory.
         if (requiredRadio.value === 'Return') {
              let rmaValid = true;
              let carrierValid = true;
@@ -258,25 +253,36 @@ function handleProcurementSubmit(e) {
              if (rmaEl && !rmaEl.value.trim()) {
                  rmaEl.classList.add("border-red-500");
                  rmaValid = false;
+                
+                 const errRma = document.getElementById("err-rmaNumber");
+                 if(errRma) errRma.textContent = "RMA # is required for returns.";
              }
              
              if (carrierEl && !carrierEl.value.trim()) {
                  carrierEl.classList.add("border-red-500");
                  carrierValid = false;
+                 const errCarr = document.getElementById("err-carrierDetails");
+                 if(errCarr) errCarr.textContent = "Carrier details are required.";
              }
              
              if (!rmaValid || !carrierValid) {
                  conditionalValid = false;
-                 // Note: Using alert for consolidated error message
              }
         }
     }
 
-    if (radioValid && conditionalValid) {
-        console.log("Procurement form submitted and validated successfully! (Data saved placeholder)");
-        alert("Procurement changes saved successfully. ✅");
+ 
+    if (opsValid && radioValid && conditionalValid) {
+        console.log("Procurement & Operations form submitted successfully!");
+        
+        // Aquí guardarías en localStorage si fuera necesario
+        // const list = JSON.parse(localStorage.getItem("ncrList") || "[]");
+        // ... lógica de guardado ...
+
+        alert("Operations & Procurement changes saved successfully.");
+        
     } else {
-        alert("Please correct the highlighted errors and ensure a disposition decision is made.");
+        alert("Please correct the highlighted errors.");
     }
 }
 // --- Initialization Block Update ---

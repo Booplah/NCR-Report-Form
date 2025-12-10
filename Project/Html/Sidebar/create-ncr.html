@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossFire NCR – Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css/create-ncr.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/viewNCR.css">
+    <link rel="stylesheet" href="../../css/Main-Page.css">
+    <link rel="stylesheet" href="../../css/notifications.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="page-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-logo">
+                <a href="../index.html" class="logo-image">
+                    <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo"
+                        style="width: auto; height: 80%;">
+                </a>
+            </div>
+            <hr>
+            <ul class="sidebar-items">
+                <li class="siderbar-item">
+                    <a href="../../Html/index.html" class="menu-link">
+                        <i data-lucide="home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="siderbar-item"><a href="../../Html/Sidebar/dashboard.html" class="menu-link">
+                        <i data-lucide="layout-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a></li>
+                <li class="siderbar-item"><a href="../../Html/Sidebar/Create-NCR.html" class="menu-link active">
+                        <i data-lucide="file-plus"></i>
+                        <span>Create NCR</span>
+                    </a></li>
+                <li class="siderbar-item"><a href="../../Html/Sidebar/admin.html" class="menu-link">
+                        <i data-lucide="settings"></i>
+                        <span>Admin Page</span>
+                    </a></li>
+                <li class="siderbar-item">
+                    <details class="dropdown-menu">
+                        <summary class="dropdown-toggle">
+                            <i data-lucide="help-circle"></i>
+                            <span class="dropdown-label">Help & About</span>
+                            <span class="dropdown-arrow"></span>
+                        </summary>
+                        <ul class="dropdown-items">
+                            <li><a href="../Sidebar/help-about.html" class="dropdown-link">
+                                    <i data-lucide="info"></i>
+                                    <span>About This Project</span>
+                                </a></li>
+                            <li><a href="../Sidebar/help-usage.html" class="dropdown-link">
+                                    <i data-lucide="book-open"></i>
+                                    <span>User Guide</span>
+                                </a></li>
+                            <li><a href="../Sidebar/help-contacts.html" class="dropdown-link">
+                                    <i data-lucide="phone"></i>
+                                    <span>Contact & Support</span>
+                                </a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-footer">
+            <a href="../Sidebar/help-contacts.html" class="help-link">Support</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="page-content">
+        <header class="main-header">
+            <div class="header-content">
+                <a href="#" class="header-title">
+                    <h1 class="page-title">Create NCR - Quality Department</h1>
+                </a>
+                <nav class="header-navigation">
+                    <ul class="header-links">
+                        <li class="account-info">
+                            <p class="account-name"><strong class="account-label">Account</strong></p>
+                        </li>
+                        <!-- Notification Bell -->
+                        <li class="notif-container">
+                            <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false"
+                                aria-label="Notifications">
+                                <i data-lucide="bell"></i>
+                                <span id="notif-badge" class="notif-badge" style="display:none;">0</span>
+                            </button>
+                            <div id="notif-dropdown" class="notif-dropdown">
+                                <div class="notif-head">
+                                    <span>Notifications</span>
+                                    <button id="notif-markall" class="notif-markall">Mark all read</button>
+                                </div>
+                                <ul id="notif-list" class="notif-list"></ul>
+                                <div id="notif-empty" class="notif-empty" style="display:none;">You're all caught up.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="flex-1 p-6">
+            <div class="max-w-4xl mx-auto gap-5">
+
+                <!-- Form Sections -->
+                <section id="view-create" class="pt-6">
+
+                    <!-- Quality Representative -->
+                    <div class="card pad progress-section">
+                        <h2 class="section-header quality">Quality Representative</h2>
+                        <form id="formQualityRep" novalidate>
+                            <div class="form-grid">
+                                <div class="row">
+                                    <div class="field-box">
+
+                                        <div class="flex justify-between field-header">
+                                            <label for="processApplicable" class="field-label">Identify Process
+                                                Applicable<span class="required" aria-hidden="true">*</span></label>
+
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+
+                                        <select id="processApplicable" name="processApplicable" class="input">
+                                            <option value="">Click to Select</option>
+                                            <option value="Supplier or Rec-Insp">Supplier or Rec-Insp</option>
+                                            <option value="WIP (Production Order)">WIP (Production Order)</option>
+                                        </select>
+
+                                        <div id="err-ncrNumber" class="error" role="alert" aria-live="polite"></div>
+                                    </div>
+
+                                    <div class="field-box">
+                                        <div class="flex justify-between field-header">
+                                            <label for="supplierName" class="field-label">Supplier Name</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+                                        <input id="supplierName" name="supplierName" class="input" type="text"
+                                            placeholder="Ex:ABC Components">
+                                    </div>
+                                    <div class="field-box">
+                                        <div class="flex justify-between field header">
+                                            <label class="field-label">NCR/PO/SO</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+                                        <input id="ncrNumber" name="ncrNumber" class="input mb-2" type="text"
+                                            placeholder="Ex: NCR-2025-011" readonly>
+                                        <input id="poOrProdNo" name="poOrProdNo" class="input mb-2" type="text"
+                                            placeholder="Ex: PO-1013">
+                                        <input id="salesOrderNo" name="salesOrderNo" class="input" type="text"
+                                            placeholder="Ex: SO-0613">
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box" style="flex: 2;">
+                                        <div class="flex justify-between field-header">
+                                            <label for="itemDescriptionSAP" class="field-label">Description of Item
+                                                (including SAP No.)</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+                                        <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input"
+                                            type="text" placeholder="Ex: LED Ring Light + Phone Holder">
+                                    </div>
+                                    <div class="field-box" style="flex: 1;">
+                                        <div class="flex justify-between field-header">
+                                            <label for="qtyReceived" class="field-label">Quantity Received</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+                                        <input id="qtyReceived" name="qtyReceived" class="input" type="number"
+                                            placeholder="Ex: 100">
+                                    </div>
+                                    <div class="field-box" style="flex: 1;">
+                                        <div class="flex justify-between field-header">
+                                            <label for="qtyDefective" class="field-label">Quantity Defective</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+                                        <input id="qtyDefective" name="qtyDefective" class="input" type="number"
+                                            placeholder="Ex: 10">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box full-width">
+                                        <div class="flex justify-between field-header">
+                                            <label for="defectDescription" class="field-label">Description of
+                                                Defect</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+                                        <textarea id="defectDescription" name="defectDescription" class="input" rows="3"
+                                            placeholder="Ex: Mobile phone clip is broken, and USB cable is frayed."></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box">
+                                        <div class=" flex justify-between field-header">
+                                            <label class="field-label">Item marked Nonconforming</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+                                        <div class="radio-group">
+                                            <label><input type="radio" name="itemMarkedNonconforming" value="Yes">
+                                                Yes</label>
+                                            <label><input type="radio" name="itemMarkedNonconforming" value="No">
+                                                No</label>
+                                        </div>
+                                    </div>
+                                    <div class="field-box">
+                                        <div class="flex justify-between field-header">
+                                            <label for="fileNCR" class="field-label">Attachment Upload</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+                                        <input type="file" id="fileNCR" multiple class="input">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-box">
+                                        <label for="reportedBy" class="field-label">Quality Representative's
+                                            Name</label>
+                                        <input id="reportedBy" name="reportedBy" class="input" type="text"
+                                            placeholder="Ex: Dave Kendell">
+                                    </div>
+                                    <div class="field-box">
+                                        <div class="flex justify-between field-header">
+                                            <label for="dateReported" class="field-label">Date Reported</label>
+                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
+                                                alt="Help icon" onclick="openModal('helperModal')" />
+                                        </div>
+                                        <input id="dateReported" name="dateReported" class="input" type="date"
+                                            placeholder="Ex: 2025-11-04">
+                                    </div>
+                                </div>
+
+                                <div class="actions">
+                                    <button type="button" class="btn save"
+                                        onclick="openModal('submitModal')">
+                                        Create</button>
+                                    <button type="button" class="btn cancel"
+                                        onclick="openModal('confirmModal')">
+                                        Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer class="pt-10">
+                <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
+                    <ul class="flex flex-wrap justify-center gap-4 text-xs">
+                        <li><a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a></li>
+                    </ul>
+                    <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Notification System -->
+    <script defer src="../../Scripts/app.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../../Scripts/notifications-demo.js"></script>
+    <script src="../../Scripts/modals.js"></script>
+    <script>if (window.lucide) lucide.createIcons();</script>
+    <script src="../../Scripts/role-manager.js"></script>
+</body>
+
+</html>

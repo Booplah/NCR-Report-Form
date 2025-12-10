@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../css/Main-Page.css">
+  <link rel="stylesheet" href="../../css/buttons.css">
+  <link rel="stylesheet" href="../../css/notifications.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+</head>
+<body class="page-container">
+  <aside class="sidebar">
+    <div class="sidebar-content">
+      <div class="sidebar-logo">
+        <a href="../../Html/index.html" class="logo-image">
+          <img src="../../Images/crossfire-logo.png" alt="CrossFire NCR System Logo" style="width: auto; height: 80%;">
+        </a>
+      </div>
+      <hr>
+      <ul class="sidebar-items">
+        <li class="siderbar-item">
+          <a href="index.html" class="menu-link active">
+            <i data-lucide="home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="siderbar-item">
+          <a href="./Dashboard.html" class="menu-link">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="siderbar-item">
+          <a href="./Create-NCR.html" class="menu-link">
+            <i data-lucide="file-plus"></i>
+            <span>Create NCR</span>
+          </a>
+        </li>
+        <li class="siderbar-item">
+          <details class="dropdown-menu">
+            <summary class="dropdown-toggle">
+              <i data-lucide="help-circle"></i>
+              <span class="dropdown-label">Help & About</span>
+              <span class="dropdown-arrow"></span>
+            </summary>
+
+            <ul class="dropdown-items">
+              <li>
+                <a href="../Help&About/Help-About.html" class="dropdown-link">
+                  <i data-lucide="info"></i>
+                  <span>About This Project</span>
+                </a>
+              </li>
+              <li>
+                <a href="../Help&About/Help-Usage.html" class="dropdown-link">
+                  <i data-lucide="book-open"></i>
+                  <span>User Guide</span>
+                </a>
+              </li>
+              <li>
+                <a href="../Help&About/Help-Contacts.html" class="dropdown-link">
+                  <i data-lucide="phone"></i>
+                  <span>Contact & Support</span>
+                </a>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar-footer">
+      <a href="../Login.html" class="menu-link">Logout</a>
+    </div>
+  </aside>
+
+  <div class="page-content">
+    <header class="main-header">
+      <div class="header-content">
+        <a href="#" class="header-title">
+          <h1 class="page-title">Dashboard</h1>
+        </a>
+        <nav class="header-navigation">
+          <ul class="header-links">
+            <li class="account-info">
+              <p class="account-name"><strong class="account-label">Quality Assurance</strong></p>
+            </li>
+            <!-- Notification Bell + Dropdown -->
+            <li class="notif-container">
+              <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false"
+                aria-label="Notifications">
+                <i data-lucide="bell"></i>
+                <span id="notif-badge" class="notif-badge" style="display:none;">0</span>
+              </button>
+
+              <div id="notif-dropdown" class="notif-dropdown">
+                <div class="notif-head">
+                  <span>Notifications</span>
+                  <button id="notif-markall" class="notif-markall">Mark all read</button>
+                </div>
+                <ul id="notif-list" class="notif-list"></ul>
+                <div id="notif-empty" class="notif-empty" style="display:none;">You are all caught up.</div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1 flex flex-col justify-center items-center text-center p-10">
+      <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
+        Welcome to
+        <p style="color: #2d6ea7;"> CrossFire NCR </p>
+      </h1>
+
+      <p class="mt-6 text-lg text-gray-700 max-w-3xl">
+        Streamline your Non-Conformance Reporting process with our comprehensive digital solution.
+        Track, manage, and resolve quality issues efficiently across your organization.
+      </p>
+
+      <div class="mt-4 flex justify-center gap-4 sm:mt-6">
+        <button class="btn-action" onclick="window.location.href='./Create-NCR.html'">
+          New NCR
+        </button>
+        <button class="btn-action" onclick="window.location.href='./Dashboard.html'">
+          View Dashboard
+        </button>
+      </div>
+    </main>
+
+    <footer class="left-64 right-0 bg-white border-t border-gray-200 py-3 z-10">
+      <div class="flex flex-col items-center justify-center gap-4 text-center py-4">
+        <ul class="flex flex-wrap justify-center gap-4 text-xs">
+          <li><a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a></li>
+          <li><a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a></li>
+        </ul>
+        <p class="text-gray-500 text-xs">© CrossFire NCR. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+  <script src="../../Scripts/app.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="../../Scripts/notifications-demo.js"></script>
+  <script>
+    if (window.lucide) lucide.createIcons();
+  </script>
+</body>
+</html>

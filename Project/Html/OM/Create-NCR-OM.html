@@ -122,186 +122,150 @@
                     <div class="ncr-sum">NCR No: <strong>2025-023</strong> | Status: <strong>Active</strong> | Date: Oct
                         10 2025</div>
                     <!-- Quality Representative Section -->
-                    <div class="progress-section" data-step-content="quality" hidden>
+<div class="progress-section" data-step-content="quality" hidden>
+    <h2 class="section-header quality">Quality Representative – Completed</h2>
 
-                        <h2 class="section-header quality">Quality Representative</h2>
-
-                        <form id="formQualityRep" novalidate data-section-role="proc-section">
-
-                            <div class="form-grid">
-                                <div class="row">
-                                    <div class="field-box">
-                                        <label for="processApplicable" class="field-label">Identify Process
-                                            Applicable</label>
-                                        <select id="processApplicable" name="processApplicable" class="input">
-                                            <option value="">Select…</option>
-                                            <option value="Supplier or Rec-Insp" selected>Supplier or Rec-Insp
-                                            </option>
-                                            <option value="WIP (Production Order)">WIP (Production Order)
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div class="field-box">
-                                        <label for="supplierName" class="field-label">Supplier Name</label>
-                                        <input id="supplierName" name="supplierName" class="input" type="text"
-                                            value="ABC Components">
-                                    </div>
-                                    <div class="field-box">
-                                        <label class="field-label">NCR/PO/SO</label>
-                                        <input id="ncrNumber" name="ncrNumber" class="input mb-2" type="text"
-                                            value="NCR-2025-011" readonly>
-                                        <input id="poOrProdNo" name="poOrProdNo" class="input mb-2" type="text"
-                                            value="PO-1013">
-                                        <input id="salesOrderNo" name="salesOrderNo" class="input" type="text"
-                                            value="SO-0613">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="field-box" style="flex: 2;">
-                                        <label for="itemDescriptionSAP" class="field-label">Description of Item
-                                            (including SAP No.)</label>
-                                        <input id="itemDescriptionSAP" name="itemDescriptionSAP" class="input"
-                                            type="text" value="LED Ring Light + Phone Holder">
-                                    </div>
-                                    <div class="field-box" style="flex: 1;">
-                                        <label for="qtyReceived" class="field-label">Quantity Received</label>
-                                        <input id="qtyReceived" name="qtyReceived" class="input" type="number"
-                                            value="100">
-                                    </div>
-                                    <div class="field-box" style="flex: 1;">
-                                        <label for="qtyDefective" class="field-label">Quantity Defective</label>
-                                        <input id="qtyDefective" name="qtyDefective" class="input" type="number"
-                                            value="10">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="field-box full-width">
-                                        <label for="defectDescription" class="field-label">Description of
-                                            Defect</label>
-                                        <textarea id="defectDescription" name="defectDescription" class="input"
-                                            rows="3">"Mobile phone clip is broken, and USB cable is frayed."</textarea>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="field-box">
-                                        <label class="field-label">Item marked Nonconforming</label>
-                                        <div class="radio-group">
-                                            <label><input type="radio" name="itemMarkedNonconforming" value="Yes"
-                                                    checked>
-                                                Yes</label>
-                                            <label><input type="radio" name="itemMarkedNonconforming" value="No">
-                                                No</label>
-                                        </div>
-                                    </div>
-                                    <div class="field-box">
-                                        <label for="fileNCR" class="field-label">Attachment Upload</label>
-                                        <input id="fileNCR" multiple class="input" value="No files chosen">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="field-box">
-                                        <label for="reportedBy" class="field-label">Quality Representative's
-                                            Name</label>
-                                        <input id="reportedBy" name="reportedBy" class="input" type="text"
-                                            value="Dave Kendell">
-                                    </div>
-                                    <div class="field-box">
-                                        <label for="dateReported" class="field-label">Date Reported</label>
-                                        <input id="dateReported" name="dateReported" class="input" type="date"
-                                            value="2025-11-04">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </form>
-
+    <form id="formQualityRep" novalidate>
+        <fieldset disabled>
+            <div class="form-grid">
+                <div class="row">
+                    <div class="field-box">
+                        <label class="field-label">Identify Process Applicable</label>
+                        <select class="input" disabled>
+                            <option selected>Supplier or Rec-Insp</option>
+                        </select>
                     </div>
+                    <div class="field-box">
+                        <label class="field-label">Supplier Name</label>
+                        <input class="input" type="text" value="ABC Components" disabled>
+                    </div>
+                    <div class="field-box">
+                        <label class="field-label">NCR/PO/SO</label>
+                        <input class="input mb-2" type="text" value="NCR-2025-011" readonly>
+                        <input class="input mb-2" type="text" value="PO-1013" disabled>
+                        <input class="input" type="text" value="SO-0613" disabled>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field-box" style="flex: 2;">
+                        <label class="field-label">Description of Item (including SAP No.)</label>
+                        <input class="input" type="text" value="LED Ring Light + Phone Holder" disabled>
+                    </div>
+                    <div class="field-box" style="flex: 1;">
+                        <label class="field-label">Quantity Received</label>
+                        <input class="input" type="number" value="100" disabled>
+                    </div>
+                    <div class="field-box" style="flex: 1;">
+                        <label class="field-label">Quantity Defective</label>
+                        <input class="input" type="number" value="10" disabled>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field-box full-width">
+                        <label class="field-label">Description of Defect</label>
+                        <textarea class="input" rows="3" disabled>Mobile phone clip is broken, and USB cable is frayed.</textarea>
+                    </div>
+                </div>
+
+               
+
+                <div class="row">
+                    <div class="field-box">
+                        <label class="field-label">Item marked Nonconforming</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="itemMarkedNonconforming" value="Yes" checked disabled> Yes</label>
+                            <label><input type="radio" name="itemMarkedNonconforming" value="No" disabled> No</label>
+                        </div>
+                    </div>
+                    <div class="field-box">
+                        <label class="field-label">Attachment Upload</label>
+                        <div class="text-sm text-gray-600">Files attached (view only)</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field-box">
+                        <label class="field-label">Quality Representative's Name</label>
+                        <input class="input" type="text" value="Dave Kendell" disabled>
+                    </div>
+                    <div class="field-box">
+                        <label class="field-label">Date Reported</label>
+                        <input class="input" type="date" value="2025-11-04" disabled>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+                    
                     <!-- Engineering Section -->
-                    <div class="progress-section" data-step-content="engineering">
-                        <h2 class="section-header engineering">Engineering</h2>
-                        <form id="formEngineering" novalidate data-section-role="proc-section">
+<div class="progress-section" data-step-content="engineering">
+    <h2 class="section-header engineering">Engineering – Completed</h2>
 
-                            <div class="form-grid">
-                                <div class="row">
-                                    <div class="field-box">
-                                        <div class="flex justify-between field-header">
-                                            <label for="processApplicable" class="field-label">Review by CF
-                                                Engineering<span class="required" aria-hidden="true">*</span></label>
-
-                                            <img src="../../Images/HelpIcon.png" class="w-5 h-5 cursor-pointer"
-                                                alt="Help icon" onclick="openHelpModel()" />
-                                        </div>
-
-                                        <div class="radio-group two-col">
-                                            <label><input type="radio" name="cfEngDisposition" value="Use As Is">
-                                                Use As
-                                                Is</label>
-                                            <label><input type="radio" name="cfEngDisposition" value="Repair" checked>
-                                                Repair</label>
-                                            <label><input type="radio" name="cfEngDisposition" value="Rework">
-                                                Rework</label>
-                                            <label><input type="radio" name="cfEngDisposition" value="Scrap">
-                                                Scrap</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="field-box" style="flex: 2;">
-                                        <label for="dispositionDetails" class="field-label">Disposition</label>
-                                        <textarea id="dispositionDetails" name="dispositionDetails" class="input"
-                                            rows="4">1. Remove defective phone holder clips. 2. Install new clips. 3. Test USB cable functionality"</textarea>
-                                    </div>
-                                    <div class="field-box" style="flex: 1;">
-                                        <label class="field-label">Customer Notification Required?</label>
-                                        <div class="radio-group">
-                                            <label><input type="radio" name="reqNotif" value="Yes" checked>
-                                                Yes</label>
-                                            <label><input type="radio" name="reqNotif" value="No"> No</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="field-box">
-                                        <label class="field-label">Drawing Update Required?</label>
-                                        <div class="radio-group">
-                                            <label><input type="radio" name="reqUpdating" value="Yes" checked>
-                                                Yes</label>
-                                            <label><input type="radio" name="reqUpdating" value="No"> No</label>
-                                        </div>
-                                    </div>
-                                    <div class="field-box">
-                                        <label for="origRevNum" class="field-label">Original Rev. Number</label>
-                                        <input id="origRevNum" name="origRevNum" class="input" type="text"
-                                            value="REV-3030">
-                                    </div>
-                                    <div class="field-box">
-                                        <label for="updatedRev" class="field-label">Updated Rev. Number</label>
-                                        <input id="updatedRev" name="updatedRev" class="input" type="text"
-                                            value="REV-3031">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="field-box">
-                                        <label for="enginName" class="field-label">Engineer Name</label>
-                                        <input id="enginName" name="enginName" class="input" type="text"
-                                            value="Warren Tarasuk">
-                                    </div>
-                                    <div class="field-box">
-                                        <label for="engDate" class="field-label">Date</label>
-                                        <input id="engDate" name="engDate" class="input" type="date" value="2025-10-11">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </form>
+    <form id="formEngineering" novalidate>
+        <fieldset disabled>
+            <div class="form-grid">
+                <div class="row">
+                    <div class="field-box">
+                        <label class="field-label">Review by CF Engineering</label>
+                        <div class="radio-group two-col">
+                            <label><input type="radio" name="cfEngDisposition" value="Use As Is" disabled> Use As Is</label>
+                            <label><input type="radio" name="cfEngDisposition" value="Repair" checked disabled> Repair</label>
+                            <label><input type="radio" name="cfEngDisposition" value="Rework" disabled> Rework</label>
+                            <label><input type="radio" name="cfEngDisposition" value="Scrap" disabled> Scrap</label>
+                        </div>
                     </div>
+                </div>
+
+                <div class="row">
+                    <div class="field-box" style="flex: 2;">
+                        <label class="field-label">Disposition</label>
+                        <textarea class="input" rows="4" disabled>1. Remove defective phone holder clips. 2. Install new clips. 3. Test USB cable functionality.</textarea>
+                    </div>
+                    <div class="field-box" style="flex: 1;">
+                        <label class="field-label">Customer Notification Required?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="reqNotif" value="Yes" checked disabled> Yes</label>
+                            <label><input type="radio" name="reqNotif" value="No" disabled> No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field-box">
+                        <label class="field-label">Drawing Update Required?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="reqUpdating" value="Yes" checked disabled> Yes</label>
+                            <label><input type="radio" name="reqUpdating" value="No" disabled> No</label>
+                        </div>
+                    </div>
+                    <div class="field-box">
+                        <label class="field-label">Original Rev. Number</label>
+                        <input class="input" type="text" value="REV-3030" disabled>
+                    </div>
+                    <div class="field-box">
+                        <label class="field-label">Updated Rev. Number</label>
+                        <input class="input" type="text" value="REV-3031" disabled>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field-box">
+                        <label class="field-label">Engineer Name</label>
+                        <input class="input" type="text" value="Warren Tarasuk" disabled>
+                    </div>
+                    <div class="field-box">
+                        <label class="field-label">Date</label>
+                        <input class="input" type="date" value="2025-10-11" disabled>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
                     <!-- Operations and Procurement Section -->
                     <div class="progress-section" data-step-content="operations" hidden>
                         <h2 class="section-header operations">Operations</h2>

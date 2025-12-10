@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Dashboard Quality Representative</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../../css/Main-Page.css">
   <link rel="stylesheet" href="../../css/notifications.css">
@@ -26,38 +26,54 @@
       </div>
       <hr>
       <ul class="sidebar-items">
-        <li class="siderbar-item"><a href="./index.html" class="menu-link">
-            <i data-lucide="home"></i>
-            <span>Home</span></a></li>
         <li class="siderbar-item">
-          <a href="./Dashboard.html" class="menu-link active">
-            <i data-lucide="layout-dashboard"></i>
-            <span>Dashboard</span></a>
+          <a href="index.html" class="menu-link">
+            <i data-lucide="home"></i>
+            <span>Home</span>
+          </a>
         </li>
-        <li class="siderbar-item"><a href="./Create-NCR.html" class="menu-link">
+        <li class="siderbar-item">
+          <a href="Dashboard-Quality.html" class="menu-link active">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+            <li class="siderbar-item">
+        <a href="../../Html/Sidebar/Create-NCR.html" class="menu-link">
             <i data-lucide="file-plus"></i>
-            <span>Create NCR</span></a></li>
+            <span>Create NCR</span>
+        </a>
+    </li>
+    
+        <!-- Quality Representatives do NOT have "Create NCR" permission -->
+        <!-- So this item is intentionally removed -->
+
         <li class="siderbar-item">
           <details class="dropdown-menu">
             <summary class="dropdown-toggle">
               <i data-lucide="help-circle"></i>
               <span class="dropdown-label">Help & About</span>
-
               <span class="dropdown-arrow"></span>
             </summary>
             <ul class="dropdown-items">
-              <li><a href="./Help-About.html" class="dropdown-link">
+              <li>
+                <a href="../Help&About/Help-About.html" class="dropdown-link">
                   <i data-lucide="info"></i>
                   <span>About This Project</span>
-                </a></li>
-              <li><a href="./Help-Usage.html" class="dropdown-link">
+                </a>
+              </li>
+              <li>
+                <a href="../Help&About/Help-Usage.html" class="dropdown-link">
                   <i data-lucide="book-open"></i>
                   <span>User Guide</span>
-                </a></li>
-              <li><a href="./Help-Contacts.html" class="dropdown-link">
+                </a>
+              </li>
+              <li>
+                <a href="../Help&About/Help-Contacts.html" class="dropdown-link">
                   <i data-lucide="phone"></i>
                   <span>Contact & Support</span>
-                </a></li>
+                </a>
+              </li>
             </ul>
           </details>
         </li>
@@ -67,6 +83,7 @@
       <a href="../Login.html" class="menu-link">Logout</a>
     </div>
   </aside>
+
   <div class="page-content">
     <header class="main-header">
       <div class="header-content">
@@ -76,7 +93,7 @@
         <nav class="header-navigation">
           <ul class="header-links">
             <li class="account-info">
-              <p class="account-name"><strong class="account-label">Quality Assyrance</strong></p>
+              <p class="account-name"><strong class="account-label">Quality Representative</strong></p>
             </li>
             <li class="notif-container">
               <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false"
@@ -107,41 +124,41 @@
           <div class="bg-white rounded-md shadow p-7 border border-blue-600 border-l-4">
             <div class="flex items-center">
               <div class="ml-3.5">
-                <p class="text-sm font-medium">Total NCRs</p>
-                <p class="text-2xl font-bold text-gray-900">10</p>
+                <p class="text-sm font-medium">Total Assigned</p>
+                <p class="text-2xl font-bold text-gray-900">7</p>
               </div>
             </div>
           </div>
           <div class="bg-white rounded-md shadow p-7 border border-green-600 border-l-4">
             <div class="flex items-center">
               <div class="ml-3.5">
-                <p class="text-sm font-medium">Active NCRs</p>
-                <p class="text-2xl font-bold text-gray-900">6</p>
+                <p class="text-sm font-medium">Active</p>
+                <p class="text-2xl font-bold text-gray-900">4</p>
               </div>
             </div>
           </div>
           <div class="bg-white rounded-md shadow p-7 border border-red-600 border-l-4">
             <div class="flex items-center">
               <div class="ml-3.5">
-                <p class="text-sm font-medium">Closed NCRs</p>
-                <p class="text-2xl font-bold text-gray-900">4</p>
+                <p class="text-sm font-medium">Closed</p>
+                <p class="text-2xl font-bold text-gray-900">3</p>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- NCR List Section -->
         <div class="mb-7">
           <h3 class="text-2xl font-semibold text-gray-800 mb-5">NCR List</h3>
         </div>
 
         <div class="bg-white rounded-md shadow mb-7">
-          <div class="px-5 py-3.5 border-b border-gray-200 flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-gray-800">Recent NCRs</h3>
-            <a href="./Create-NCR.html"
-              class="bg-[#2D6EA7] text-white px-4 py-2.5 rounded-md hover:bg-[#275E8F] text-center font-medium">Create
-              New NCR</a>
+          <div class="px-5 py-3.5 border-b border-gray-200">
+            <h3 class="text-lg font-semibold text-gray-800">Quality Department NCRs</h3>
+            <!-- Removed "Create New NCR" button – Quality Reps can only view/edit -->
           </div>
 
+          <!-- Filters -->
           <div class="px-5 py-3.5 border-b border-gray-200">
             <div class="flex flex-wrap gap-3">
               <input type="text" id="searchInput" placeholder="Search NCRs..."
@@ -158,20 +175,21 @@
                     </svg>
                   </span>
                 </summary>
-                <div
-                  class="z-10 w-62 divide-y divide-gray-300 rounded border border-gray-300 bg-white shadow-sm group-open:absolute group-open:start-0 group-open:top-8 mt-1">
+                <div class="z-10 w-62 divide-y divide-gray-300 rounded border border-gray-300 bg-white shadow-sm group-open:absolute group-open:start-0 group-open:top-8 mt-1">
                   <fieldset class="p-2.5">
                     <legend class="sr-only">Sections</legend>
                     <div class="flex flex-col items-start gap-2.5">
-                      <label for="sectionQuality" class="inline-flex items-center gap-2.5">
-                        <input type="checkbox" class="section-checkbox size-5 rounded border-gray-300 shadow-sm"
-                          id="sectionQuality" value="Quality Rep" />
+                      <label class="inline-flex items-center gap-2.5">
+                        <input type="checkbox" class="section-checkbox size-5 rounded border-gray-300" value="Quality Rep" checked />
                         <span class="text-sm font-medium text-gray-700">Quality Rep</span>
                       </label>
-                      <label for="sectionEngineering" class="inline-flex items-center gap-2.5">
-                        <input type="checkbox" class="section-checkbox size-5 rounded border-gray-300 shadow-sm"
-                          id="sectionEngineering" value="Engineering" />
-                        <span class="text-sm font-medium text-gray-700">Engineering</span>
+                      <label class="inline-flex items-center gap-2.5">
+                        <input type="checkbox" class="section-checkbox size-5 rounded border-gray-300" value="Engineer" />
+                        <span class="text-sm font-medium text-gray-700">Engineer</span>
+                      </label>
+                      <label class="inline-flex items-center gap-2.5">
+                        <input type="checkbox" class="section-checkbox size-5 rounded border-gray-300" value="Operation" />
+                        <span class="text-sm font-medium text-gray-700">Operation</span>
                       </label>
                     </div>
                   </fieldset>
@@ -179,8 +197,7 @@
               </details>
 
               <details class="group relative">
-                <summary
-                  class="flex items-center justify-between gap-2 p-2.5 text-gray-700 transition-colors hover:text-gray-900 [&::-webkit-details-marker]:hidden cursor-pointer">
+                <summary class="flex items-center justify-between gap-2 p-2.5 text-gray-700 transition-colors hover:text-gray-900 [&::-webkit-details-marker]:hidden cursor-pointer">
                   <span class="text-sm font-medium">Status</span>
                   <span class="transition-transform group-open:-rotate-180">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -189,19 +206,16 @@
                     </svg>
                   </span>
                 </summary>
-                <div
-                  class="z-10 w-62 divide-y divide-gray-300 rounded border border-gray-300 bg-white shadow-sm group-open:absolute group-open:start-0 group-open:top-8 mt-1">
+                <div class="z-10 w-62 divide-y divide-gray-300 rounded border border-gray-300 bg-white shadow-sm group-open:absolute group-open:start-0 group-open:top-8 mt-1">
                   <fieldset class="p-2.5">
                     <legend class="sr-only">Status</legend>
                     <div class="flex flex-col items-start gap-2.5">
-                      <label for="statusActive" class="inline-flex items-center gap-2.5">
-                        <input type="checkbox" class="status-checkbox size-5 rounded border-gray-300 shadow-sm"
-                          id="statusActive" value="Active" />
+                      <label class="inline-flex items-center gap-2.5">
+                        <input type="checkbox" class="status-checkbox size-5 rounded border-gray-300" value="Active" checked />
                         <span class="text-sm font-medium text-gray-700">Active</span>
                       </label>
-                      <label for="statusClosed" class="inline-flex items-center gap-2.5">
-                        <input type="checkbox" class="status-checkbox size-5 rounded border-gray-300 shadow-sm"
-                          id="statusClosed" value="Closed" />
+                      <label class="inline-flex items-center gap-2.5">
+                        <input type="checkbox" class="status-checkbox size-5 rounded border-gray-300" value="Closed" />
                         <span class="text-sm font-medium text-gray-700">Closed</span>
                       </label>
                     </div>
@@ -210,17 +224,15 @@
               </details>
 
               <button id="resetAllFilters"
-                class="px-3 py-2.5 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 text-sm font-medium">Reset
-                All</button>
-              <button id="toggleNCRList" class="ml-auto hover:text-[#2D6EA7] font-medium focus:outline-none">View All
-                NCRs ▼</button>
+                class="px-3 py-2.5 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 text-sm font-medium">
+                Reset All
+              </button>
             </div>
           </div>
 
-          <!-- NCR Table -->
+          <!-- NCR Table - Only Quality Rep NCRs -->
           <div class="overflow-x-auto p-5">
             <table class="min-w-full divide-y divide-gray-200 text-sm">
-              <!-- NCR Types -->
               <thead class="bg-gray-50">
                 <tr>
                   <th class="px-3 py-2 text-left">NCR ID</th>
@@ -231,162 +243,91 @@
                   <th>Actions</th>
                 </tr>
               </thead>
-              <!-- Recent NCRs -->
+
               <tbody class="divide-y divide-gray-100">
                 <tr>
-                  <td class="px-3 py-2 font-medium text-gray-900">NCR-002</td>
+                  <td class="px-3 py-2 font-medium text-gray-900">NCR-011</td>
                   <td class="px-3 py-2 text-green-700">Active</td>
                   <td class="px-3 py-2">Quality Rep</td>
-                  <td class="px-3 py-2">2025-10-09</td>
-                  <td class="px-3 py-2">Dimensional deviation found in metal part assembly.</td>
+                  <td class="px-3 py-2">2025-11-15</td>
+                  <td class="px-3 py-2">Visual defect on painted surface detected during final inspection.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../Sidebar/Create-NCR-Engineer.html" class="btnActions create">Create Engineer</a>
+                    <a href="./view-ncr-qa.html" class="btnActions">View/Edit</a>
                   </td>
                 </tr>
 
                 <tr>
-                  <td class="px-3 py-2 font-medium text-gray-900">NCR-003</td>
+                  <td class="px-3 py-2 font-medium text-gray-900">NCR-012</td>
                   <td class="px-3 py-2 text-green-700">Active</td>
                   <td class="px-3 py-2">Quality Rep</td>
-                  <td class="px-3 py-2">2025-10-01</td>
-                  <td class="px-3 py-2">Packaging defect corrected and verified.</td>
+                  <td class="px-3 py-2">2025-11-10</td>
+                  <td class="px-3 py-2">Missing inspection stamp on certified product.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../Sidebar/Create-NCR-Engineer.html" class="btnActions create">Create Engineer</a>
+                    <a href="./view-ncr-qa.html" class="btnActions">View/Edit</a>
                   </td>
                 </tr>
 
                 <tr>
-                  <td class="px-3 py-2 font-medium text-gray-900">NCR-005</td>
+                  <td class="px-3 py-2 font-medium text-gray-900">NCR-013</td>
                   <td class="px-3 py-2 text-green-700">Active</td>
                   <td class="px-3 py-2">Quality Rep</td>
-                  <td class="px-3 py-2">2025-09-28</td>
-                  <td class="px-3 py-2 truncate">Unverified supplier component variance reported.</td>
+                  <td class="px-3 py-2">2025-11-05</td>
+                  <td class="px-3 py-2">Incorrect material certification submitted with batch.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../Sidebar/Create-NCR-Engineer.html" class="btnActions create">Create Engineer</a>
+                    <a href="./view-ncr-qa.html" class="btnActions">View/Edit</a>
                   </td>
                 </tr>
 
                 <tr>
-                  <td class="px-3 py-2 font-medium text-gray-900">NCR-001</td>
-                  <td class="px-3 py-2 text-green-700">Active</td>
-                  <td class="px-3 py-2">Engineering</td>
-                  <td class="px-3 py-2">2025-10-05</td>
-                  <td class="px-3 py-2">Incorrect batch labeling detected during inspection.</td>
-                  <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View/Edit</a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="px-3 py-2 font-medium text-gray-900">NCR-004</td>
+                  <td class="px-3 py-2 font-medium text-gray-900">NCR-014</td>
                   <td class="px-3 py-2 text-red-700">Closed</td>
-                  <td class="px-3 py-2">Engineering</td>
-                  <td class="px-3 py-2">2025-10-10</td>
-                  <td class="px-3 py-2 truncate">Surface finish non-compliance on final assembly.</td>
+                  <td class="px-3 py-2">Quality Rep</td>
+                  <td class="px-3 py-2">2025-10-28</td>
+                  <td class="px-3 py-2">Resolved: Packaging damage during transit – procedure updated.</td>
                   <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View/Edit</a>
+                    <a href="./view-ncr-qa.html" class="btnActions">View/Edit</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="px-3 py-2 font-medium text-gray-900">NCR-015</td>
+                  <td class="px-3 py-2 text-green-700">Active</td>
+                  <td class="px-3 py-2">Quality Rep</td>
+                  <td class="px-3 py-2">2025-10-20</td>
+                  <td class="px-3 py-2">Non-conforming weld bead width found in sample.</td>
+                  <td class="px-3 py-2 text-center">
+                    <a href="./view-ncr-qa.html" class="btnActions">View/Edit</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="px-3 py-2 font-medium text-gray-900">NCR-016</td>
+                  <td class="px-3 py-2 text-red-700">Closed</td>
+                  <td class="px-3 py-2">Quality Rep</td>
+                  <td class="px-3 py-2">2025-10-12</td>
+                  <td class="px-3 py-2">Resolved: Incorrect test report attached – corrected and re-verified.</td>
+                  <td class="px-3 py-2 text-center">
+                    <a href="./view-ncr-qa.html" class="btnActions">View/Edit</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="px-3 py-2 font-medium text-gray-900">NCR-017</td>
+                  <td class="px-3 py-2 text-red-700">Closed</td>
+                  <td class="px-3 py-2">Quality Rep</td>
+                  <td class="px-3 py-2">2025-09-30</td>
+                  <td class="px-3 py-2">Resolved: Label placement error on final product.</td>
+                  <td class="px-3 py-2 text-center">
+                    <a href="./view-ncr-qa.html" class="btnActions">View/Edit</a>
                   </td>
                 </tr>
               </tbody>
-              <!-- View All NCR -->
-              <tbody id="extraNCRs" class="divide-y divide-gray-100 hidden">
-
-                <tr>
-                  <td class="px-3 py-2 font-medium text-gray-900">NCR-006</td>
-                  <td class="px-3 py-2 text-green-700">Active</td>
-                  <td class="px-3 py-2">Engineering</td>
-                  <td class="px-3 py-2">2025-10-11</td>
-                  <td class="px-3 py-2 truncate">Incorrect torque values detected in component assembly.</td>
-                  <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View/Edit</a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="px-3 py-2 font-medium text-gray-900">NCR-007</td>
-                  <td class="px-3 py-2 text-red-700">Closed</td>
-                  <td class="px-3 py-2">Engineering</td>
-                  <td class="px-3 py-2">2025-09-25</td>
-                  <td class="px-3 py-2 truncate">Incorrect lot traceability information resolved.</td>
-                  <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View/Edit</a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="px-3 py-2 font-medium text-gray-900">NCR-008</td>
-                  <td class="px-3 py-2 text-red-700">Closed</td>
-                  <td class="px-3 py-2">Engineering</td>
-                  <td class="px-3 py-2">2025-10-03</td>
-                  <td class="px-3 py-2 truncate">Electrical test failure in circuit board batch.</td>
-                  <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View/Edit</a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="px-3 py-2 font-medium text-gray-900">NCR-009</td>
-                  <td class="px-3 py-2 text-green-700">Active</td>
-                  <td class="px-3 py-2">Engineering</td>
-                  <td class="px-3 py-2">2025-09-27</td>
-                  <td class="px-3 py-2 truncate">Material substitution found without authorization.</td>
-                  <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View/Edit</a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="px-3 py-2 font-medium text-gray-900">NCR-010</td>
-                  <td class="px-3 py-2 text-red-700">Closed</td>
-                  <td class="px-3 py-2">Engineering</td>
-                  <td class="px-3 py-2">2025-09-20</td>
-                  <td class="px-3 py-2 truncate">Outdated calibration certificate on testing equipment.</td>
-                  <td class="px-3 py-2 text-center">
-                    <a href="../NCR-Samples/View-NCR-001.html" class="btnActions">View/Edit</a>
-                  </td>
-                </tr>
-
-              </tbody>
-
             </table>
           </div>
 
-          <!-- Pagination -->
-          <ul class="overflow-x-auto p-5 flex justify-center gap-1 text-gray-900">
-            <li>
-              <a href="#"
-                class="grid size-8 place-content-center rounded border border-gray-200 transition-colors hover:bg-gray-50 rtl:rotate-180"
-                aria-label="Previous page">
-                <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </a>
-            </li>
-            <li
-              class="block size-8 rounded border border-bg-[#2D6EA7] bg-[#2D6EA7] text-center text-sm/8 font-medium text-white">
-              1</li>
-            <li><a href="#"
-                class="block size-8 rounded border border-gray-200 text-center text-sm/8 font-medium transition-colors hover:bg-gray-50">2</a>
-            </li>
-            <li><a href="#"
-                class="block size-8 rounded border border-gray-200 text-center text-sm/8 font-medium transition-colors hover:bg-gray-50">3</a>
-            </li>
-            <li><a href="#"
-                class="block size-8 rounded border border-gray-200 text-center text-sm/8 font-medium transition-colors hover:bg-gray-50">4</a>
-            </li>
-            <li>
-              <a href="#"
-                class="grid size-8 place-content-center rounded border border-gray-200 transition-colors hover:bg-gray-50 rtl:rotate-180"
-                aria-label="Next page">
-                <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </a>
-            </li>
+          <!-- Pagination (optional - can keep if you want) -->
+          <ul class="flex justify-center gap-1 p-5 text-gray-900">
+            <li class="block size-8 rounded bg-[#2D6EA7] text-white text-center font-medium">1</li>
           </ul>
         </div>
       </div>
@@ -402,29 +343,13 @@
       </footer>
     </main>
 
-    <div id="confirmationModal" class="fixed inset-0 z-50 grid place-content-center bg-black/50 p-4 hidden"
-      role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <div class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg">
-        <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Confirm Action</h2>
-        <div class="mt-4">
-          <p class="text-pretty text-gray-700">Are you sure you want to close this NCR?</p>
-        </div>
-        <footer class="mt-6 flex justify-end gap-2">
-          <button type="button"
-            class="rounded bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200">Cancel</button>
-          <button type="button"
-            class="rounded bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700">Confirm</button>
-        </footer>
-      </div>
-    </div>
+    <script src="../../Scripts/Dashboard.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../../Scripts/notifications-demo.js"></script>
+    <script>
+      if (window.lucide) lucide.createIcons();
+    </script>
   </div>
-
-  <script src="../../Scripts/Dashboard.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="../../Scripts/notifications-demo.js"></script>
-  <script>
-    if (window.lucide) lucide.createIcons();
-  </script>
 </body>
 
 </html>

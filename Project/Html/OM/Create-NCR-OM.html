@@ -458,32 +458,20 @@
                                         </div>
                                     </div>
                                 </div>
-<div class="actions">
-    <button type="button" class="btn submit" id="procurementSubmitBtn">
-        Proceed to Final Review
-    </button>
+                            <div class="actions">
+                                <button type="button" class="btn submit"
+                                    onclick="openModal('finalModal')">
+                                    Submit
+                                </button>
 
-                                <div class="actions">
-                                    <button type="button" class="btn submit"
-                                        onclick="handleProcurementSubmit(event, 'submit')">
-                                        Submit
-                                    </button>
+                                <button type="button" class="btn save"
+                                    onclick="openModal('saveModal')">
+                                    Save
+                                </button>
 
-                                    <button type="button" class="btn save"
-                                        onclick="handleProcurementSubmit(event, 'save')">
-                                        Save
-                                    </button>
-
-                                    <button class="btn save">
-                                        <a href="mailto:ncr@crossfire.com">
-                                            Email
-                                        </a>
-                                    </button>
-
-                                    <button type="button" class="btn cancel" onclick="openModal('confirmModal')">
-                                        Cancel
-                                    </button>
-                                </div>
+                                <button type="button" class="btn cancel" onclick="openModal('confirmModal')">
+                                    Cancel
+                                </button>
                             </div>
                         </form>
                     </div>

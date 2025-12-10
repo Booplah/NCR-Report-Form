@@ -11,6 +11,11 @@
 #view-create {
     font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
     color: var(--cf-ink);
+     background: #fafafa;
+    margin-top: 5px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.05);
+    padding: 30px 60px;
 }
 
 #view-create h2 {

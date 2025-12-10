@@ -242,9 +242,10 @@ function handleProcurementSubmit(e) {
     if (carrierEl) carrierEl.classList.remove("border-red-500");
     
     if (!radioValid) {
-        if (radioErrorDiv) radioErrorDiv.textContent = "Please select a disposition decision (Return or Dispose).";
+        if (radioErrorDiv) radioErrorDiv.textContent = "Please select Return or Dispose.";
     } else {
         if (radioErrorDiv) radioErrorDiv.textContent = "";
+    }
 
         if (requiredRadio.value === 'Return') {
              let rmaValid = true;
@@ -284,6 +285,29 @@ function handleProcurementSubmit(e) {
     } else {
         alert("Please correct the highlighted errors.");
     }
+
+    // Final validation result
+    const allValid = radioValid && conditionalValid && managerValid;
+
+    if (allValid && action === 'submit') {
+        // Optional: Save to localStorage here if needed
+        alert("NCR successfully submitted by Operations & Procurement! Proceeding to Final Review...");
+
+        // REDIRECT TO FINAL REVIEW PAGE
+        window.location.href = "./ncr-final-review.html";
+    } else if (allValid && action === 'save') {
+        alert("Draft saved successfully!");
+    } else {
+        alert("Please fix the highlighted errors before submitting.");
+    }
+
+
+// Add this near the other event listeners (after formProcurement submit binding)
+const procurementSubmitBtn = document.getElementById('procurementSubmitBtn');
+if (procurementSubmitBtn) {
+    procurementSubmitBtn.addEventListener('click', (e) => {
+        handleProcurementSubmit(e, 'submit'); // 'submit' triggers redirect
+    });
 }
 // --- Initialization Block Update ---
 document.addEventListener("DOMContentLoaded", () => {

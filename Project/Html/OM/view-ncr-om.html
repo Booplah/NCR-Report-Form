@@ -134,14 +134,13 @@
                     <button id="btnDownloadPDF" class="btn save">Download</button>
                     <button onclick="window.location.href='./edit-ncr.html'"
                         class="btn submit">Edit NCR</button>
-                    <button id="" class="btn save">
+                    <button class="btn save">
                         <a href="mailto:ncr@crossfire.com">
                             Email
                         </a>
                     </button>
                     <button onclick="window.location.href='../../html/Sidebar/dashboard.html'"
                         class="btn save">Back</button>
-                    <!-- <button onclick="openModal('confirmModal')" id="btnCloseNCR" class="btn cancel">Close NCR</button> -->
                 </div>
 
                 <!-- NCR Form Content -->
@@ -300,17 +299,17 @@
                     </section>
 
                     <!-- Purchasing Section -->
-                    <section id="sec-purchasing" class="progress-section" data-step-content="procurement" hidden>
+                    <section id="sec-purchasing" class="progress-section" data-step-content="procurement" hidden data-section-role="proc-section">
                         <div class="section-header operations">Operations</div>
                         <div class="row">
                             <div class="field-box">
                                 <div class="field-label" style="border-color: #497ba1;">Purchasing's Preliminary
                                     Decision:</div>
-                                <div class="field-value">
+                                <div class="radio-group">
                                     <label><input type="checkbox" id="chk-rework in-house" name="chk-rework in-house"
-                                            checked disabled> Rework "In-House"</label>
-                                    <label><input type="checkbox" id="chk-return" name="chk-return" disabled> Return to
-                                        Supplier for either "rework" or "replacement"</label>
+                                            disabled> Rework "In-House"</label>
+                                    <label><input type="checkbox" id="chk-return" name="chk-return" checked disabled> Return to
+                                        Supplier</label>
                                     <label><input type="checkbox" id="chk-scrap" name="chk-scrap" disabled> Scrap in
                                         House</label>
                                     <label><input type="checkbox" id="chk-defer" name="chk-defer" disabled> Defer for
@@ -352,85 +351,84 @@
                         </div>
                         <h2 class="section-header procurement">Procurement </h2>
 
-                        <div class="form-grid">
+                                <div class="form-grid">
 
-                            <div class="row">
-                                <div class="field-box full-width">
-                                    <label class="field-label">Supplier Disposition Decision</label>
-                                    <div class="radio-group two-col">
-                                        <label><input type="radio" name="supplierDispositionDecision" value="Return"
-                                                id="decisionReturn"> Return rejected
-                                            items to supplier</label>
-                                        <label><input type="radio" name="supplierDispositionDecision" value="Dispose"
-                                                id="decisionDispose"> Permit dispose on
-                                            site</label>
-                                    </div>
-                                    <div id="err-supplierDispositionDecision" class="error" role="alert"
-                                        aria-live="polite">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="returnDetailsBlock">
-                                <h3 class="field-header">Return Logistics (Required if returning to
-                                    supplier)</h3>
-                                <div class="row">
-                                    <div class="field-box" style="flex:1;">
-                                        <label for="rmaNumber" class="field-label">RMA #</label>
-                                        <input id="rmaNumber" name="rmaNumber" class="input" type="text"
-                                            placeholder="RMA #">
-                                        <div id="err-rmaNumber" class="error" role="alert" aria-live="polite">
+                                    <div class="row">
+                                        <div class="field-box full-width">
+                                            <label class="field-label">Supplier Disposition Decision</label>
+                                            <div class="radio-group two-col">
+                                                <label><input type="radio" name="supplierDispositionDecision"
+                                                        value="Return" id="decisionReturn"> Return rejected
+                                                    items to supplier</label>
+                                                <label><input type="radio" name="supplierDispositionDecision"
+                                                        value="Dispose" id="decisionDispose" checked> Permit dispose on
+                                                    site</label>
+                                            </div>
+                                            <div id="err-supplierDispositionDecision" class="error" role="alert"
+                                                aria-live="polite">
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="field-box" style="flex:2;">
-                                        <label for="carrierDetails" class="field-label">Carrier
-                                            information with
-                                            account #</label>
-                                        <input id="carrierDetails" name="carrierDetails" class="input" type="text"
-                                            placeholder="Ex: FedEx Acct: 12345">
-                                        <div id="err-carrierDetails" class="error" role="alert" aria-live="polite">
+
+                                    <div id="returnDetailsBlock">
+                                        <h3 class="field-header">Return Logistics (Required if returning to
+                                            supplier)</h3>
+                                        <div class="row">
+                                            <div class="field-box" style="flex:1;">
+                                                <label for="rmaNumber" class="field-label">RMA #</label>
+                                                <input id="rmaNumber" name="rmaNumber" class="input" type="text"
+                                                    value="#1323">
+                                                <div id="err-rmaNumber" class="error" role="alert" aria-live="polite">
+                                                </div>
+                                            </div>
+                                            <div class="field-box" style="flex:2;">
+                                                <label for="carrierDetails" class="field-label">Carrier
+                                                    information with
+                                                    account #</label>
+                                                <input id="carrierDetails" name="carrierDetails" class="input"
+                                                    type="text" value="FedEx Acct: 12345">
+                                                <div id="err-carrierDetails" class="error" role="alert"
+                                                    aria-live="polite">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="field-box full-width">
+                                            <label for="expectedReturnDate" class="field-label">Procurement to
+                                                add date when
+                                                replacement/reworked item will be received/returned</label>
+                                            <input id="expectedReturnDate" name="expectedReturnDate" class="input"
+                                                type="date" value="2025-11-29">
+                                        </div>
+                                    </div>
+
+                                    <h3 class="field-header">Administrative & Financial </h3>
+                                    <div class="row">
+                                        <div class="field-box full-width"
+                                            style="display:flex; flex-direction:column; gap:12px; padding: 20px;">
+
+                                            <label>
+                                                <input type="checkbox" name="sapReturnCompleteCheck"
+                                                    id="sapReturnCompleteCheck" value="Completed">
+                                                Supplier return has been completed in SAP
+                                            </label>
+
+                                            <label>
+                                                <input type="checkbox" name="creditExpectedCheck"
+                                                    id="creditExpectedCheck" value="Expected">
+                                                Expecting a credit from the supplier
+                                            </label>
+
+                                            <label>
+                                                <input type="checkbox" name="billingSupplierReworkCheck"
+                                                    id="billingSupplierReworkCheck" value="Billing">
+                                                Billing the supplier for expenses incurred in rework
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="field-box full-width">
-                                    <label for="expectedReturnDate" class="field-label">Procurement to
-                                        add date when
-                                        replacement/reworked item will be received/returned</label>
-                                    <input id="expectedReturnDate" name="expectedReturnDate" class="input" type="date">
-                                </div>
-                            </div>
-
-                            <h3 class="field-header">Administrative & Financial </h3>
-                            <div class="row">
-                                <div class="field-box full-width"
-                                    style="display:flex; flex-direction:column; gap:12px; padding: 20px;">
-
-                                    <label>
-                                        <input type="checkbox" name="sapReturnCompleteCheck" id="sapReturnCompleteCheck"
-                                            value="Completed">
-                                        Supplier return has been completed in SAP
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="creditExpectedCheck" id="creditExpectedCheck"
-                                            value="Expected">
-                                        Expecting a credit from the supplier
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="billingSupplierReworkCheck"
-                                            id="billingSupplierReworkCheck" value="Billing">
-                                        Billing the supplier for expenses incurred in rework
-                                    </label>
-                                </div>
-                            </div>
-
-
-                        </div>
-
                     </section>
 
                     <!-- Final Review Section -->

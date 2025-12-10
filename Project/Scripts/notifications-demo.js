@@ -1,6 +1,6 @@
 
 (function () {
-  const STORAGE_KEY = 'crossfire.notifications.v3';
+  const STORAGE_KEY = 'crossfire.notifications.v6';
   const ROLE_KEY = 'crossfire.role';
 
   // ---------- helpers ----------
@@ -24,9 +24,14 @@
     return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
   }
 
+  //function getRole() {
+  //  return localStorage.getItem(ROLE_KEY) || 'Engineering'; // default for demo
+  //}
   function getRole() {
-    return localStorage.getItem(ROLE_KEY) || 'Engineering'; // default for demo
-  }
+  const r = localStorage.getItem(ROLE_KEY) || 'Engineering';
+  return r === 'Procurement' ? 'Purchasing' : r;
+}
+
 
   function loadAll() {
     try {
@@ -104,7 +109,7 @@
         message: 'NCR #140 is ready for Purchasing review.',
         createdAt: t - 1000 * 60 * 15, // 15m ago
         read: false,
-        url: '/Project/Html/Sidebar/Create-NCR-Procurement.html',
+        url: '/Project/Html/OM/Create-NCR-OM.html',
         audience: 'Purchasing'
       },
       {
@@ -115,7 +120,7 @@
         message: 'NCR #140 has been sent to Quality for final review.',
         createdAt: t - 1000 * 60 * 3, // 3m ago
         read: false,
-        url: '/Project/Html/NCR-Samples/Create-NCR-Final.html',
+        url: '/Project/Html/OM/ncr-final-review.html',
         audience: 'Purchasing'
       },
 

@@ -89,6 +89,9 @@
                 </a>
                 <nav class="header-navigation">
                     <ul class="header-links">
+                        <li>
+                            <p class="account-name"><strong class="account-label">Operations Manager</strong></p>
+                        </li>
                         <!-- Notification Bell -->
                         <li class="notif-container">
                             <button id="notif-bell" class="notif-bell" aria-haspopup="listbox" aria-expanded="false"
@@ -105,9 +108,6 @@
                                 <div id="notif-empty" class="notif-empty" style="display:none;">You're all caught up.
                                 </div>
                             </div>
-                        </li>
-                        <li>
-                            <p class="account-name"><strong class="account-label">Operations Manager</strong></p>
                         </li>
                     </ul>
                 </nav>
@@ -131,12 +131,19 @@
                 </div>
 
                 <div class="btn-container">
-                    <button id="btnDownloadPDF" class="btn save">Download</button>
+                    <button id="btnDownloadPDF" class="btn save">
+                        Download
+                    </button>
                     <button onclick="window.location.href='../../Html/NCR-Samples/Edit-NCR-001.html'"
-                        class="btn submit">Edit NCR</button>
-                    <button onclick="window.location.href='../../html/Sidebar/dashboard.html'"
-                        class="btn save">Back</button>
-                    <!-- <button onclick="openModal('confirmModal')" id="btnCloseNCR" class="btn cancel">Close NCR</button> -->
+                        class="btn submit">
+                        Edit NCR
+                    </button>
+                    <button id="btnSendEmail" class="btn save">
+                        <a href="mailto:Crossfire@crossfire.com">Email</a>
+                    </button>
+                    <button onclick="window.location.href='../../html/Sidebar/dashboard.html'" class="btn save">
+                        Back
+                    </button>
                 </div>
 
                 <!-- NCR Form Content -->
@@ -227,7 +234,8 @@
                         <div class="row">
                             <div class="field-box">
                                 <div class="field-label" style="border-color: #58a899;">Review by CF Engineering:
-                                    <small>(indicate disposition by "checking" one of the following)</small></div>
+                                    <small>(indicate disposition by "checking" one of the following)</small>
+                                </div>
                                 <div class="field-value">
                                     <label><input type="checkbox" id="chk-use-as-is" name="chk-use-as-is" disabled> Use
                                         As Is</label>
@@ -506,4 +514,3 @@
 </body>
 
 </html>
-<!--  OM should have a button to email NCRs  -->
